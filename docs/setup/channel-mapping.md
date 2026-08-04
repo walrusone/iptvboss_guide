@@ -11,9 +11,22 @@ Map a playlist channel to an EPG channel so the generated guide contains program
 
 ![The Layout Editor](../assets/images/layout/layout-editor.png)
 
-## Search for an EPG match
+## Choose EPG sources for mapping
 
-Before searching, open **EPG Search Options** beside the mapping controls and enable only the EPG sources relevant to the channels being mapped. For example, enable only USA sources for USA channels, then switch to only Canada sources for Canadian channels.
+**EPG Search Options** controls which EPG sources are searched during automatic and manual channel mapping. It does not add EPG sources or make guide data available.
+
+1. Select **EPG Search Options** beside the mapping controls.
+2. Enable only the EPG sources that should be considered for the current mapping work.
+3. Select **OK** to save the search scope.
+
+Keep the search list focused on the sources that match the channels you are mapping. For example, enable only USA EPG sources while mapping USA channels, then disable those and enable only Canada EPG sources while mapping Canadian channels. This reduces unrelated matches and makes the results easier to review.
+
+!!! note
+    The source selection affects mapping searches; it does not disable synchronization or remove a source from the application. Re-enable a source later when it should be included in another mapping pass.
+
+![EPG search options](../assets/images/epg/epg-search-options.png)
+
+## Search for an EPG match
 
 1. Select the EPG search or manual search control for the selected channel.
 2. Review the suggested matches.

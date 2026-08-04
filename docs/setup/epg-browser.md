@@ -15,7 +15,7 @@ The **EPG Browser** helps inspect guide data before or after assigning an EPG ch
 
 ## Search guide data
 
-1. Open **Layout Editor** → **EPG Search Options** when the mapping search scope needs adjustment.
+1. Return to [Channel Mapping](channel-mapping.md) and select **EPG Search Options** beside the mapping controls when the mapping search scope needs adjustment.
 2. Search using a distinctive channel, network, or service name.
 3. Clear the search text before trying a different term.
 4. Compare the country, network, identifier, and programme data.
