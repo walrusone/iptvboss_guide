@@ -69,6 +69,7 @@ nav:
       - Layout Overview: layouts/index.md
       - Layout Manager: layouts/layout-manager.md
       - Layout Editor: layouts/layout-editor.md
+      - User Management: layouts/users.md
   - Features:
       - Feature Overview: features/index.md
       - Advanced EPG Dummies: features/aed.md
@@ -79,9 +80,11 @@ nav:
   - Settings:
       - Application Settings: settings/application.md
       - Preferences and Theme: settings/preferences.md
+      - Automatic Synchronization: settings/automation.md
   - Troubleshooting:
       - Common Problems: troubleshooting/common-problems.md
       - Logs and Diagnostics: troubleshooting/logs.md
       - Resetting IPTVBoss: troubleshooting/reset.md
+      - Recovery and Application Files: troubleshooting/recovery.md
   - Frequently Asked Questions: faq.md
   - Support: support.md

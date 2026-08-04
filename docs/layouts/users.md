@@ -1,0 +1,43 @@
+# User Management
+
+IPTVBoss uses layouts and user records to create separate output links for different customers, household members, or devices.
+
+## Use one source per provider
+
+For each provider, add one source to IPTVBoss, regardless of how many users have accounts with that provider.
+
+For example, if several users have accounts with Provider A:
+
+1. Add Provider A once using the provider credentials for the source.
+2. Open **User Management**.
+3. Add each customer or account as a separate IPTVBoss user.
+4. Add that user's Provider A username and password to the Provider A credential entry.
+5. Enable the user and the source credential.
+6. Assign the user's enabled layout. In the layout manager, an enabled layout is shown in blue.
+7. Repeat the process for each additional user of Provider A.
+
+Repeat the source setup only when you have another provider. Do not create duplicate source entries for every user of the same provider unless there is a specific reason to keep the sources separate.
+
+## User output links
+
+Each enabled user can receive their own M3U link and, when configured, their own EPG link. The links use the user's enabled layouts and source credentials.
+
+Universal EPG is often more efficient when every user uses the same EPG data. It allows IPTVBoss to publish one shared EPG file instead of generating multiple identical EPG files for separate users or layouts.
+
+!!! warning
+    Do not include provider usernames, passwords, M3U links, EPG links, or access tokens in screenshots, support requests, or public documentation.
+
+## Manage users
+
+1. Open the **Layouts** area.
+2. Select **Manage Users**.
+3. Add or select a user.
+4. Set **User Enabled** when the user should receive output.
+5. Assign only layouts that are enabled.
+6. Review the source credentials and enable the credentials the user should use.
+7. Save the user and verify the generated links.
+
+The server console may also expose **User Management** for administrators. Server-side changes can trigger backups or cloud synchronization, so wait for the operation to finish before making another database change.
+
+!!! note
+    If user management is locked or unavailable, check the account plan, server authorization, and whether another IPTVBoss or XC Server process is currently modifying users.

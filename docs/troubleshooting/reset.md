@@ -32,3 +32,5 @@ If the database is damaged or the configuration is wrong, first identify a known
 Do not manually delete the application data directory unless support has provided exact instructions for your operating system and version. A manual deletion can remove the only usable copy of your database.
 
 If no backup is available, collect the logs and open a support ticket before resetting anything.
+
+For operating-system folder locations and Dropbox recovery, see [Recovery and Application Files](recovery.md).

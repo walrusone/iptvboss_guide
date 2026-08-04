@@ -30,6 +30,8 @@ Before enabling synchronization:
 !!! warning
     Cloud synchronization is not a substitute for understanding which database is authoritative. Do not enable multiple competing sync workflows without a recovery plan.
 
+See [Recovery and Application Files](../troubleshooting/recovery.md) before attempting a cloud restore, and [Automatic Synchronization](automation.md) for a Windows noGUI schedule.
+
 ## Runtime and logging settings
 
 The settings dialog includes log level and log time-zone controls. Leave the log level at the normal setting unless support asks for more detail. Set the log time zone to the zone used by the person reviewing the logs.
