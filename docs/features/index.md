@@ -20,7 +20,7 @@ IPTVBoss can search EPG data, assign EPG channels, update logos, edit channel na
 
 Use [Mapping Channels](../setup/channel-mapping.md) for the standard mapping workflow.
 
-For event-aware channel naming, logos, and sports metadata, see [Advanced Event Definitions](aed.md). For sports-specific channel filtering and ordering, see [Custom Sports](custom-sports.md).
+For event-aware channel naming, logos, and sports metadata, see [Advanced EPG Dummies](aed.md). For sports-specific channel filtering and ordering, see [Custom Sports](custom-sports.md).
 
 ## Layouts
 
