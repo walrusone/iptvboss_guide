@@ -7,6 +7,8 @@ site_dir: site
 
 theme:
   name: material
+  logo: assets/branding/banner_logo.png
+  favicon: assets/branding/cropped-logo.png
   features:
     - navigation.sections
     - navigation.expand
@@ -65,6 +67,7 @@ nav:
       - Adding EPG Sources: setup/epg-sources.md
       - Universal EPG: setup/universal-epg.md
       - Source and EPG Tools: setup/source-tools.md
+      - Browsing EPG Data: setup/epg-browser.md
       - Channel Mapping: setup/channel-mapping.md
       - Creating Output: setup/output.md
       - Cloud Output Links: setup/output-links.md
@@ -72,6 +75,7 @@ nav:
       - Layout Overview: layouts/index.md
       - Layout Manager: layouts/layout-manager.md
       - Layout Editor: layouts/layout-editor.md
+      - Layout Output Settings: layouts/output-settings.md
       - User Management: layouts/users.md
   - Features:
       - Feature Overview: features/index.md
@@ -80,12 +84,15 @@ nav:
   - Server:
       - Server Overview: server/index.md
       - Server Settings: server/settings.md
+      - Server User Management: server/users.md
   - Settings:
       - Application Settings: settings/application.md
       - Preferences and Theme: settings/preferences.md
       - Automatic Synchronization: settings/automation.md
       - Sync Schedule: settings/scheduling.md
       - AI Settings: settings/ai.md
+      - Pro and Account Access: settings/pro.md
+      - Email Notifications: settings/email.md
   - Troubleshooting:
       - Common Problems: troubleshooting/common-problems.md
       - Logs and Diagnostics: troubleshooting/logs.md

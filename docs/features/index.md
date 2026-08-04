@@ -20,7 +20,7 @@ IPTVBoss can search EPG data, assign EPG channels, update logos, edit channel na
 
 Use [Mapping Channels](../setup/channel-mapping.md) for the standard mapping workflow.
 
-For event-aware channel naming, logos, and sports metadata, see [Advanced EPG Dummies](aed.md). For sports-specific channel filtering and ordering, see [Custom Sports](custom-sports.md).
+For event-aware channel naming, logos, and sports metadata, see [Advanced EPG Dummies](aed.md). For sports-specific channel creation, filtering, and ordering, see [Custom Sports](custom-sports.md).
 
 ## Layouts
 
@@ -36,7 +36,7 @@ See [Creating Output](../setup/output.md).
 
 ## Automation and diagnostics
 
-IPTVBoss includes synchronization schedules, database backup and restore workflows, log viewing, and optional server or headless capabilities. These features should be configured only after the basic desktop workflow is working.
+IPTVBoss includes synchronization schedules, database backup and restore workflows, log viewing, AI-assisted AED regex tools, and optional server or headless capabilities. These features should be configured only after the basic desktop workflow is working.
 
 ## Basic and Pro capabilities
 

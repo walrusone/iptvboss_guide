@@ -1,8 +1,11 @@
-# Automatic Synchronization on Windows
+# External noGUI Scheduling
 
-Non-Pro users can use Windows Task Scheduler to run the IPTVBoss noGUI synchronization task on a schedule.
+Native **Sync Schedule** is the standard Pro workflow. Non-Pro users can use an operating-system scheduler to run IPTVBoss noGUI synchronization. The examples below use the confirmed default commands.
 
-## Create the task
+!!! warning
+    IPTVBoss must be closed before a noGUI run starts. Do not run the desktop application and noGUI synchronization against the same database at the same time.
+
+## Windows Task Scheduler
 
 1. Close IPTVBoss.
 2. Open **Task Scheduler** in Windows.
@@ -36,7 +39,44 @@ Non-Pro users can use Windows Task Scheduler to run the IPTVBoss noGUI synchroni
 4. Check Task Manager after a short delay. IPTVBoss should appear while the noGUI process is running.
 5. Review the IPTVBoss logs and confirm that source and EPG synchronization completed.
 
-!!! warning
-    Do not run the desktop application and noGUI synchronization against the same database at the same time. Concurrent writers can cause conflicts or prevent a scheduled run from starting.
-
 If the task cannot find IPTVBoss, use the full path to the installed executable in the action or configure the task's **Start in** directory to the IPTVBoss installation directory.
+
+## Linux cron
+
+1. Close IPTVBoss.
+2. Open the user crontab:
+
+   ```bash
+   crontab -e
+   ```
+
+3. Add an entry using the desired minute and hour. For a 03:00 run:
+
+   ```cron
+   0 3 * * * iptvboss -nogui
+   ```
+
+4. Replace `iptvboss` with the full executable path when it is not on `PATH`.
+5. Save the crontab.
+6. Test the command manually, then review the IPTVBoss logs after the first scheduled run.
+
+## macOS cron
+
+1. Close IPTVBoss.
+2. Open the user crontab:
+
+   ```bash
+   crontab -e
+   ```
+
+3. Add an entry using the desired minute and hour. For a 03:00 run with the default application path:
+
+   ```cron
+   0 3 * * * /Applications/IPTVBoss.app/Contents/MacOS/IPTVBoss -nogui
+   ```
+
+4. Replace the application path when IPTVBoss is installed elsewhere.
+5. Save the crontab.
+6. Test the command manually, then review the IPTVBoss logs after the first scheduled run.
+
+The native scheduler may manage these entries automatically when Pro access is enabled. Avoid manually adding a second cron entry for the same schedule.

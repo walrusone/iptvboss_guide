@@ -1,6 +1,6 @@
 # AI Settings
 
-AI Settings configure the provider and model used by IPTVBoss features that request AI-assisted output, such as sports summaries or regex assistance when those features are available.
+AI Settings configure the provider and model used by IPTVBoss AED AI Regex Assistance.
 
 ## Configure an AI provider
 
@@ -26,7 +26,4 @@ If the model list cannot be refreshed:
 4. Review the IPTVBoss logs for the provider error.
 5. Select a saved or default model when the provider catalog is unavailable.
 
-AI-generated text is optional content. Verify event summaries, predictions, or regex suggestions before publishing them to users.
-
-!!! note "Draft review"
-    Confirm which AI providers, models, and features are officially supported before publishing a provider-specific recommendation.
+AI-suggested regex remains advisory. Test the resulting AED against representative provider names before saving or applying it broadly.

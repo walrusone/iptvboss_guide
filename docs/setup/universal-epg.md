@@ -16,9 +16,6 @@ Using one shared EPG can reduce duplicate output files and simplify player confi
 
 ![Universal EPG options](../assets/images/epg/universal-epg-options.png)
 
-!!! note "Draft review"
-    Confirm with the IPTVBoss owner which Universal EPG options are available for each account plan and whether the current recommendation is one shared EPG for all users.
-
 ## Use Universal EPG with multiple users
 
 1. Configure and verify the shared EPG first.

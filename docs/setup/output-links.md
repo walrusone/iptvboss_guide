@@ -25,5 +25,4 @@ When cloud output is configured, IPTVBoss can display the generated M3U and EPG 
 
 If a link is stale, regenerate the relevant output and check the cloud authorization in **IPTVBoss Settings**.
 
-!!! note "Draft review"
-    Confirm the exact cloud-link lifetime, provider behavior, and user-link permissions with the IPTVBoss owner before publishing detailed policy claims.
+Cloud-link lifetime and expiration behavior can vary. Do not document or rely on a fixed expiration period.

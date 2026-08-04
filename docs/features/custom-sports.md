@@ -2,6 +2,20 @@
 
 Custom Sports groups use sports event data and AED results to organize channels around upcoming, live, favorite, and unmatched events. The group settings control filtering and the order in which those channels appear.
 
+## Create a Custom Sports group
+
+1. Open **Layout Manager** and select the layout that should contain the sports group.
+2. Open **Layout Editor**.
+3. Create or select the group that should contain the sports channels.
+4. Enable the group’s Custom Sports behavior when the option is available.
+5. Add or move sports channels and team-based channels into the group.
+6. Confirm that the channels have the required AED and sports event data.
+7. Select **Edit Sports Settings** to configure filtering and sorting.
+8. Refresh sports data and AED results.
+9. Generate output and verify the event order in the resulting playlist.
+
+If the Custom Sports controls are unavailable, confirm that the group is configured for sports behavior and that the required Pro features are active.
+
 ## Open sports settings
 
 1. Open the **Layout Editor**.
