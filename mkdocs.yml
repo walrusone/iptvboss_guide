@@ -11,7 +11,6 @@ theme:
   favicon: assets/branding/cropped-logo.png
   features:
     - navigation.sections
-    - navigation.expand
     - navigation.top
     - navigation.footer
     - search.highlight
