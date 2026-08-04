@@ -27,15 +27,16 @@ Use **Sync All Sources** when all configured playlist sources should be refreshe
 !!! warning
     Name cleanup can affect matching, AED regexes, and output. Record the original naming pattern before applying a broad change.
 
-## Refresh categories
+## Manage categories
 
-Use the source refresh-category tool when category membership or category names have changed at the provider.
+Use **Manage Categories** in the source dialog before saving a new playlist. The same view can be opened later when category membership or category names have changed at the provider.
 
-1. Open the category refresh action from the source workflow.
-2. Select the source or categories to refresh.
-3. Review the proposed changes.
-4. Apply the refresh.
-5. Confirm that the affected layout groups still contain the intended channels.
+1. Open **Manage Categories** from the source workflow.
+2. Select **Refresh Categories** in the category view.
+3. Wait for the provider's current categories to load.
+4. Select the categories to use and review the proposed changes.
+5. Close the category view to keep the selection.
+6. Confirm that the affected layout groups still contain the intended channels.
 
 ![Refresh categories](../assets/images/epg/manage-refresh-categories.png)
 
