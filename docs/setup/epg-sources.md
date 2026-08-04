@@ -24,7 +24,7 @@ https://provider.example/guide.xml
 
 ## Synchronize the EPG source
 
-1. Open **Sources** → **Sources Manager**.
+1. Open [Source and EPG Tools](source-tools.md) → **Sources Manager**.
 2. Select the EPG source.
 3. Start the synchronization action.
 4. Wait for the import to finish.
@@ -32,7 +32,7 @@ https://provider.example/guide.xml
 
 ## Use built-in EPG data
 
-Pro users may have access to built-in EPG sources and the EPG browser. If the feature is locked, use an external EPG source or confirm the account’s Pro status.
+[Pro users](../settings/pro.md) may have access to built-in EPG sources and the [EPG Browser](epg-browser.md). If the feature is locked, use an external EPG source or confirm the account’s Pro status.
 
 ![EPG search options](../assets/images/epg/epg-search-options.png)
 

@@ -42,4 +42,4 @@ When a run fails:
 !!! warning
     Do not create overlapping schedules that write to the same database at the same time. Choose one authoritative scheduler for a given installation.
 
-For a Windows installation that cannot use the native scheduler, see [Automatic Synchronization on Windows](automation.md).
+For a Windows installation that cannot use the native scheduler, see [External noGUI Scheduling](automation.md).

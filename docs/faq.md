@@ -10,7 +10,7 @@ An M3U source uses a complete playlist URL or local `.m3u` file. An API source u
 
 ## Why can I see a feature but not use it?
 
-Some features depend on the account plan. Basic accounts have limits on sources, EPG sources, layouts, and users. Pro access may unlock built-in EPG tools, advanced layout features, and other capabilities.
+Some features depend on the account plan. See [IPTVBoss Pro and Account Access](settings/pro.md) for the confirmed Pro-only feature categories and account-access workflow.
 
 ## Why is my EPG empty?
 
@@ -18,7 +18,7 @@ Confirm that the EPG source synchronized successfully, contains channels, and is
 
 ## Where are the logs?
 
-Open **Logs** → **View Logs**. IPTVBoss also stores log files in a `logs` directory under the application data directory.
+Open [Logs and Diagnostics](troubleshooting/logs.md) and select **View Logs**. IPTVBoss also stores log files in a `logs` directory under the application data directory.
 
 ## Can I update without losing my layouts?
 

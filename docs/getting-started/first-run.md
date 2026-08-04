@@ -25,7 +25,7 @@ Confirm that:
 
 ## Activate Pro when applicable
 
-If you have an IPTVBoss Pro subscription, use the Pro settings area to enter or activate the credentials supplied with your account. Pro-only controls may remain locked until the account is validated.
+If you have an IPTVBoss Pro subscription, follow [IPTVBoss Pro and Account Access](../settings/pro.md) to enter or activate the credentials supplied with your account. Pro-only controls may remain locked until the account is validated.
 
 !!! note
     Do not paste a token, license key, or account credential into a screenshot or support ticket. Describe the error without exposing the secret.

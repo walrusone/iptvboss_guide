@@ -4,12 +4,12 @@ Custom Sports groups use sports event data and AED results to organize channels 
 
 ## Create a Custom Sports group
 
-1. Open **Layout Manager** and select the layout that should contain the sports group.
-2. Open **Layout Editor**.
+1. Open [Layout Manager](../layouts/layout-manager.md) and select the layout that should contain the sports group.
+2. Open [Layout Editor](../layouts/layout-editor.md).
 3. Create or select the group that should contain the sports channels.
 4. Enable the group’s Custom Sports behavior when the option is available.
 5. Add or move sports channels and team-based channels into the group.
-6. Confirm that the channels have the required AED and sports event data.
+6. Confirm that the channels have the required [AED](aed.md) and sports event data.
 7. Select **Edit Sports Settings** to configure filtering and sorting.
 8. Refresh sports data and AED results.
 9. Generate output and verify the event order in the resulting playlist.
@@ -19,7 +19,7 @@ If the Custom Sports controls are unavailable, confirm that the group is configu
 ## Open sports settings
 
 1. Open the **Layout Editor**.
-2. Select a Custom Sports group.
+2. Select a Custom Sports group in the [Layout Editor](../layouts/layout-editor.md).
 3. Select **Edit Sports Settings**.
 4. Change the filters or bucket order.
 5. Select **OK**, then refresh or regenerate output to review the result.
@@ -71,7 +71,7 @@ Select **OK** to save the selection. Favorite event and team channels are then c
 ## Verify the result
 
 1. Confirm that the group contains the expected sports and team channels.
-2. Refresh the AED results or synchronize the relevant EPG data.
+2. Refresh the AED results or synchronize the relevant [EPG source](../setup/epg-sources.md).
 3. Check that upcoming events are in time order when **Sort by Time** is enabled.
 4. Confirm that ended events move down when the ended-event option is enabled.
 5. Check **No Event** and **Non-AED** at the bottom for channels that did not match a sports event.

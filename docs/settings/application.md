@@ -32,7 +32,7 @@ Before enabling synchronization:
 !!! warning
     Cloud synchronization is not a substitute for understanding which database is authoritative. Do not enable multiple competing sync workflows without a recovery plan.
 
-See [Recovery and Application Files](../troubleshooting/recovery.md) before attempting a cloud restore, and [Automatic Synchronization](automation.md) for a Windows noGUI schedule.
+See [Recovery and Application Files](../troubleshooting/recovery.md) before attempting a cloud restore, [Cloud Output Links](../setup/output-links.md) for generated links, and [Automatic Synchronization](automation.md) for a Windows noGUI schedule.
 
 ## Runtime and logging settings
 

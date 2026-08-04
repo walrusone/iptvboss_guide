@@ -4,7 +4,7 @@ Layout output settings determine which files or links are generated and where th
 
 ## Configure output for a layout
 
-1. Open **Layout Manager**.
+1. Open [Layout Manager](layout-manager.md).
 2. Select a layout.
 3. Select **Edit Layout**.
 4. Review the output settings before enabling the layout.

@@ -6,11 +6,11 @@ After sources and layouts are configured, generate the playlist and guide files 
 
 Before generating output:
 
-1. Open **Layout Manager**.
+1. Open [Layout Manager](../layouts/layout-manager.md).
 2. Select the intended layout.
 3. Confirm that the layout is enabled.
 4. Confirm that the required channels and EPG mappings are saved.
-5. Confirm the output folder or cloud-provider settings.
+5. Confirm the [Layout Output Settings](../layouts/output-settings.md), output folder, or cloud-provider settings.
 
 ## Generate output for the current layout
 

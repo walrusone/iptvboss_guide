@@ -4,9 +4,9 @@ Map a playlist channel to an EPG channel so the generated guide contains program
 
 ## Open the layout editor
 
-1. Open **Layout Manager**.
+1. Open [Layout Manager](../layouts/layout-manager.md).
 2. Select the layout that contains the imported playlist channels.
-3. Open the layout in **Layout Editor**.
+3. Open the layout in [Layout Editor](../layouts/layout-editor.md).
 4. Select a channel that needs EPG data.
 
 ![The Layout Editor](../assets/images/layout/layout-editor.png)
@@ -21,6 +21,8 @@ Map a playlist channel to an EPG channel so the generated guide contains program
 6. Save the layout.
 
 Use the channel’s country, network, and service name to distinguish similarly named results. Do not select a match only because its display name looks similar.
+
+See [Browsing EPG Data](epg-browser.md) when you need to inspect guide data before mapping.
 
 ![EPG Browser](../assets/images/layout/epg-browser.png)
 

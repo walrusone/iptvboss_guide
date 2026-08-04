@@ -1,6 +1,6 @@
 # AI Settings
 
-AI Settings configure the provider and model used by IPTVBoss AED AI Regex Assistance.
+AI Settings configure the provider and model used by IPTVBoss [AED AI Regex Assistance](../features/aed.md).
 
 ## Configure an AI provider
 

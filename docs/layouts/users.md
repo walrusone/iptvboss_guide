@@ -22,7 +22,7 @@ Repeat the source setup only when you have another provider. Do not create dupli
 
 Each enabled user receives their own M3U link. Standard EPG output can be shared between users when the guide data is the same. XC Server users receive unique XMLTV links.
 
-Universal EPG is often more efficient when every user uses the same EPG data. It allows IPTVBoss to publish one shared EPG file instead of generating multiple identical EPG files for separate users or layouts.
+[Universal EPG](../setup/universal-epg.md) is often more efficient when every user uses the same EPG data. It allows IPTVBoss to publish one shared EPG file instead of generating multiple identical EPG files for separate users or layouts.
 
 !!! warning
     Do not include provider usernames, passwords, M3U links, EPG links, or access tokens in screenshots, support requests, or public documentation.

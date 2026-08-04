@@ -90,4 +90,4 @@ Complete these steps in order:
 8. Recreate or review the noGUI schedule.
 9. Close IPTVBoss so the restored database can finish synchronizing to the cloud provider.
 
-If the restore still fails, stop repeating destructive steps and provide clean IPTVBoss logs, the operating system, the application version, and the restore method used.
+If the restore still fails, stop repeating destructive steps and provide [clean IPTVBoss logs](logs.md), the operating system, the application version, and the restore method used.

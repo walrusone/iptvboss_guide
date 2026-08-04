@@ -39,7 +39,7 @@ Confirm that the intended layout is selected, the layout is enabled, and the cha
 
 ## The application shows a locked feature
 
-Some EPG, layout, source, and advanced editing features depend on the account plan. Confirm the account status in the Pro settings area before treating a locked control as an application error.
+Some EPG, layout, source, and advanced editing features depend on the account plan. Confirm the account status in [IPTVBoss Pro and Account Access](../settings/pro.md) before treating a locked control as an application error.
 
 ## When to open a ticket
 

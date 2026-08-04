@@ -4,12 +4,12 @@ When cloud output is configured, IPTVBoss can display the generated M3U and EPG 
 
 ## Generate cloud output
 
-1. Confirm that the intended layout is enabled.
+1. Confirm that the intended [layout](../layouts/layout-manager.md) is enabled.
 2. Confirm that cloud output is configured for the layout.
 3. Open **Output**.
 4. Select **All Layouts M3Us & EPGs** or the current-layout output action required by the test.
 5. Wait for the output operation to finish.
-6. Select **Output** → **View Cloud Links**.
+6. Select **Output** → **View Cloud Links**. See [Layout Output Settings](../layouts/output-settings.md) if the destination is not configured.
 7. Copy only the link intended for the selected user or player.
 
 !!! warning
