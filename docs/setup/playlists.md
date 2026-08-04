@@ -8,6 +8,26 @@ IPTVBoss can import an M3U playlist from a URL or local file. It can also import
 !!! warning
     Use only playlist sources that you are authorized to access. Treat provider URLs, usernames, and passwords as private credentials.
 
+## Manage Categories
+
+Use **Manage Categories** while adding or editing a playlist source to load the provider's current categories and choose which categories the source should include.
+
+The dialog shows separate lists for **Live Categories**, **VOD Categories**, and **Series Categories**. The count below each list reports how many categories are shown, how many exist in total, and how many are stale. Use the filter field above a list to narrow the visible categories.
+
+1. Select **Manage Categories** in the source dialog.
+2. Select **Refresh Categories** in the category view.
+3. Wait for the provider's current categories to load.
+4. Click a category to select it. Use Ctrl-click on Windows/Linux or Command-click on macOS to select multiple categories.
+5. Right-click the selected categories to use the available actions:
+   - **Select All** selects every category in that list.
+   - **Enable Selected** includes the selected categories in the source.
+   - **Disable Selected** excludes the selected categories from the source.
+   - **Clear Selected Stale** removes selected categories that are no longer current, when stale categories are present.
+6. Repeat the selection and enable/disable actions independently in the Live, VOD, and Series lists.
+7. Close the category view to keep the selection, then save the source dialog.
+
+![Manage playlist categories](../assets/images/epg/manage-refresh-categories.png)
+
 ## Add an M3U source
 
 1. Open **Sources**.
@@ -15,7 +35,7 @@ IPTVBoss can import an M3U playlist from a URL or local file. It can also import
 3. Enter a descriptive value in **Name**.
 4. Enter the playlist address in **Source Link**, or select **Browse** to choose a local `.m3u` file.
 5. If the source requires authentication, enable the username/password option and enter the provider credentials.
-6. Select **Manage Categories** before saving the source.
+6. Select [**Manage Categories**](#manage-categories) before saving the source.
 7. In the category view, select **Refresh Categories** and wait for IPTVBoss to load the provider's current categories.
 8. Select the categories you want to import, then close the category view.
 9. Review the output and category options.
@@ -31,7 +51,7 @@ Use the API workflow when your provider supplies a server address, username, and
 2. Select **Add API Source**.
 3. Enter the provider server address.
 4. Enter the supplied username and password.
-5. Select **Manage Categories** before saving the source.
+5. Select [**Manage Categories**](#manage-categories) before saving the source.
 6. In the category view, select **Refresh Categories** and wait for the category list to load.
 7. Select the categories and content types to include.
 8. Review whether VOD or series content should be included in the M3U output.

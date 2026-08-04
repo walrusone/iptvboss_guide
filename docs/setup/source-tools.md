@@ -27,26 +27,9 @@ Use **Sync All Sources** when all configured playlist sources should be refreshe
 !!! warning
     Name cleanup can affect matching, AED regexes, and output. Record the original naming pattern before applying a broad change.
 
-## Manage categories
+## Playlist category maintenance
 
-Use **Manage Categories** in the source dialog before saving a new playlist. The same view can be opened later when category membership or category names have changed at the provider.
-
-The dialog shows separate lists for **Live Categories**, **VOD Categories**, and **Series Categories**. The count below each list reports how many categories are shown, how many exist in total, and how many are stale. Use the filter field above a list to narrow the visible categories.
-
-1. Open **Manage Categories** from the source workflow.
-2. Select **Refresh Categories** in the category view.
-3. Wait for the provider's current categories to load.
-4. Click a category to select it. Use Ctrl-click on Windows/Linux or Command-click on macOS to select multiple categories.
-5. Right-click the selected categories to use the available actions:
-   - **Select All** selects every category in that list.
-   - **Enable Selected** includes the selected categories in the source.
-   - **Disable Selected** excludes the selected categories from the source.
-   - **Clear Selected Stale** removes selected categories that are no longer current, when stale categories are present.
-6. Repeat the selection and enable/disable actions independently in the Live, VOD, and Series lists.
-7. Close the category view to keep the selection, then save the source dialog.
-8. Confirm that the affected layout groups still contain the intended channels.
-
-![Refresh categories](../assets/images/epg/manage-refresh-categories.png)
+Category selection belongs to the playlist source workflow. See [Manage Categories in Adding a Playlist](playlists.md#manage-categories) when adding or editing a source. After changing categories, confirm that the affected layout groups still contain the intended channels.
 
 ## Manage channels and categories
 
