@@ -27,7 +27,7 @@ Before asking for help in the [IPTVBoss Discord](https://discord.gg/s3kpjP8EgR) 
 2. Review [common problems](troubleshooting/common-problems.md).
 3. Collect the relevant IPTVBoss logs.
 4. Include your IPTVBoss version and operating system.
-5. Use Discord for general help, or use the ticket system for account-specific or private issues.
+5. Use Discord for general help, the ticket system for account-specific or private issues, or [report a guide error on GitHub](https://github.com/walrusone/iptvboss_guide/issues).
 
 !!! note
     Menu names and screenshots are based on the current desktop workflow. They may change as IPTVBoss is updated.
