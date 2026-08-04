@@ -1,29 +1,60 @@
 # Adding a Playlist
 
-This page explains how to add and synchronize an M3U or API playlist source in IPTVBoss.
+IPTVBoss can import an M3U playlist from a URL or local file. It can also import a provider connection through the API source workflow.
 
-## Add an M3U playlist
+!!! warning
+    Use only playlist sources that you are authorized to access. Treat provider URLs, usernames, and passwords as private credentials.
 
-1. Open IPTVBoss.
-2. Select **Sources**.
-3. Select **Add M3U**.
-4. Enter a descriptive source name.
-5. Enter the playlist URL or select the appropriate local file option.
-6. Review the source settings.
+## Add an M3U source
+
+1. Open **Sources**.
+2. Select **Add M3U Source**.
+3. Enter a descriptive value in **Name**.
+4. Enter the playlist address in **Source Link**, or select **Browse** to choose a local `.m3u` file.
+5. If the source requires authentication, enable the username/password option and enter the provider credentials.
+6. Review the output and category options.
 7. Select **Save**.
-8. Synchronize the source from the Sources Manager.
 
 ![The Add M3U Source dialog](../assets/images/sources/add-m3u-source.png)
 
+For a documentation example, use a value such as:
+
+```text
+https://provider.example/playlist.m3u
+```
+
+Do not use a real provider URL in the guide or in screenshots.
+
+## Add an API source
+
+Use the API workflow when your provider supplies a server address, username, and password instead of a complete M3U URL.
+
+1. Open **Sources**.
+2. Select **Add API Source**.
+3. Enter the provider server address.
+4. Enter the supplied username and password.
+5. Review whether VOD or series content should be included in the M3U output.
+6. Select **Save**.
+
+![The Add API Source dialog](../assets/images/sources/add-api-source.png)
+
 !!! note
-    Do not include playlist credentials or private URLs in screenshots, support tickets, or documentation examples.
+    API source fields vary by provider. If the provider gives you a complete playlist URL, use **Add M3U Source** instead.
 
-## Confirm the source
+## Synchronize the source
 
-Open **Sources** → **Sources Manager** and confirm that the playlist appears with its current synchronization status.
+1. Open **Sources** → **Sources Manager**.
+2. Select the source you added.
+3. Start the source synchronization action.
+4. Wait for the synchronization to finish before editing channels or generating output.
+5. Review the imported categories and channel count.
 
 ![The Sources Manager](../assets/images/sources/sources-manager.png)
 
-!!! note "Version requirement"
-    These labels and screenshots target the IPTVBoss 3.11.x desktop workflow and may change in later releases.
+If synchronization fails, confirm that the URL is reachable, credentials are correct, and the provider is online. Then review [Common Problems](../troubleshooting/common-problems.md).
 
+!!! note "Basic and Pro"
+    Basic accounts have a limited number of playlist sources. Pro accounts provide higher or unlimited source limits depending on the subscription tier.
+
+!!! note "Version requirement"
+    These labels and screenshots target the IPTVBoss 3.11 desktop workflow.
