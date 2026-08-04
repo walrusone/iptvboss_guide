@@ -44,5 +44,5 @@ Do not use an all-layout action when you are testing a single layout change.
 !!! note
     Output filenames and destinations depend on the layout settings. Do not assume that every layout writes to the same folder.
 
-!!! note "Version requirement"
-    These menu names target the IPTVBoss 3.11 desktop workflow.
+!!! note
+    Menu labels may change between desktop releases. Use [Cloud Output Links](output-links.md) when the layout publishes cloud-hosted links.

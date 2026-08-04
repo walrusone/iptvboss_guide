@@ -2,6 +2,8 @@
 
 A layout is the publishable arrangement of your IPTV channels. It controls which groups and channels appear in output and which EPG settings apply to them.
 
+![Layout menu](../assets/images/layout-menu.png)
+
 The setup relationship is:
 
 ```text

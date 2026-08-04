@@ -2,7 +2,7 @@
 
 Welcome to the official IPTVBoss user guide.
 
-This guide explains how to install, configure, update, and troubleshoot IPTVBoss 3.11.x.
+This guide explains how to install, configure, update, and troubleshoot IPTVBoss.
 
 ## New users
 
@@ -30,5 +30,4 @@ Before opening a support ticket:
 5. Open a ticket through the [IPTVBoss member portal](https://members.bosstees.net/).
 
 !!! note
-    This first release targets the IPTVBoss 3.11.x workflow. Version-specific differences are called out on the relevant pages.
-
+    Menu names and screenshots are based on the current desktop workflow. They may change as IPTVBoss is updated.

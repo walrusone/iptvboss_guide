@@ -56,5 +56,5 @@ If synchronization fails, confirm that the URL is reachable, credentials are cor
 !!! note "Basic and Pro"
     Basic accounts have a limited number of playlist sources. Pro accounts provide higher or unlimited source limits depending on the subscription tier.
 
-!!! note "Version requirement"
-    These labels and screenshots target the IPTVBoss 3.11 desktop workflow.
+!!! note
+    Menu labels and screenshots may change between desktop releases.

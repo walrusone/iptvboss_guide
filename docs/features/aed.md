@@ -206,9 +206,15 @@ Include examples from different leagues, event states, and provider naming varia
 
 ![AED editor AI and regex options](../assets/images/sources/aed-editor-ai-regex.png)
 
+![AED bulk updater](../assets/images/sources/aed-bulk-updater.png)
+
 - **AED Defaults** stores reusable output and matching defaults.
 - **AED Bulk Updater** applies selected changes to multiple AEDs.
+- **Import AED(s)** and **Export AED(s)** move AED definitions between installations.
+- **Reload Sports Data** refreshes the sports data used by sports AED workflows.
+- **Reload TXT Channel Names** reloads text-based channel names when that source workflow is in use.
 - **Refresh All AEDs** refreshes stale AED results across layouts when available.
-- **Import AED(s)** and **Export AED(s)** help move definitions between installations.
+
+![AED Defaults settings](../assets/images/settings-aed-defaults.png)
 
 AED tools may depend on the account plan and application release. If a menu item is locked, check account access before troubleshooting the definition.

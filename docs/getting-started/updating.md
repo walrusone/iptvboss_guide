@@ -37,5 +37,5 @@ Check the version shown by the application, then test a low-risk workflow:
 
 Do not delete the database. Save the logs, note the version you installed, and open a support ticket through the [IPTVBoss member portal](https://members.bosstees.net/).
 
-!!! note "Version requirement"
-    The release page and installer names may change as IPTVBoss 3.11 releases are published.
+!!! note
+    The release page and installer names may change as new IPTVBoss releases are published.

@@ -43,5 +43,5 @@ The first-run setup is complete when you can:
 3. Open **Settings** without an error.
 4. Continue to [Adding a playlist](../setup/playlists.md).
 
-!!! note "Version requirement"
-    This page targets the IPTVBoss 3.11 release and should be reviewed again if the startup or activation screens change.
+!!! note
+    Startup and activation screens may change between releases. Confirm the labels shown by the installed version.

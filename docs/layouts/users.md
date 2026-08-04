@@ -29,13 +29,15 @@ Universal EPG is often more efficient when every user uses the same EPG data. It
 
 ## Manage users
 
-1. Open the **Layouts** area.
+1. Open the **Sources** menu.
 2. Select **Manage Users**.
 3. Add or select a user.
 4. Set **User Enabled** when the user should receive output.
 5. Assign only layouts that are enabled.
 6. Review the source credentials and enable the credentials the user should use.
 7. Save the user and verify the generated links.
+
+![Manage Users dialog](../assets/images/sources/manage-users.png)
 
 The server console may also expose **User Management** for administrators. Server-side changes can trigger backups or cloud synchronization, so wait for the operation to finish before making another database change.
 

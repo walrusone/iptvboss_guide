@@ -45,4 +45,4 @@ Basic accounts provide the core editor workflow with limits on sources, EPG sour
 The exact availability and limits depend on the account and release. Treat a locked menu item as a plan or authorization question first, then review the account settings or contact support.
 
 !!! note
-    This overview describes the IPTVBoss 3.11 desktop workflow. Feature names and availability may change in later releases.
+    Feature names and availability may change between releases. Use the current application labels when they differ from this guide.

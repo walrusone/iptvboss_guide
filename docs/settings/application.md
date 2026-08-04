@@ -2,6 +2,8 @@
 
 Open **Settings** → **IPTVBoss Settings** to configure application-wide behavior. These settings affect more than one source or layout, so change them deliberately.
 
+![Settings menu](../assets/images/settings-menu.png)
+
 ![IPTVBoss Settings](../assets/images/getting-started/iptvboss-settings-2.png)
 
 ## General settings

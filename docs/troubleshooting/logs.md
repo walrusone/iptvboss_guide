@@ -12,6 +12,8 @@ Logs record startup, source synchronization, EPG imports, output generation, and
 
 ![The View Logs screen](../assets/images/troubleshooting/view-logs.png)
 
+![Logs menu](../assets/images/logs-menu.png)
+
 ## Find the log files
 
 IPTVBoss stores logs in a `logs` directory under its application data directory. The application’s log viewer is the safest way to identify the active data location.

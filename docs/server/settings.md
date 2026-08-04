@@ -4,6 +4,10 @@ Use **Server** → **Settings** or the **Server Settings** section in the Server
 
 ![Server Settings](../assets/images/server-console/server-settings.png)
 
+![Server settings dashboard](../assets/images/server/server-settings-1.png)
+
+![Additional server settings](../assets/images/server/server-settings-2.png)
+
 ## Configure the server connection
 
 1. Open **Server Settings**.
@@ -47,5 +51,5 @@ The run history shows whether scheduled work succeeded or failed and when it las
 
 If the server cannot be reached after a change, restore the previous connection values and review the logs before changing the port again.
 
-!!! note "Version requirement"
-    Server settings and schedule controls shown here target the IPTVBoss 3.11 server console.
+!!! note
+    Server settings and schedule controls may change between releases.

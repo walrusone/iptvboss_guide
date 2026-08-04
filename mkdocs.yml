@@ -63,8 +63,11 @@ nav:
   - Sources and Setup:
       - Adding Playlists: setup/playlists.md
       - Adding EPG Sources: setup/epg-sources.md
+      - Universal EPG: setup/universal-epg.md
+      - Source and EPG Tools: setup/source-tools.md
       - Channel Mapping: setup/channel-mapping.md
       - Creating Output: setup/output.md
+      - Cloud Output Links: setup/output-links.md
   - Layouts:
       - Layout Overview: layouts/index.md
       - Layout Manager: layouts/layout-manager.md
@@ -81,6 +84,8 @@ nav:
       - Application Settings: settings/application.md
       - Preferences and Theme: settings/preferences.md
       - Automatic Synchronization: settings/automation.md
+      - Sync Schedule: settings/scheduling.md
+      - AI Settings: settings/ai.md
   - Troubleshooting:
       - Common Problems: troubleshooting/common-problems.md
       - Logs and Diagnostics: troubleshooting/logs.md
