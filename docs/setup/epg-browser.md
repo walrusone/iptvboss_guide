@@ -11,14 +11,17 @@ The **EPG Browser** helps inspect guide data before or after assigning an EPG ch
 5. Select a **Channel**.
 6. Review the available programmes, descriptions, and programme icons.
 
+Double-click a channel in the EPG Browser to return to **Layout Editor** with that channel selected.
+
 ![EPG Browser](../assets/images/layout/epg-browser.png)
 
 ## Search guide data
 
-1. Return to [Channel Mapping](channel-mapping.md) and select **EPG Search Options** beside the mapping controls when the mapping search scope needs adjustment.
-2. Search using a distinctive channel, network, or service name.
-3. Clear the search text before trying a different term.
-4. Compare the country, network, identifier, and programme data.
+Use [Channel Mapping](channel-mapping.md) for the complete mapping workflow and to configure **EPG Search Options** before searching for matches. In the EPG Browser itself:
+
+1. Search using a distinctive channel, network, or service name.
+2. Clear the search text before trying a different term.
+3. Compare the country, network, identifier, and programme data.
 
 If a channel has no programmes, confirm that the EPG source synchronized successfully and that the source contains data for the requested date.
 
