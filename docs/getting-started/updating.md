@@ -2,6 +2,9 @@
 
 Update IPTVBoss while protecting the database, settings, layouts, and source configuration already on the computer.
 
+!!! note "Automatic updates"
+    Windows and macOS installations should normally update automatically when a new release is available. Use this page when an automatic update does not complete, when you need to verify the installed version, or when updating a Linux package manually.
+
 ## Before updating
 
 1. Finish or cancel any source synchronization and output operation.
