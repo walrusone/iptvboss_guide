@@ -1,0 +1,12 @@
+:root {
+  --md-primary-fg-color: #273a8a;
+  --md-primary-fg-color--light: #4054aa;
+  --md-primary-fg-color--dark: #1b2868;
+}
+
+.md-typeset img {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.15rem 0.4rem #00000018;
+}
+

@@ -1,0 +1,86 @@
+site_name: IPTVBoss Guide
+site_description: Official user guide and documentation for IPTVBoss
+site_url: https://guide.iptvboss.pro/
+
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Installation: getting-started/installation.md
+      - First Run: getting-started/first-run.md
+      - Updating IPTVBoss: getting-started/updating.md
+  - Sources and Setup:
+      - Adding Playlists: setup/playlists.md
+      - Adding EPG Sources: setup/epg-sources.md
+      - Channel Mapping: setup/channel-mapping.md
+      - Creating Output: setup/output.md
+  - Layouts:
+      - Layout Overview: layouts/index.md
+      - Layout Manager: layouts/layout-manager.md
+      - Layout Editor: layouts/layout-editor.md
+  - Features:
+      - Feature Overview: features/index.md
+  - Server:
+      - Server Overview: server/index.md
+      - Server Settings: server/settings.md
+  - Settings:
+      - Application Settings: settings/application.md
+      - Preferences and Theme: settings/preferences.md
+  - Troubleshooting:
+      - Common Problems: troubleshooting/common-problems.md
+      - Logs and Diagnostics: troubleshooting/logs.md
+      - Resetting IPTVBoss: troubleshooting/reset.md
+  - Frequently Asked Questions: faq.md
+  - Support: support.md
+
