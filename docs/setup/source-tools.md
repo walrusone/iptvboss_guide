@@ -71,7 +71,19 @@ Confirm the tag behavior before applying it globally. Tags can affect grouping, 
 
 ## EPG search options
 
-Use **Sources** → **EPG Search Options** to adjust the matching behavior used when searching for EPG channels. Test a changed option against a small set of channels before remapping a complete layout.
+**EPG Search Options** controls which EPG sources are searched during automatic and manual channel mapping. It does not add EPG sources or make guide data available.
+
+1. Open **Layout Editor** and select **EPG Search Options** beside the mapping controls.
+2. Enable only the EPG sources that should be considered for the current mapping work.
+3. Select **OK** to save the search scope.
+4. Run automatic or manual mapping for the selected channels.
+
+Keep the search list focused on the sources that match the channels you are mapping. For example, enable only USA EPG sources while mapping USA channels, then disable those and enable only Canada EPG sources while mapping Canadian channels. This reduces unrelated matches and makes the results easier to review.
+
+!!! note
+    The source selection affects mapping searches; it does not disable synchronization or remove a source from the application. Re-enable a source later when it should be included in another mapping pass.
+
+![EPG search options](../assets/images/epg/epg-search-options.png)
 
 ## Manage users
 

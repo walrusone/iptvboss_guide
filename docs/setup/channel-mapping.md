@@ -13,6 +13,8 @@ Map a playlist channel to an EPG channel so the generated guide contains program
 
 ## Search for an EPG match
 
+Before searching, open **EPG Search Options** beside the mapping controls and enable only the EPG sources relevant to the channels being mapped. For example, enable only USA sources for USA channels, then switch to only Canada sources for Canadian channels.
+
 1. Select the EPG search or manual search control for the selected channel.
 2. Review the suggested matches.
 3. Select the EPG source and channel that match the playlist channel.
