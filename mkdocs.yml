@@ -71,6 +71,8 @@ nav:
       - Layout Editor: layouts/layout-editor.md
   - Features:
       - Feature Overview: features/index.md
+      - Advanced Event Definitions: features/aed.md
+      - Custom Sports: features/custom-sports.md
   - Server:
       - Server Overview: server/index.md
       - Server Settings: server/settings.md
@@ -83,4 +85,3 @@ nav:
       - Resetting IPTVBoss: troubleshooting/reset.md
   - Frequently Asked Questions: faq.md
   - Support: support.md
-
