@@ -19,12 +19,25 @@ The related **AED Bulk Updater** can apply a change to multiple existing AEDs. I
 
 ![AED Editor showing event and output fields](../assets/images/sources/aed-editor.png)
 
+## League Based and Regex Based AEDs
+
+AEDs can be used in two main ways. Choose the approach that matches the data available from your EPG source.
+
+| AED approach | How it works | Best suited for |
+| --- | --- | --- |
+| **League Based** | Matches a channel to sports and league event data, then uses the matching event to populate teams, league, venue, time, logos, and other placeholders. | Sports channels whose names identify a league or sport and whose events are available in the sports data. |
+| **Regex Based** | Reads the provider channel name and uses regular expressions to extract the title, date, time, or other values. | Non-sports channels, custom event feeds, or providers whose event details are not available in the sports data. |
+
+League Based AEDs can also use regex. **Title Regex** can provide additional `{title}` fields, while **Date Regex** and **Time Regex** can extract event dates and times from provider names. Supplying date and time regex is recommended when those values are present in the channel name because it can speed up AED event matching and processing.
+
+Regex Based AEDs do not need a league match to create an output channel name. They rely on the provider naming pattern, so similar channel names and representative test samples are especially important.
+
 ## How an AED is evaluated
 
-An AED normally combines three jobs:
+The exact steps depend on the AED approach, but an AED normally combines three jobs:
 
-1. **Match the provider channel.** Channel Name Regex decides which channels the definition applies to.
-2. **Extract event values.** Title Regex and any sports event data populate placeholders such as `{title}`, `{team1}`, and `{league}`.
+1. **Match the provider channel.** A League Based AED uses its sport and league settings; a Regex Based AED uses Channel Name Regex.
+2. **Extract event values.** Sports event data and regex fields populate placeholders such as `{title}`, `{team1}`, and `{league}`.
 3. **Format the result.** Output fields use placeholders to produce the channel name, event title, description, and logo URL.
 
 If no event is active, the channel can fall back to its provider name or to the AED's no-event behavior, depending on the configuration.
@@ -189,6 +202,21 @@ For times written with AM or PM, this pattern matches values such as `8pm`, `8:3
 !!! warning
     Alternation such as `regex1|regex2` can populate only one side's capture groups. Prefer named groups or separate patterns when both formats must return values.
 
+## Time and date formats
+
+Date and time settings tell the AED how to interpret values captured from a provider channel name. The regex finds the value; the corresponding format tells IPTVBoss what that value means.
+
+- **Time Regex** identifies the time in the provider name.
+- **Time Format** describes the captured time, including whether it uses a 12-hour or 24-hour clock and whether it includes minutes or an AM/PM marker.
+- **Date Regex** identifies the date in the provider name.
+- **Date Format** describes the captured date, including the order of the day, month, and year.
+- **Timezone of Source** identifies the timezone represented by the provider’s date and time.
+- **Output Time Format** and **Output Timezone** control how the event time is shown in the generated output.
+
+For example, a channel containing `03 Aug 06:40 PM` could use a date format such as `d MMM` and a time format such as `h:mm a`. A provider using a 24-hour value such as `18:40` needs a matching 24-hour time format. The format must match the provider text exactly; changing the format without changing the source pattern can prevent the event from matching.
+
+Use the AED tester with samples from different days, times, and naming variations. Check the source timezone as well as the output timezone when an event appears at the wrong time.
+
 ## Test and refresh an AED
 
 1. Open the AED tester from the AED workflow.
@@ -204,12 +232,27 @@ Include examples from different leagues, event states, and provider naming varia
 
 ## Related tools
 
+### AI Regex Suggestions
+
 ![AED editor AI and regex options](../assets/images/sources/aed-editor-ai-regex.png)
+
+**AI Regex Suggestions** can examine representative channel names and suggest values for the fields most likely to vary by provider, including Title Regex, Date Regex, Time Regex, Date Format, Time Format, and Source Timezone.
+
+To use it, select representative channels, add samples from the source, generate suggestions, and review each suggested value before applying it. Include multiple naming variations when possible. AI-generated regex is a starting point, not a guarantee that every channel will match. Test the applied AED in the tester and inspect the generated event before assigning it broadly.
+
+AI Regex Suggestions requires a configured AI provider and model. See [AI Settings](../settings/ai.md) for provider setup and troubleshooting.
+
+### AED Bulk Updater
 
 ![AED bulk updater](../assets/images/sources/aed-bulk-updater.png)
 
+**AED Bulk Updater** applies selected field changes to several AEDs at once. Select the AEDs to update, enable only the fields that should change, enter or choose the new values, and apply the update. It can be used for shared extraction settings such as regex and formats, output timing settings, matching rules, logos, and enabled-state options.
+
+Use it when several AEDs need the same correction, such as a provider changing from 12-hour to 24-hour times or a timezone setting changing. Review the selected AEDs and enabled fields carefully: any selected field can replace the existing value on every chosen AED. Test representative AEDs after a bulk update and refresh their assigned channels when the results are correct.
+
+Other AED tools include:
+
 - **AED Defaults** stores reusable output and matching defaults.
-- **AED Bulk Updater** applies selected changes to multiple AEDs.
 - **Import AED(s)** and **Export AED(s)** move AED definitions between installations.
 - **Reload Sports Data** refreshes the sports data used by sports AED workflows.
 - **Reload TXT Channel Names** reloads text-based channel names when that source workflow is in use.

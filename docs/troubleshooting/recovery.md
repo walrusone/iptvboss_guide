@@ -20,6 +20,26 @@ If the Windows installation uses another drive or custom path, use the correspon
 
 The `db` and `backup` directories are especially important. Do not delete them until you have copied them somewhere safe and confirmed that the copy can be read.
 
+## Restore an XC Server paired code
+
+When an installation is reinstalled, moved to another computer, or loses its local XC Server pairing, use **XC Server Paired Code Restore** when the server provides a paired recovery code. This restores the installation’s connection to the existing XC Server without creating a new server or replacing the server database.
+
+Before starting, confirm that you are using the intended XC Server and that the current server database is backed up. A paired code grants access to that server and should be handled like a temporary credential.
+
+1. On the XC Server, open **Server** → **Dashboard** and open **Paired Devices**.
+2. Generate or copy the paired recovery code for the installation.
+3. On the installation being recovered, open **Settings** → **Server Settings**.
+4. Open **XC Server Paired Code Restore**.
+5. Enter the server address when requested, then paste the paired code.
+6. Apply the restore and wait for the installation to report that it is paired.
+7. Confirm the installation in the server’s **Paired Devices** list.
+8. Review **XC Cloud Database** settings and confirm that synchronization is enabled only when the server database should be authoritative.
+
+!!! warning
+    Do not use paired code restore to initialize an unrelated server or to replace a database. If the server is already paired to other installations, confirm the server URL and database owner before applying the code.
+
+If the paired code is expired or rejected, generate a new code and repeat the restore. For the normal first-time pairing flow, see [Server Dashboard and GUI Settings](../server/settings.md).
+
 ## Restore a deleted Dropbox backup
 
 Dropbox retains deleted files for a limited period according to the Dropbox account and plan. A noGUI run may create a database backup, so older backup files can sometimes be recovered from Dropbox deleted items.
