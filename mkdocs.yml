@@ -10,6 +10,7 @@ theme:
   logo: assets/branding/banner_logo.png
   favicon: assets/branding/cropped-logo.png
   features:
+    # Keep top-level sections user-collapsible; do not enable navigation.expand.
     - navigation.sections
     - navigation.top
     - navigation.footer
