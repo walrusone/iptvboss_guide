@@ -82,8 +82,8 @@ nav:
       - Advanced EPG Dummies: features/aed.md
       - Custom Sports: features/custom-sports.md
   - Server:
-      - Server Overview: server/index.md
-      - Server Settings: server/settings.md
+      - Server Console: server/index.md
+      - Server Dashboard and GUI Settings: server/settings.md
       - Server User Management: server/users.md
   - Settings:
       - Application Settings: settings/application.md
