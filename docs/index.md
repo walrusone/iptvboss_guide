@@ -21,13 +21,13 @@ Use the navigation or search at the top of the page to find instructions for a s
 
 ## Getting support
 
-Before opening a support ticket:
+Before asking for help in the [IPTVBoss Discord](https://discord.gg/s3kpjP8EgR) or opening a [support ticket through the member portal](https://members.bosstees.net/):
 
 1. Search this guide for the error or feature.
 2. Review [common problems](troubleshooting/common-problems.md).
 3. Collect the relevant IPTVBoss logs.
 4. Include your IPTVBoss version and operating system.
-5. Open a ticket through the [IPTVBoss member portal](https://members.bosstees.net/).
+5. Use Discord for general help, or use the ticket system for account-specific or private issues.
 
 !!! note
     Menu names and screenshots are based on the current desktop workflow. They may change as IPTVBoss is updated.

@@ -13,7 +13,7 @@ When cloud output is configured, IPTVBoss can display the generated M3U and EPG 
 7. Copy only the link intended for the selected user or player.
 
 !!! warning
-    Cloud links can provide access to provider content. Treat them as credentials and never publish them in screenshots, issues, or documentation.
+    Cloud links can provide access to provider content. Treat them as credentials and never share them publicly.
 
 ## Verify a link
 

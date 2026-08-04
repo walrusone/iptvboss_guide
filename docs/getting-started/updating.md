@@ -38,7 +38,7 @@ Check the version shown by the application, then test a low-risk workflow:
 
 ## If the update fails
 
-Do not delete the database. Save the logs, note the version you installed, and open a support ticket through the [IPTVBoss member portal](https://members.bosstees.net/).
+Do not delete the database. Save the logs, note the version you installed, then ask in the [IPTVBoss Discord](https://discord.gg/s3kpjP8EgR) or open a [support ticket through the member portal](https://members.bosstees.net/) if the issue is account-specific or private.
 
 !!! note
     The release page and installer names may change as new IPTVBoss releases are published.

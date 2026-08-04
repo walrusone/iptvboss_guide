@@ -13,12 +13,6 @@ An EPG source supplies programme information that can be assigned to channels in
 
 ![The Add EPG dialog](../assets/images/epg/add-epg-source.png)
 
-Use a placeholder URL when documenting or testing the procedure:
-
-```text
-https://provider.example/guide.xml
-```
-
 !!! warning
     Do not publish private EPG URLs, account tokens, or provider credentials.
 

@@ -1,6 +1,6 @@
 # Logs and Diagnostics
 
-Logs record startup, source synchronization, EPG imports, output generation, and errors. Include the relevant log with a support request when it does not contain private information.
+Logs record startup, source synchronization, EPG imports, output generation, and errors. After sanitizing a relevant log, include it when asking in the [IPTVBoss Discord](https://discord.gg/s3kpjP8EgR) or opening a [support ticket through the member portal](https://members.bosstees.net/).
 
 ## View logs in IPTVBoss
 

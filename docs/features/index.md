@@ -42,7 +42,7 @@ IPTVBoss includes synchronization schedules, database backup and restore workflo
 
 Basic accounts provide the core editor workflow with limits on sources, EPG sources, users, and layouts. See [IPTVBoss Pro and Account Access](../settings/pro.md) for the confirmed Pro-only feature categories and account-access workflow.
 
-The exact availability and limits depend on the account and release. Treat a locked menu item as a plan or authorization question first, then review the account settings or contact support.
+The exact availability and limits depend on the account and release. Treat a locked menu item as a plan or authorization question first, then review the account settings. For help, ask in the [IPTVBoss Discord](https://discord.gg/s3kpjP8EgR) or open a [support ticket through the member portal](https://members.bosstees.net/).
 
 !!! note
     Feature names and availability may change between releases. Use the current application labels when they differ from this guide.

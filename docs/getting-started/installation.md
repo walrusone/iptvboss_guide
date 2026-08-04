@@ -28,7 +28,7 @@ Choose the asset for your operating system and processor:
 | Linux | Intel or AMD | Linux x64 package |
 | Linux | ARM64 | Linux ARM64 package |
 
-The exact asset names may change between releases. Do not substitute a beta or alpha download unless the support request specifically requires it.
+The exact asset names may change between releases. Do not substitute a beta or alpha download unless a [support ticket](https://members.bosstees.net/) specifically requires it.
 
 ## Windows
 

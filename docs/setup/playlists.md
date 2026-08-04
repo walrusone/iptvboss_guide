@@ -12,18 +12,12 @@ IPTVBoss can import an M3U playlist from a URL or local file. It can also import
 3. Enter a descriptive value in **Name**.
 4. Enter the playlist address in **Source Link**, or select **Browse** to choose a local `.m3u` file.
 5. If the source requires authentication, enable the username/password option and enter the provider credentials.
-6. Review the output and category options.
-7. Select **Save**.
+6. Select **Refresh Categories** and wait for IPTVBoss to load the provider's current categories.
+7. Select the categories you want to import, then close the category selector.
+8. Review the output and category options.
+9. Select **Save**.
 
 ![The Add M3U Source dialog](../assets/images/sources/add-m3u-source.png)
-
-For a documentation example, use a value such as:
-
-```text
-https://provider.example/playlist.m3u
-```
-
-Do not use a real provider URL in the guide or in screenshots.
 
 ## Add an API source
 
@@ -33,8 +27,10 @@ Use the API workflow when your provider supplies a server address, username, and
 2. Select **Add API Source**.
 3. Enter the provider server address.
 4. Enter the supplied username and password.
-5. Review whether VOD or series content should be included in the M3U output.
-6. Select **Save**.
+5. Select **Refresh Categories** and wait for the category list to load.
+6. Select the categories and content types to include.
+7. Review whether VOD or series content should be included in the M3U output.
+8. Select **Save**.
 
 ![The Add API Source dialog](../assets/images/sources/add-api-source.png)
 

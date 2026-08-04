@@ -43,4 +43,4 @@ Some EPG, layout, source, and advanced editing features depend on the account pl
 
 ## When to open a ticket
 
-Open a ticket through the [IPTVBoss member portal](https://members.bosstees.net/) after collecting the version, operating system, steps to reproduce, and sanitized logs.
+After collecting the version, operating system, steps to reproduce, and sanitized logs, ask in the [IPTVBoss Discord](https://discord.gg/s3kpjP8EgR) or open a [support ticket through the member portal](https://members.bosstees.net/) for account-specific or private issues.

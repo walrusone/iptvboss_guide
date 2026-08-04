@@ -24,11 +24,11 @@ Open [Logs and Diagnostics](troubleshooting/logs.md) and select **View Logs**. I
 
 Yes, a normal update should preserve the existing database and configuration. Create or confirm a backup before updating, close IPTVBoss, install the new version, and verify the layouts after startup.
 
-## What should I include in a support ticket?
+## What should I include when asking for support?
 
 Include the IPTVBoss version, operating system, exact steps to reproduce the problem, approximate failure time, relevant settings, and sanitized logs.
 
-[Open the IPTVBoss member portal](https://members.bosstees.net/)
+For general questions, [join the IPTVBoss Discord](https://discord.gg/s3kpjP8EgR). For account, billing, private, or sensitive issues, [open a support ticket through the member portal](https://members.bosstees.net/).
 
 !!! warning
     Never include passwords, playlist URLs containing credentials, tokens, license keys, or private customer information.
