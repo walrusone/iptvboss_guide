@@ -10,11 +10,13 @@ This page explains how to install the current IPTVBoss release on Windows, macOS
 - Choose a location where IPTVBoss can keep its local database and output files.
 
 !!! warning
-    Do not download IPTVBoss from an unofficial mirror. Use the official release page and verify the release and operating-system package before installing.
+    Do not download IPTVBoss from an unofficial mirror. Use the official IPTVBoss download page and verify the release and operating-system package before installing.
 
 ## Download the installer
 
-Open the [IPTVBoss releases page](https://github.com/walrusone/iptvboss-release/releases/latest) and select the current release for your operating system.
+Start with the [official IPTVBoss download page](https://walrusone.github.io/iptvboss-release/download.html) and select the current release for your operating system.
+
+The [GitHub Releases page](https://github.com/walrusone/iptvboss-release/releases/latest) is also available when you need to inspect release notes or download assets directly.
 
 Choose the asset for your operating system and processor:
 
@@ -51,6 +53,14 @@ On the first launch, macOS may ask you to confirm that you want to open an appli
 1. Download the package matching your Linux architecture.
 2. Install the package using your distribution’s package manager.
 3. Start **IPTVBoss** from the applications menu or its installed command.
+
+For Debian-based Linux, the release package uses the system architecture in its filename. The download page provides the current package version; replace `3.11.16` below with the version shown there:
+
+```bash
+CPU=$(dpkg --print-architecture)
+wget https://github.com/walrusone/iptvboss-release/releases/latest/download/iptvboss_3.11.16_${CPU}.deb
+sudo apt install ./iptvboss_3.11.16_${CPU}.deb
+```
 
 The package format and installation command may vary by release. Follow the instructions attached to the selected release rather than copying a command from an older version.
 

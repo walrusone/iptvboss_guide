@@ -8,7 +8,7 @@ Update IPTVBoss while protecting the database, settings, layouts, and source con
 2. Confirm that no second IPTVBoss process is using the database.
 3. Create or confirm a recent database backup.
 4. Record the current IPTVBoss version and operating system.
-5. Download the new installer only from the [official release page](https://github.com/walrusone/iptvboss-release/releases/latest).
+5. Download the new installer only from the [official IPTVBoss download page](https://walrusone.github.io/iptvboss-release/download.html). Use the [GitHub Releases page](https://github.com/walrusone/iptvboss-release/releases/latest) when you need direct assets or release notes.
 
 !!! warning
     Do not remove the existing application data directory as part of a normal update. That directory contains configuration and database files.
