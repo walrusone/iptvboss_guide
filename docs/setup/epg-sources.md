@@ -2,32 +2,34 @@
 
 An EPG source supplies programme information that can be assigned to channels in a layout.
 
-## Add an external EPG source
-
-1. Open **Sources**.
-2. Select **Add EPG**.
-3. Enter a descriptive name.
-4. Enter the EPG source URL supplied by your provider.
-5. Review any refresh, time-zone, and logo options shown in the dialog.
-6. Select **Save**.
-
-![The Add EPG dialog](../assets/images/epg/add-epg-source.png)
-
-!!! warning
-    Do not publish private EPG URLs, account tokens, or provider credentials.
-
 ## Add a built-in or Pro EPG
-
-IPTVBoss can provide built-in EPG sources for accounts that have access to them. These sources are selected from the source list instead of being entered as a URL.
 
 1. Open **Sources**.
 2. Select **Add EPG**.
 3. Open the **Source** dropdown.
 4. Select the available built-in or Pro EPG source.
 5. Confirm that the source name is populated and that the URL field is not required.
-6. Review the source settings and select **Save**.
+6. Review any refresh, time-zone, and logo options shown in the dialog.
+7. Select **Save**.
+
+![The Add Pro EPG dialog](../assets/images/epg/add-epg-pro.png)
 
 The built-in source is then available for synchronization and channel mapping like another EPG source. If the source is not listed or is locked, confirm the account status in [IPTVBoss Pro and Account Access](../settings/pro.md).
+
+## Add an external EPG source
+
+1. Open **Sources**.
+2. Select **Add EPG**.
+3. Leave **Source** set to **Custom**.
+4. Enter a descriptive name.
+5. Enter the EPG source URL supplied by your provider.
+6. Review any refresh, time-zone, and logo options shown in the dialog.
+7. Select **Save**.
+
+![The Add EPG dialog](../assets/images/epg/add-epg-source.png)
+
+!!! warning
+    Do not publish private EPG URLs, account tokens, or provider credentials.
 
 ## Configure the EPG Layout
 
