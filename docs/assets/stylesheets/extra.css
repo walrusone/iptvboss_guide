@@ -10,16 +10,16 @@
    the blue logo. */
 body[data-md-color-primary="indigo"] .md-header,
 body[data-md-color-primary="indigo"] .md-tabs {
-  background-color: #20242c;
+  background-color: #20242c !important;
 }
 
 body[data-md-color-primary="indigo"] .md-header .md-search__form {
-  background-color: #343a46;
+  background-color: #343a46 !important;
 }
 
 body[data-md-color-primary="indigo"] .md-header .md-search__form:hover,
 body[data-md-color-primary="indigo"] .md-header .md-search__form:focus-within {
-  background-color: #414956;
+  background-color: #414956 !important;
 }
 
 .md-typeset img {
