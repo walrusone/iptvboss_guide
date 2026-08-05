@@ -14,7 +14,7 @@ An EPG source supplies programme information that can be assigned to channels in
 
 ![The Add Pro EPG dialog](../assets/images/epg/add-epg-pro.png)
 
-The built-in source is then available for synchronization and channel mapping like another EPG source. If the source is not listed or is locked, confirm the account status in [IPTVBoss Pro and Account Access](../settings/pro.md).
+The built-in source is then available for synchronization and channel mapping like another EPG source. If the source is not listed or is locked, confirm the account status in [Free vs Pro](../getting-started/free-vs-pro.md) and [IPTVBoss Pro Account Access](../settings/pro.md).
 
 ## Add an external EPG source
 

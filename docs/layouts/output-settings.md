@@ -16,7 +16,7 @@ Common settings include:
 | --- | --- |
 | **M3U Output Enabled** | Includes the layout in playlist output. |
 | **EPG Output Enabled** | Includes guide output for the layout when available. |
-| **XC Enabled** | Enables the layout for XC Server workflows when configured. |
+| **XC Enabled** | Includes this layout in XC Server output when configured. It is not required when the XC Server is used only for M3U delivery. |
 | **M3U Filename** | Sets the generated playlist filename. |
 | **EPG Filename** | Sets the generated guide filename. |
 | **Custom Output Folder** | Writes local output to a chosen folder. |
@@ -33,7 +33,7 @@ Common settings include:
 
 - Use **Custom Output Folder** for local files consumed by a player or another service on the same system.
 - Use **Cloud Provider Folder** when the layout should publish to an authorized cloud provider.
-- Use XC settings when the layout is intended for XC Server output.
+- Use XC settings when this layout is intended for XC Server output. The XC Server itself can remain enabled for M3U delivery without enabling XC on any layout.
 
 Do not enable multiple destinations until you understand which output is authoritative.
 

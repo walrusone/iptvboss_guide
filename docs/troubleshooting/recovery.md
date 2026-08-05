@@ -26,7 +26,7 @@ When an installation is reinstalled, moved to another computer, or loses its loc
 
 Before starting, confirm that you are using the intended XC Server and that the current server database is backed up. A paired code grants access to that server and should be handled like a temporary credential.
 
-1. On the XC Server, open **Server** → **Dashboard** and open **Paired Devices**.
+1. Open the [Server Console](../server/index.md) in a browser, then open [Paired Devices](../server/console/paired-devices.md).
 2. Generate or copy the paired recovery code for the installation.
 3. On the installation being recovered, open **Settings** → **Server Settings**.
 4. Open **XC Server Paired Code Restore**.
@@ -38,7 +38,7 @@ Before starting, confirm that you are using the intended XC Server and that the 
 !!! warning
     Do not use paired code restore to initialize an unrelated server or to replace a database. If the server is already paired to other installations, confirm the server URL and database owner before applying the code.
 
-If the paired code is expired or rejected, generate a new code and repeat the restore. For the normal first-time pairing flow, see [Server Dashboard and GUI Settings](../server/settings.md).
+If the paired code is expired or rejected, generate a new code and repeat the restore. For the normal first-time pairing flow, see [GUI Server Dashboard and Desktop GUI Settings](../server/settings.md).
 
 ## Restore a deleted Dropbox backup
 

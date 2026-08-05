@@ -1,24 +1,8 @@
-# IPTVBoss Pro and Account Access
+# IPTVBoss Pro Account Access
 
 Open **Settings** → **IPTVBoss Pro Settings** to activate or review Pro access.
 
-## Pro-only features
-
-The following guide features require Pro access:
-
-- Additional playlist sources
-- Additional EPG sources
-- Built-in EPGs and EPG Browser tools
-- Advanced EPG Dummy tools
-- Universal EPG
-- User management
-- Multiple layouts
-- Native Sync Schedule
-- AI Settings
-- Cloud output and backups
-- XC Server
-
-Exact limits can vary by subscription tier. Review the account information shown by IPTVBoss or the official account portal for the current limits.
+See [Free vs Pro](../getting-started/free-vs-pro.md) for the current limits and feature comparison.
 
 ## Activate or refresh access
 

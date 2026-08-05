@@ -57,6 +57,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started:
+      - Free vs Pro: getting-started/free-vs-pro.md
       - Installation: getting-started/installation.md
       - First Run: getting-started/first-run.md
       - Updating IPTVBoss: getting-started/updating.md
@@ -73,15 +74,21 @@ nav:
       - Layout Overview: layouts/index.md
       - Layout Manager: layouts/layout-manager.md
       - Layout Editor: layouts/layout-editor.md
+      - Advanced EPG Dummies: features/aed.md
+      - Custom Sports Groups: features/custom-sports.md
       - Layout Output Settings: layouts/output-settings.md
       - User Management: layouts/users.md
-  - Features:
-      - Feature Overview: features/index.md
-      - Advanced EPG Dummies: features/aed.md
-      - Custom Sports: features/custom-sports.md
   - Server:
       - Server Console: server/index.md
-      - Server Dashboard and GUI Settings: server/settings.md
+      - Console Sections:
+          - Logs: server/console/logs.md
+          - Boss Metadata: server/console/metadata.md
+          - Server Settings: server/console/settings.md
+          - User Management: server/console/users.md
+          - Paired Devices: server/console/paired-devices.md
+          - Link Restore: server/console/link-restore.md
+      - GUI Server Dashboard: server/dashboard.md
+      - Desktop GUI Settings: server/gui-settings.md
       - Server User Management: server/users.md
   - Settings:
       - Application Settings: settings/application.md
