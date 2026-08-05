@@ -64,6 +64,7 @@ nav:
   - Sources and Setup:
       - Sources Manager: setup/sources-manager.md
       - Adding Playlists: setup/playlists.md
+      - 💲 Custom Sports Channel Names: setup/custom-sports-channel-names.md
       - Adding EPG Sources: setup/epg-sources.md
       - 💲 Universal EPG: setup/universal-epg.md
       - Source and EPG Tools: setup/source-tools.md
