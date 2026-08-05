@@ -45,7 +45,17 @@ The dialog shows separate lists for **Live Categories**, **VOD Categories**, and
 
 ## Add an API source
 
-Use the API workflow when your provider supplies a server address, username, and password instead of a complete M3U URL.
+Use the API workflow when your provider uses the standard Xtream Codes API format. This is the recommended choice for a link such as:
+
+`http://provider.example:8080/get.php?username=myuser&password=mypass&type=m3u_plus&output=ts`
+
+Do not paste the entire `get.php` link into **Source Link** in the API dialog. Extract the three API fields from it:
+
+- **Address**: `http://provider.example:8080/` — keep the scheme, hostname, and port; remove `/get.php` and everything after the `?`.
+- **Username**: the value after `username=` — `myuser` in the example.
+- **Password**: the value after `password=` — `mypass` in the example.
+
+If a value contains URL-encoded characters such as `%2B` or `%40`, copy the value exactly as provided rather than changing it. If the provider gives you a standard XC link with a different filename or additional query parameters, the same rule applies: use the server portion as the address and copy the `username` and `password` parameter values.
 
 1. Open **Sources**.
 2. Select **Add API Source**.
@@ -60,7 +70,7 @@ Use the API workflow when your provider supplies a server address, username, and
 ![The Add API Source dialog](../assets/images/sources/add-api-source.png)
 
 !!! note
-    API source fields vary by provider. If the provider gives you a complete playlist URL, use **Add M3U Source** instead.
+    Use **Add M3U Source** for a genuine M3U playlist URL or local `.m3u` file that is not a standard XC login link. When the link follows the standard XC `get.php?username=...&password=...` pattern, use **Add API Source** so IPTVBoss can retrieve the provider's Live, VOD, and Series categories through the API.
 
 ## Synchronize the source
 
