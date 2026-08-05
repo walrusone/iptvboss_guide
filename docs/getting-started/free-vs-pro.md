@@ -2,6 +2,8 @@
 
 IPTVBoss has a full core editing workflow in the Free plan. Pro removes the main content limits and unlocks advanced EPG, layout, automation, cloud, AI, and XC Server features.
 
+If you want to try the Pro features, visit the [IPTVBoss members site](https://members.bosstees.net/) to start a free Pro trial.
+
 The limits and locked controls below reflect the current application behavior. Pro user capacity depends on the subscribed tier; account status and available limits are shown in **Settings** → **IPTVBoss Pro Settings**.
 
 💲 **Pro feature marker:** a dollar sign identifies a Pro-gated feature or page. Select the nearby [Free vs Pro](free-vs-pro.md) link to return to this comparison.

@@ -4,6 +4,10 @@ Welcome to the official IPTVBoss user guide.
 
 This guide explains how to install, configure, update, and troubleshoot IPTVBoss.
 
+## Free and Pro plans
+
+Review the [Free vs Pro comparison](getting-started/free-vs-pro.md) before configuring advanced features. The [IPTVBoss members site](https://members.bosstees.net/) also offers a free Pro trial, so you can test Pro features before choosing a plan.
+
 ## New users
 
 Start here:
