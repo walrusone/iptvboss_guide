@@ -52,7 +52,7 @@ Save the EPG source after reviewing the three lists, then synchronize the source
 
 ## Synchronize the EPG source
 
-1. Open [Source and EPG Tools](source-tools.md) → **Sources Manager**.
+1. Open [Sources Manager](sources-manager.md).
 2. Select the EPG source.
 3. Start the synchronization action.
 4. Wait for the import to finish.

@@ -1,16 +1,8 @@
 # Source and EPG Tools
 
-The **Sources** menu contains maintenance tools for imported channels, categories, EPG data, users, tags, and Advanced EPG Dummies.
+The **Sources** menu contains maintenance tools for imported sources, EPG data, users, and tags.
 
 ![Sources menu](../assets/images/sources-menu.png)
-
-## Sources Manager
-
-Use **Sources** → **Sources Manager** to review imported playlist and EPG sources, start synchronization, and inspect source status.
-
-![Sources Manager](../assets/images/sources/sources-manager.png)
-
-Use **Sync All Sources** when all configured playlist sources should be refreshed. For a controlled test, synchronize one selected source from **Sources Manager** instead.
 
 ## Remove provider prefixes
 
@@ -32,19 +24,6 @@ Use **Sync All Sources** when all configured playlist sources should be refreshe
 ## Playlist category maintenance
 
 Category selection belongs to the playlist source workflow. See [Manage Categories in Adding a Playlist](playlists.md#manage-categories) when adding or editing a source. After changing categories, confirm that the affected layout groups still contain the intended channels.
-
-## Manage channels and categories
-
-The layout tools can create or manage channels and categories when the imported provider data does not match the desired organization.
-
-- Use **New Channel Manager** to create or maintain channel entries.
-- Use **New Category Manager** to create or maintain category entries.
-
-![New Channel Manager](../assets/images/layout/new-channel-manager.png)
-
-![New Category Manager](../assets/images/layout/new-category-manager.png)
-
-Review the resulting layout and output after making manual entries. Do not create duplicates when an existing source channel can be mapped instead.
 
 ## 💲 Manage new tags
 

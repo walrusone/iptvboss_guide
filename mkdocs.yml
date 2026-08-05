@@ -62,6 +62,7 @@ nav:
       - First Run: getting-started/first-run.md
       - Updating IPTVBoss: getting-started/updating.md
   - Sources and Setup:
+      - Sources Manager: setup/sources-manager.md
       - Adding Playlists: setup/playlists.md
       - Adding EPG Sources: setup/epg-sources.md
       - 💲 Universal EPG: setup/universal-epg.md
@@ -74,6 +75,9 @@ nav:
       - Layout Overview: layouts/index.md
       - Layout Manager: layouts/layout-manager.md
       - Layout Editor: layouts/layout-editor.md
+      - Layout Tools:
+          - New Channel Manager: layouts/new-channel-manager.md
+          - New Category Manager: layouts/new-category-manager.md
       - 💲 Advanced EPG Dummies: features/aed.md
       - 💲 Custom Sports Groups: features/custom-sports.md
       - Layout Output Settings: layouts/output-settings.md
@@ -92,6 +96,7 @@ nav:
       - 💲 Server User Management: server/users.md
   - Settings:
       - Application Settings: settings/application.md
+      - Cloud Provider Setup: settings/cloud-providers.md
       - Preferences and Theme: settings/preferences.md
       - Automatic Synchronization: settings/automation.md
       - 💲 Sync Schedule: settings/scheduling.md

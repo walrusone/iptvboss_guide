@@ -30,7 +30,7 @@ Do not interrupt a database migration. If startup fails, stop and collect the lo
 
 Check the version shown by the application, then test a low-risk workflow:
 
-1. Open [Source and EPG Tools](../setup/source-tools.md) and select **Sources Manager**.
+1. Open [Sources Manager](../setup/sources-manager.md).
 2. Confirm that a source is present without synchronizing it yet.
 3. Open [Layout Manager](../layouts/layout-manager.md) and confirm that your layouts are present.
 4. Review [Application Settings](../settings/application.md).
