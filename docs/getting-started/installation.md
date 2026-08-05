@@ -6,7 +6,7 @@ This page explains how to install the current IPTVBoss release on Windows, macOS
 
 - Use a computer or server that you control.
 - Confirm whether your computer uses an Intel/AMD or ARM processor.
-- Have your IPTVBoss account or license information available if you use [Pro features](../settings/pro.md).
+- Have your IPTVBoss account or license information available if you use 💲 [Pro features](free-vs-pro.md).
 - Choose a location where IPTVBoss can keep its local database and output files.
 
 !!! warning

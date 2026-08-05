@@ -21,4 +21,4 @@ Use a separate layout when different viewers need different channel groups, orde
 5. Use [Creating output](../setup/output.md) to generate the files or links.
 
 !!! note "Basic and Pro"
-    Basic accounts have a layout limit. Pro tiers provide higher or unlimited layout capacity according to the subscription.
+    Free accounts have a layout limit. 💲 Pro tiers provide higher or unlimited layout capacity according to the subscription. See [Free vs Pro](../getting-started/free-vs-pro.md).

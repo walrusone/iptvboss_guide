@@ -1,5 +1,7 @@
 # Sync Schedule
 
+💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+
 The native **Sync Schedule** editor can run selected source synchronization, EPG synchronization, and output actions at configured times.
 
 ## Create a schedule

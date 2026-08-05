@@ -64,9 +64,9 @@ nav:
   - Sources and Setup:
       - Adding Playlists: setup/playlists.md
       - Adding EPG Sources: setup/epg-sources.md
-      - Universal EPG: setup/universal-epg.md
+      - 💲 Universal EPG: setup/universal-epg.md
       - Source and EPG Tools: setup/source-tools.md
-      - Browsing EPG Data: setup/epg-browser.md
+      - 💲 Browsing EPG Data: setup/epg-browser.md
       - Channel Mapping: setup/channel-mapping.md
       - Creating Output: setup/output.md
       - Cloud Output Links: setup/output-links.md
@@ -74,12 +74,12 @@ nav:
       - Layout Overview: layouts/index.md
       - Layout Manager: layouts/layout-manager.md
       - Layout Editor: layouts/layout-editor.md
-      - Advanced EPG Dummies: features/aed.md
-      - Custom Sports Groups: features/custom-sports.md
+      - 💲 Advanced EPG Dummies: features/aed.md
+      - 💲 Custom Sports Groups: features/custom-sports.md
       - Layout Output Settings: layouts/output-settings.md
       - User Management: layouts/users.md
   - Server:
-      - Server Console: server/index.md
+      - 💲 Server Console: server/index.md
       - Console Sections:
           - Logs: server/console/logs.md
           - Boss Metadata: server/console/metadata.md
@@ -87,17 +87,17 @@ nav:
           - User Management: server/console/users.md
           - Paired Devices: server/console/paired-devices.md
           - Link Restore: server/console/link-restore.md
-      - GUI Server Dashboard: server/dashboard.md
-      - Desktop GUI Settings: server/gui-settings.md
-      - Server User Management: server/users.md
+      - 💲 GUI Server Dashboard: server/dashboard.md
+      - 💲 Desktop GUI Settings: server/gui-settings.md
+      - 💲 Server User Management: server/users.md
   - Settings:
       - Application Settings: settings/application.md
       - Preferences and Theme: settings/preferences.md
       - Automatic Synchronization: settings/automation.md
-      - Sync Schedule: settings/scheduling.md
-      - AI Settings: settings/ai.md
+      - 💲 Sync Schedule: settings/scheduling.md
+      - 💲 AI Settings: settings/ai.md
       - Pro and Account Access: settings/pro.md
-      - Email Notifications: settings/email.md
+      - 💲 Email Notifications: settings/email.md
   - Troubleshooting:
       - Common Problems: troubleshooting/common-problems.md
       - Logs and Diagnostics: troubleshooting/logs.md

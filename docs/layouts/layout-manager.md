@@ -38,4 +38,4 @@ Duplicating is useful when two outputs share most of the same channels.
 Before removing a layout, confirm that no player, user, cloud link, or scheduled process still depends on it. Export or back up important configuration before destructive changes.
 
 !!! note "Basic and Pro"
-    Basic accounts have a limited number of layouts. If the layout limit is reached, remove an unused layout or upgrade the account before creating another one.
+    Free accounts have a limited number of layouts. If the layout limit is reached, remove an unused layout or activate 💲 Pro before creating another one. See [Free vs Pro](../getting-started/free-vs-pro.md).

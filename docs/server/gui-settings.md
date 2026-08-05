@@ -1,5 +1,7 @@
 # Desktop GUI Settings
 
+💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+
 Open **Settings** → **Server Settings** in the desktop IPTVBoss application. These settings connect the desktop installation to the XC Server and control its server, network, output, security, and synchronization behavior.
 
 ![Desktop XC API Settings](../assets/images/server/server-settings-1.png)

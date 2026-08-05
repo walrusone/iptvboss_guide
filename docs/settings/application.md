@@ -19,6 +19,8 @@ Use a timeout appropriate for the provider and network. A very short timeout can
 
 ## Backup and cloud settings
 
+💲 Database cloud synchronization and backup controls are Pro features. [See Free vs Pro](../getting-started/free-vs-pro.md).
+
 IPTVBoss can use cloud providers or an XC Server for database synchronization and backups. Available providers can include **Dropbox**, **Google Drive**, or **XC Server**, depending on account access and configuration.
 
 Before enabling synchronization:

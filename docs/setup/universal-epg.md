@@ -1,5 +1,7 @@
 # Universal EPG
 
+💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+
 Universal EPG creates one shared guide output that can be reused by multiple users, layouts, or players when they use the same guide data.
 
 Using one shared EPG can reduce duplicate output files and simplify player configuration. It is not appropriate when different users require different guide selections or mappings.

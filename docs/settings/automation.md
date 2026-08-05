@@ -1,6 +1,6 @@
 # External noGUI Scheduling
 
-Native [Sync Schedule](scheduling.md) is the standard Pro workflow. Non-Pro users can use an operating-system scheduler to run IPTVBoss noGUI synchronization. The examples below use the confirmed default commands.
+💲 [Sync Schedule](scheduling.md) is the standard Pro workflow; see [Free vs Pro](../getting-started/free-vs-pro.md). Non-Pro users can use an operating-system scheduler to run IPTVBoss noGUI synchronization. The examples below use the confirmed default commands.
 
 !!! warning
     IPTVBoss must be closed before a noGUI run starts. Do not run the desktop application and noGUI synchronization against the same database at the same time.

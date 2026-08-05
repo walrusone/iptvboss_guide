@@ -56,4 +56,4 @@ See [Browsing EPG Data](epg-browser.md) when you need to inspect guide data befo
 The mapping is ready when the selected channel shows its EPG source and channel identifier and the layout can be saved without an error.
 
 !!! note "Basic and Pro"
-    Automatic mapping and built-in EPG tools may require Pro. Manual assignment remains the appropriate fallback when automatic tools are unavailable.
+    💲 Automatic mapping and built-in EPG tools may require Pro. Manual assignment remains the appropriate fallback when automatic tools are unavailable. See [Free vs Pro](../getting-started/free-vs-pro.md).

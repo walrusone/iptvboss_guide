@@ -75,7 +75,7 @@ Use the API workflow when your provider supplies a server address, username, and
 If synchronization fails, confirm that the URL is reachable, credentials are correct, and the provider is online. Then review [Common Problems](../troubleshooting/common-problems.md).
 
 !!! note "Basic and Pro"
-    Basic accounts have a limited number of playlist sources. Pro accounts provide higher or unlimited source limits depending on the subscription tier.
+    Free accounts have a limited number of playlist sources. 💲 Pro accounts provide higher or unlimited source limits depending on the subscription tier. See [Free vs Pro](../getting-started/free-vs-pro.md).
 
 !!! note
     Menu labels and screenshots may change between desktop releases.

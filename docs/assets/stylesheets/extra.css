@@ -1,7 +1,8 @@
 :root {
-  --md-primary-fg-color: #273a8a;
-  --md-primary-fg-color--light: #4054aa;
-  --md-primary-fg-color--dark: #1b2868;
+  /* Neutral navigation keeps the blue IPTVBoss logo readable in the header. */
+  --md-primary-fg-color: #20242c;
+  --md-primary-fg-color--light: #343a46;
+  --md-primary-fg-color--dark: #15181e;
 }
 
 .md-typeset img {

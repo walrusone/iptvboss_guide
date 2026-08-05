@@ -1,5 +1,7 @@
 # Advanced EPG Dummies
 
+💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+
 Advanced EPG Dummies (AEDs) turn a channel name into an event-aware channel. An AED can identify the event, extract useful values from the provider name, format the output name and description, and select a suitable logo.
 
 AEDs are especially useful for sports channels whose event names change throughout the day. They can also be used for other provider channels that follow a predictable naming pattern.

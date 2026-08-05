@@ -2,7 +2,7 @@
 
 An EPG source supplies programme information that can be assigned to channels in a layout.
 
-## Add a built-in or Pro EPG
+## 💲 Add a built-in or Pro EPG
 
 1. Open **Sources**.
 2. Select **Add EPG**.
@@ -63,7 +63,7 @@ Save the EPG source after reviewing the three lists, then synchronize the source
 After synchronizing an external or built-in source, use [Channel Mapping](channel-mapping.md) to assign its channels to playlist channels. Use the [EPG Browser](epg-browser.md) when you need to inspect programme data before mapping.
 
 !!! note "Basic and Pro"
-    Built-in EPG sources and some advanced EPG tools may require Pro. External EPG sources remain available when the account can use them.
+    💲 Built-in EPG sources and some advanced EPG tools may require Pro. External EPG sources remain available when the account can use them. See [Free vs Pro](../getting-started/free-vs-pro.md).
 
 ## Verify the source
 

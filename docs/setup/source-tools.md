@@ -14,6 +14,8 @@ Use **Sync All Sources** when all configured playlist sources should be refreshe
 
 ## Remove provider prefixes
 
+💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+
 **Prefix Auto-Removal** can help normalize provider channel names before mapping and sorting.
 
 1. Open **Sources** → **Prefix Auto-Removal**.
@@ -44,7 +46,9 @@ The layout tools can create or manage channels and categories when the imported 
 
 Review the resulting layout and output after making manual entries. Do not create duplicates when an existing source channel can be mapped instead.
 
-## Manage new tags
+## 💲 Manage new tags
+
+💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
 
 Use **Sources** → **Manage New Tags** to review tags discovered during source or EPG processing.
 

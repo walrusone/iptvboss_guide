@@ -1,5 +1,7 @@
 # Server Console
 
+💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+
 The IPTVBoss Server Console is the browser-based administration interface for an XC Server. Open it from the server address in a browser; it is not a screen inside the desktop IPTVBoss application.
 
 ## Open the Server Console

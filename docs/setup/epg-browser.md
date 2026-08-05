@@ -1,5 +1,7 @@
 # Browsing EPG Data
 
+💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+
 The **EPG Browser** helps inspect guide data before or after assigning an EPG channel to a playlist channel. Browsing data does not itself create a mapping.
 
 ## Open the EPG Browser

@@ -32,6 +32,8 @@ Review these choices after importing a source and before generating output.
 
 ## Change the theme
 
+💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+
 1. Open **Settings**.
 2. Select **Theme Settings**.
 3. Choose the preferred theme.

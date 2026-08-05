@@ -1,4 +1,6 @@
-# Server User Management
+# 💲 Server User Management
+
+💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
 
 Server **User Management** controls users whose layouts, source credentials, and output links are managed through the XC Server.
 
