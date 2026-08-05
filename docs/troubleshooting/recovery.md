@@ -26,7 +26,7 @@ When an installation is reinstalled, moved to another computer, or loses its loc
 
 Before starting, confirm that you are using the intended XC Server and that the current server database is backed up. A paired code grants access to that server and should be handled like a temporary credential.
 
-1. On the XC Server, open **Server** → **Dashboard** and open **Paired Devices**.
+1. Open the [Server Dashboard](../server/dashboard.md) in a browser, then open [Paired Devices](../server/console/paired-devices.md).
 2. Generate or copy the paired recovery code for the installation.
 3. On the installation being recovered, open **Settings** → **Server Settings**.
 4. Open **XC Server Paired Code Restore**.
