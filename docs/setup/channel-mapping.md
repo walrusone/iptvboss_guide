@@ -37,7 +37,7 @@ Keep the search list focused on the sources that match the channels you are mapp
 
 Use the channel’s country, network, and service name to distinguish similarly named results. Do not select a match only because its display name looks similar.
 
-See [Browsing EPG Data](epg-browser.md) when you need to inspect guide data before mapping.
+After saving a mapping, see [Browsing EPG Data](epg-browser.md) when you need to inspect the guide data returned for that mapped channel.
 
 ![EPG Browser](../assets/images/layout/epg-browser.png)
 

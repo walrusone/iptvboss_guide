@@ -2,7 +2,7 @@
 
 💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
 
-The **EPG Browser** helps inspect guide data before or after assigning an EPG channel to a playlist channel. Browsing data does not itself create a mapping.
+The **EPG Browser** displays programme data for the current EPG mappings in the selected layout. It does not browse every channel in every EPG source: a playlist channel must already have an EPG source and channel identifier assigned before its guide data can appear here. Browsing data does not create or change a mapping.
 
 ## Open the EPG Browser
 
@@ -11,7 +11,8 @@ The **EPG Browser** helps inspect guide data before or after assigning an EPG ch
 3. Select a **Layout**.
 4. Select a **Group**.
 5. Select a **Channel**.
-6. Review the available programmes, descriptions, and programme icons.
+6. Confirm that the channel has a current EPG mapping in Layout Editor.
+7. Review the programmes, descriptions, and programme icons returned for that mapping.
 
 Double-click a channel in the EPG Browser to return to **Layout Editor** with that channel selected.
 
@@ -19,17 +20,17 @@ Double-click a channel in the EPG Browser to return to **Layout Editor** with th
 
 ## Search guide data
 
-Use [Channel Mapping](channel-mapping.md) for the complete mapping workflow and to configure **EPG Search Options** before searching for matches. In the EPG Browser itself:
+Use [Channel Mapping](channel-mapping.md) to assign an EPG source and channel identifier first. The EPG Browser then searches the channels and mappings available in the selected layout:
 
-1. Search using a distinctive channel, network, or service name.
+1. Search for a mapped playlist channel using a distinctive channel, network, or service name.
 2. Clear the search text before trying a different term.
 3. Compare the country, network, identifier, and programme data.
 
-If a channel has no programmes, confirm that the EPG source synchronized successfully and that the source contains data for the requested date.
+If a mapped channel has no programmes, confirm that its EPG source synchronized successfully and that the source contains data for the requested date. An unmapped channel will not become browseable merely because its source contains matching EPG data.
 
 ## Browse versus map
 
-- Use **EPG Browser** to inspect guide data and confirm that a source contains the expected programmes.
 - Use [Channel Mapping](channel-mapping.md) to assign an EPG source and channel identifier to a playlist channel.
+- Use **EPG Browser** to inspect the guide data for that current mapping in the selected layout.
 
 Do not treat a visually similar channel as a reliable mapping without checking its identifier and programme data.

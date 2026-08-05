@@ -10,10 +10,10 @@ The limits and locked controls below reflect the current application behavior. P
 
 | Area | Free | 💲 Pro |
 | --- | --- | --- |
-| Playlist sources | Up to **2** playlist or API sources | 💲 Unlimited playlist sources |
-| EPG sources | Up to **5** EPG sources | 💲 Unlimited EPG sources, including Pro-provided EPG sources |
-| Layouts | Up to **2** layouts | 💲 Unlimited layouts |
-| Users | Up to **2** users | 💲 Tiered limits: **25, 75, 200, 500, 1,000, or unlimited** users, depending on the Pro tier |
+| Playlist sources | Up to **2** playlist or API sources | Unlimited playlist sources |
+| EPG sources | Up to **5** EPG sources | Unlimited EPG sources, including Pro-provided EPG sources |
+| Layouts | Up to **2** layouts | Unlimited layouts |
+| Users | Up to **2** users | Tiered limits: **25, 75, 200, 500, 1,000, or unlimited** users, depending on the Pro tier |
 | Source and channel editing | Import sources, sync sources, edit groups and channels, reorder content, assign logos, and manually assign EPG data | Everything in Free, plus the Pro-only editor actions listed below |
 | EPG workflow | External/custom EPG sources, manual mapping, and standard EPG output | EPG Browser, automatic EPG tools in Layout Editor, EPG layout overrides, EPG logo templates, and Universal EPG |
 | Layout workflow | Create and edit layouts, import channels, organize groups, and generate output | Layout import/export, channel-list export, linked layout groups, and layout EPG override settings |

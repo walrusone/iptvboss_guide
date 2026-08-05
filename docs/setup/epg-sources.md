@@ -60,7 +60,7 @@ Save the EPG source after reviewing the three lists, then synchronize the source
 
 ## Use EPG data for mapping
 
-After synchronizing an external or built-in source, use [Channel Mapping](channel-mapping.md) to assign its channels to playlist channels. Use the [EPG Browser](epg-browser.md) when you need to inspect programme data before mapping.
+After synchronizing an external or built-in source, use [Channel Mapping](channel-mapping.md) to assign its channels to playlist channels. After a mapping is saved, use the [EPG Browser](epg-browser.md) to inspect the programme data returned for that mapped channel.
 
 !!! note "Basic and Pro"
     💲 Built-in EPG sources and some advanced EPG tools may require Pro. External EPG sources remain available when the account can use them. See [Free vs Pro](../getting-started/free-vs-pro.md).
