@@ -86,12 +86,17 @@ nav:
   - Server:
       - 💲 Server Console: server/index.md
       - Console Sections:
+          - Login and Setup: server/console/login.md
           - Logs: server/console/logs.md
           - Boss Metadata: server/console/metadata.md
           - Server Settings: server/console/settings.md
           - User Management: server/console/users.md
           - Paired Devices: server/console/paired-devices.md
           - Link Restore: server/console/link-restore.md
+          - API Keys: server/console/api.md
+          - Swagger API Documentation: server/console/swagger.md
+          - Console Security: server/console/security.md
+          - Administrator Account: server/console/administrator.md
       - 💲 GUI Server Dashboard: server/dashboard.md
       - 💲 Desktop GUI Settings: server/gui-settings.md
       - 💲 Server User Management: server/users.md

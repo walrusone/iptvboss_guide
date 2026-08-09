@@ -54,12 +54,12 @@ On the first launch, macOS may ask you to confirm that you want to open an appli
 2. Install the package using your distribution’s package manager.
 3. Start **IPTVBoss** from the applications menu or its installed command.
 
-For Debian-based Linux, the release package uses the system architecture in its filename. The download page provides the current package version; replace `3.11.16` below with the version shown there:
+For Debian-based Linux, the release package uses the system architecture in its filename. The following example uses 3.11.43; replace it with the version shown on the release page when installing a newer release:
 
 ```bash
 CPU=$(dpkg --print-architecture)
-wget https://github.com/walrusone/iptvboss-release/releases/latest/download/iptvboss_3.11.16_${CPU}.deb
-sudo apt install ./iptvboss_3.11.16_${CPU}.deb
+wget https://github.com/walrusone/iptvboss-release/releases/latest/download/iptvboss_3.11.43_${CPU}.deb
+sudo apt install ./iptvboss_3.11.43_${CPU}.deb
 ```
 
 The package format and installation command may vary by release. Follow the instructions attached to the selected release rather than copying a command from an older version.
