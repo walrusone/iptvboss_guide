@@ -14,7 +14,13 @@
 4. Enter the current six-digit authenticator code to confirm enrollment.
 5. Save the recovery codes in a secure location before closing the recovery-code panel.
 
-Recovery codes are one-time credentials. Generate a new set if the codes may have been copied; the previous set stops working. Disable two-factor authentication only when necessary and only after confirming the account remains protected by a strong password.
+Recovery codes are one-time credentials. Generate a new set if the codes may have been copied; the previous set stops working.
+
+## Manage enabled two-factor authentication
+
+![Enabled authenticator controls](../../assets/images/server-console/server-security-enabled-view.png)
+
+When two-factor authentication is enabled, **Generate new recovery codes** replaces the existing one-time codes after password and authenticator verification. **Disable two-factor authentication** removes the second sign-in step and signs out active browsers, so use it only when necessary and only after confirming the account remains protected by a strong password.
 
 ## Section PIN protection
 
@@ -31,7 +37,5 @@ The section PIN must contain exactly six digits. Use the security settings to ch
 - API Keys
 
 Security changes revoke active section unlocks. Re-authenticate with the new PIN when a protected section requests **PIN Unlock**.
-
-![Protected console view](../../assets/images/server-console/server-security-enabled-view.png)
 
 Keep the administrator password and section PIN separate. Do not publish either credential.
