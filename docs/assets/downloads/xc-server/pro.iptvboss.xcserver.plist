@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- DRAFT — Still Requires Final Review & Testing. -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>pro.iptvboss.xcserver</string>
+    <key>UserName</key>
+    <string>YOUR_MAC_USERNAME</string>
+    <key>WorkingDirectory</key>
+    <string>/Users/YOUR_MAC_USERNAME/Library/Application Support/IPTVBoss-XC</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Applications/IPTVBoss.app/Contents/MacOS/iptvboss-c</string>
+        <string>-xcserver</string>
+        <string>-directory</string>
+        <string>/Users/YOUR_MAC_USERNAME/Library/Application Support/IPTVBoss-XC</string>
+        <string>-xc-proxy</string>
+        <string>-xc-bind-address</string>
+        <string>loopback</string>
+    </array>
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>IPTVBOSS_XC_TRUSTED_PROXIES</key>
+        <string>127.0.0.1/32,::1/128</string>
+    </dict>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+    </dict>
+    <key>ThrottleInterval</key>
+    <integer>5</integer>
+    <key>ExitTimeOut</key>
+    <integer>60</integer>
+    <key>ProcessType</key>
+    <string>Background</string>
+    <key>StandardOutPath</key>
+    <string>/Users/YOUR_MAC_USERNAME/Library/Application Support/IPTVBoss-XC/service-stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/YOUR_MAC_USERNAME/Library/Application Support/IPTVBoss-XC/service-stderr.log</string>
+</dict>
+</plist>

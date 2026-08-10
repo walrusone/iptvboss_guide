@@ -1,0 +1,5 @@
+# DRAFT — Still Requires Final Review & Testing.
+# Replace boss.domain.com with the public hostname assigned to this server.
+boss.domain.com {
+	reverse_proxy 127.0.0.1:8001
+}

@@ -84,6 +84,11 @@ nav:
       - Layout Output Settings: layouts/output-settings.md
       - User Management: layouts/users.md
   - Server:
+      - "Draft: XC Server Setup":
+          - "Draft: Setup Overview": server/setup/index.md
+          - "Draft: Docker Installation": server/setup/docker.md
+          - "Draft: Linux and macOS Service": server/setup/native-service.md
+          - "Draft: Windows Options": server/setup/windows.md
       - 💲 Server Console: server/index.md
       - Console Sections:
           - Login and Setup: server/console/login.md
