@@ -65,7 +65,10 @@ If another editor owns the lease, the console is read-only. Use **Take Over** on
 
 ## Server bootstrap and restore
 
-When the server has no usable database, it may enter bootstrap mode and require a database restore before it can continue. Open the web frontend with the bootstrap URL above, then use [Link Restore](console/link-restore.md).
+When the server has no usable database, it enters bootstrap mode. Open the web frontend with the bootstrap URL above, then choose one setup path:
+
+- Use [GUI pairing](gui-settings.md#bootstrap-an-empty-xc-server-with-gui-pairing) to push the database currently open in an IPTVBoss Pro desktop installation.
+- Use [Link Restore](console/link-restore.md) to initialize the server from a supported backup link.
 
 ![Server bootstrap mode](../assets/images/server-console/bootstrap-mode.png)
 

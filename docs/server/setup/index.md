@@ -44,7 +44,9 @@ Caddy's [reverse-proxy defaults](https://caddyserver.com/docs/caddyfile/directiv
 1. Confirm that the local health endpoint responds.
 2. Open `https://boss.domain.com/boss.php`.
 3. [Create the first administrator account and section PIN](../console/login.md).
-4. If the server has no database, use [Link Restore](../console/link-restore.md) to complete bootstrap.
+4. If the server has no database, complete bootstrap in one of two ways:
+    - Use [GUI pairing](../gui-settings.md#bootstrap-an-empty-xc-server-with-gui-pairing) to push the database currently open in an IPTVBoss Pro desktop installation.
+    - Use [Link Restore](../console/link-restore.md) to initialize the server from a supported backup link.
 5. Review [Console Security](../console/security.md), then back up the working server data.
 
 See [Windows hosting options](windows.md) before attempting either path on Windows.

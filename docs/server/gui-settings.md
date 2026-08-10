@@ -17,6 +17,19 @@ Open **Settings** → **Server Settings** in the desktop IPTVBoss application. T
 
 After pairing, actions such as **Refresh Cloud Status**, **Disable Sync**, **Retry Current Database**, and **Unlink This Installation** apply immediately.
 
+## Bootstrap an empty XC Server with GUI pairing
+
+An IPTVBoss Pro desktop installation can initialize a new XC Server using the database currently open in the GUI:
+
+1. Open `https://boss.domain.com/boss.php` on the new server.
+2. Copy the server URL and one-time pairing code shown under **Link from IPTVBoss**.
+3. In the desktop application, open **Settings** → **Server Settings**.
+4. Enter the server URL and pairing code, then select **Link XC Server**.
+5. Confirm that the current GUI database should become the authoritative server database.
+6. Wait for the upload and server bootstrap to finish, then verify the connection and backup status.
+
+The pairing code expires and can be used only once. Confirm that the intended database is open and backed up before linking because it becomes the initial authoritative database for the server. A non-Pro installation can pair only after bootstrap has been completed.
+
 ## Server and Network
 
 Use **Enable XC Server** when this installation should provide the XC Server service. Use **Block direct connections (bind to 127.0.0.1)** only when the server must be local-only; it prevents remote paired devices from reaching it.
