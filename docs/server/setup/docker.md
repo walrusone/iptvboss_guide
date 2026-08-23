@@ -126,7 +126,7 @@ IPTVBOSS_XC_BIND_ADDRESS=all
 IPTVBOSS_XC_KEYSTORE_PASSWORD=replace-with-keystore-password
 ```
 
-Place `keystore.jks` in the container’s `/data` directory. Proxy mode takes precedence over direct HTTPS. When both secure modes are disabled, direct HTTP is the default and is suitable only for isolated local-network use.
+Mount the PKCS#12 file `keystore.p12` read-only at `/data/keystore.p12`. Follow the complete [Direct HTTPS](direct-https.md) procedure to create the certificate store, protect its password, configure the mount, and verify client trust. Proxy mode takes precedence over direct HTTPS. When both secure modes are disabled, direct HTTP is the default and is suitable only for isolated local-network use.
 
 ## Data, stop, and upgrade
 

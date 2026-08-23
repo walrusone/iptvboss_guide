@@ -34,7 +34,7 @@ The default XC Server port is `8001`. The platform setup pages explain how to in
 | --- | --- |
 | `-xcserver` | Start IPTVBoss as a headless XC Server. This is required for the server process. |
 | `-xc-proxy` | Indicate that HTTPS is terminated by a reverse proxy. IPTVBoss expects requests to arrive with forwarded HTTPS information and does not use a local keystore. |
-| `-httpsOnly` | Enable direct HTTPS instead of HTTP when no reverse proxy is being used. Direct HTTPS requires `keystore.jks` in the IPTVBoss data directory and `IPTVBOSS_XC_KEYSTORE_PASSWORD`. Proxy mode takes precedence when both are enabled. |
+| `-httpsOnly` | Enable direct HTTPS instead of HTTP when no reverse proxy is being used. Direct HTTPS requires the PKCS#12 file `keystore.p12` in the IPTVBoss data directory and `IPTVBOSS_XC_KEYSTORE_PASSWORD`. Proxy mode takes precedence when both are enabled. |
 | `-xc-bind-address loopback` | Listen only on `127.0.0.1`. This is the recommended value when using an HTTPS reverse proxy. |
 | `-xc-bind-address all` | Listen on `0.0.0.0`, allowing connections through the host’s network interfaces. Use only when the firewall and transport security are configured appropriately. |
 | `-directory PATH` | Store the IPTVBoss database, configuration, logs, keystore, and generated files under `PATH` instead of the operating-system default. The service account must be able to read and write this location. |
@@ -100,7 +100,7 @@ Use this only for an isolated local network or temporary bootstrap. Credentials,
 
 ### Direct HTTPS
 
-Direct HTTPS requires a Java keystore named `keystore.jks` in the selected IPTVBoss data directory and its password in the environment:
+Direct HTTPS requires a PKCS#12 keystore named `keystore.p12` in the selected IPTVBoss data directory and its password in the environment:
 
 ```bash
 IPTVBOSS_XC_KEYSTORE_PASSWORD='change-this-password' \
@@ -109,6 +109,8 @@ IPTVBOSS_XC_KEYSTORE_PASSWORD='change-this-password' \
 
 The environment variable `IPTVBOSS_HTTPS_ONLY=true` enables the same mode. Do not put the keystore password directly in a shared service file when the service manager provides a safer secret mechanism.
 
+The keystore contains the HTTPS private key and certificate chain. Its password does not protect XC users, administrator credentials, or the database. See [Direct HTTPS](../server/setup/direct-https.md) for certificate creation, deployment, verification, and renewal instructions.
+
 ## XC Server environment variables
 
 | Variable | Meaning |
@@ -116,7 +118,7 @@ The environment variable `IPTVBOSS_HTTPS_ONLY=true` enables the same mode. Do no
 | `IPTVBOSS_XC_BIND_ADDRESS` | Select `loopback` or `all` when the command line does not specify `-xc-bind-address`. |
 | `IPTVBOSS_XC_BEHIND_HTTPS_PROXY` | Set to `true` to enable HTTPS reverse-proxy mode without `-xc-proxy`. |
 | `IPTVBOSS_HTTPS_ONLY` | Set to `true` to require direct HTTPS without `-httpsOnly`. |
-| `IPTVBOSS_XC_KEYSTORE_PASSWORD` | Password for `keystore.jks` in direct HTTPS mode. |
+| `IPTVBOSS_XC_KEYSTORE_PASSWORD` | Password that unlocks `keystore.p12` in direct HTTPS mode. It is unused in proxy and direct-HTTP modes. |
 | `IPTVBOSS_XC_TRUSTED_PROXIES` | Optional comma-separated list of trusted proxy IP addresses or CIDRs. When set in proxy mode, forwarded client information is accepted only from those addresses. |
 
 Boolean variables use `true` to enable the corresponding behavior. Proxy mode takes precedence over direct HTTPS mode, so a process configured for both expects HTTPS from the reverse proxy rather than loading the local keystore.

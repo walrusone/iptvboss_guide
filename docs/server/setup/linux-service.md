@@ -71,6 +71,8 @@ curl --fail https://boss.domain.com/healthz
 
 Do not expose port `8001` directly to the Internet.
 
+If a reverse proxy cannot be used, follow [Direct HTTPS](direct-https.md) to install a PKCS#12 certificate store and change the service flags and environment securely.
+
 ## Back up and upgrade
 
 Back up the IPTVBoss data directory before upgrading or restoring the installation. Stop the service before replacing the package or restoring files:

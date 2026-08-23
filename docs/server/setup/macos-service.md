@@ -61,6 +61,8 @@ sudo brew services list
 
 Use the same Caddyfile and hostname setup described in [the Linux Caddy section](linux-service.md#put-caddy-in-front-of-iptvboss). Running `brew services` with `sudo` creates a system LaunchDaemon rather than a login-only LaunchAgent.
 
+If a reverse proxy cannot be used, follow the [Direct HTTPS](direct-https.md) certificate and launchd guidance. This alternative remains subject to the same macOS testing warning as the rest of this page.
+
 ## Back up and upgrade
 
 The data directory is the durable state. Stop the service before making a backup or replacing the application:

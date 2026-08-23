@@ -13,6 +13,8 @@ The XC Server runs IPTVBoss continuously without the desktop interface and expos
 
 The hosted paths put [Caddy](https://caddyserver.com/) in front of IPTVBoss. Caddy accepts public HTTPS connections while IPTVBoss listens only on the host's loopback interface. Do not expose IPTVBoss port `8001` directly to the Internet.
 
+For installations that cannot use a reverse proxy, see [Direct HTTPS](direct-https.md). IPTVBoss then terminates TLS itself using a PKCS#12 certificate store and normally listens at `https://host:8001`.
+
 ## Alpha release notice
 
 !!! warning "Alpha software"
