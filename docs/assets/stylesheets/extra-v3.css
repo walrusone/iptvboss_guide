@@ -37,8 +37,8 @@ body[data-md-color-primary="indigo"] .md-header .md-search__form:focus-within {
   height: 2em !important;
   min-width: 0 !important;
   min-height: 0 !important;
-  max-width: 1em !important;
-  max-height: 1em !important;
+  max-width: 2em !important;
+  max-height: 2em !important;
   margin: 0 0.08em !important;
   padding: 0 !important;
   border: 0 !important;
