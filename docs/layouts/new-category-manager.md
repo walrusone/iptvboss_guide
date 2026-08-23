@@ -8,7 +8,7 @@ When a source is enabled for a layout in this manager, any categories that appea
 
 ## Enable a source for a layout
 
-1. Open **Layouts** → **New Category Manager**.
+1. Open **Layout** → **New Category Manager**.
 2. Select the target **Layout**.
 3. Review the source list.
 4. Select one or more sources and right-click them to toggle their status.

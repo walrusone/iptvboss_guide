@@ -76,7 +76,7 @@ If a value contains URL-encoded characters such as `%2B` or `%40`, copy the valu
 
 1. Open **Sources** → **Sources Manager**.
 2. Select the source you added.
-3. Start the source synchronization action.
+3. Select ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** in the **IPTV Sources** header.
 4. Wait for the synchronization to finish before editing channels or generating output.
 5. Review the imported categories and channel count.
 

@@ -44,7 +44,7 @@ Pro controls are marked with a lock in the application until a valid Pro subscri
 
 - **Sources** → EPG Browser, Universal EPG, Prefix Auto-Removal, Custom Tags, AED tools, and sports-data refresh tools.
 - **Layout Editor** → automatic EPG assignment, stream and programme playback, linked layout groups, and advanced EPG/group tools.
-- **Layouts** → layout import/export, channel-list export, and EPG layout overrides.
+- **Layout** → layout import/export, channel-list export, and EPG layout overrides.
 - **Settings** → AI Settings, Theme Settings, native Sync Schedule, Email Notifications, cloud database backup/synchronization, and XC Server.
 
 After activating Pro, confirm that the lock icons have been removed. Pro access takes effect in the current application session; a restart is not required. Existing Free-plan data remains available after an upgrade; Pro expands what can be added, generated, or synchronized.

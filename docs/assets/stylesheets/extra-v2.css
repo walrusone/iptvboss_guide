@@ -27,3 +27,20 @@ body[data-md-color-primary="indigo"] .md-header .md-search__form:focus-within {
   border-radius: 0.25rem;
   box-shadow: 0 0.15rem 0.4rem #00000018;
 }
+
+/* Small copies of the application icons are placed beside control names so
+   readers can match an instruction to an icon-only button in the desktop UI. */
+.md-typeset img.ui-icon {
+  width: 1.15em;
+  height: 1.15em;
+  margin: 0 0.1em;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  object-fit: contain;
+  vertical-align: -0.2em;
+}
+
+[data-md-color-scheme="slate"] .md-typeset img.ui-icon {
+  filter: invert(1);
+}

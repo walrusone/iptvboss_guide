@@ -8,8 +8,8 @@ The redesigned Layout Manager adapts to the size of its window. Its three sectio
 
 ## Create a layout
 
-1. Open **Layout Manager**.
-2. Select **Add Layout**.
+1. Open **Layout** → **Layout Manager**.
+2. Select ![](../assets/icons/ui/add.svg){ .ui-icon } **Add New Layout** above the layout list.
 3. Enter a descriptive layout name.
 4. Review the layout’s output and synchronization settings.
 5. Select **Save Layout**.
@@ -29,13 +29,15 @@ Use the layout’s enabled control when you want it included or excluded from op
 ## Duplicate a layout
 
 1. Select the layout to copy.
-2. Select the duplicate action.
+2. Select ![](../assets/icons/ui/copy.svg){ .ui-icon } **Duplicate Layout** above the layout list.
 3. Give the copy a new name.
 4. Open the copy and adjust its groups, channels, and output settings.
 
 Duplicating is useful when two outputs share most of the same channels.
 
 ## Remove a layout
+
+Select the layout, then select ![](../assets/icons/ui/remove.svg){ .ui-icon } **Remove Layout** above the layout list. Confirm the removal only after checking that the correct layout is selected.
 
 Before removing a layout, confirm that no player, user, cloud link, or scheduled process still depends on it. Export or back up important configuration before destructive changes.
 

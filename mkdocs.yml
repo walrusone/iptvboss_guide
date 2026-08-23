@@ -59,9 +59,9 @@ nav:
   - Getting Started:
       - Free vs Pro: getting-started/free-vs-pro.md
       - Installation: getting-started/installation.md
-      - Server Basics: getting-started/server.md
       - First Run: getting-started/first-run.md
       - Updating IPTVBoss: getting-started/updating.md
+      - Server Basics: getting-started/server.md
   - Sources and Setup:
       - Sources Manager: setup/sources-manager.md
       - Adding Playlists: setup/playlists.md

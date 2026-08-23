@@ -10,7 +10,7 @@ This is useful when a provider regularly adds channels to categories that you al
 
 ## Create a new-channel rule
 
-1. Open **Layouts** → **New Channel Manager**.
+1. Open **Layout** → **New Channel Manager**.
 2. Select the **Layout** to configure.
 3. Select the content type: **LIVE**, **VOD**, or **SERIES**.
 4. Select the **Source**. The Categories list now shows the enabled categories for that source and content type.
@@ -24,7 +24,7 @@ Changes to the included-category list are saved as the group is updated. To remo
 
 When the provider adds a channel, IPTVBoss checks its source and category against the rules in every layout. If the category is included in a layout group's rule, IPTVBoss adds the channel to that group automatically. The channel is marked as new and receives the group's position and other applicable layout behavior.
 
-The rule only applies to new channels. It does not move existing channels between groups, and it does not make a disabled provider category available. To change existing content, use the [Channel Importer](../layouts/layout-editor.md#import-channels-with-the-channel-importer) or organize the channels in the Layout Editor.
+The rule only applies to new channels. It does not move existing channels between groups, and it does not make a disabled provider category available. To change existing content, use the [Channel Importer](../layouts/layout-editor.md#import-channels-with-channel-importer) or organize the channels in the Layout Editor.
 
 ## Source Categories options
 

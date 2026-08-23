@@ -12,8 +12,8 @@ Custom Sports groups use sports event data and AED results to organize channels 
 4. Enable the group’s Custom Sports behavior when the option is available.
 5. Add or move sports channels and team-based channels into the group.
 6. Confirm that the channels have the required [AED](aed.md) and sports event data.
-7. Select **Edit Sports Settings** to configure filtering and sorting.
-8. Refresh sports data and AED results.
+7. Select ![](../assets/icons/ui/settings.svg){ .ui-icon } **Edit Sports Settings** in the **Group Options** header to configure filtering and sorting.
+8. Select ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Refresh AEDs** when the group’s AED results need to be updated.
 9. Generate output and verify the event order in the resulting playlist.
 
 If the Custom Sports controls are unavailable, confirm that the group is configured for sports behavior and that the required Pro features are active.
@@ -22,7 +22,7 @@ If the Custom Sports controls are unavailable, confirm that the group is configu
 
 1. Open the **Layout Editor**.
 2. Select a Custom Sports group in the [Layout Editor](../layouts/layout-editor.md).
-3. Select **Edit Sports Settings**.
+3. Select ![](../assets/icons/ui/settings.svg){ .ui-icon } **Edit Sports Settings** in the **Group Options** header.
 4. Change the filters or bucket order.
 5. Select **OK**, then refresh or regenerate output to review the result.
 
@@ -59,7 +59,7 @@ Checked buckets move to the top in the order shown. Unchecked buckets remain at 
 
 ## Choose favourite teams
 
-Favourite teams can be used to prioritize events and team channels. In the Layout Editor, open the favourite-team selector for the Custom Sports group and select the teams to prioritize.
+Favourite teams can be used to prioritize events and team channels. In the Layout Editor, select the Custom Sports group, then select ![](../assets/icons/ui/teams.svg){ .ui-icon } **Select Favorite Teams** in the **Group Options** header.
 
 ![Favourite Teams Selector with team-channel and 24-hour options](../assets/images/layout/favourite-teams-selector.png)
 
