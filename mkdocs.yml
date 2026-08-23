@@ -59,6 +59,7 @@ nav:
   - Getting Started:
       - Free vs Pro: getting-started/free-vs-pro.md
       - Installation: getting-started/installation.md
+      - Server Basics: getting-started/server.md
       - First Run: getting-started/first-run.md
       - Updating IPTVBoss: getting-started/updating.md
   - Sources and Setup:
@@ -87,7 +88,8 @@ nav:
       - "Draft: XC Server Setup":
           - "Draft: Setup Overview": server/setup/index.md
           - "Draft: Docker Installation": server/setup/docker.md
-          - "Draft: Linux and macOS Service": server/setup/native-service.md
+          - "Linux Service": server/setup/linux-service.md
+          - "macOS Service (Needs Testing)": server/setup/macos-service.md
           - "Draft: Windows Options": server/setup/windows.md
       - 💲 Server Console: server/index.md
       - Console Sections:

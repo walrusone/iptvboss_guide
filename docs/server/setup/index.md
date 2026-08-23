@@ -1,16 +1,17 @@
-# XC Server Setup — Draft
+# XC Server Setup
 
-!!! danger "Draft — Still Requires Final Review & Testing"
-    These installation instructions and their downloadable configuration files have not completed final review or platform testing. Treat them as evaluation material, not finalized production deployment guidance.
+!!! danger "Draft paths"
+    Docker and macOS service instructions still require final review and platform testing. The Linux service procedure is the tested native installation path.
 
-The XC Server runs IPTVBoss continuously without the desktop interface and exposes the browser-based [Server Console](../index.md). Two installation paths are currently being prepared:
+The XC Server runs IPTVBoss continuously without the desktop interface and exposes the browser-based [Server Console](../index.md). Start with [Server Basics](../../getting-started/server.md) for the runtime model, available XC flags, defaults, and security modes, then choose the installation path for your host:
 
 | Path | Best suited for | Persistent data | Process manager |
 | --- | --- | --- | --- |
 | [Docker](docker.md) | Hosts that already run Docker Compose | Docker named volume | Docker Compose |
-| [Linux or macOS service](native-service.md) | A dedicated host without a container requirement | Host data directory | systemd or launchd |
+| [Linux service](linux-service.md) | A Linux host without a container requirement | IPTVBoss default or `-directory` | systemd |
+| [macOS service](macos-service.md) | A macOS host without a container requirement | IPTVBoss default or `-directory` | launchd |
 
-Both paths put [Caddy](https://caddyserver.com/) in front of IPTVBoss. Caddy accepts public HTTPS connections while IPTVBoss listens only on the host's loopback interface. Do not expose IPTVBoss port `8001` directly to the Internet.
+The hosted paths put [Caddy](https://caddyserver.com/) in front of IPTVBoss. Caddy accepts public HTTPS connections while IPTVBoss listens only on the host's loopback interface. Do not expose IPTVBoss port `8001` directly to the Internet.
 
 ## Alpha release notice
 

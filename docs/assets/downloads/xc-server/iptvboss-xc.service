@@ -1,26 +1,14 @@
-# DRAFT — Still Requires Final Review & Testing.
 [Unit]
-Description=IPTVBoss XC Server
-Wants=network-online.target
-After=network-online.target
+Description=IPTVBoss
+After=network.target
+StartLimitIntervalSec=0
 
 [Service]
 Type=simple
-User=iptvboss
-Group=iptvboss
-WorkingDirectory=/var/lib/iptvboss
-Environment="IPTVBOSS_XC_TRUSTED_PROXIES=127.0.0.1/32,::1/128"
-ExecStart=/opt/iptvboss/bin/iptvboss-c -xcserver -directory /var/lib/iptvboss -xc-proxy -xc-bind-address loopback
-Restart=on-failure
-RestartSec=5s
-TimeoutStopSec=60s
-KillSignal=SIGTERM
-UMask=0077
-NoNewPrivileges=true
-PrivateTmp=true
-ProtectSystem=strict
-ProtectHome=true
-ReadWritePaths=/var/lib/iptvboss
+Restart=always
+RestartSec=10
+User=ubuntu
+ExecStart=/usr/bin/iptvboss -xcserver -xc-proxy -xc-bind-address loopback
 
 [Install]
 WantedBy=multi-user.target
