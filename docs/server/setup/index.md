@@ -7,20 +7,20 @@ The XC Server runs IPTVBoss continuously without the desktop interface and expos
 
 | Path | Best suited for | Persistent data | Process manager |
 | --- | --- | --- | --- |
-| [Docker](docker.md) | Hosts that already run Docker Compose | Docker named volume | Docker Compose |
+| [Docker](docker.md) | Ubuntu or Debian hosts; bundled Caddy is included | Docker named volumes | Docker Compose |
 | [Linux service](linux-service.md) | A Linux host without a container requirement | IPTVBoss default or `-directory` | systemd |
 | [macOS service](macos-service.md) | A macOS host without a container requirement | IPTVBoss default or `-directory` | launchd |
 
-The hosted paths put [Caddy](https://caddyserver.com/) in front of IPTVBoss. Caddy accepts public HTTPS connections while IPTVBoss listens only on the host's loopback interface. Do not expose IPTVBoss port `8001` directly to the Internet.
+The Docker path includes [Caddy](https://caddyserver.com/) in the Compose stack by default. It can instead use an HTTPS reverse proxy already running on the same host. The native Linux and macOS paths install Caddy as a host service. In each case, Caddy accepts public HTTPS connections while the unencrypted IPTVBoss port is kept off the public network. Do not expose IPTVBoss port `8001` directly to the Internet.
 
 For installations that cannot use a reverse proxy, see [Direct HTTPS](direct-https.md). IPTVBoss then terminates TLS itself using a PKCS#12 certificate store and normally listens at `https://host:8001`.
 
-## Alpha release notice
+## Release channel
 
-!!! warning "Alpha software"
-    The current examples use the public `walrusone/iptvboss-alpha` release channel and the `ghcr.io/walrusone/iptvboss-alpha:alpha` image. Alpha builds can change without notice. The examples will move to Beta and later to stable after those channels are published and tested.
+!!! warning "Pre-release software"
+    The current examples use the public Alpha container channel. Pre-release builds can change without notice.
 
-For a long-running installation, pin an exact version after it has been tested instead of automatically following the moving `alpha` tag.
+The Docker template keeps the image repository and version tag in `.env`, so changing to a future Beta or stable channel will not require editing `compose.yaml`. For a long-running installation, pin an exact tested version instead of automatically following a moving channel tag.
 
 ## Shared requirements
 
@@ -32,7 +32,7 @@ Before using either path, prepare:
 - Administrator or `sudo` access on the host.
 - A plan for backing up the IPTVBoss data before upgrades or restores.
 
-The basic Caddy configuration is deliberately small:
+The basic Caddy configuration for native host installations is deliberately small:
 
 ```caddyfile
 boss.domain.com {

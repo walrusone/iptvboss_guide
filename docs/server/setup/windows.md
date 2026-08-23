@@ -5,9 +5,9 @@
 
 ## Current direction: Docker
 
-The proposed Windows route is the [Docker installation](docker.md) using Docker Desktop's Linux-container backend. The XC container, persistent volume, and 60-second stop grace period remain the same as on other Docker hosts.
+The proposed Windows route is the [Docker installation](docker.md) using Docker Desktop's Linux-container backend. The IPTVBoss container, persistent volume, bundled Caddy container, and 60-second stop grace period remain the same as on other Docker hosts.
 
-Host Caddy still needs to start reliably after a reboot and bind ports `80` and `443`. Caddy documents [Windows service installation](https://caddyserver.com/docs/running#windows-service) through either `sc.exe` or WinSW, but that part of the combined IPTVBoss setup has not completed final testing.
+Docker Desktop must start reliably after a reboot, and its Caddy container must be able to bind ports `80` and `443`. The combined Windows setup has not completed final testing. If another Windows web server already owns those ports, disable the bundled Caddy profile and configure that server as the existing host proxy.
 
 ## Leading native option: WinSW
 

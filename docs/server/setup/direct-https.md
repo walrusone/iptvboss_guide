@@ -16,11 +16,21 @@ The variable does **not** encrypt the IPTVBoss database and does not protect XC 
 
 Protect both the file and the password. Anyone who obtains both can impersonate the HTTPS server until the certificate is revoked or expires.
 
+Generate a strong value that is also safe to copy into systemd and Compose environment files:
+
+```bash
+openssl rand -hex 32
+```
+
+Save the generated value in a password manager and enter it when the certificate tool requests the keystore or export password. Do not add the password itself to commands, shell history, or source control.
+
 ## Prepare the certificate name
 
 Choose the exact hostname or IP address that every client will use, such as `boss.example.com` or `boss.lan`. The certificate Subject Alternative Name (SAN) must contain that value. A certificate for `boss.lan` will still fail validation when a client connects to `192.168.1.50` unless the IP address is also present in the SAN.
 
 Use one of the following certificate workflows.
+
+The certificate can be prepared on another trusted computer and then copied to the server. The CA-issued workflow requires OpenSSL. The self-signed workflow requires `keytool` from a Java Development Kit; the Java runtime bundled with IPTVBoss may not expose that utility.
 
 ### Convert a CA-issued certificate
 
@@ -49,7 +59,7 @@ keytool -genkeypair \
   -keyalg RSA \
   -keysize 3072 \
   -sigalg SHA256withRSA \
-  -validity 825 \
+  -validity 365 \
   -storetype PKCS12 \
   -keystore keystore.p12 \
   -dname "CN=boss.lan" \
@@ -134,6 +144,7 @@ For launchd on macOS, make the equivalent changes in `pro.iptvboss.xcserver.plis
 Set direct HTTPS and publish the default port in `.env`:
 
 ```env
+COMPOSE_PROFILES=
 IPTVBOSS_XC_BEHIND_HTTPS_PROXY=false
 IPTVBOSS_HTTPS_ONLY=true
 IPTVBOSS_XC_BIND_ADDRESS=all
@@ -141,6 +152,8 @@ IPTVBOSS_XC_KEYSTORE_PASSWORD=replace-with-the-keystore-password
 IPTVBOSS_HOST_IP=0.0.0.0
 IPTVBOSS_HOST_PORT=8001
 ```
+
+Clearing `COMPOSE_PROFILES` disables the bundled Caddy container. Direct HTTPS and reverse-proxy mode must not be enabled together.
 
 Restrict `.env` and ensure it is excluded from source control:
 

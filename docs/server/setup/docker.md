@@ -1,150 +1,215 @@
-# Docker XC Server Installation
+# Install the XC Server with Docker
 
-!!! warning "Alpha release"
-    This procedure uses the published IPTVBoss Alpha container image. Pin a tested version in `.env` for a long-running installation.
+This guide installs IPTVBoss and an HTTPS web server with Docker Compose. It is written for a beginner using Ubuntu or Debian. The same Compose files can also be used with an HTTPS reverse proxy that is already installed on the Docker host.
 
-This path runs IPTVBoss in Docker while a reverse proxy such as Caddy runs on the host or elsewhere on the network. The container listens on port `8001` and stores its data in the named `iptvboss-data` volume.
+The recommended setup starts two containers:
 
-## Requirements
+- **IPTVBoss** runs the XC Server and stores its data in a Docker volume.
+- **Caddy** provides the public HTTPS address and renews its certificate automatically.
 
-- A supported Linux host or Docker Desktop installation.
-- Docker Engine and Docker Compose v2. Follow Docker’s [official Engine installation instructions](https://docs.docker.com/engine/install/) for your operating system. Verify the installation with `docker version` and `docker compose version`.
-- A reverse proxy for remote HTTPS access. The examples below use Caddy.
-- The DNS, hostname, and port requirements from the [XC Server setup overview](index.md).
+Port `8001` remains available only on the Docker host. It is not exposed directly to the Internet.
 
-Do not expose direct HTTP XC Server traffic to the Internet. Use an HTTPS reverse proxy or configure direct HTTPS.
+## 1. Prepare the hostname and network
 
-## Download the templates
+Choose a hostname for the server, such as `boss.example.com`.
 
-Create a working directory and download these files:
+Before starting the containers:
+
+1. Create a DNS `A` record that points the hostname to your public IPv4 address. Add an `AAAA` record only if the server has working public IPv6.
+2. Forward TCP ports `80` and `443` from the router to the Docker host.
+3. Allow TCP ports `80` and `443` through the host firewall. Caddy can also use UDP port `443` for HTTP/3, but TCP `443` is still required.
+4. Confirm that no other program is already using host ports `80` or `443`.
+
+!!! note
+    Automatic public HTTPS normally requires a publicly reachable hostname. If the Internet provider uses carrier-grade NAT, or if this is a private-LAN-only installation, an existing proxy, VPN, or private certificate setup may be needed. See [Advanced Docker configuration](docker-advanced.md).
+
+## 2. Install Docker
+
+Install Docker Engine by following Docker's official instructions for [Ubuntu](https://docs.docker.com/engine/install/ubuntu/) or [Debian](https://docs.docker.com/engine/install/debian/). Install the Docker Compose plugin when the instructions list the packages to install.
+
+Verify both tools:
+
+```bash
+sudo docker version
+sudo docker compose version
+```
+
+Both commands must finish without an error. This guide uses `sudo` because that works with Docker's default Linux permissions.
+
+## 3. Download the setup files
+
+Create a directory for the installation:
+
+```bash
+mkdir -p ~/iptvboss-xc
+cd ~/iptvboss-xc
+```
+
+Download all three files into that directory:
 
 - [compose.yaml](../../assets/downloads/xc-server/compose.yaml)
 - [iptvboss.env.example](../../assets/downloads/xc-server/iptvboss.env.example)
 - [Caddyfile](../../assets/downloads/xc-server/Caddyfile)
 
-Place the files in the working directory and rename the environment example:
+Rename the environment example to `.env`:
 
 ```bash
 mv iptvboss.env.example .env
 ```
 
-The Compose template uses `ghcr.io/walrusone/iptvboss-alpha:${IPTVBOSS_TAG:-alpha}`. `IPTVBOSS_TAG=alpha` follows new Alpha publications. After testing a release, replace it with the exact release version to prevent an unplanned upgrade.
+The directory should now contain `compose.yaml`, `.env`, and `Caddyfile`:
 
-## Configure the container
+```bash
+ls -la
+```
 
-For a reverse proxy running directly on the Docker host, set these values in `.env`:
+## 4. Choose the HTTPS setup
+
+### Recommended: use the bundled Caddy container
+
+Open `.env` in a text editor:
+
+```bash
+nano .env
+```
+
+Replace `boss.domain.com` with the hostname prepared in step 1:
 
 ```env
-IPTVBOSS_XC_BEHIND_HTTPS_PROXY=true
-IPTVBOSS_HTTPS_ONLY=false
-IPTVBOSS_XC_BIND_ADDRESS=all
+COMPOSE_PROFILES=caddy
+IPTVBOSS_DOMAIN=boss.example.com
+```
+
+Leave the other settings unchanged. Save with <kbd>Ctrl</kbd>+<kbd>O</kbd>, press <kbd>Enter</kbd>, and exit with <kbd>Ctrl</kbd>+<kbd>X</kbd>.
+
+### Alternative: use an existing proxy on this host
+
+Use this option only when Caddy, Nginx, Apache, or another HTTPS proxy already runs directly on the same Docker host.
+
+Edit `.env` and clear the profile value:
+
+```env
+COMPOSE_PROFILES=
+```
+
+Leave these settings unchanged:
+
+```env
 IPTVBOSS_HOST_IP=127.0.0.1
 IPTVBOSS_HOST_PORT=8001
+IPTVBOSS_XC_BEHIND_HTTPS_PROXY=true
 ```
 
-| Setting | Meaning |
+Configure the existing proxy to send HTTPS requests to this HTTP upstream:
+
+```text
+http://127.0.0.1:8001
+```
+
+The proxy must supply `X-Forwarded-Proto: https`. Most established reverse-proxy configurations do this automatically.
+
+!!! note
+    A reverse proxy in another container cannot use the Docker host's `127.0.0.1`. Follow [Reverse proxies in another container or host](docker-advanced.md#reverse-proxies-in-another-container-or-host) instead.
+
+## 5. Check and start the containers
+
+From `~/iptvboss-xc`, validate the configuration:
+
+```bash
+sudo docker compose config
+```
+
+Correct any reported error before continuing. Pull the images and start the installation:
+
+```bash
+sudo docker compose pull
+sudo docker compose up --detach
+```
+
+Check its status:
+
+```bash
+sudo docker compose ps
+```
+
+With bundled Caddy, both `iptvboss` and `caddy` should be running. Caddy may take a short time to obtain the first certificate.
+
+Follow the logs while the services start:
+
+```bash
+sudo docker compose logs --follow
+```
+
+Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to stop viewing the logs. The containers continue running.
+
+## 6. Open the Server Console
+
+Check the public health address, replacing the example hostname:
+
+```bash
+curl --fail https://boss.example.com/healthz
+```
+
+Then open this address in a browser:
+
+```text
+https://boss.example.com/boss.php
+```
+
+On a new installation, the first visit creates the administrator account. Continue with [first-time setup](index.md#after-installation).
+
+## Common commands
+
+Run these commands from `~/iptvboss-xc`.
+
+| Task | Command |
 | --- | --- |
-| `IPTVBOSS_XC_BEHIND_HTTPS_PROXY` | Requires HTTPS forwarded by the reverse proxy. |
-| `IPTVBOSS_HTTPS_ONLY` | Enables direct HTTPS inside the container. Leave it `false` for proxy mode. |
-| `IPTVBOSS_XC_BIND_ADDRESS` | Controls the listener inside the container. Use `all` for normal bridge networking; container loopback is not host loopback. |
-| `IPTVBOSS_HOST_IP` | Controls which host interface publishes port `8001`. Use `127.0.0.1` for a host-local proxy. |
-| `IPTVBOSS_HOST_PORT` | Changes the host-side port; the internal port remains `8001`. |
-| `IPTVBOSS_UID` / `IPTVBOSS_GID` | Select the non-root container UID/GID, mainly for host bind mounts. |
-| `IPTVBOSS_XC_TRUSTED_PROXIES` | Optional comma-separated proxy IP/CIDR allowlist for forwarded client information. |
+| Show status | `sudo docker compose ps` |
+| View recent logs | `sudo docker compose logs --tail 200` |
+| Follow logs | `sudo docker compose logs --follow` |
+| Restart the services | `sudo docker compose restart` |
+| Stop the services | `sudo docker compose down` |
+| Start them again | `sudo docker compose up --detach` |
 
-The template runs as UID/GID `10001:10001`, drops all Linux capabilities, disables privilege escalation, and gives IPTVBoss 60 seconds to shut down cleanly.
-
-Containers on the same bridge have separate loopback interfaces. If the reverse proxy is another container on a user-defined network, use `IPTVBOSS_XC_BIND_ADDRESS=all`, connect both containers to that network, and use `http://iptvboss:8001` as the upstream. Remove the `ports` mapping when host-published access is unnecessary.
-
-## Start IPTVBoss
-
-From the directory containing `compose.yaml` and `.env`:
-
-```bash
-docker compose config
-docker compose pull
-docker compose up --detach
-docker compose logs --follow iptvboss
-```
-
-Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to stop following logs; the container continues running. Verify the local health endpoint:
-
-```bash
-curl --fail http://127.0.0.1:8001/healthz
-```
-
-If the check fails, inspect `docker compose logs iptvboss` before configuring public access.
-
-## Configure Caddy
-
-Replace `boss.domain.com` in the downloaded [Caddyfile](../../assets/downloads/xc-server/Caddyfile) with the public hostname. Install Caddy using its [official installation instructions](https://caddyserver.com/docs/install), then validate and load the configuration:
-
-```bash
-caddy validate --config ./Caddyfile
-sudo cp ./Caddyfile /etc/caddy/Caddyfile
-sudo systemctl reload caddy
-sudo systemctl status caddy
-```
-
-For macOS, install Caddy with Homebrew and register it as a service:
-
-```bash
-brew install caddy
-IPTVBOSS_CADDY_PREFIX=$(brew --prefix)
-caddy validate --config ./Caddyfile
-sudo cp ./Caddyfile "$IPTVBOSS_CADDY_PREFIX/etc/Caddyfile"
-sudo brew services start caddy
-sudo brew services list
-```
-
-The proxy must send `X-Forwarded-Proto: https`. Verify the public path:
-
-```bash
-curl --fail https://boss.domain.com/healthz
-```
-
-Then open `https://boss.domain.com/boss.php`. On a new data volume, create the first administrator in the browser to complete bootstrap. Continue with [first-time setup](index.md#after-installation).
-
-### Proxy trust
-
-Docker traffic may appear to come from a bridge gateway rather than the proxy container’s displayed address. Leave `IPTVBOSS_XC_TRUSTED_PROXIES` empty for a host-local proxy. When the published port can be reached by untrusted peers, set an allowlist using the peer address reported in IPTVBoss logs:
-
-```env
-IPTVBOSS_XC_TRUSTED_PROXIES=172.17.0.6/32,127.0.0.1/32
-```
-
-An invalid allowlist prevents startup, and a request from a peer outside the allowlist is rejected. Include every trusted proxy network when another proxy sits in front of the local reverse proxy.
-
-## Direct HTTPS alternative
-
-For direct HTTPS without a reverse proxy, set:
-
-```env
-IPTVBOSS_XC_BEHIND_HTTPS_PROXY=false
-IPTVBOSS_HTTPS_ONLY=true
-IPTVBOSS_XC_BIND_ADDRESS=all
-IPTVBOSS_XC_KEYSTORE_PASSWORD=replace-with-keystore-password
-```
-
-Mount the PKCS#12 file `keystore.p12` read-only at `/data/keystore.p12`. Follow the complete [Direct HTTPS](direct-https.md) procedure to create the certificate store, protect its password, configure the mount, and verify client trust. Proxy mode takes precedence over direct HTTPS. When both secure modes are disabled, direct HTTP is the default and is suitable only for isolated local-network use.
-
-## Data, stop, and upgrade
-
-All databases, configuration, XC files, caches, and logs are stored in the named `iptvboss-data` volume. Stop the container without deleting that data:
-
-```bash
-docker compose down
-```
-
-Back up the volume before every upgrade. To upgrade, set `IPTVBOSS_TAG` to the tested target version, then run:
-
-```bash
-docker compose pull
-docker compose up --detach
-docker compose logs --follow iptvboss
-```
-
-Check both health endpoints and sign in to the console. To roll back, restore the matching pre-upgrade data backup if the schema changed, set the previous version tag, and recreate the service.
+The data remains in the `iptvboss-data` Docker volume when the services are stopped or recreated.
 
 !!! danger
-    Do not run `docker compose down --volumes` unless the persistent IPTVBoss data is intentionally being deleted.
+    Never run `docker compose down --volumes` unless the IPTVBoss data is intentionally being deleted. The `--volumes` option removes persistent data.
+
+## Back up the server
+
+Back up the data before every upgrade and on a regular schedule. The following example creates a directory named for the backup date; replace the date with today's date:
+
+```bash
+mkdir -p backups/2026-08-23
+sudo docker compose stop iptvboss
+sudo docker compose cp --archive iptvboss:/data/. ./backups/2026-08-23/
+sudo docker compose start iptvboss
+```
+
+Copy the resulting backup to another computer or storage device. A backup kept only on the Docker host does not protect against failure of that host.
+
+## Update IPTVBoss
+
+Create a backup first, then run:
+
+```bash
+sudo docker compose pull
+sudo docker compose up --detach
+sudo docker compose ps
+```
+
+Check the logs and sign in after the update. Version pinning, restore, and rollback procedures are in [Advanced Docker configuration](docker-advanced.md).
+
+## Quick troubleshooting
+
+| Problem | What to check |
+| --- | --- |
+| Caddy cannot obtain a certificate | Confirm the DNS record points to this host and inbound TCP ports `80` and `443` reach it. Check `sudo docker compose logs caddy`. |
+| Host port `80` or `443` is already in use | Stop the existing web server or use it as the [existing proxy](#alternative-use-an-existing-proxy-on-this-host). |
+| Only the `iptvboss` service starts | Confirm `.env` contains `COMPOSE_PROFILES=caddy`. If it does, check the IPTVBoss logs because Caddy waits for that service to become healthy. |
+| The browser shows a gateway error | Check `sudo docker compose ps` and `sudo docker compose logs iptvboss`. Wait for IPTVBoss to become healthy. |
+| The public URL works but `/boss.php` does not | Include `/boss.php` exactly and inspect the IPTVBoss logs for the request. |
+| Docker reports permission denied | Use `sudo` with the Docker commands, or follow Docker's official post-installation instructions to configure non-root access. |
+
+For Docker Desktop, NAS systems, direct HTTPS, nonstandard networks, or custom file ownership, continue to [Advanced Docker configuration](docker-advanced.md).

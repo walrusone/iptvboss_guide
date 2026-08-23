@@ -88,6 +88,7 @@ nav:
       - "Draft: XC Server Setup":
           - "Draft: Setup Overview": server/setup/index.md
           - "Draft: Docker Installation": server/setup/docker.md
+          - "Advanced Docker": server/setup/docker-advanced.md
           - "Linux Service": server/setup/linux-service.md
           - "macOS Service (Needs Testing)": server/setup/macos-service.md
           - "Direct HTTPS": server/setup/direct-https.md
