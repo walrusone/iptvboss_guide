@@ -33,7 +33,7 @@ theme:
         name: Switch to light mode
 
 extra_css:
-  - assets/stylesheets/extra-v3.css
+  - assets/stylesheets/extra-v4.css
 
 plugins:
   - search

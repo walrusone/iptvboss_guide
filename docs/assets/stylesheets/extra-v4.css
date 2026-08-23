@@ -33,19 +33,19 @@ body[data-md-color-primary="indigo"] .md-header .md-search__form:focus-within {
    enlarging icons in lists or tables. */
 .md-typeset img.ui-icon {
   display: inline-block !important;
-  width: 1.2em !important;
-  height: 1.2em !important;
+  width: 1rem !important;
+  height: 1rem !important;
   min-width: 0 !important;
   min-height: 0 !important;
-  max-width: 1.2em !important;
-  max-height: 1.2em !important;
+  max-width: 1rem !important;
+  max-height: 1rem !important;
   margin: 0 0.08em !important;
   padding: 0 !important;
   border: 0 !important;
   border-radius: 0 !important;
   box-shadow: none !important;
   object-fit: contain;
-  vertical-align: -0.22em;
+  vertical-align: -0.2rem;
 }
 
 [data-md-color-scheme="slate"] .md-typeset img.ui-icon {
