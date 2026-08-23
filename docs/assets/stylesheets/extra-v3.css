@@ -33,8 +33,8 @@ body[data-md-color-primary="indigo"] .md-header .md-search__form:focus-within {
    enlarging icons in lists or tables. */
 .md-typeset img.ui-icon {
   display: inline-block !important;
-  width: 1em !important;
-  height: 1em !important;
+  width: 2em !important;
+  height: 2em !important;
   min-width: 0 !important;
   min-height: 0 !important;
   max-width: 1em !important;
