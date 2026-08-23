@@ -1,7 +1,7 @@
 # XC Server Setup
 
 !!! danger "Draft paths"
-    Docker and macOS service instructions still require final review and platform testing. The Linux service procedure is the tested native installation path.
+    The macOS launchd and Windows Task Scheduler instructions still require hands-on platform testing. The Windows scheduler also has weaker shutdown guarantees than a true service. The Linux service procedure is the tested native installation path.
 
 The XC Server runs IPTVBoss continuously without the desktop interface and exposes the browser-based [Server Console](../index.md). Start with [Server Basics](../../getting-started/server.md) for the runtime model, available XC flags, defaults, and security modes, then choose the installation path for your host:
 
@@ -10,8 +10,9 @@ The XC Server runs IPTVBoss continuously without the desktop interface and expos
 | [Docker](docker.md) | Ubuntu or Debian hosts; bundled Caddy is included | Docker named volumes | Docker Compose |
 | [Linux service](linux-service.md) | A Linux host without a container requirement | IPTVBoss default or `-directory` | systemd |
 | [macOS service](macos-service.md) | A macOS host without a container requirement | IPTVBoss default or `-directory` | launchd |
+| [Windows startup task](windows.md) | A Windows host without a container requirement; draft | Explicit local app-data directory | Task Scheduler |
 
-The Docker path includes [Caddy](https://caddyserver.com/) in the Compose stack by default. It can instead use an HTTPS reverse proxy already running on the same host. The native Linux and macOS paths install Caddy as a host service. In each case, Caddy accepts public HTTPS connections while the unencrypted IPTVBoss port is kept off the public network. Do not expose IPTVBoss port `8001` directly to the Internet.
+The Docker path includes [Caddy](https://caddyserver.com/) in the Compose stack by default. It can instead use an HTTPS reverse proxy already running on the same host. The native Linux, macOS, and Windows paths install Caddy as a host service. In each case, Caddy accepts public HTTPS connections while the unencrypted IPTVBoss port is kept off the public network. Do not expose IPTVBoss port `8001` directly to the Internet.
 
 For installations that cannot use a reverse proxy, see [Direct HTTPS](direct-https.md). IPTVBoss then terminates TLS itself using a PKCS#12 certificate store and normally listens at `https://host:8001`.
 
@@ -24,7 +25,7 @@ The Docker template keeps the image repository and version tag in `.env`, so cha
 
 ## Shared requirements
 
-Before using either path, prepare:
+Before using an installation path, prepare:
 
 - A server you control and can back up.
 - A public hostname such as `boss.domain.com` with an `A` and, when applicable, `AAAA` record pointing to the server.
@@ -52,4 +53,4 @@ Caddy's [reverse-proxy defaults](https://caddyserver.com/docs/caddyfile/directiv
     - Use [Link Restore](../console/link-restore.md) to initialize the server from a supported backup link.
 5. Review [Console Security](../console/security.md), then back up the working server data.
 
-See [Windows hosting options](windows.md) before attempting either path on Windows.
+The native Windows path remains a draft. Use [Docker](docker.md) when its stronger container lifecycle and backup workflow are preferable.

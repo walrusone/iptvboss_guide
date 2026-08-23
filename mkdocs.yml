@@ -90,9 +90,9 @@ nav:
           - "Draft: Docker Installation": server/setup/docker.md
           - "Advanced Docker": server/setup/docker-advanced.md
           - "Linux Service": server/setup/linux-service.md
-          - "macOS Service (Needs Testing)": server/setup/macos-service.md
+          - "Draft: macOS Service": server/setup/macos-service.md
           - "Direct HTTPS": server/setup/direct-https.md
-          - "Draft: Windows Options": server/setup/windows.md
+          - "Draft: Windows Startup Task": server/setup/windows.md
       - 💲 Server Console: server/index.md
       - Console Sections:
           - Login and Setup: server/console/login.md
