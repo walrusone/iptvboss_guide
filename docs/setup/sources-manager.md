@@ -4,6 +4,8 @@
 
 ![Sources Manager](../assets/images/sources/sources-manager.png)
 
+The redesigned Sources Manager adapts to the available window size. Its two independent sections—**IPTV Sources** and **EPG Sources**—can each be expanded or collapsed from the section header. IPTVBoss remembers your choices between uses, which is useful when working in a smaller window.
+
 The screen has two independent areas: playlist sources at the top and EPG sources below. Select an item in a list to populate its details and actions. Double-click a playlist or EPG source to open its editor.
 
 ## Playlist sources

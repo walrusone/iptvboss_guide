@@ -18,6 +18,8 @@ Double-click a channel in the EPG Browser to return to **Layout Editor** with th
 
 ![EPG Browser](../assets/images/layout/epg-browser.png)
 
+The redesigned EPG Browser uses three resizable panes for layouts and channels, programmes, and channel details. Resize the window or pane boundaries to give more space to the list or the programme information; this screen uses adjustable panes rather than collapsible sections.
+
 ## Search guide data
 
 Use [Channel Mapping](channel-mapping.md) to assign an EPG source and channel identifier first. The EPG Browser then searches the channels and mappings available in the selected layout:

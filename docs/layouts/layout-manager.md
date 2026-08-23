@@ -4,6 +4,8 @@ Use **Layout Manager** to create, select, duplicate, remove, import, and export 
 
 ![The Layout Manager](../assets/images/layout/layout-manager.png)
 
+The redesigned Layout Manager adapts to the size of its window. Its three sections—**General**, **Output & Sync**, and **Advanced / Custom**—can each be expanded or collapsed from the section header. IPTVBoss remembers those choices the next time you open the screen, so you can keep frequently used settings visible while reducing clutter on smaller screens.
+
 ## Create a layout
 
 1. Open **Layout Manager**.
