@@ -1,13 +1,13 @@
 # Build Your First Working Setup
 
-This tutorial takes a new desktop installation from an empty database to local M3U playlist and EPG (XMLTV) files that you can test in a player. It uses the core Free workflow; Pro features, cloud publishing, users, and XC Server are optional next steps.
+This tutorial takes a new desktop installation from an empty database to cloud-hosted M3U playlist and EPG (XMLTV) links that you can use in a player. It uses the core Free workflow; cloud playlist/EPG publishing does not require Pro. Cloud database backup, automation, advanced tools, and XC Server are optional next steps.
 
 Before you begin, have these items ready:
 
 - an authorized M3U playlist or Xtream Codes provider connection;
 - an external EPG URL that contains guide data for at least some of your channels;
-- a local folder where IPTVBoss can write output;
-- a player that can load an M3U playlist and its EPG.
+- a Dropbox or Google Drive account that can host the generated output;
+- a player that can load an M3U playlist and EPG from URLs.
 
 Treat provider addresses, usernames, passwords, output links, and tokens as private credentials.
 
@@ -41,19 +41,30 @@ Start with a small channel set. You can enable more categories after the complet
 
 See [Adding an EPG Source](../setup/epg-sources.md) for time-zone, logo, and EPG layout options.
 
-## 4. Create and enable a layout
+## 4. Configure cloud publishing
+
+1. Open **Settings** → **IPTVBoss Settings**.
+2. Expand **Cloud & Backups** and enable the cloud settings.
+3. Select **Dropbox** or **Google Drive**.
+4. Follow the matching tab in [Cloud Provider Setup](../settings/cloud-providers.md) to create the required provider app and enter its credentials.
+5. Select **Authorize** and complete the provider's authorization flow.
+6. Save the settings.
+
+This authorizes IPTVBoss to publish playlist and EPG files. It does not require or enable Pro cloud database synchronization or backup. Keep app secrets, authorization codes, and generated output links private.
+
+## 5. Create and enable a layout
 
 1. Open **Layout** → **Layout Manager**.
 2. Select **Add New Layout**.
 3. Enter a descriptive name, such as `First Test`.
 4. Enable M3U and EPG output for the layout.
-5. Choose a local **Custom Output Folder** that you can find easily.
+5. Select a **Cloud Provider Folder** for the provider you authorized.
 6. Make sure the layout itself is enabled.
 7. Select **Save Layout**.
 
 The layout is the publishable channel list. Adding sources alone does not place their channels into output.
 
-## 5. Import channels into the layout
+## 6. Import channels into the layout
 
 1. Open **Layout** → **Layout Editor**.
 2. Select the layout you just created.
@@ -65,7 +76,7 @@ The layout is the publishable channel list. Adding sources alone does not place 
 
 See [Editing a Layout](../layouts/layout-editor.md#import-channels-with-channel-importer) for selection, duplicate, and grouping options.
 
-## 6. Map EPG data
+## 7. Map EPG data
 
 1. Select a channel that should have guide data.
 2. In **Channel Options**, expand **EPG Mapping**.
@@ -76,31 +87,34 @@ See [Editing a Layout](../layouts/layout-editor.md#import-channels-with-channel-
 
 Choose a mapping only when the channel identity is reliable. An incorrect guide is more misleading than a missing one. See [Mapping Channels](../setup/channel-mapping.md) for the complete mapping workflow.
 
-## 7. Generate local output
+## 8. Generate cloud output
 
-1. Return to **Layout Manager** and confirm that the layout, M3U output, EPG output, and local output folder are enabled and saved.
+1. Return to **Layout Manager** and confirm that the layout, M3U output, EPG output, and cloud-provider folder are enabled and saved.
 2. Open **Output**.
 3. Select **Current Layout M3U & EPG**.
-4. Wait for generation to finish.
-5. Open the configured output folder and confirm that both the M3U and EPG files exist.
+4. Wait for generation and upload to finish.
+5. Select **Output** → **View Cloud Links**.
+6. Find the M3U and EPG links for the layout you created.
+7. Copy the two links without exposing them in a screenshot, issue, or support message.
 
 Do not use an all-layout output action while testing one layout.
 
-## 8. Test the result
+## 9. Test the result
 
-1. Load the generated M3U file into your intended player.
-2. Configure the generated EPG file as that playlist's guide source.
-3. Confirm that an imported channel plays.
-4. Confirm that a mapped channel shows the expected programme information.
+1. Add the generated cloud M3U link to your intended player.
+2. Configure the generated cloud EPG link as that playlist's guide source.
+3. Refresh the playlist and guide in the player.
+4. Confirm that an imported channel plays.
+5. Confirm that a mapped channel shows the expected programme information.
 
-If channels are missing, review the source categories and layout import. If guide data is missing, confirm that the EPG synchronized, the channel mapping was saved, and the EPG output was regenerated.
+If the cloud links are missing, confirm the provider authorization and the layout's cloud-provider folder, then regenerate the current layout output. If channels are missing, review the source categories and layout import. If guide data is missing, confirm that the EPG synchronized, the channel mapping was saved, the EPG link is assigned to the playlist in the player, and the output was regenerated.
 
 ## Next steps
 
-After the local test works, you can:
+After the cloud links work, you can:
 
 - [organize and rename layout content](../layouts/layout-editor.md);
 - [configure additional output settings](../layouts/output-settings.md);
 - [create desktop output users](../layouts/users.md);
-- [publish output through a cloud provider](../settings/cloud-providers.md);
+- configure a local output folder as an optional diagnostic or same-computer workflow;
 - [automate synchronization](../settings/automation.md).
