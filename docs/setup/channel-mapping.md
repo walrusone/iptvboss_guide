@@ -45,7 +45,7 @@ For manual mapping:
 
 Use the channel’s country, network, and service name to distinguish similarly named results. Do not select a match only because its display name looks similar.
 
-After saving a mapping, see [Browsing EPG Data](epg-browser.md) when you need to inspect the guide data returned for that mapped channel.
+<span class="pro-badge">PRO</span> Use [EPG Browser](epg-browser.md) to inspect the guide data returned for a mapped channel.
 
 ![EPG Browser](../assets/images/layout/epg-browser.png)
 
@@ -63,5 +63,5 @@ After saving a mapping, see [Browsing EPG Data](epg-browser.md) when you need to
 
 The mapping is ready when the selected channel shows its EPG source and channel identifier and the layout can be saved without an error.
 
-!!! note "Basic and Pro"
+!!! note "Free and Pro"
     <span class="pro-badge">PRO</span> Automatic mapping and built-in EPG tools require Pro. Manual assignment remains the appropriate fallback when automatic tools are unavailable. See [Free vs Pro](../getting-started/free-vs-pro.md).

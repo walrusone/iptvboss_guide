@@ -1,4 +1,4 @@
-# IPTVBoss Pro Account Access
+# IPTVBoss Pro Settings and Account Access
 
 Open **Settings** → **IPTVBoss Pro Settings** to activate or review Pro access.
 

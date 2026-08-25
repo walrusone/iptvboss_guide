@@ -23,7 +23,7 @@ This page is the guide's canonical entitlement table. Subscription tiers and fea
 | Source and channel editing | Import sources, sync sources, edit groups and channels, reorder content, assign logos, and manually assign EPG data | Everything in Free, plus the Pro-only editor actions listed below |
 | EPG workflow | External/custom EPG sources, manual mapping, and standard EPG output | EPG Browser, automatic EPG tools in Layout Editor, EPG layout overrides, EPG logo templates, and Universal EPG |
 | Layout workflow | Create and edit layouts, import channels, organize groups, and generate output | Layout import/export, channel-list export, linked layout groups, and layout EPG override settings |
-| Output and hosting | Standard M3U and EPG output, including supported output links | Cloud database synchronization and backups, XC Server, and the related server workflows |
+| Output and hosting | Local M3U/EPG output and supported cloud playlist/EPG publishing | Everything in Free, plus cloud database synchronization and backups, XC Server, and the related server workflows |
 | Automation | Run supported noGUI commands through the operating-system scheduler | Native **Sync Schedule**, headless/cloud synchronization workflows, and email notifications |
 | Advanced tools | Core layout and source tools | Advanced EPG Dummies, AED bulk tools, AI Settings, Prefix Auto-Removal, custom tags, sports-data tools, and Custom Sports Groups |
 | Playback and diagnostics | Standard channel and EPG editing | VLCJ stream and EPG playback actions from the Layout Editor |

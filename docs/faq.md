@@ -10,7 +10,7 @@ An M3U source uses a complete playlist URL or local `.m3u` file. An Xtream Codes
 
 ## Why can I see a feature but not use it?
 
-Some features depend on the account plan. See [Free vs Pro](getting-started/free-vs-pro.md) for the current limits and Pro-only feature categories, then use [IPTVBoss Pro Account Access](settings/pro.md) for activation.
+Some features depend on the account plan. See [Free vs Pro](getting-started/free-vs-pro.md) for the current limits and Pro-only feature categories, then use [IPTVBoss Pro Settings](settings/pro.md) for activation.
 
 ## Why is my EPG empty?
 

@@ -57,10 +57,10 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Start Here:
+      - First Working Setup: getting-started/first-working-setup.md
       - Free vs Pro: getting-started/free-vs-pro.md
       - Installation: getting-started/installation.md
       - First Run: getting-started/first-run.md
-      - First Working Setup: getting-started/first-working-setup.md
       - Updating IPTVBoss: getting-started/updating.md
   - Sources:
       - Sources Manager: setup/sources-manager.md
@@ -88,7 +88,7 @@ nav:
   - Advanced / Pro Features:
       - Advanced Source Tools · PRO: setup/source-tools.md
       - Universal EPG · PRO: setup/universal-epg.md
-      - Browsing EPG Data · PRO: setup/epg-browser.md
+      - EPG Browser · PRO: setup/epg-browser.md
       - Advanced EPG Dummies · PRO: features/aed.md
       - Custom Sports Channel Names · PRO: setup/custom-sports-channel-names.md
       - Custom Sports Groups · PRO: features/custom-sports.md
@@ -122,7 +122,7 @@ nav:
   - Settings:
       - Application Settings: settings/application.md
       - Preferences and Theme: settings/preferences.md
-      - Pro and Account Access: settings/pro.md
+      - IPTVBoss Pro Settings: settings/pro.md
   - Troubleshooting:
       - Common Problems: troubleshooting/common-problems.md
       - Logs and Diagnostics: troubleshooting/logs.md

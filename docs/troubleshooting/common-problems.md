@@ -39,6 +39,8 @@ Confirm that the intended layout is selected, the layout is enabled, and the cha
 
 ## Server did not reload after a client update
 
+<span class="pro-badge">PRO</span> This troubleshooting workflow applies to XC Server.
+
 The automatic reload request is sent when a paired IPTVBoss client closes after completing its database backup workflow. It is not sent after every edit.
 
 Check the following:
@@ -54,7 +56,7 @@ See [Automatic server reloads from this client](../server/gui-settings.md#automa
 
 ## The application shows a locked feature
 
-Some EPG, layout, source, and advanced editing features depend on the account plan. Confirm the account status in [Free vs Pro](../getting-started/free-vs-pro.md) and [IPTVBoss Pro Account Access](../settings/pro.md) before treating a locked control as an application error.
+Some EPG, layout, source, and advanced editing features depend on the account plan. Confirm the account status in [Free vs Pro](../getting-started/free-vs-pro.md) and [IPTVBoss Pro Settings](../settings/pro.md) before treating a locked control as an application error.
 
 ## When to open a ticket
 

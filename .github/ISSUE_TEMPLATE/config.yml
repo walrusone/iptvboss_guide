@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private or account-specific support
+    url: https://members.bosstees.net/
+    about: Open a private support ticket for accounts, billing, credentials, or other sensitive matters.
+  - name: Community help
+    url: https://discord.gg/s3kpjP8EgR
+    about: Ask setup questions and discuss general troubleshooting in the IPTVBoss Discord.

@@ -27,5 +27,5 @@ Open layout tools from the **Layout** menu at the top of IPTVBoss:
 4. Use [Layout Output Settings](output-settings.md) to configure destinations and formats.
 5. Use [Creating output](../setup/output.md) to generate the files or links.
 
-!!! note "Basic and Pro"
+!!! note "Free and Pro"
     Layout limits are listed only in the canonical [Free vs Pro comparison](../getting-started/free-vs-pro.md). If you reach the current limit, remove an unused layout or review the available Pro plans.

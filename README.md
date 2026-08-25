@@ -4,6 +4,8 @@ This repository contains the source files for the official IPTVBoss user guide.
 
 The guide is built with [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) and deployed to GitHub Pages after approved changes are merged into `main`.
 
+Use the [documentation issue form](https://github.com/walrusone/iptvboss_guide/issues/new?template=documentation.yml) to report an incorrect, outdated, unclear, or missing guide page. Use the [IPTVBoss member portal](https://members.bosstees.net/) instead when a request contains account information or other private details.
+
 ## Requirements
 
 - Python 3
@@ -61,3 +63,8 @@ The generated site is placed in `site/`. The `site/` directory is generated and 
 
 The pull-request workflow validates the site without deploying it. Merges to `main` deploy through GitHub Pages.
 
+Never include playlist credentials, provider URLs, tokens, license keys, customer information, or other secrets in issues, pull requests, screenshots, or test content.
+
+## Copyright
+
+Copyright © 2026 IPTVBoss. All rights reserved. See [COPYRIGHT.md](COPYRIGHT.md) for the repository terms, including the terms that apply to submitted contributions.

@@ -1,4 +1,4 @@
-# Browsing EPG Data
+# EPG Browser
 
 <span class="pro-badge">PRO</span> [See Free vs Pro](../getting-started/free-vs-pro.md).
 

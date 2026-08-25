@@ -29,7 +29,7 @@ An EPG (XMLTV) source supplies programme information that can be assigned to cha
 
 ![The Add Pro EPG dialog](../assets/images/epg/add-epg-pro.png)
 
-The built-in source is then available for synchronization and channel mapping like another EPG source. If the source is not listed or is locked, confirm the account status in [Free vs Pro](../getting-started/free-vs-pro.md) and [IPTVBoss Pro Account Access](../settings/pro.md).
+The built-in source is then available for synchronization and channel mapping like another EPG source. If the source is not listed or is locked, confirm the account status in [Free vs Pro](../getting-started/free-vs-pro.md) and [IPTVBoss Pro Settings](../settings/pro.md).
 
 ## Configure the EPG Layout
 
@@ -60,9 +60,9 @@ Save the EPG source after reviewing the three lists, then synchronize the source
 
 ## Use EPG data for mapping
 
-After synchronizing an external or built-in source, use [Channel Mapping](channel-mapping.md) to assign its channels to playlist channels. After a mapping is saved, use the [EPG Browser](epg-browser.md) to inspect the programme data returned for that mapped channel.
+After synchronizing an external or built-in source, use [Channel Mapping](channel-mapping.md) to assign its channels to playlist channels. <span class="pro-badge">PRO</span> Use [EPG Browser](epg-browser.md) to inspect the programme data returned for a mapped channel.
 
-!!! note "Basic and Pro"
+!!! note "Free and Pro"
     <span class="pro-badge">PRO</span> Built-in EPG sources and some advanced EPG tools require Pro. External EPG sources remain available when the account can use them. See [Free vs Pro](../getting-started/free-vs-pro.md).
 
 ## Verify the source

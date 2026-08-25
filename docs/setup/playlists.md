@@ -72,7 +72,7 @@ If a value contains URL-encoded characters such as `%2B` or `%40`, copy the valu
 
 If synchronization fails, confirm that the URL is reachable, credentials are correct, and the provider is online. Then review [Common Problems](../troubleshooting/common-problems.md).
 
-!!! note "Basic and Pro"
+!!! note "Free and Pro"
     Source limits are listed only in the canonical [Free vs Pro comparison](../getting-started/free-vs-pro.md). If you reach the current limit, remove an unused source or review the available Pro plans.
 
 !!! note

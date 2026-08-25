@@ -22,6 +22,8 @@ The `db` and `backup` directories are especially important. Do not delete them u
 
 ## Restore an XC Server paired code
 
+<span class="pro-badge">PRO</span> This recovery workflow applies to XC Server.
+
 When an installation is reinstalled, moved to another computer, or loses its local XC Server pairing, use **XC Server Paired Code Restore** when the server provides a paired recovery code. This restores the installation’s connection to the existing XC Server without creating a new server or replacing the server database.
 
 Before starting, confirm that you are using the intended XC Server and that the current server database is backed up. A paired code grants access to that server and should be handled like a temporary credential.
