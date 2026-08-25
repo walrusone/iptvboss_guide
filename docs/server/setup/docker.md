@@ -1,5 +1,7 @@
 # Install the XC Server with Docker
 
+--8<-- "includes/xc-server-preview.md"
+
 This guide runs IPTVBoss as a standalone Docker container and stores its data in a Docker volume. It is written for a beginner using Ubuntu or Debian.
 
 The default setup publishes unencrypted HTTP on port `8001` so other devices on a trusted local network can reach the Server Console.

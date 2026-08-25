@@ -1,5 +1,7 @@
 # Server Console: Swagger API Documentation
 
+--8<-- "includes/xc-server-preview.md"
+
 ![Swagger API documentation](../../assets/images/server-console/server-swagger.png)
 
 The server exposes interactive Swagger documentation for the external API at:

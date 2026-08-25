@@ -6,13 +6,17 @@ If you want to try the Pro features, visit the [IPTVBoss members site](https://m
 
 The limits and locked controls below reflect the current application behavior. Pro user capacity depends on the subscribed tier; account status and available limits are shown in **Settings** → **IPTVBoss Pro Settings**.
 
-💲 **Pro feature marker:** a dollar sign identifies a Pro-gated feature or page. Select the nearby [Free vs Pro](free-vs-pro.md) link to return to this comparison.
+**Last verified:** August 2026.
+
+This page is the guide's canonical entitlement table. Subscription tiers and feature availability can change, so the limits displayed by **IPTVBoss Pro Settings** for the signed-in account are authoritative.
+
+<span class="pro-badge">PRO</span> identifies a Pro-gated feature or page. Sidebar entries use the text suffix **· PRO**.
 
 ## Plan comparison
 
-| Area | Free | 💲 Pro |
+| Area | Free | <span class="pro-badge">PRO</span> Pro |
 | --- | --- | --- |
-| Playlist sources | Up to **2** playlist or API sources | Unlimited playlist sources |
+| Playlist sources | Up to **2** M3U or Xtream Codes sources | Unlimited playlist sources |
 | EPG sources | Up to **5** EPG sources | Unlimited EPG sources, including Pro-provided EPG sources |
 | Layouts | Up to **2** layouts | Unlimited layouts |
 | Users | Up to **2** users | Tiered limits: **25, 75, 200, 500, 1,000, or unlimited** users, depending on the Pro tier |
@@ -29,7 +33,7 @@ The limits and locked controls below reflect the current application behavior. P
 
 The Free plan is enough to build a small personal setup:
 
-1. Add up to two playlist or API sources.
+1. Add up to two M3U or Xtream Codes sources.
 2. Add up to five EPG sources and map their channels manually when needed.
 3. Create up to two layouts.
 4. Organize groups and channels in Layout Editor.

@@ -4,9 +4,9 @@
 
 No. IPTVBoss is an editor that imports and manages playlist and EPG sources supplied by the user. Use only sources that you are authorized to access.
 
-## What is the difference between an M3U source and an API source?
+## What is the difference between an M3U source and an Xtream Codes source?
 
-An M3U source uses a complete playlist URL or local `.m3u` file. An API source uses provider connection details such as a server address, username, and password.
+An M3U source uses a complete playlist URL or local `.m3u` file. An Xtream Codes source uses provider connection details such as a server address, username, and password.
 
 ## Why can I see a feature but not use it?
 

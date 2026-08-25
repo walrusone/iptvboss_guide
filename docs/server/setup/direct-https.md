@@ -1,5 +1,7 @@
 # Direct HTTPS
 
+--8<-- "includes/xc-server-preview.md"
+
 Direct HTTPS makes IPTVBoss terminate TLS itself. Use it when an HTTPS reverse proxy cannot be used. The XC Server normally listens at `https://host:8001` and requires a PKCS#12 certificate store named `keystore.p12` in the selected IPTVBoss data directory.
 
 !!! tip "A reverse proxy is normally easier"

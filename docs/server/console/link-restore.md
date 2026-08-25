@@ -1,5 +1,7 @@
 # Server Console: Link Restore
 
+--8<-- "includes/xc-server-preview.md"
+
 Use **Link Restore** to replace or initialize the active XC Server database from a supported backup link workflow.
 
 ![Server link restore](../../assets/images/server-console/link-restore.png)

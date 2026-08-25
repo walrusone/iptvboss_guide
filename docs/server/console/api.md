@@ -1,5 +1,7 @@
 # Server Console: API Keys
 
+--8<-- "includes/xc-server-preview.md"
+
 ![Server Console API keys](../../assets/images/server-console/server-api.png)
 
 The **API Keys** section lists the reload-only credentials created for paired IPTVBoss clients and the named keys used by scripts that call the documented `/api/v1` endpoints. These are separate credential types with different permissions.

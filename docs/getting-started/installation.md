@@ -6,7 +6,7 @@ This page explains how to install the current IPTVBoss release on Windows, macOS
 
 - Use a computer or server that you control.
 - Confirm whether your computer uses an Intel/AMD or ARM processor.
-- Have your IPTVBoss account or license information available if you use 💲 [Pro features](free-vs-pro.md).
+- Have your IPTVBoss account or license information available if you use <span class="pro-badge">PRO</span> [Pro features](free-vs-pro.md).
 - Choose a location where IPTVBoss can keep its local database and output files.
 
 !!! warning
@@ -54,12 +54,11 @@ On the first launch, macOS may ask you to confirm that you want to open an appli
 2. Install the package using your distribution’s package manager.
 3. Start **IPTVBoss** from the applications menu or its installed command.
 
-For Debian-based Linux, the release package uses the system architecture in its filename. The following example uses 3.11.43; replace it with the version shown on the release page when installing a newer release:
+For Debian-based Linux, the release package uses the version and system architecture in its filename. Download the current `.deb` from the official release page, then install that exact downloaded filename. For example, replace the placeholder below with the real filename:
 
 ```bash
-CPU=$(dpkg --print-architecture)
-wget https://github.com/walrusone/iptvboss-release/releases/latest/download/iptvboss_3.11.43_${CPU}.deb
-sudo apt install ./iptvboss_3.11.43_${CPU}.deb
+cd ~/Downloads
+sudo apt install ./iptvboss_VERSION_ARCH.deb
 ```
 
 The package format and installation command may vary by release. Follow the instructions attached to the selected release rather than copying a command from an older version.

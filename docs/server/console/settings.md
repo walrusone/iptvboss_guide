@@ -1,5 +1,7 @@
 # Server Console: Server Settings
 
+--8<-- "includes/xc-server-preview.md"
+
 Use **Server Settings** in the web frontend to configure the public server address and synchronization schedules. Saving settings may push a fresh backup to the configured cloud provider.
 
 1. Enter the server address in **Server URL**.

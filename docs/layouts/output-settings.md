@@ -16,7 +16,7 @@ Common settings include:
 | --- | --- |
 | **M3U Output Enabled** | Includes the layout in playlist output. |
 | **EPG Output Enabled** | Includes guide output for the layout when available. |
-| **XC Enabled** | 💲 Includes this layout in XC Server output when configured. It is not required when the XC Server is used only for M3U delivery. See [Free vs Pro](../getting-started/free-vs-pro.md). |
+| **XC Enabled** | <span class="pro-badge">PRO</span> Includes this layout in XC Server output when configured. It is not required when the XC Server is used only for M3U delivery. See [Free vs Pro](../getting-started/free-vs-pro.md). |
 | **M3U Filename** | Sets the generated playlist filename. |
 | **EPG Filename** | Sets the generated guide filename. |
 | **Custom Output Folder** | Writes local output to a chosen folder. |

@@ -42,4 +42,4 @@ Select the layout, then select ![](../assets/icons/ui/remove.svg){ .ui-icon } **
 Before removing a layout, confirm that no player, user, cloud link, or scheduled process still depends on it. Export or back up important configuration before destructive changes.
 
 !!! note "Basic and Pro"
-    Free accounts have a limited number of layouts. If the layout limit is reached, remove an unused layout or activate 💲 Pro before creating another one. See [Free vs Pro](../getting-started/free-vs-pro.md).
+    Layout limits are listed only in the canonical [Free vs Pro comparison](../getting-started/free-vs-pro.md). If you reach the current limit, remove an unused layout or review the available Pro plans.

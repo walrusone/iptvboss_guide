@@ -1,5 +1,7 @@
 # Server Console: Security
 
+--8<-- "includes/xc-server-preview.md"
+
 ![Console security](../../assets/images/server-console/server-security-section-pin.png)
 
 **Console Security** controls two-factor authentication and which console sections require an additional six-digit PIN.

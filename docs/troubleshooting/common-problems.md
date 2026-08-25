@@ -17,7 +17,7 @@ Do not delete the database to solve a startup problem.
 Check the source URL, provider availability, username, and password. Confirm that the source type matches the provider information:
 
 - Genuine M3U playlist URL or local M3U file: **Add M3U Source**
-- Standard XC `get.php?username=...&password=...` link: extract the server address, username, and password, then use **Add API Source**
+- Standard Xtream Codes `get.php?username=...&password=...` link: extract the server address, username, and password, then use **Add API Source**
 
 Review the source log and try again only after confirming the provider is reachable.
 

@@ -1,7 +1,9 @@
-# Install the XC Server on Windows — Draft
+# Install the XC Server on Windows
+
+--8<-- "includes/xc-server-preview.md"
 
 !!! danger "Still requires Windows testing"
-    This Task Scheduler procedure is a practical draft, not a fully tested Windows service installation. Task Scheduler can start IPTVBoss automatically, but it does not provide the same graceful shutdown guarantees as a true service wrapper. Reboot, shutdown, upgrade, and database-recovery testing is still required.
+    This Task Scheduler procedure is not a fully tested Windows service installation. Task Scheduler can start IPTVBoss automatically, but it does not provide the same graceful shutdown guarantees as a true service wrapper. Reboot, shutdown, upgrade, and database-recovery testing is still required.
 
 This setup uses two Windows components:
 
@@ -198,7 +200,7 @@ Before an upgrade:
 5. Copy the entire `IPTVBoss-XC` data directory to another computer or storage device.
 6. Install the update, confirm the console launcher path is still correct, and run the task again.
 
-Do not overwrite or restore live database files while the scheduled task is running. The shutdown and upgrade limitations are why this procedure remains marked as draft.
+Do not overwrite or restore live database files while the scheduled task is running. The shutdown and upgrade limitations are why this procedure remains marked as untested.
 
 ## Troubleshooting
 

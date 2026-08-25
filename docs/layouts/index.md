@@ -28,4 +28,4 @@ Open layout tools from the **Layout** menu at the top of IPTVBoss:
 5. Use [Creating output](../setup/output.md) to generate the files or links.
 
 !!! note "Basic and Pro"
-    Free accounts have a layout limit. 💲 Pro tiers provide higher or unlimited layout capacity according to the subscription. See [Free vs Pro](../getting-started/free-vs-pro.md).
+    Layout limits are listed only in the canonical [Free vs Pro comparison](../getting-started/free-vs-pro.md). If you reach the current limit, remove an unused layout or review the available Pro plans.

@@ -1,5 +1,7 @@
 # Advanced Docker Configuration
 
+--8<-- "includes/xc-server-preview.md"
+
 Start with the [beginner Docker installation](docker.md). This page explains variations that are useful after the basic Compose setup is understood.
 
 ## How the Compose setup works

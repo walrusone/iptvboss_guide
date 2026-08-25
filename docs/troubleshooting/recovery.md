@@ -38,7 +38,7 @@ Before starting, confirm that you are using the intended XC Server and that the 
 !!! warning
     Do not use paired code restore to initialize an unrelated server or to replace a database. If the server is already paired to other installations, confirm the server URL and database owner before applying the code.
 
-If the paired code is expired or rejected, generate a new code and repeat the restore. For the normal first-time pairing flow, see [GUI Server Dashboard and Desktop GUI Settings](../server/settings.md).
+If the pairing code is expired or rejected, generate a new code and repeat the restore. For the normal first-time pairing flow, see [Bootstrap an empty XC Server with GUI pairing](../server/gui-settings.md#bootstrap-an-empty-xc-server-with-gui-pairing).
 
 ## Restore a deleted Dropbox backup
 

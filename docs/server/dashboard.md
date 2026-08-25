@@ -1,6 +1,6 @@
 # GUI Server Dashboard
 
-💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+--8<-- "includes/xc-server-preview.md"
 
 The **GUI Server Dashboard** is the dashboard shown inside the desktop IPTVBoss application when the XC Server is enabled. Open it from the **Server** menu in the GUI.
 

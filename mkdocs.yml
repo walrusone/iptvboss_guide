@@ -56,68 +56,73 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Getting Started:
+  - Start Here:
       - Free vs Pro: getting-started/free-vs-pro.md
       - Installation: getting-started/installation.md
       - First Run: getting-started/first-run.md
+      - First Working Setup: getting-started/first-working-setup.md
       - Updating IPTVBoss: getting-started/updating.md
-      - Server Basics: getting-started/server.md
-  - Sources and Setup:
+  - Sources:
       - Sources Manager: setup/sources-manager.md
       - Adding Playlists: setup/playlists.md
-      - 💲 Custom Sports Channel Names: setup/custom-sports-channel-names.md
+      - Playlist Categories: setup/playlist-categories.md
       - Adding EPG Sources: setup/epg-sources.md
-      - 💲 Universal EPG: setup/universal-epg.md
-      - Source and EPG Tools: setup/source-tools.md
-      - 💲 Browsing EPG Data: setup/epg-browser.md
-      - Channel Mapping: setup/channel-mapping.md
-      - Creating Output: setup/output.md
-      - Cloud Output Links: setup/output-links.md
-  - Layouts:
+  - Build a Layout:
       - Layout Overview: layouts/index.md
       - Layout Manager: layouts/layout-manager.md
       - Layout Editor: layouts/layout-editor.md
+      - Channel Mapping: setup/channel-mapping.md
       - Layout Tools:
           - New Channel Manager: layouts/new-channel-manager.md
           - New Category Manager: layouts/new-category-manager.md
-      - 💲 Advanced EPG Dummies: features/aed.md
-      - 💲 Custom Sports Groups: features/custom-sports.md
+  - Output & Users:
       - Layout Output Settings: layouts/output-settings.md
-      - User Management: layouts/users.md
-  - Server:
-      - "Draft: XC Server Setup":
-          - "Draft: Setup Overview": server/setup/index.md
-          - "Draft: Docker Installation": server/setup/docker.md
+      - Creating Output: setup/output.md
+      - Desktop Output Users: layouts/users.md
+  - Automation & Cloud:
+      - Cloud Provider Setup: settings/cloud-providers.md
+      - Cloud Output Links: setup/output-links.md
+      - External noGUI Scheduling: settings/automation.md
+      - Sync Schedule · PRO: settings/scheduling.md
+      - Email Notifications · PRO: settings/email.md
+  - Advanced / Pro Features:
+      - Advanced Source Tools · PRO: setup/source-tools.md
+      - Universal EPG · PRO: setup/universal-epg.md
+      - Browsing EPG Data · PRO: setup/epg-browser.md
+      - Advanced EPG Dummies · PRO: features/aed.md
+      - Custom Sports Channel Names · PRO: setup/custom-sports-channel-names.md
+      - Custom Sports Groups · PRO: features/custom-sports.md
+      - AI Settings · PRO: settings/ai.md
+  - XC Server · PRO · 3.12 BETA:
+      - XC Server Overview: server/overview.md
+      - Setup:
+          - Setup Overview: server/setup/index.md
+          - Docker Installation: server/setup/docker.md
           - "Advanced Docker": server/setup/docker-advanced.md
           - "Linux Service": server/setup/linux-service.md
-          - "Draft: macOS Service": server/setup/macos-service.md
+          - "macOS Service": server/setup/macos-service.md
           - "Direct HTTPS": server/setup/direct-https.md
-          - "Draft: Windows Startup Task": server/setup/windows.md
-      - 💲 Server Console: server/index.md
-      - Console Sections:
+          - "Windows Startup Task": server/setup/windows.md
+      - Desktop Integration:
+          - GUI Server Dashboard: server/dashboard.md
+          - Desktop GUI Settings: server/gui-settings.md
+      - Server Console: server/index.md
+      - Server Console Sections:
           - Login and Setup: server/console/login.md
           - Logs: server/console/logs.md
           - Boss Metadata: server/console/metadata.md
           - Server Settings: server/console/settings.md
-          - User Management: server/console/users.md
+          - XC Server Users: server/console/users.md
           - Paired Devices: server/console/paired-devices.md
           - Link Restore: server/console/link-restore.md
           - API Keys: server/console/api.md
           - Swagger API Documentation: server/console/swagger.md
           - Console Security: server/console/security.md
           - Administrator Account: server/console/administrator.md
-      - 💲 GUI Server Dashboard: server/dashboard.md
-      - 💲 Desktop GUI Settings: server/gui-settings.md
-      - 💲 Server User Management: server/users.md
   - Settings:
       - Application Settings: settings/application.md
-      - Cloud Provider Setup: settings/cloud-providers.md
       - Preferences and Theme: settings/preferences.md
-      - Automatic Synchronization: settings/automation.md
-      - 💲 Sync Schedule: settings/scheduling.md
-      - 💲 AI Settings: settings/ai.md
       - Pro and Account Access: settings/pro.md
-      - 💲 Email Notifications: settings/email.md
   - Troubleshooting:
       - Common Problems: troubleshooting/common-problems.md
       - Logs and Diagnostics: troubleshooting/logs.md

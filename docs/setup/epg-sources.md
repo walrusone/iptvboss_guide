@@ -1,20 +1,6 @@
 # Adding an EPG Source
 
-An EPG source supplies programme information that can be assigned to channels in a layout.
-
-## 💲 Add a built-in or Pro EPG
-
-1. Open **Sources**.
-2. Select **Add EPG**.
-3. Open the **Source** dropdown.
-4. Select the available built-in or Pro EPG source.
-5. Confirm that the source name is populated and that the URL field is not required.
-6. Review any refresh, time-zone, and logo options shown in the dialog.
-7. Select **Save**.
-
-![The Add Pro EPG dialog](../assets/images/epg/add-epg-pro.png)
-
-The built-in source is then available for synchronization and channel mapping like another EPG source. If the source is not listed or is locked, confirm the account status in [Free vs Pro](../getting-started/free-vs-pro.md) and [IPTVBoss Pro Account Access](../settings/pro.md).
+An EPG (XMLTV) source supplies programme information that can be assigned to channels in a layout.
 
 ## Add an external EPG source
 
@@ -30,6 +16,20 @@ The built-in source is then available for synchronization and channel mapping li
 
 !!! warning
     Do not publish private EPG URLs, account tokens, or provider credentials.
+
+## Add a built-in EPG source <span class="pro-badge">PRO</span>
+
+1. Open **Sources**.
+2. Select **Add EPG**.
+3. Open the **Source** dropdown.
+4. Select the available built-in Pro EPG source.
+5. Confirm that the source name is populated and that the URL field is not required.
+6. Review any refresh, time-zone, and logo options shown in the dialog.
+7. Select **Save**.
+
+![The Add Pro EPG dialog](../assets/images/epg/add-epg-pro.png)
+
+The built-in source is then available for synchronization and channel mapping like another EPG source. If the source is not listed or is locked, confirm the account status in [Free vs Pro](../getting-started/free-vs-pro.md) and [IPTVBoss Pro Account Access](../settings/pro.md).
 
 ## Configure the EPG Layout
 
@@ -63,7 +63,7 @@ Save the EPG source after reviewing the three lists, then synchronize the source
 After synchronizing an external or built-in source, use [Channel Mapping](channel-mapping.md) to assign its channels to playlist channels. After a mapping is saved, use the [EPG Browser](epg-browser.md) to inspect the programme data returned for that mapped channel.
 
 !!! note "Basic and Pro"
-    💲 Built-in EPG sources and some advanced EPG tools may require Pro. External EPG sources remain available when the account can use them. See [Free vs Pro](../getting-started/free-vs-pro.md).
+    <span class="pro-badge">PRO</span> Built-in EPG sources and some advanced EPG tools require Pro. External EPG sources remain available when the account can use them. See [Free vs Pro](../getting-started/free-vs-pro.md).
 
 ## Verify the source
 

@@ -1,4 +1,4 @@
-# User Management
+# Desktop Output Users
 
 IPTVBoss uses layouts and user records to create separate output links for different customers, household members, or devices.
 
@@ -39,7 +39,7 @@ Each enabled user receives their own M3U link. Standard EPG output can be shared
 
 ![Manage Users dialog](../assets/images/sources/manage-users.png)
 
-The server console may also expose **User Management** for administrators. Server-side changes can trigger backups or cloud synchronization, so wait for the operation to finish before making another database change.
+For browser-based administration, use [XC Server Users](../server/console/users.md). Server-side changes can trigger backups or cloud synchronization, so wait for the operation to finish before making another database change.
 
 !!! note
-    If user management is locked or unavailable, check the account plan, server authorization, and whether another IPTVBoss or XC Server process is currently modifying users.
+    If desktop user management is locked or unavailable, check the account plan and whether another IPTVBoss process is currently modifying users.

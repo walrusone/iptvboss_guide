@@ -1,7 +1,9 @@
 # Install the XC Server as a macOS Service
 
+--8<-- "includes/xc-server-preview.md"
+
 !!! warning "Needs macOS testing"
-    This procedure and its launchd template still need hands-on testing on both Apple Silicon and Intel macOS. Treat it as draft guidance until those tests are complete.
+    This procedure and its launchd template still need hands-on testing on both Apple Silicon and Intel macOS. Treat it as untested guidance until those checks are complete.
 
 This setup runs the packaged `iptvboss-c` console launcher without the desktop interface. macOS starts it at boot with launchd, and Caddy provides the public HTTPS address.
 

@@ -10,7 +10,7 @@ The screen has two independent areas: playlist sources at the top and EPG source
 
 ## Playlist sources
 
-The playlist section shows the configured M3U, XC API, and custom sources. The details panel can include the source name, expiry, connection limit, time zone, channel totals, category totals, user status, and the last attempt, successful synchronization, and output times.
+The playlist section shows the configured M3U, Xtream Codes, and custom sources. The details panel can include the source name, expiry, connection limit, time zone, channel totals, category totals, user status, and the last attempt, successful synchronization, and output times.
 
 ### Playlist toolbar
 

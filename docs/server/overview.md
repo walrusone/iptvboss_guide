@@ -1,6 +1,8 @@
-# Server Basics
+# XC Server Overview
 
-IPTVBoss can run as an XC Server without opening the desktop application. In this mode it runs continuously, provides the browser-based [Server Console](../server/index.md), and serves XC playlists, EPG data, and streams.
+--8<-- "includes/xc-server-preview.md"
+
+IPTVBoss can run as an XC Server without opening the desktop application. In this mode it runs continuously, provides the browser-based [Server Console](index.md), and serves XC playlists, EPG data, and streams.
 
 XC Server mode is normally run behind an HTTPS reverse proxy. IPTVBoss listens on the local machine, while the reverse proxy handles the public hostname, TLS certificate, and Internet-facing connection.
 
@@ -23,10 +25,10 @@ This command:
 
 The default XC Server port is `8001`. The platform setup pages explain how to install IPTVBoss, run this command under a service manager, and configure the reverse proxy:
 
-- [Linux service](../server/setup/linux-service.md)
-- [macOS service](../server/setup/macos-service.md)
-- [Docker installation](../server/setup/docker.md)
-- [Windows options](../server/setup/windows.md)
+- [Linux service](setup/linux-service.md)
+- [macOS service](setup/macos-service.md)
+- [Docker installation](setup/docker.md)
+- [Windows options](setup/windows.md)
 
 ## XC Server flags
 
@@ -109,7 +111,7 @@ IPTVBOSS_XC_KEYSTORE_PASSWORD='change-this-password' \
 
 The environment variable `IPTVBOSS_HTTPS_ONLY=true` enables the same mode. Do not put the keystore password directly in a shared service file when the service manager provides a safer secret mechanism.
 
-The keystore contains the HTTPS private key and certificate chain. Its password does not protect XC users, administrator credentials, or the database. See [Direct HTTPS](../server/setup/direct-https.md) for certificate creation, deployment, verification, and renewal instructions.
+The keystore contains the HTTPS private key and certificate chain. Its password does not protect XC users, administrator credentials, or the database. See [Direct HTTPS](setup/direct-https.md) for certificate creation, deployment, verification, and renewal instructions.
 
 ## XC Server environment variables
 
@@ -143,4 +145,4 @@ iptvboss -xcserver -xc-reset-admin -directory /path/to/data
 
 Stop every IPTVBoss process using that data directory first. The command refuses to run while the data is locked, asks for `RESET XC ADMIN`, and then clears the XC administrator identity, MFA, and trusted sessions. It preserves users, sources, layouts, settings, and backups. Start XC Server normally afterward; the console will ask you to create new administrator credentials.
 
-For first-time initialization and normal administration, continue to the [Server Console](../server/index.md). For installation and service management, use the [XC Server setup overview](../server/setup/index.md).
+For first-time initialization and normal administration, continue to the [Server Console](index.md). For installation and service management, use the [XC Server setup overview](setup/index.md).

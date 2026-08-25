@@ -1,5 +1,7 @@
 # Server Console: Administrator Account
 
+--8<-- "includes/xc-server-preview.md"
+
 ![Administrator account management](../../assets/images/server-console/server-administrator-management.png)
 
 The **Administrator Account** section changes the username or password used to sign in to the Server Console.

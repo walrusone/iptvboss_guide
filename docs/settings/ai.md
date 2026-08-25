@@ -1,6 +1,6 @@
 # AI Settings
 
-💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+<span class="pro-badge">PRO</span> [See Free vs Pro](../getting-started/free-vs-pro.md).
 
 AI Settings configure the provider and model used by IPTVBoss [AED AI Regex Assistance](../features/aed.md).
 

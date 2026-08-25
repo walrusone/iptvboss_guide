@@ -1,5 +1,7 @@
 # Custom Sports Channel Names for AEDs
 
+<span class="pro-badge">PRO</span> [See Free vs Pro](../getting-started/free-vs-pro.md).
+
 **Custom Sports Channel Names** lets a source use a local or hosted TXT file of fixture names when an AED needs a more descriptive channel name to find the correct event. The TXT name is used as an AED lookup name; it does not rename the channel displayed in your layout.
 
 This is useful when a provider supplies stable numbered sports channels such as `ESPN 1`, but the sports data or AED needs the current fixture name, such as `ESPN 1: Lakers vs Celtics`.
@@ -65,11 +67,11 @@ The file location is configured in the playlist source dialog, not in the AED ed
 2. Find **Custom Sports Channel Names**.
 3. Enter the full local path to `fixtures.txt`, or enter an `https://`/`http://` URL that returns the plain text file.
 4. Select **Browse** when the file is stored locally.
-5. Save the source and complete [Manage Categories](playlists.md#manage-categories) if this is a new source.
+5. Save the source and complete [Playlist Categories](playlist-categories.md) if this is a new source.
 
-### XC API source
+### Xtream Codes source
 
-1. Open **Sources** → **Add API Source**, or edit an existing XC source.
+1. Open **Sources** → **Add API Source**, or edit an existing Xtream Codes source.
 2. Find **Custom Sports Channel Names**.
 3. Enter the local path or hosted TXT URL.
 4. Save the source and synchronize it if the source or its categories have changed.

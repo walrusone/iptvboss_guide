@@ -15,4 +15,4 @@ See [Free vs Pro](../getting-started/free-vs-pro.md) for the current limits and 
 If a feature remains locked, confirm the account, network connection, and subscription status before troubleshooting the feature itself.
 
 !!! note
-    This guide intentionally does not publish fixed numeric limits. Subscription tiers and limits may change.
+    [Free vs Pro](../getting-started/free-vs-pro.md) is the guide's only numeric entitlement table. The limits shown in **IPTVBoss Pro Settings** for the signed-in account remain authoritative.

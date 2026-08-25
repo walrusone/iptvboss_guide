@@ -1,5 +1,7 @@
 # Server Console: Logs
 
+--8<-- "includes/xc-server-preview.md"
+
 Use **Logs** to review server activity, synchronization results, output events, and failures. Choose among the **XC Server**, **IPTVBoss**, and **NoGUI** logs, then select a dated log and the number of lines to display.
 
 ![Server logs](../../assets/images/server-console/server-logs.png)

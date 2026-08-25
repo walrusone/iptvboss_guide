@@ -1,5 +1,7 @@
 # Linux XC Server Installation
 
+--8<-- "includes/xc-server-preview.md"
+
 The Linux service runs IPTVBoss continuously without the desktop interface and exposes the browser-based [Server Console](../index.md). This guide uses the normal Linux package installation and a simple systemd service.
 
 !!! note

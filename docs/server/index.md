@@ -1,8 +1,8 @@
-# Server Console (3.11.43)
+# Server Console
 
-💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+--8<-- "includes/xc-server-preview.md"
 
-The IPTVBoss Server Console is the browser-based administration interface for an XC Server. The workflows below describe the 3.11.43 interface. Open it from the server address in a browser; it is not a screen inside the desktop IPTVBoss application.
+The IPTVBoss Server Console is the browser-based administration interface for an XC Server. The workflows below describe the planned 3.12 Beta interface. Open it from the server address in a browser; it is not a screen inside the desktop IPTVBoss application.
 
 ## Open the Server Console
 
@@ -33,7 +33,7 @@ The available console sections are listed in the navigation. Use the pages in th
 - [Login and Setup](console/login.md) — create the first administrator and sign in.
 - [Boss Metadata](console/metadata.md) — review server metadata and administrative information.
 - [Server Settings](console/settings.md) — configure server connection and schedule settings.
-- [User Management](console/users.md) — manage server users.
+- [XC Server Users](console/users.md) — manage server users.
 - [Paired Devices](console/paired-devices.md) — generate pairing codes and revoke device access.
 - [Link Restore](console/link-restore.md) — restore or initialize a server database from a supported link.
 - [API Keys](console/api.md) — rotate the XC Reload key and manage external automation keys.

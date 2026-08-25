@@ -1,6 +1,6 @@
 # Browsing EPG Data
 
-💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+<span class="pro-badge">PRO</span> [See Free vs Pro](../getting-started/free-vs-pro.md).
 
 The **EPG Browser** displays programme data for the current EPG mappings in the selected layout. It does not browse every channel in every EPG source: a playlist channel must already have an EPG source and channel identifier assigned before its guide data can appear here. Browsing data does not create or change a mapping.
 

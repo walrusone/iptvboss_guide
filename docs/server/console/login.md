@@ -1,5 +1,7 @@
 # Server Console: Login and Setup
 
+--8<-- "includes/xc-server-preview.md"
+
 ![Server Console login](../../assets/images/server-console/server-login.png)
 
 ## First-time setup

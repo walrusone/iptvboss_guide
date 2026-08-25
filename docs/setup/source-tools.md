@@ -1,12 +1,12 @@
-# Source and EPG Tools
+# Advanced Source Tools
 
-The **Sources** menu contains maintenance tools for imported sources, EPG data, users, and tags.
+<span class="pro-badge">PRO</span> [See Free vs Pro](../getting-started/free-vs-pro.md).
+
+The **Sources** menu contains advanced maintenance tools for imported sources and discovered tags.
 
 ![Sources menu](../assets/images/sources-menu.png)
 
 ## Remove provider prefixes
-
-💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
 
 **Prefix Auto-Removal** can help normalize provider channel names before mapping and sorting.
 
@@ -21,20 +21,10 @@ The **Sources** menu contains maintenance tools for imported sources, EPG data, 
 !!! warning
     Name cleanup can affect matching, AED regexes, and output. Record the original naming pattern before applying a broad change.
 
-## Playlist category maintenance
-
-Category selection belongs to the playlist source workflow. See [Manage Categories in Adding a Playlist](playlists.md#manage-categories) when adding or editing a source. After changing categories, confirm that the affected layout groups still contain the intended channels.
-
-## 💲 Manage new tags
-
-💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+## Manage new tags
 
 Use **Sources** → **Manage New Tags** to review tags discovered during source or EPG processing.
 
 ![Manage New Tags](../assets/images/sources/manage-new-tags.png)
 
 Confirm the tag behavior before applying it globally. Tags can affect grouping, filtering, or output depending on the configuration.
-
-## Manage users
-
-Use **Sources** → **Manage Users** to create users, enable or disable them, assign enabled layouts, and configure source credentials. See [User Management](../layouts/users.md) for the provider and multi-user workflow.

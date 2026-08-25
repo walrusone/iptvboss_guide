@@ -1,6 +1,6 @@
 # Custom Sports Groups
 
-💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+<span class="pro-badge">PRO</span> [See Free vs Pro](../getting-started/free-vs-pro.md).
 
 Custom Sports groups use sports event data and AED results to organize channels around upcoming, live, favorite, and unmatched events. The group settings control filtering and the order in which those channels appear.
 

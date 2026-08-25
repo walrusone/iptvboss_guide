@@ -1,8 +1,8 @@
 # Email Notifications
 
-💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+<span class="pro-badge">PRO</span> [See Free vs Pro](../getting-started/free-vs-pro.md).
 
-Email Notification Settings can send operational notifications such as provider-user credential expiry warnings. This is an optional 💲 [Pro feature](../getting-started/free-vs-pro.md).
+Email Notification Settings can send operational notifications such as provider-user credential expiry warnings. This is an optional [Pro feature](../getting-started/free-vs-pro.md).
 
 ## Configure SMTP
 

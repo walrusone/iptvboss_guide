@@ -55,7 +55,7 @@ The buttons above the **Groups** and **Channels** lists apply to the selected ro
 
 Select **Add Channels** in the Layout Editor to open **Channel Importer**. The importer has two modes:
 
-- **Source Import** adds groups and channels from an imported playlist or API source.
+- **Source Import** adds groups and channels from an imported M3U or Xtream Codes source.
 - **Layout Import** adds groups and channels that already exist in another layout.
 
 Use **Switch to Layout Import** or **Switch to Source Import** at the bottom of the dialog to change modes. The selected mode determines whether the left-hand list is labeled **Source** or **Layout**.

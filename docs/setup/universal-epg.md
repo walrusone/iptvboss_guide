@@ -1,6 +1,6 @@
 # Universal EPG
 
-💲 [Pro feature — see Free vs Pro](../getting-started/free-vs-pro.md).
+<span class="pro-badge">PRO</span> [See Free vs Pro](../getting-started/free-vs-pro.md).
 
 Universal EPG creates one shared guide output that can be reused by multiple users, layouts, or players when they use the same guide data.
 
