@@ -37,6 +37,21 @@ Confirm that the URL returns the expected EPG format, that synchronization compl
 
 Confirm that the intended layout is selected, the layout is enabled, and the channels are assigned to the expected groups. If you used an all-layout output action, confirm that you are reviewing the correct output file.
 
+## Server did not reload after a client update
+
+The automatic reload request is sent when a paired IPTVBoss client closes after completing its database backup workflow. It is not sent after every edit.
+
+Check the following:
+
+1. Confirm the desktop installation still appears under the XC Server's [Paired Devices](../server/console/paired-devices.md).
+2. Confirm XC is enabled in the client's saved Server Settings and that the configured server address is reachable from that computer.
+3. If database cloud synchronization is enabled, confirm the shutdown cloud backup completed successfully. IPTVBoss intentionally skips the reload request after a failed or incomplete cloud backup.
+4. Check whether the server was already updating, processing an administration or restore operation, or blocked by a database synchronization lock.
+5. Review the client log for the reload notification and HTTP response, then review the [XC Server logs](../server/console/logs.md) for the queued or rejected request.
+6. If the client was revoked, generate a new one-time pairing code and pair it again. Do not reuse an expired pairing code or manually share a reload credential.
+
+See [Automatic server reloads from this client](../server/gui-settings.md#automatic-server-reloads-from-this-client) for the expected behavior.
+
 ## The application shows a locked feature
 
 Some EPG, layout, source, and advanced editing features depend on the account plan. Confirm the account status in [Free vs Pro](../getting-started/free-vs-pro.md) and [IPTVBoss Pro Account Access](../settings/pro.md) before treating a locked control as an application error.

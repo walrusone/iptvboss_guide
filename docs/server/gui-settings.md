@@ -17,6 +17,18 @@ Open **Settings** → **Server Settings** in the desktop IPTVBoss application. T
 
 After pairing, actions such as **Refresh Cloud Status**, **Disable Sync**, **Retry Current Database**, and **Unlink This Installation** apply immediately.
 
+## Automatic server reloads from this client
+
+Pairing does more than connect the desktop installation to the XC Server database. The server also provisions a client-specific, reload-only credential. IPTVBoss stores and uses this credential automatically; it does not grant general Server Console or administration access.
+
+When the desktop client closes after producing a database backup, it asks the paired XC Server to reload after a short delay:
+
+- If database cloud synchronization is disabled, the server reloads its local database.
+- If database cloud synchronization is enabled and the cloud backup succeeds, the server reloads from the synchronized cloud database.
+- If an enabled cloud backup fails or is incomplete, the client does not request a reload. This prevents the server from loading an incomplete update.
+
+The client must be paired, XC must be enabled in its saved configuration, and the server address must be reachable. This is not a live reload after every edit; it occurs as part of the client's shutdown and backup workflow. If the server is offline, busy, or blocked by another database operation, review the client and server logs before trying again. See [Paired Devices](console/paired-devices.md) for access management and [Server did not reload after a client update](../troubleshooting/common-problems.md#server-did-not-reload-after-a-client-update) for troubleshooting.
+
 ## Bootstrap an empty XC Server with GUI pairing
 
 An IPTVBoss Pro desktop installation can initialize a new XC Server using the database currently open in the GUI:

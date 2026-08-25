@@ -2,11 +2,15 @@
 
 ![Server Console API keys](../../assets/images/server-console/server-api.png)
 
-The **API Keys** section contains the key used for XC Server reload operations and named keys for scripts that call the documented `/api/v1` endpoints.
+The **API Keys** section lists the reload-only credentials created for paired IPTVBoss clients and the named keys used by scripts that call the documented `/api/v1` endpoints. These are separate credential types with different permissions.
 
-## XC Reload API Key
+## Paired reload credentials
 
-Use **Rotate Key** when the existing reload key may have been exposed or must be replaced. Copy the new secret immediately; it is not shown again. Update every trusted client that uses the old key before relying on reload operations.
+The server creates a client-specific reload credential automatically during pairing. The desktop client uses it to request a server reload after its shutdown backup workflow completes. It cannot be used for general administration or external automation.
+
+Manage this access through [Paired Devices](paired-devices.md). Revoking a paired client also revokes its reload credential. If a credential is rejected but the pairing is still valid, the client attempts to refresh the credential and retry once. Normally, users do not need to copy or configure these credentials manually.
+
+See [Automatic server reloads from this client](../gui-settings.md#automatic-server-reloads-from-this-client) for the user-facing workflow.
 
 ## External Automation Keys
 
