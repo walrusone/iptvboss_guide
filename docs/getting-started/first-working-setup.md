@@ -116,5 +116,4 @@ After the cloud links work, you can:
 - [organize and rename layout content](../layouts/layout-editor.md);
 - [configure additional output settings](../layouts/output-settings.md);
 - [create desktop output users](../layouts/users.md);
-- configure a local output folder as an optional diagnostic or same-computer workflow;
 - [automate synchronization](../settings/automation.md).
