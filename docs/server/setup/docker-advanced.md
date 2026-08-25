@@ -4,25 +4,13 @@ Start with the [beginner Docker installation](docker.md). This page explains var
 
 ## How the Compose setup works
 
-The `iptvboss` service always runs. The `caddy` service belongs to the optional `caddy` [Compose profile](https://docs.docker.com/compose/how-tos/profiles/). The downloaded `.env` enables that profile by default:
-
-```env
-COMPOSE_PROFILES=caddy
-```
-
-Clear the value to run IPTVBoss without the bundled proxy:
-
-```env
-COMPOSE_PROFILES=
-```
-
-The three named volumes have separate purposes:
+The downloaded Compose file runs one `iptvboss` service and stores its persistent data in one named volume:
 
 | Volume | Contents |
 | --- | --- |
 | `iptvboss-data` | IPTVBoss databases, configuration, generated XC files, caches, and logs |
-| `caddy-data` | Caddy certificates and other persistent TLS data |
-| `caddy-config` | Caddy runtime configuration data |
+
+When [Caddy is added to the same Compose file](docker.md#bundle-caddy-in-the-same-compose-file), its `caddy-data` and `caddy-config` volumes store certificates and runtime configuration separately from IPTVBoss data.
 
 The exact Docker volume names include the Compose project name, which normally comes from the installation directory. Run `docker compose config --volumes` from that directory to see the logical names, or `docker volume ls` to see Docker's full names.
 
@@ -39,14 +27,14 @@ This makes a future channel change an `.env` edit instead of a Compose-file edit
 
 ## Reverse proxies in another container or host
 
-The beginner template publishes the backend only on host loopback:
+The standalone template publishes the backend on all host interfaces. When a reverse proxy runs directly on the Docker host, change it to host loopback:
 
 ```env
 IPTVBOSS_HOST_IP=127.0.0.1
 IPTVBOSS_HOST_PORT=8001
 ```
 
-That is correct for bundled Caddy and for a proxy process running directly on the host. A proxy in another container or on another computer cannot reach the Docker host's loopback address.
+Bundled Caddy reaches `iptvboss:8001` over the Compose network, while a proxy process running directly on the host reaches `127.0.0.1:8001`. A proxy in another container or on another computer cannot reach the Docker host's loopback address.
 
 There are two common advanced designs:
 
@@ -72,7 +60,7 @@ networks:
     external: true
 ```
 
-Disable bundled Caddy with `COMPOSE_PROFILES=`, attach the other proxy container to the same external network, and use `http://iptvboss:8001` as its upstream. Include the override file in every Compose command for this deployment:
+Set `IPTVBOSS_XC_BEHIND_HTTPS_PROXY=true` and `IPTVBOSS_HOST_IP=127.0.0.1`, attach the other proxy container to the same external network, and use `http://iptvboss:8001` as its upstream. Include the override file in every Compose command for this deployment:
 
 ```bash
 sudo docker compose -f compose.yaml -f compose.proxy.yaml up --detach
@@ -83,7 +71,6 @@ The loopback-only host port may remain for health checks. Removing the `ports` e
 For the second design, set a specific private address when possible:
 
 ```env
-COMPOSE_PROFILES=
 IPTVBOSS_HOST_IP=192.168.1.50
 IPTVBOSS_HOST_PORT=8001
 IPTVBOSS_XC_BEHIND_HTTPS_PROXY=true
@@ -108,10 +95,9 @@ An invalid entry prevents XC Server startup. A request from outside the allowlis
 
 ## Direct HTTPS
 
-Direct HTTPS is intended for installations that cannot use an HTTPS reverse proxy. It disables the bundled Caddy profile and makes IPTVBoss load a PKCS#12 private-key store:
+Direct HTTPS is intended for installations that cannot use an HTTPS reverse proxy. It makes IPTVBoss load a PKCS#12 private-key store:
 
 ```env
-COMPOSE_PROFILES=
 IPTVBOSS_XC_BEHIND_HTTPS_PROXY=false
 IPTVBOSS_HTTPS_ONLY=true
 IPTVBOSS_XC_KEYSTORE_PASSWORD=replace-with-the-keystore-password

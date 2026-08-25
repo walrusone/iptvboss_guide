@@ -144,7 +144,6 @@ For launchd on macOS, make the equivalent changes in `pro.iptvboss.xcserver.plis
 Set direct HTTPS and publish the default port in `.env`:
 
 ```env
-COMPOSE_PROFILES=
 IPTVBOSS_XC_BEHIND_HTTPS_PROXY=false
 IPTVBOSS_HTTPS_ONLY=true
 IPTVBOSS_XC_BIND_ADDRESS=all
@@ -153,7 +152,7 @@ IPTVBOSS_HOST_IP=0.0.0.0
 IPTVBOSS_HOST_PORT=8001
 ```
 
-Clearing `COMPOSE_PROFILES` disables the bundled Caddy container. Direct HTTPS and reverse-proxy mode must not be enabled together.
+The default Compose file contains only IPTVBoss. Direct HTTPS and reverse-proxy mode must not be enabled together.
 
 Restrict `.env` and ensure it is excluded from source control:
 

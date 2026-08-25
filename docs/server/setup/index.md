@@ -7,12 +7,12 @@ The XC Server runs IPTVBoss continuously without the desktop interface and expos
 
 | Path | Best suited for | Persistent data | Process manager |
 | --- | --- | --- | --- |
-| [Docker](docker.md) | Ubuntu or Debian hosts; bundled Caddy is included | Docker named volumes | Docker Compose |
+| [Docker](docker.md) | Ubuntu or Debian hosts; optional bundled Caddy | Docker named volumes | Docker Compose |
 | [Linux service](linux-service.md) | A Linux host without a container requirement | IPTVBoss default or `-directory` | systemd |
 | [macOS service](macos-service.md) | A macOS host without a container requirement | IPTVBoss default or `-directory` | launchd |
 | [Windows startup task](windows.md) | A Windows host without a container requirement; draft | Explicit local app-data directory | Task Scheduler |
 
-The Docker path includes [Caddy](https://caddyserver.com/) in the Compose stack by default. It can instead use an HTTPS reverse proxy already running on the same host. The native Linux, macOS, and Windows paths install Caddy as a host service. In each case, Caddy accepts public HTTPS connections while the unencrypted IPTVBoss port is kept off the public network. Do not expose IPTVBoss port `8001` directly to the Internet.
+The default Docker path runs IPTVBoss by itself and publishes unencrypted HTTP on port `8001` for use on a trusted LAN. For public access, add [Caddy](https://caddyserver.com/) to the same Compose stack or use an existing HTTPS reverse proxy. The native Linux, macOS, and Windows paths install Caddy as a host service. Do not expose unencrypted IPTVBoss port `8001` directly to the Internet.
 
 For installations that cannot use a reverse proxy, see [Direct HTTPS](direct-https.md). IPTVBoss then terminates TLS itself using a PKCS#12 certificate store and normally listens at `https://host:8001`.
 
@@ -28,8 +28,8 @@ The Docker template keeps the image repository and version tag in `.env`, so cha
 Before using an installation path, prepare:
 
 - A server you control and can back up.
-- A public hostname such as `boss.domain.com` with an `A` and, when applicable, `AAAA` record pointing to the server.
-- Inbound TCP ports `80` and `443` forwarded to the server for Caddy's automatic HTTPS setup.
+- For public HTTPS, a hostname such as `boss.domain.com` with an `A` and, when applicable, `AAAA` record pointing to the server.
+- For Caddy's automatic public HTTPS, inbound TCP ports `80` and `443` forwarded to the server.
 - Administrator or `sudo` access on the host.
 - A plan for backing up the IPTVBoss data before upgrades or restores.
 
@@ -46,7 +46,7 @@ Caddy's [reverse-proxy defaults](https://caddyserver.com/docs/caddyfile/directiv
 ## After installation
 
 1. Confirm that the local health endpoint responds.
-2. Open `https://boss.domain.com/boss.php`.
+2. Open the Server Console address for the selected setup: the private HTTP address for standalone Docker or the public HTTPS hostname for a proxy setup.
 3. [Create the first administrator account and section PIN](../console/login.md).
 4. If the server has no database, complete bootstrap in one of two ways:
     - Use [GUI pairing](../gui-settings.md#bootstrap-an-empty-xc-server-with-gui-pairing) to push the database currently open in an IPTVBoss Pro desktop installation.
