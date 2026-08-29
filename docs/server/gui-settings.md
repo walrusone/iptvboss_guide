@@ -15,6 +15,8 @@ Open **Settings** → **Server Settings** in the desktop IPTVBoss application. T
 3. Review the displayed connection address.
 4. Link the installation before enabling cloud database synchronization.
 
+HTTP and HTTPS server URLs are accepted. IPTVBoss displays a warning when the configured endpoint uses unencrypted HTTP; use HTTPS for connections that cross an untrusted network or the public Internet. Other URL schemes are not supported.
+
 After pairing, actions such as **Refresh Cloud Status**, **Disable Sync**, **Retry Current Database**, and **Unlink This Installation** apply immediately.
 
 ## Automatic server reloads from this client

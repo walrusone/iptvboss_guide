@@ -28,6 +28,33 @@ If the Custom Sports controls are unavailable, confirm that the group is configu
 
 ![Sports Settings dialog for a Custom Sports group](../assets/images/layout/custom-sports-settings.png)
 
+## Customize the sports presentation
+
+A Custom Sports group can give its channels a consistent presentation name and numbered logo. This is useful for provider feeds that contain a large set of numbered sports channels, such as **ESPN+ 001**, **ESPN+ 002**, and so on.
+
+![Custom Sports presentation settings in the Layout Editor](../assets/images/layout/custom-sports-presentation.png)
+
+1. Select the Custom Sports group in the Layout Editor.
+2. Expand **Custom sports presentation** under **Group Options**.
+3. Enter a **Name** to use as the channel prefix, such as ESPN+.
+4. Choose the number of **Digits**. A value of 3 produces 001, 002, and 003; 0 leaves the number unpadded.
+5. Select a numbered **Logo set**, or enter a **Custom logo URL** containing {num}.
+6. Review the preview, then select **Save Group(s)**.
+
+The logo set and custom URL are alternatives. A custom URL takes precedence when both are present. The selected catalog set uses the digit width required by that set; the preview shows the resulting URL and width.
+
+Numbering follows the final channel order after the group’s filters and sports sort order are applied. A channel that moves because of favorites, event status, or time sorting receives the number for its new position.
+
+### AED names and logos
+
+By default, a valid AED presentation can still provide the channel name or logo. Use **Override AED name** or **Override AED logo** when every channel in the group should use the group’s numbered presentation instead.
+
+The group presentation is also used by the Layout Editor’s channel list, programme preview, generated M3U output, and other layout views. An example with the programme preview open is shown below.
+
+![Custom Sports presentation with programme preview](../assets/images/layout/custom-sports-presentation-preview.png)
+
+Prebuilt logo sets are labeled by provider and variant. For example, alternate ESPN+, ESPNPlay, NCAAB, MLB, NBA, NFL, NHL, PPV, and regional sets have distinct names in the selector. Choose the variant whose numbered URL matches the assets you want to publish.
+
 ## Filtering options
 
 | Setting | Behavior |

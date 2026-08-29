@@ -162,6 +162,12 @@ The **Group Options** header can also contain:
 
 Sports controls appear only for a group configured as a **Custom Sports Group**.
 
+### Custom sports presentation
+
+When **Custom Sports Group** is enabled, expand **Custom sports presentation** in **Group Options** to configure a numbered channel presentation. Set the name prefix and number padding, choose a prebuilt logo set or enter a custom {num} logo URL, and decide whether the presentation should override AED names or logos. The section includes a live preview of the generated name and logo URL.
+
+See [Custom Sports Groups](../features/custom-sports.md#customize-the-sports-presentation) for the complete setup and numbering behavior.
+
 Review the selected layout after each bulk change. A change made in one layout does not automatically change another layout.
 
 ## Check the result

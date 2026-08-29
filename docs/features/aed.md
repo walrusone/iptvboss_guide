@@ -58,6 +58,7 @@ Use these placeholders in AED output fields. A value may be empty when the sourc
 | `{team1record}`, `{team2record}` | Team records, such as `12-3` |
 | `{team1nick}`, `{team2nick}` | Team nicknames or mascots |
 | `{team1loc}`, `{team2loc}` | Team city or location |
+| `{prefix}` | Custom Sports group presentation name and number, such as `ESPN+ 001` (Channel Name Regex only) |
 | `{league}` | Full league name |
 | `{leagueabbr}` | League abbreviation |
 | `{leagueshort}` | Short league name |
@@ -137,6 +138,9 @@ Channel Name Regex controls which provider channels match the AED and can also c
 - `{time}` and `{countdown}` are not supported in this field.
 - `{league}` and `{leagueabbr}` need another placeholder alongside them; do not use either one by itself.
 - When no event is active, the provider channel name is used as the fallback.
+- In a Custom Sports group, `{prefix}` resolves to the group presentation name and the channel’s final numbered position, such as `ESPN+ 008`.
+- For a team-based channel, `{title}` and `{shorttitle}` resolve to that channel’s team name in this field. They continue to behave normally in the other AED output fields.
+- Missing league, sport, or other optional values resolve to an empty string. Put surrounding punctuation in an `{if}` block when it should disappear with the missing value.
 
 Examples:
 
@@ -149,6 +153,16 @@ This can produce:
 ```text
 NHL: Detroit Red Wings at Chicago Blackhawks
 ```
+
+For a Custom Sports group with the presentation name ESPN+, this template can include the numbered group presentation:
+
+    {prefix}: {shorttitle}
+
+It can produce:
+
+    ESPN+ 008: Real Betis
+
+`{prefix}` is specific to **Channel Name Regex**. It does not change the meaning of `{title}` or `{shorttitle}` in the AED Title, Description, or other output fields.
 
 If the AED is used for one league only, a fixed prefix is also possible:
 
