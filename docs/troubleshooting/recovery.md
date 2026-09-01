@@ -42,6 +42,12 @@ Before starting, confirm that you are using the intended XC Server and that the 
 
 If the pairing code is expired or rejected, generate a new code and repeat the restore. For the normal first-time pairing flow, see [Bootstrap an empty XC Server with GUI pairing](../server/gui-settings.md#bootstrap-an-empty-xc-server-with-gui-pairing).
 
+## Unpair when the XC Server is unavailable
+
+Open **Settings** → **Server Settings** and select **Unlink This Installation**. IPTVBoss stops the local XC heartbeat, attempts to revoke the server-side client, and removes the local pairing even if the server is unreachable. The status message identifies when the old server-side pairing may remain until the server can be contacted.
+
+If the server is still in bootstrap mode, use [Repair a server left in bootstrap mode](../server/gui-settings.md#repair-a-server-left-in-bootstrap-mode). Choose a local unpair/re-pair action when the server database and identity must remain intact. Use the full reset only when all XC pairing and backup history should be erased.
+
 ## Restore a deleted Dropbox backup
 
 Dropbox retains deleted files for a limited period according to the Dropbox account and plan. A noGUI run may create a database backup, so older backup files can sometimes be recovered from Dropbox deleted items.

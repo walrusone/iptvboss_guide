@@ -33,6 +33,12 @@ Confirm that the URL returns the expected EPG format, that synchronization compl
 4. Check that the layout is configured to output EPG data.
 5. Generate the EPG again.
 
+## A sports channel has no current event
+
+Sports event data may arrive after the source channel has already synchronized. When an AED-based sports channel has no matching event, IPTVBoss keeps the channel available and retries eligible no-match assignments during a later sports-data refresh. Confirm that the AED is assigned, the provider channel name is correct, and the sports data refresh completed before changing the layout or deleting the channel.
+
+For ESPN+ channels that were published before their event data was available, wait for the next sports-data refresh and then review the channel in **Layout Editor**. Use [Advanced EPG Dummies](../features/aed.md) when the provider name requires a different matching pattern.
+
 ## Output is missing channels
 
 Confirm that the intended layout is selected, the layout is enabled, and the channels are assigned to the expected groups. If you used an all-layout output action, confirm that you are reviewing the correct output file.
@@ -53,6 +59,12 @@ Check the following:
 6. If the client was revoked, generate a new one-time pairing code and pair it again. Do not reuse an expired pairing code or manually share a reload credential.
 
 See [Automatic server reloads from this client](../server/gui-settings.md#automatic-server-reloads-from-this-client) for the expected behavior.
+
+## XC output is rebuilding or serves an older response
+
+XC Server now prepares and publishes complete response variants, then keeps the previous valid generation available while a replacement is built. A request can temporarily use direct database generation when its cached variant is unavailable or when the database is changing.
+
+Do not delete XC cache files while the server is running. Check the client and [XC Server logs](../server/console/logs.md) for database-transition, cache-build, direct-fallback, or out-of-memory messages. If the problem continues, restart the XC Server after creating a database backup and include the sanitized logs with the application version when requesting support.
 
 ## The application shows a locked feature
 

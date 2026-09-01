@@ -17,7 +17,22 @@ Open **Settings** → **Server Settings** in the desktop IPTVBoss application. T
 
 HTTP and HTTPS server URLs are accepted. IPTVBoss displays a warning when the configured endpoint uses unencrypted HTTP; use HTTPS for connections that cross an untrusted network or the public Internet. Other URL schemes are not supported.
 
-After pairing, actions such as **Refresh Cloud Status**, **Disable Sync**, **Retry Current Database**, and **Unlink This Installation** apply immediately.
+After pairing, actions such as **Refresh Cloud Status**, **Disable Sync**, **Retry Current Database**, and **Unlink This Installation** apply immediately. **Unlink This Installation** removes the local pairing even when the server cannot be reached; if revocation cannot be sent, the old server-side pairing may remain until the server is reachable again.
+
+## Repair a server left in bootstrap mode
+
+If a paired XC Server loses its database and returns to bootstrap mode, open **Settings** → **Server Settings** and select **Refresh Cloud Status**. The desktop application reports that the server is awaiting database bootstrap and keeps cloud editing read-only until the situation is resolved.
+
+Select **Repair Bootstrap Server** to open the recovery choices. On a Pro installation, the available recovery path can publish the database currently open in the GUI as the authoritative server database. Review the paired-client list before confirming and leave selected only the clients that should remain trusted. The current GUI cannot be removed from that retention list.
+
+The recovery actions have different consequences:
+
+- **Reset Server, Keep Pairing** uploads the current GUI database and retains the selected paired clients. Use this only when the open GUI database is the authoritative copy.
+- **Unpair and Re-pair** is intended to remove this GUI’s local pairing while leaving the server identity and bootstrap state available for a new pairing code. If this option is not shown in the installed build, use **Unlink This Installation**, then pair again from the server’s one-time code.
+- **Reset Server and Unpair** invalidates the server’s pairing state and backup history and requires a full setup again. It requires typing `RESET`.
+- **Not Now** leaves the server untouched and keeps cloud editing read-only.
+
+Do not use a reset action to recover an unrelated server. Back up the current GUI database first, verify the server address, and confirm which database should be authoritative.
 
 ## Automatic server reloads from this client
 

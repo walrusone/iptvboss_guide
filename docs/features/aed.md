@@ -42,7 +42,7 @@ The exact steps depend on the AED approach, but an AED normally combines three j
 2. **Extract event values.** Sports event data and regex fields populate placeholders such as `{title}`, `{team1}`, and `{league}`.
 3. **Format the result.** Output fields use placeholders to produce the channel name, event title, description, and logo URL.
 
-If no event is active, the channel can fall back to its provider name or to the AED's no-event behavior, depending on the configuration.
+If no event is active, the channel can fall back to its provider name or to the AED's no-event behavior, depending on the configuration. If event data was not available when the source synchronized, IPTVBoss can retry eligible no-match sports assignments during a later sports-data refresh.
 
 ## Output placeholders
 

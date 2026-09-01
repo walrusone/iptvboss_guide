@@ -6,6 +6,16 @@ Use **Layout Manager** to create, select, duplicate, remove, import, and export 
 
 The redesigned Layout Manager adapts to the size of its window. Its three sections—**General**, **Output & Sync**, and **Advanced / Custom**—can each be expanded or collapsed from the section header. IPTVBoss remembers those choices the next time you open the screen, so you can keep frequently used settings visible while reducing clutter on smaller screens.
 
+## Remove empty groups after source sync
+
+Enable **Remove Empty Layout Groups After Source Sync** when a layout should automatically discard groups that no longer contain any layout channels after a successful source synchronization.
+
+![Layout Manager: empty-group cleanup](../assets/images/layout-manager-cleanup-empty-groups.png)
+
+This is a per-layout setting. It runs only after the source sync completes successfully. Groups that still contain layout channels are kept, including groups whose sports channels do not currently have a matched event. A linked group is removed when its linked source group is missing or has no layout channels.
+
+Because this changes the layout structure, export or back up the database before enabling it if empty groups may be intentional. Review the layout after the next source sync and disable the setting when groups should be retained for later imports.
+
 ## Create a layout
 
 1. Open **Layout** → **Layout Manager**.

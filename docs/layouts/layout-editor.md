@@ -121,6 +121,24 @@ The **Channel Options** header also provides these actions:
 
 In **Basic Info**, select ![](../assets/icons/ui/revert.svg){ .ui-icon } **Revert to Provider Name** beside **Channel Name** to restore the name supplied by the playlist source. Beside **Channel Logo**, ![](../assets/icons/ui/find_replace.svg){ .ui-icon } **Find and Replace** updates logo text or links for selected channels; **EPG Logo** and **M3U Logo** copy the logo from the corresponding source when one is available.
 
+### Choose the channel name source
+
+Each layout channel has a name mode beside **Channel Name**. The mode controls the name used by that layout’s playlist, guide, and player output:
+
+| Mode | Behavior |
+| --- | --- |
+| **USE PROVIDER NAME** | Uses the original name received from the playlist provider. The name field is not editable in this mode. |
+| **USE UNIVERSAL NAME** | Uses the normal IPTVBoss channel name, including applicable AED and source-prefix processing. This is the default mode for existing and newly added layout channels. |
+| **USE LAYOUT NAME** | Stores a custom name for this layout channel only. The same source channel can therefore have different names in different layouts. |
+
+![Layout Editor: channel name modes](../assets/images/layout-editor-channel-name-modes.png)
+
+Select one channel before changing the mode. The selector is disabled for a multi-channel selection. When **USE LAYOUT NAME** is selected, edit the name field and save the channel.
+
+![Layout Editor: custom layout channel name](../assets/images/layout-editor-custom-channel-name.png)
+
+The name actions above the channel list apply only to channels whose names can be changed. They skip channels using **USE PROVIDER NAME**. **Revert to Provider Name** and **Ignore Name Changes** apply to the universal-name workflow; the revert action restores the provider-supplied name while leaving the channel in the universal-name mode.
+
 Inside **EPG Mapping**, the header buttons are:
 
 | Control | What it does |
@@ -131,7 +149,7 @@ Inside **EPG Mapping**, the header buttons are:
 
 From left to right, the buttons beside **EPG-ID** are ![](../assets/icons/ui/add.svg){ .ui-icon } **Add Dummy EPG**, ![](../assets/icons/ui/add.svg){ .ui-icon } **Add Advanced Dummy EPG**, ![](../assets/icons/ui/edit.svg){ .ui-icon } **Edit Dummy EPG**, and ![](../assets/icons/ui/offset.png){ .ui-icon } **EPG Offset**. The two Add buttons use the same plus icon, so use their position or hover tooltip to distinguish them. Some controls are available only when the selected channel or account supports them.
 
-To edit the channel name directly, double-click the channel row. Press **Enter** to commit the edit or **Esc** to cancel it. Right-click a channel row for actions such as enabling or disabling channels, removing channels, moving selected channels to the top or bottom, and cutting, copying, or pasting channels.
+To edit the channel name directly, select a channel that uses **USE UNIVERSAL NAME** or **USE LAYOUT NAME**, then double-click the channel row or edit the **Channel Name** field. Press **Enter** to commit the edit or **Esc** to cancel it. Right-click a channel row for actions such as enabling or disabling channels, removing channels, moving selected channels to the top or bottom, and cutting, copying, or pasting channels.
 
 Keep channel names consistent with the service you are editing. If you change a name only to improve matching, record the original name somewhere before saving.
 
