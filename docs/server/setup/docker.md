@@ -61,11 +61,16 @@ The downloaded environment file defaults to:
 ```env
 IPTVBOSS_HOST_IP=0.0.0.0
 IPTVBOSS_HOST_PORT=8001
+IPTVBOSS_XC_PORT=8001
 IPTVBOSS_XC_BEHIND_HTTPS_PROXY=false
 IPTVBOSS_HTTPS_ONLY=false
 ```
 
 `0.0.0.0` publishes port `8001` on every host network interface. Keep this only when the host firewall and router restrict access to a trusted network. To allow access through one host address instead, replace it with that private address.
+
+`IPTVBOSS_XC_PORT` controls the port IPTVBoss listens on inside the container.
+`IPTVBOSS_HOST_PORT` is the existing Docker host-side publication port. The
+Compose template maps the host port to the configured XC listener port.
 
 Leave the remaining settings unchanged. Save with <kbd>Ctrl</kbd>+<kbd>O</kbd>, press <kbd>Enter</kbd>, and exit with <kbd>Ctrl</kbd>+<kbd>X</kbd>.
 
@@ -202,6 +207,7 @@ When Caddy, Nginx, Apache, or another HTTPS proxy already runs directly on the D
 ```env
 IPTVBOSS_HOST_IP=127.0.0.1
 IPTVBOSS_HOST_PORT=8001
+IPTVBOSS_XC_PORT=8001
 IPTVBOSS_XC_BEHIND_HTTPS_PROXY=true
 ```
 
@@ -218,7 +224,7 @@ sudo docker compose config
 sudo docker compose up --detach
 ```
 
-A proxy in another container or on another computer cannot use the Docker host's `127.0.0.1`. Follow [Reverse proxies in another container or host](docker-advanced.md#reverse-proxies-in-another-container-or-host) for those designs.
+A proxy in another container or on another computer cannot use the Docker host's `127.0.0.1`. Follow [Reverse proxies in another container or host](docker-advanced.md#reverse-proxies-in-another-container-or-host) for those designs. When using a custom XC port, use that same port in the proxy upstream.
 
 ## Common commands
 

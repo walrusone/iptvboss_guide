@@ -34,13 +34,14 @@ The standalone template publishes the backend on all host interfaces. When a rev
 ```env
 IPTVBOSS_HOST_IP=127.0.0.1
 IPTVBOSS_HOST_PORT=8001
+IPTVBOSS_XC_PORT=8001
 ```
 
-Bundled Caddy reaches `iptvboss:8001` over the Compose network, while a proxy process running directly on the host reaches `127.0.0.1:8001`. A proxy in another container or on another computer cannot reach the Docker host's loopback address.
+Bundled Caddy reaches `iptvboss:8001` over the Compose network, while a proxy process running directly on the host reaches `127.0.0.1:8001`. Replace `8001` with the configured `IPTVBOSS_XC_PORT` when using a custom listener. A proxy in another container or on another computer cannot reach the Docker host's loopback address.
 
 There are two common advanced designs:
 
-1. Attach the proxy and IPTVBoss to the same user-defined Docker network, then use `http://iptvboss:8001` as the upstream. A host-published port is unnecessary in this design.
+1. Attach the proxy and IPTVBoss to the same user-defined Docker network, then use `http://iptvboss:8001` as the upstream, or the configured `IPTVBOSS_XC_PORT`. A host-published port is unnecessary in this design.
 2. Publish port `8001` on a host address the proxy can reach, then use that host address and port as the upstream.
 
 For a shared network, first create it once:

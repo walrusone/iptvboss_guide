@@ -76,6 +76,9 @@ For **Add arguments**, enter one line, replacing `YOUR_USERNAME` with the Window
 -xcserver -directory "C:\Users\YOUR_USERNAME\AppData\Local\IPTVBoss-XC" -xc-proxy -xc-bind-address loopback
 ```
 
+To override the persisted listener port, append `-xc-port 9000`. Use the
+same port in the local health check and Caddy upstream.
+
 For **Start in**, enter the directory containing `iptvboss-c.exe`, without quotation marks. Choose **OK**.
 
 ### Conditions tab

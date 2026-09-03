@@ -14,6 +14,12 @@ IPTVBoss uses layouts and user records to create separate output links for diffe
 
 ![Manage Users dialog](../assets/images/sources/manage-users.png)
 
+When XC Server pairing is enabled, the selected user can show an **XC Activity** summary with the last successful synchronization, last playback, and stream. Select **Activity** to open the full activity table for all users.
+
+![Desktop XC user activity](../assets/images/sources/user-activity.png)
+
+The activity view reports successful XC playlist, guide, catalog, and playback activity. **Last Sync** and **Last Played** use relative and exact timestamps; **Stream** identifies the most recently played live, VOD, or series item when that information is available. Activity is read from the paired XC Server, so it is unavailable until the desktop installation is paired and the server can be reached.
+
 !!! important "Use one source per provider"
     Add each provider once, regardless of how many users have accounts with that provider. Store each user's provider credentials in that user's record instead of creating a duplicate source for every account.
 

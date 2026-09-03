@@ -12,6 +12,8 @@ Use **User Management** to control users whose layouts, source credentials, and 
 
 ![Server users](../../assets/images/server-console/server-users.png)
 
+The selected-user summary can include the user's last successful synchronization, last playback, and current stream. See [User Activity](activity.md) for the server-wide activity table.
+
 ## Add or edit a user
 
 1. Select **Add User** to create a user, or select an existing user.

@@ -39,6 +39,7 @@ The default XC Server port is `8001`. The platform setup pages explain how to in
 | `-httpsOnly` | Enable direct HTTPS instead of HTTP when no reverse proxy is being used. Direct HTTPS requires the PKCS#12 file `keystore.p12` in the IPTVBoss data directory and `IPTVBOSS_XC_KEYSTORE_PASSWORD`. Proxy mode takes precedence when both are enabled. |
 | `-xc-bind-address loopback` | Listen only on `127.0.0.1`. This is the recommended value when using an HTTPS reverse proxy. |
 | `-xc-bind-address all` | Listen on `0.0.0.0`, allowing connections through the host’s network interfaces. Use only when the firewall and transport security are configured appropriately. |
+| `-xc-port PORT` | Listen on TCP port `PORT` instead of the persisted/default port. Valid values are `1` through `65535`. |
 | `-directory PATH` | Store the IPTVBoss database, configuration, logs, keystore, and generated files under `PATH` instead of the operating-system default. The service account must be able to read and write this location. |
 | `-xc-reset-admin` | Reset the XC administrator identity for the next server load. Stop the XC Server first; the command requires an interactive terminal and the exact confirmation `RESET XC ADMIN`. |
 
@@ -54,7 +55,12 @@ Unless `-directory` is supplied, IPTVBoss uses a per-user data directory:
 | macOS | `~/Library/Application Support/IPTVBoss` |
 | Windows | `%USERPROFILE%/IPTVBoss` |
 
-The XC Server listens on port `8001` by default. The server port is configured in IPTVBoss settings and is not changed by the XC command-line flags described here.
+The XC Server listens on port `8001` by default. The listener port can be
+configured in IPTVBoss settings or overridden for a headless process with
+`-xc-port PORT` or `IPTVBOSS_XC_PORT=PORT`. The command-line value takes
+precedence over the environment variable. When neither override is supplied,
+the persisted port is used, including the existing `server_info.json` value
+when present.
 
 ## Listener selection
 
@@ -65,6 +71,22 @@ The effective listener is selected in this order:
 3. the persisted **Block direct connections** server setting.
 
 The environment variable and command-line option accept `loopback`, `all`, `127.0.0.1`, or `0.0.0.0`.
+
+The port has its own independent selection order:
+
+1. `-xc-port`, when supplied;
+2. `IPTVBOSS_XC_PORT`, when set;
+3. the persisted XC Server port;
+4. the default `8001`.
+
+For example:
+
+```bash
+IPTVBOSS_XC_PORT=9000 iptvboss -xcserver -xc-proxy -xc-bind-address loopback
+```
+
+An explicit port must be a TCP port from `1` through `65535`. Invalid external
+values prevent XC Server startup instead of silently falling back.
 
 Example using the environment variable:
 
@@ -117,6 +139,7 @@ The keystore contains the HTTPS private key and certificate chain. Its password 
 
 | Variable | Meaning |
 | --- | --- |
+| `IPTVBOSS_XC_PORT` | Select the XC listener TCP port when the command line does not specify `-xc-port`. |
 | `IPTVBOSS_XC_BIND_ADDRESS` | Select `loopback` or `all` when the command line does not specify `-xc-bind-address`. |
 | `IPTVBOSS_XC_BEHIND_HTTPS_PROXY` | Set to `true` to enable HTTPS reverse-proxy mode without `-xc-proxy`. |
 | `IPTVBOSS_HTTPS_ONLY` | Set to `true` to require direct HTTPS without `-httpsOnly`. |

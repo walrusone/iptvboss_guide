@@ -114,6 +114,7 @@ nav:
           - Boss Metadata: server/console/metadata.md
           - Server Settings: server/console/settings.md
           - XC Server Users: server/console/users.md
+          - User Activity: server/console/activity.md
           - Paired Devices: server/console/paired-devices.md
           - Link Restore: server/console/link-restore.md
           - API Keys: server/console/api.md

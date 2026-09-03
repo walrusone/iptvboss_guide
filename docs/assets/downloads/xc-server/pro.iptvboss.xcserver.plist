@@ -21,6 +21,7 @@
     </array>
     <key>EnvironmentVariables</key>
     <dict>
+        <!-- Add IPTVBOSS_XC_PORT here to override the persisted listener port. -->
         <key>IPTVBOSS_XC_TRUSTED_PROXIES</key>
         <string>127.0.0.1/32,::1/128</string>
     </dict>

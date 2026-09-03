@@ -19,7 +19,7 @@ Choose a hostname such as `boss.example.com`. Before continuing:
 4. If the macOS firewall is enabled, allow incoming connections for Caddy.
 5. Make sure the Mac will remain powered on and will not sleep while it is serving clients.
 
-Caddy uses ports `80` and `443` to obtain and renew the public HTTPS certificate. IPTVBoss itself remains on `127.0.0.1:8001` and is not exposed directly to the network.
+Caddy uses ports `80` and `443` to obtain and renew the public HTTPS certificate. IPTVBoss itself remains on `127.0.0.1:8001` by default and is not exposed directly to the network. Use `IPTVBOSS_XC_PORT` in the launchd environment or `-xc-port` in `ProgramArguments` to select another listener port.
 
 ## 2. Install IPTVBoss
 
@@ -82,6 +82,8 @@ Check the local health endpoint:
 ```bash
 curl --fail http://127.0.0.1:8001/healthz
 ```
+
+Replace `8001` with the configured XC port when an override is in use.
 
 View recent service output when the health check fails:
 

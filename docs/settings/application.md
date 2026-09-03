@@ -44,6 +44,18 @@ The settings dialog includes log level and log time-zone controls. Leave the log
 
 Advanced settings may include global M3U output tags and output-link behavior. Change these only when you understand how the receiving player uses the generated attributes.
 
+## Layout Editor settings
+
+The **Layout Editor** section controls how programme previews appear while editing EPG mappings.
+
+![Layout Editor settings](../assets/images/settings-layout-editor.png)
+
+- **Enable Full Preview Overlays** enables the delayed full preview shown when hovering over a programme card.
+- **Show Full Preview in-line in Channel Options** displays the selected programme preview below the three programme cards. When enabled, it replaces the delayed overlay.
+- **Full Preview Size** sets the size of both the overlay and inline preview. Choose **Small**, **Medium**, or **Large**.
+
+Save the settings, then reopen or refresh the Layout Editor if it was already open.
+
 ## Save and verify
 
 1. Review each changed value.

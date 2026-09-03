@@ -8,11 +8,15 @@ The editor is divided into three working areas: groups on the left, channels in 
 
 The right side has two main panels: **Channel Options** and **Group Options**. **Basic Info** and **EPG Mapping** are sections inside **Channel Options**. Select a section header to expand or collapse it. IPTVBoss remembers these choices between uses.
 
-### Editor with programme preview
+### Programme preview
 
-The editor can show a programme preview over the channel details when preview information is available. This view helps confirm programme metadata, descriptions, and artwork while you work on a channel.
+The editor can show programme information when preview data is available. The three programme cards show the previous, current, and next entries for the selected EPG mapping.
 
-![The Layout Editor with programme preview](../assets/images/layout/layout-editor-with-preview.png)
+When **Show Full Preview in-line in Channel Options** is enabled, select a programme card to display its artwork, title, time, and description below the cards. The selected card is highlighted, and the inline preview replaces the delayed hover overlay.
+
+![The Layout Editor with an inline programme preview](../assets/images/layout/layout-editor-inline-programme.png)
+
+When inline preview is disabled, **Enable Full Preview Overlays** can show the full preview as a delayed overlay when you hover over a programme card. The preview size is controlled from [Layout Editor settings](../settings/application.md#layout-editor-settings).
 
 ## Select a layout and group
 
@@ -138,6 +142,10 @@ Select one channel before changing the mode. The selector is disabled for a mult
 ![Layout Editor: custom layout channel name](../assets/images/layout-editor-custom-channel-name.png)
 
 The name actions above the channel list apply only to channels whose names can be changed. They skip channels using **USE PROVIDER NAME**. **Revert to Provider Name** and **Ignore Name Changes** apply to the universal-name workflow; the revert action restores the provider-supplied name while leaving the channel in the universal-name mode.
+
+![Layout Editor channel naming options](../assets/images/layout-editor-channel-naming-options.png)
+
+For a universal-name channel, enable **Ignore Name Changes** when AED or source synchronization must not replace the current universal name. The control is available for the applicable selected channels and can show a mixed state when selected channels have different values.
 
 Inside **EPG Mapping**, the header buttons are:
 

@@ -34,6 +34,7 @@ The available console sections are listed in the navigation. Use the pages in th
 - [Boss Metadata](console/metadata.md) — review server metadata and administrative information.
 - [Server Settings](console/settings.md) — configure server connection and schedule settings.
 - [XC Server Users](console/users.md) — manage server users.
+- [User Activity](console/activity.md) — review successful synchronization and playback activity.
 - [Paired Devices](console/paired-devices.md) — generate pairing codes and revoke device access.
 - [Link Restore](console/link-restore.md) — restore or initialize a server database from a supported link.
 - [API Keys](console/api.md) — rotate the XC Reload key and manage external automation keys.

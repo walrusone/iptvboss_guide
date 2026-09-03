@@ -1,5 +1,24 @@
 # Changelog
 
+## 📢 IPTVBoss 3.11.87
+
+### 🧩 Layout Editor
+
+- **New:** Display the full programme preview inline below the previous, current, and next programme cards. Select a card to inspect its artwork, title, time, and description.
+- **New:** Configure full-preview overlays, inline preview, and preview size from the Layout Editor settings.
+- **Improvement:** Channel naming options now support the universal-name **Ignore Name Changes** control, including applicable multi-channel selections and mixed values.
+
+### 🏟️ AED and EPG
+
+- **New:** Configure the signing-off overnight cutoff hour in AED Defaults and in individual AED/advanced dummy channel settings.
+- **Improvement:** AED refreshes are coordinated so dependent event and sports data is available before eligible channels are updated.
+- **Fix:** No-event and after-event output, signing-off behavior, EPG browser viewing, and late-arriving sports matches are handled more consistently.
+
+### ☁️ XC Server and synchronization
+
+- **New:** Configure the XC Server listener port through the server settings, `-xc-port`, or `IPTVBOSS_XC_PORT`.
+- **Improvement:** Cloud-provider locking, backup publication, reload notifications, cache generation, and database transitions are coordinated more safely across paired installations.
+
 ## 📢 IPTVBoss 3.11.79 → 3.11.85
 
 Here’s what changed since 3.11.78:
@@ -24,10 +43,5 @@ Here’s what changed since 3.11.78:
 
 - **Fix:** Sports channels, including ESPN+ matches whose event data arrives late, can retry eligible no-match assignments after a later sports-data refresh.
 - **Fix:** Layout-specific channel names are now used consistently in playlist, guide, player, sorting, and preview output.
-
-### 🛠️ Reliability
-
-- Improved synchronization locking, database-transition handling, cache cleanup, and recovery logging.
-- Existing databases migrate new layout and layout-channel fields automatically.
 
 If you run into an issue after updating, include the exact IPTVBoss version, operating system, reproduction steps, and sanitized logs when asking in [Discord](https://discord.gg/s3kpjP8EgR) or opening a [support ticket](https://members.bosstees.net/).

@@ -21,6 +21,8 @@ The related **AED Bulk Updater** can apply a change to multiple existing AEDs. I
 
 ![AED Editor showing event and output fields](../assets/images/sources/aed-editor.png)
 
+The AED editor's timing controls include **Signing Off Length (hrs)** and **Cutoff Hour**. The cutoff hour is a 24-hour value from `0` through `23` and controls the overnight boundary used when signing-off output is written.
+
 ## League Based and Regex Based AEDs
 
 AEDs can be used in two main ways. Choose the approach that matches the data available from your EPG source.
@@ -43,6 +45,14 @@ The exact steps depend on the AED approach, but an AED normally combines three j
 3. **Format the result.** Output fields use placeholders to produce the channel name, event title, description, and logo URL.
 
 If no event is active, the channel can fall back to its provider name or to the AED's no-event behavior, depending on the configuration. If event data was not available when the source synchronized, IPTVBoss can retry eligible no-match sports assignments during a later sports-data refresh.
+
+## Output timing and signing off
+
+Use **AED Defaults** to set reusable timing values for new or inherited AED configurations. The defaults include event duration, the window for including ended events, signing-off length, and **Signing Off Overnight Cutoff Hour (0-23)**.
+
+![AED Defaults output timing](../assets/images/settings-aed-defaults.png)
+
+An individual AED or advanced dummy channel can override inherited values. Use the channel-level controls when one event feed needs different signing-off behavior from the general defaults. Keep the cutoff between `0` and `23`; the default installation value is `4`.
 
 ## Output placeholders
 
@@ -273,7 +283,5 @@ Other AED tools include:
 - **Reload Sports Data** refreshes the sports data used by sports AED workflows.
 - **Reload TXT Channel Names** reloads text-based channel names when that source workflow is in use.
 - **Refresh All AEDs** refreshes stale AED results across layouts when available.
-
-![AED Defaults settings](../assets/images/settings-aed-defaults.png)
 
 AED tools may depend on the account plan and application release. If a menu item is locked, check account access before troubleshooting the definition.
