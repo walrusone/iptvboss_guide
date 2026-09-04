@@ -56,6 +56,16 @@ The **Layout Editor** section controls how programme previews appear while editi
 
 Save the settings, then reopen or refresh the Layout Editor if it was already open.
 
+## Layout Manager attention checks
+
+The **Layout Manager** section controls which conditions can mark a layout as **Needs attention**. All checks are enabled by default. Expand **Layout Manager** to review or change them, then select **Save Settings**.
+
+![Layout Manager attention checks](../3.11.94_Screens/Layout_Manager_Settings.png)
+
+The content and structure checks are **Unmapped live channels**, **Missing source channels**, **Empty groups**, **Broken linked groups**, and **Duplicate custom channel numbers**. The output checks are **Output failures**, **Output currently running**, and **Output never generated**.
+
+These options change the health indicator and warning decision only. They do not disable output checks, remove channels, or repair a layout. See [Managing Layouts](../layouts/layout-manager.md#read-layout-health) for the dashboard values and clickable review workflow.
+
 ## Save and verify
 
 1. Review each changed value.

@@ -33,11 +33,23 @@ Confirm that the URL returns the expected EPG format, that synchronization compl
 4. Check that the layout is configured to output EPG data.
 5. Generate the EPG again.
 
+## Layout Manager shows Needs attention
+
+Select the layout and read the reason beside its **Needs attention** badge. The dashboard can identify unmapped live channels, missing source channels, empty groups, broken linked groups, duplicate custom channel numbers, output failures, output currently running, or output that has never been generated.
+
+Select the affected metric to open Layout Editor with the related groups or channels in focus. If a condition is intentional, open **Settings** → **IPTVBoss Settings** → **Layout Manager** and disable only the corresponding attention check. Changing the check does not change the layout content or output.
+
+## Sources Manager shows Needs attention
+
+In Sources Manager, review the selected source’s health reason and **Sync history**. A playlist source may need attention because its last sync was skipped or is running, a category needs attention, it has not been synced yet, or its XC account is expired or close to expiry. An EPG source may need attention because it has not been synced yet or its last sync was skipped or failed.
+
+Use **Inventory** to confirm that the source contains the expected channels, and use **Access & expiry** for XC account and user details. Correct the source settings or provider account, then run a single-source sync and review the status again.
+
 ## A sports channel has no current event
 
-Sports event data may arrive after the source channel has already synchronized. When an AED-based sports channel has no matching event, IPTVBoss keeps the channel available and retries eligible no-match assignments during a later sports-data refresh. Confirm that the AED is assigned, the provider channel name is correct, and the sports data refresh completed before changing the layout or deleting the channel.
+Sports event data may arrive after the source channel has already synchronized. When an AED-based sports channel has no matching event, IPTVBoss keeps the channel available and retries eligible no-match assignments after a successful source synchronization or during a later sports-data refresh. Confirm that the AED is assigned, the provider channel name is correct, and the sports data refresh completed before changing the layout or deleting the channel.
 
-For ESPN+ channels that were published before their event data was available, wait for the next sports-data refresh and then review the channel in **Layout Editor**. Use [Advanced EPG Dummies](../features/aed.md) when the provider name requires a different matching pattern.
+For ESPN+ channels that were published before their event data was available, wait for the source sync or next sports-data refresh to complete and then review the channel in **Layout Editor**. If the application is starting or reloading a synchronized database, allow the sports-data readiness step to finish before judging the result. Use [Advanced EPG Dummies](../features/aed.md) when the provider name requires a different matching pattern.
 
 ## Output is missing channels
 

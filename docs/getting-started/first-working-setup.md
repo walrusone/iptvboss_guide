@@ -24,8 +24,8 @@ If you are opening an existing database, stop here and back it up before replaci
 1. Follow [Adding Playlists](../setup/playlists.md) and choose the M3U or Xtream Codes workflow that matches the information from your provider.
 2. Open **Manage Categories**, refresh the provider categories, and enable a small set of Live categories for this first test.
 3. Save the source.
-4. Open **Sources** → **Sources Manager**.
-5. Select the source and select **Sync** in the **IPTV Sources** header.
+4. Open **Sources** → **Sources Manager** and open the **IPTV Sources** tab.
+5. Select the source and select **Sync** in the source action bar.
 6. Wait for synchronization to finish and confirm that the source contains channels.
 
 Start with a small channel set. You can enable more categories after the complete workflow works.
@@ -36,7 +36,7 @@ Start with a small channel set. You can enable more categories after the complet
 2. Leave **Source** set to **Custom**.
 3. Enter a descriptive name and the external EPG URL.
 4. Save the source.
-5. In **Sources Manager**, select the EPG source and select **Sync** in the **EPG Sources** header.
+5. In **Sources Manager**, open the **EPG Sources** tab, select the EPG source, and select **Sync** in the source action bar.
 6. Wait for synchronization to finish and confirm that EPG channels were imported.
 
 See [Adding an EPG Source](../setup/epg-sources.md) for time-zone, logo, and EPG layout options.
@@ -89,7 +89,7 @@ Choose a mapping only when the channel identity is reliable. An incorrect guide 
 
 ## 8. Generate cloud output
 
-1. Return to **Layout Manager** and confirm that the layout, M3U output, EPG output, and cloud-provider folder are enabled and saved.
+1. Return to **Layout Manager** and confirm that the layout health dashboard, M3U output, EPG output, and cloud-provider folder are correct and saved.
 2. Open **Output**.
 3. Select **Current Layout M3U & EPG**.
 4. Wait for generation and upload to finish.

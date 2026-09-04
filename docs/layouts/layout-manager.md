@@ -2,9 +2,57 @@
 
 Use **Layout Manager** to create, select, duplicate, remove, import, and export layouts.
 
-![The Layout Manager](../assets/images/layout/layout-manager.png)
+![The 3.11.94 Layout Manager](../3.11.94_Screens/Layout_Manager.png)
 
-The redesigned Layout Manager adapts to the size of its window. Its three sections—**General**, **Output & Sync**, and **Advanced / Custom**—can each be expanded or collapsed from the section header. IPTVBoss remembers those choices the next time you open the screen, so you can keep frequently used settings visible while reducing clutter on smaller screens.
+The Layout Manager uses a split view: layouts are listed on the left and the selected layout’s status, inventory, actions, and settings appear on the right. The dashboard adapts to the available width. Its three settings sections—**General**, **Output & Sync**, and **Advanced / Custom**—can each be expanded or collapsed from the section header.
+
+## Read layout health
+
+Select a layout to populate the dashboard. The layout list and status header use these states:
+
+- **Healthy** — the layout content and last output are healthy.
+- **Needs attention** — one or more enabled attention checks found a content, structure, or output condition to review.
+- **Output failed** — the last output attempt failed; the status reason contains the output error when available.
+- **Disabled** — the layout is disabled and will not be generated.
+- **No output configured** — neither M3U nor XMLTV output is enabled for the layout.
+
+The **Groups** and **Channels** panels show totals and enabled counts for **LIVE**, **VOD**, and **SERIES**. Live channels also show the number that are not mapped to a usable EPG source. VOD and Series show **N/A** because those content types are not EPG-mappable. The lower cards show **Other Warnings**, **Output Types**, **Last Attempt**, **Last Success**, and assigned **Users**.
+
+The dashboard is interactive. Select a group or channel metric to open Layout Editor with the related content in focus. Select an empty-group count or the live **Unmapped** count to review the affected groups or channels. The warning and output cards open the selected layout in the editor so you can investigate the details.
+
+The values are a current inventory, not a replacement for checking the generated playlist or guide. After changing a source, group, mapping, or output setting, save the layout and review the dashboard again.
+
+## Configure attention checks
+
+Open **Settings** → **IPTVBoss Settings**, then expand **Layout Manager**. The checks are enabled by default and determine which conditions can mark a layout as **Needs attention**:
+
+**Content and structure**:
+
+- **Unmapped live channels**
+- **Missing source channels**
+- **Empty groups**
+- **Broken linked groups**
+- **Duplicate custom channel numbers**
+
+**Output status**:
+
+- **Output failures**
+- **Output currently running**
+- **Output never generated**
+
+Disabling a check only removes that condition from the health decision; it does not repair the layout or change the generated output. Keep checks enabled unless a condition is intentional for your workflow.
+
+![Layout Manager attention checks](../3.11.94_Screens/Layout_Manager_Settings.png)
+
+## Use the layout settings sections
+
+The selected layout’s settings are grouped so the status dashboard remains visible while you work:
+
+- **General** contains the layout name and enabled state.
+- **Output & Sync** contains cloud sync, EPG upload, empty-group cleanup, XC output, M3U output, XMLTV output, channel numbering, and output filenames.
+- **Advanced / Custom** contains the custom output folder and cloud-provider folder.
+
+Expand only the section you need when working in a smaller window. IPTVBoss remembers the section state between uses.
 
 ## Remove empty groups after source sync
 

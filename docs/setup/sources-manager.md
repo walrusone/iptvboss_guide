@@ -2,11 +2,22 @@
 
 **Sources Manager** is the main screen for reviewing, editing, and synchronizing playlist sources and EPG sources. Open it from **Sources** → **Sources Manager**.
 
-![Sources Manager](../assets/images/sources/sources-manager.png)
+![The 3.11.94 IPTV Sources Manager](../3.11.94_Screens/Sources_Manager_IPTV.png)
 
-The redesigned Sources Manager adapts to the available window size. Its two independent sections—**IPTV Sources** and **EPG Sources**—can each be expanded or collapsed from the section header. IPTVBoss remembers your choices between uses, which is useful when working in a smaller window.
+The Sources Manager now separates playlist and guide maintenance into two tabs: **IPTV Sources** and **EPG Sources**. Each tab uses a split view with the source list on the left and the selected source’s health, details, actions, and history on the right. The detail panels adapt to the available window size.
 
-The screen has two independent areas: playlist sources at the top and EPG sources below. Each section’s controls are in its header. Select an item in a list to populate its details and enable actions for that source. Double-click a playlist or EPG source to open its settings.
+Select an item in a list to populate its details and enable actions for that source. Each list row shows a health indicator, source type, health label, and last successful sync. Double-click a playlist or EPG source to open its settings.
+
+## Understand source health
+
+The selected source header and its list row can show:
+
+- **Healthy** — the last sync completed successfully.
+- **Needs attention** — the source has not been synced, a sync was skipped or is running, a playlist category needs attention, or an XC account is expired or expiring within 30 days.
+- **Sync failed** — the last sync did not complete successfully.
+- **Built-in** — the selected EPG is the built-in dummy source.
+
+The health badge summarizes the source state; it does not replace reviewing the last attempt, last successful sync, and last output in **Sync history**.
 
 ## Playlist sources
 
@@ -27,9 +38,21 @@ Use **View Added** or **View Removed** to review recent provider changes. **Add 
 
 Use ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** on one selected source when testing a change. Use the global **Sources** → **Sync All Sources** command when all configured playlist sources should be refreshed.
 
+### Playlist detail sections
+
+The selected playlist source is organized into collapsible sections:
+
+- **Inventory** shows total, active, added, and removed channels, followed by LIVE, VOD, and SERIES category counts.
+- **Access & expiry** shows XC expiry, maximum connections, timezone, and the source-user summary when those values apply. User counts can be selected to open the relevant user-management view.
+- **Sync history** shows the last attempt, last successful sync, and last output.
+
+The **Inventory**, **Access & expiry**, and **Sync history** expansion choices are remembered. Fields that do not apply to an M3U or custom source are hidden rather than treated as zero.
+
 ## EPG sources
 
 The EPG section lists configured EPG feeds, including the built-in dummy source when present. The details panel shows the source name, channel count, synchronization/output times, preferred language, and whether the source is available for mapping or output.
+
+![The 3.11.94 EPG Sources Manager](../3.11.94_Screens/Sources_Manager_EPG.png)
 
 ### EPG toolbar
 
@@ -44,7 +67,9 @@ The EPG section lists configured EPG feeds, including the built-in dummy source 
 - ![](../assets/icons/ui/linked.png){ .ui-icon } **Map EPG to Source** opens the workflow that assigns the selected EPG to playlist sources.
 - ![](../assets/icons/ui/menu.svg){ .ui-icon } **More** opens **Output Logo Template** for the selected EPG source and **Output All Logo Templates** for all EPG sources.
 
-The EPG options below the details include **Included EPG in Search**, which makes the source available to EPG search/mapping workflows, and **Sort by Epg-ID**, which changes how its EPG channels are ordered. **Preferred Language** controls the language selected from multilingual EPG data when the source provides that choice.
+The EPG details are organized into **Inventory**, **Output & matching**, and **Sync history**. **Inventory** shows the total EPG channel count. **Output & matching** contains **Preferred Language**, **Included EPG in Search**, **Sort by Epg-ID (When unchecked, sort is by Display Name)**, mapping, and logo-template actions. **Preferred Language** controls the language selected from multilingual EPG data when the source provides that choice.
+
+The **Inventory**, **Output & matching**, and **Sync history** expansion choices are remembered. The built-in dummy source is shown as **Built-in** and cannot be synced manually. Custom EPG sources can also display a message when their sync window or daily sync limit prevents a manual sync.
 
 ## Synchronization workflow
 

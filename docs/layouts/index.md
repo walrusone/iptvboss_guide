@@ -14,7 +14,7 @@ Use a separate layout when different viewers need different channel groups, orde
 
 Open layout tools from the **Layout** menu at the top of IPTVBoss:
 
-- **Layout Manager** creates layouts and controls their output settings.
+- **Layout Manager** creates layouts, controls their output settings, and reports layout health and inventory.
 - **Layout Editor** organizes groups and channels inside a layout.
 - **EPG Browser** checks programme data for mapped channels.
 - **New Channel Manager** and **New Category Manager** control how new provider content is handled.
@@ -26,6 +26,8 @@ Open layout tools from the **Layout** menu at the top of IPTVBoss:
 3. Use [Mapping channels](../setup/channel-mapping.md) to assign EPG data.
 4. Use [Layout Output Settings](output-settings.md) to configure destinations and formats.
 5. Use [Creating output](../setup/output.md) to generate the files or links.
+
+After a source sync or layout change, return to **Layout Manager** and review the selected layout’s health badge, unmapped live-channel count, empty groups, and output status before publishing output. See [Read layout health](layout-manager.md#read-layout-health) for the attention checks and dashboard actions.
 
 !!! note "Free and Pro"
     Layout limits are listed only in the canonical [Free vs Pro comparison](../getting-started/free-vs-pro.md). If you reach the current limit, remove an unused layout or review the available Pro plans.

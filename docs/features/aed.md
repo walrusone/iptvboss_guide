@@ -44,7 +44,9 @@ The exact steps depend on the AED approach, but an AED normally combines three j
 2. **Extract event values.** Sports event data and regex fields populate placeholders such as `{title}`, `{team1}`, and `{league}`.
 3. **Format the result.** Output fields use placeholders to produce the channel name, event title, description, and logo URL.
 
-If no event is active, the channel can fall back to its provider name or to the AED's no-event behavior, depending on the configuration. If event data was not available when the source synchronized, IPTVBoss can retry eligible no-match sports assignments during a later sports-data refresh.
+If no event is active, the channel can fall back to its provider name or to the AED's no-event behavior, depending on the configuration. If event data was not available when the source synchronized, IPTVBoss can retry eligible no-match sports assignments after a successful source synchronization or during a later sports-data refresh. The retry uses the committed sports dataset and keeps explicit **No Event** assignments out of the retry.
+
+Before a startup source sync or output operation that depends on sports data, IPTVBoss waits for the sports dataset to be ready. If a database transition is still in progress, the source sync or XC response preparation is deferred until the active database and sports data agree. This prevents a temporary startup state from being saved as a default no-event result.
 
 ## Output timing and signing off
 
@@ -251,6 +253,8 @@ Use the AED tester with samples from different days, times, and naming variation
 4. Check the generated name, description, and logo URL.
 5. Save the AED only after the results are correct.
 6. Refresh the assigned AED channels and inspect the result in the Layout Editor.
+
+After a successful playlist source sync, eligible sports channels that previously had no match are retried automatically. If a channel still has no event, confirm that the sports data is available, the AED is assigned, and the provider name or custom lookup name matches the AED rules before using **Refresh AEDs** manually.
 
 ![AED tester for checking regex matches](../assets/images/sources/aed-editor-tester.png)
 

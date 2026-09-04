@@ -1,5 +1,26 @@
 # Changelog
 
+## 📢 IPTVBoss 3.11.88 → 3.11.94
+
+### 🧭 Layout and source management
+
+- **New:** Layout Manager includes a per-layout health dashboard with status, group and channel inventory, EPG coverage, output state, sync history, and assigned-user counts.
+- **New:** Layout Manager metrics and warning cards can open Layout Editor with the related layout content in focus.
+- **New:** Layout Manager attention checks can be enabled or disabled independently in **Settings** → **IPTVBoss Settings** → **Layout Manager**.
+- **Improvement:** Layout Manager settings are grouped into collapsible **General**, **Output & Sync**, and **Advanced / Custom** sections, with a responsive split layout for smaller windows.
+- **New:** Sources Manager separates **IPTV Sources** and **EPG Sources** into tabs and shows health status in source rows and selected-source headers.
+- **New:** Source details are grouped into collapsible inventory, access/expiry or output/matching, and sync-history sections. Expansion choices are remembered.
+- **Improvement:** Source and EPG lists show the last successful sync and health state, while detail cards expose channel/category counts, provider access, user summaries, mapping options, and output history.
+
+### 🏟️ AED and sports data
+
+- **Fix:** Eligible AED sports channels with no match are retried after a successful source synchronization as well as after a later sports-data refresh.
+- **Fix:** Startup source synchronization and XC response preparation wait for committed sports data and the active database transition before publishing or saving AED-dependent results.
+
+### ☁️ Cloud synchronization
+
+- **Fix:** Shared cloud lock updates use a dedicated provider upload path, so heartbeat/lease writes do not trigger foreground output-link or progress side effects. Dropbox and Google Drive lock updates now report failures explicitly.
+
 ## 📢 IPTVBoss 3.11.87
 
 ### 🧩 Layout Editor

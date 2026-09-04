@@ -54,7 +54,7 @@ Save the EPG source after reviewing the three lists, then synchronize the source
 
 1. Open [Sources Manager](sources-manager.md).
 2. Select the EPG source.
-3. Select ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** in the **EPG Sources** header.
+3. Select ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** in the source action bar.
 4. Wait for the import to finish.
 5. Confirm that the source contains channels before attempting channel mapping.
 

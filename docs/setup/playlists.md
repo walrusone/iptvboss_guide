@@ -62,13 +62,13 @@ If a value contains URL-encoded characters such as `%2B` or `%40`, copy the valu
 
 ## Synchronize the source
 
-1. Open **Sources** → **Sources Manager**.
+1. Open **Sources** → **Sources Manager**, then open the **IPTV Sources** tab.
 2. Select the source you added.
-3. Select ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** in the **IPTV Sources** header.
+3. Select ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** in the source action bar.
 4. Wait for the synchronization to finish before editing channels or generating output.
 5. Review the imported categories and channel count.
 
-![The Sources Manager](../assets/images/sources/sources-manager.png)
+![The 3.11.94 IPTV Sources Manager](../3.11.94_Screens/Sources_Manager_IPTV.png)
 
 If synchronization fails, confirm that the URL is reachable, credentials are correct, and the provider is online. Then review [Common Problems](../troubleshooting/common-problems.md).
 

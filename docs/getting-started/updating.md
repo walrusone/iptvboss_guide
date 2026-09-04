@@ -31,10 +31,10 @@ Do not interrupt a database migration. If startup fails, stop and collect the lo
 Check the version shown by the application, then test a low-risk workflow:
 
 1. Open [Sources Manager](../setup/sources-manager.md).
-2. Confirm that a source is present without synchronizing it yet.
-3. Open [Layout Manager](../layouts/layout-manager.md) and confirm that your layouts are present.
-4. Review [Application Settings](../settings/application.md).
-5. Generate a test output only after the database and settings look correct.
+2. Confirm that a source is present and review its health and last successful sync without synchronizing it yet.
+3. Open [Layout Manager](../layouts/layout-manager.md), confirm that your layouts are present, and review the selected layout’s health dashboard.
+4. Review [Application Settings](../settings/application.md), including the Layout Manager attention checks when the release adds them.
+5. Generate a test output only after the database, source health, layout inventory, and settings look correct.
 
 ## If the update fails
 
