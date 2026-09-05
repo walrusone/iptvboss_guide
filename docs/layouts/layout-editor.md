@@ -2,7 +2,7 @@
 
 Use **Layout Editor** to control the groups, channels, names, logos, and EPG assignments in a layout.
 
-![The Layout Editor](../assets/images/layout/layout-editor.png)
+![The 3.11.95 Layout Editor](../3.11.95/Layout_Editor.png)
 
 The editor is divided into three working areas: groups on the left, channels in the middle, and options on the right. You can collapse the group selector with the arrow on its right edge when you need more room.
 
@@ -50,10 +50,15 @@ The buttons above the **Groups** and **Channels** lists apply to the selected ro
 | ![](../assets/icons/ui/uppercase.svg){ .ui-icon } **Uppercase** | Changes selected channel names to uppercase. |
 | ![](../assets/icons/ui/sentence_case.svg){ .ui-icon } **Sentence Case** | Changes selected channel names to sentence case. |
 | ![](../assets/icons/ui/sort_az.svg){ .ui-icon } **Sort A to Z** | Sorts channels alphabetically. |
-| ![](../assets/icons/ui/sort_epg.svg){ .ui-icon } **Sort by Missing EPG/Logo** | Brings channels missing an EPG mapping or logo together for review. |
 | ![](../assets/icons/ui/find_replace.svg){ .ui-icon } **Find and Replace** | Finds or replaces text in selected channel names. |
 | ![](../assets/icons/ui/prefix.png){ .ui-icon } **Add Prefix/Suffix** | Adds text before or after selected channel names. |
 | ![](../assets/icons/ui/remove.svg){ .ui-icon } **Remove Channel** | Removes selected channels from the layout. |
+
+### Filter channels by missing EPG or logo
+
+Use the **Missing EPG** and **Missing Logo** checkboxes beside the **CHANNELS** heading to narrow the channel list. **Missing EPG** shows live channels without a usable EPG mapping. **Missing Logo** shows channels whose source channel has no logo. If both are selected, a channel is shown when it matches either condition. These filters can be combined with the channel search field.
+
+While a missing-content filter or a health-focused view is active, channel reordering and drag-and-drop importing are disabled. Clear the filters before changing channel order or importing onto the channel list.
 
 ## Import channels with Channel Importer
 

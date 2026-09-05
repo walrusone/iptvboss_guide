@@ -9,7 +9,7 @@ Map a playlist channel to an EPG channel so the generated guide contains program
 3. Open the layout in [Layout Editor](../layouts/layout-editor.md).
 4. Select a channel that needs EPG data.
 
-![The Layout Editor](../assets/images/layout/layout-editor.png)
+![The 3.11.95 Layout Editor](../3.11.95/Layout_Editor.png)
 
 ## Choose EPG sources for mapping
 
@@ -52,8 +52,8 @@ Use the channel’s country, network, and service name to distinguish similarly 
 ## Review missing mappings
 
 1. Return to the channel list in **Layout Editor**.
-2. Select ![](../assets/icons/ui/sort_epg.svg){ .ui-icon } **Sort by Missing EPG/Logo** above the channel list to bring channels needing attention together.
-3. Repeat the search with a shorter or alternate channel name.
+2. Enable **Missing EPG** beside the **CHANNELS** heading to show live channels without a usable EPG mapping.
+3. Repeat the search with a shorter or alternate channel name. Enable **Missing Logo** when you also need to review channels without a source logo; when both filters are enabled, either condition can match.
 4. Leave the channel unmapped when no reliable match exists.
 
 !!! warning

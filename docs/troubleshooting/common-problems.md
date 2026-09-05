@@ -35,7 +35,7 @@ Confirm that the URL returns the expected EPG format, that synchronization compl
 
 ## Layout Manager shows Needs attention
 
-Select the layout and read the reason beside its **Needs attention** badge. The dashboard can identify unmapped live channels, missing source channels, empty groups, broken linked groups, duplicate custom channel numbers, output failures, output currently running, or output that has never been generated.
+Select the layout and read the reason beside its **Needs attention** badge. The dashboard can identify unmapped live channels, missing live/VOD/TV logos, missing source channels, empty groups, broken linked groups, duplicate custom channel numbers, output failures, output currently running, or output that has never been generated.
 
 Select the affected metric to open Layout Editor with the related groups or channels in focus. If a condition is intentional, open **Settings** → **IPTVBoss Settings** → **Layout Manager** and disable only the corresponding attention check. Changing the check does not change the layout content or output.
 

@@ -2,7 +2,7 @@
 
 Use **Layout Manager** to create, select, duplicate, remove, import, and export layouts.
 
-![The 3.11.94 Layout Manager](../3.11.94_Screens/Layout_Manager.png)
+![The 3.11.95 Layout Manager](../3.11.95/Layout_Manager.png)
 
 The Layout Manager uses a split view: layouts are listed on the left and the selected layout’s status, inventory, actions, and settings appear on the right. The dashboard adapts to the available width. Its three settings sections—**General**, **Output & Sync**, and **Advanced / Custom**—can each be expanded or collapsed from the section header.
 
@@ -16,7 +16,7 @@ Select a layout to populate the dashboard. The layout list and status header use
 - **Disabled** — the layout is disabled and will not be generated.
 - **No output configured** — neither M3U nor XMLTV output is enabled for the layout.
 
-The **Groups** and **Channels** panels show totals and enabled counts for **LIVE**, **VOD**, and **SERIES**. Live channels also show the number that are not mapped to a usable EPG source. VOD and Series show **N/A** because those content types are not EPG-mappable. The lower cards show **Other Warnings**, **Output Types**, **Last Attempt**, **Last Success**, and assigned **Users**.
+The **Groups** and **Channels** panels show totals and enabled counts for **LIVE**, **VOD**, and **SERIES**. Live channels also show the number that are not mapped to a usable EPG source. VOD and Series show **N/A** because those content types are not EPG-mappable. Each content type also shows its enabled channels that have no logo. Select a missing-logo value to open Layout Editor with the matching content focused. The lower cards show **Other Warnings**, **Output Types**, **Last Attempt**, **Last Success**, and assigned **Users**.
 
 The dashboard is interactive. Select a group or channel metric to open Layout Editor with the related content in focus. Select an empty-group count or the live **Unmapped** count to review the affected groups or channels. The warning and output cards open the selected layout in the editor so you can investigate the details.
 
@@ -29,6 +29,9 @@ Open **Settings** → **IPTVBoss Settings**, then expand **Layout Manager**. The
 **Content and structure**:
 
 - **Unmapped live channels**
+- **Missing Live Logos**
+- **Missing VOD Logos**
+- **Missing TV Logos**
 - **Missing source channels**
 - **Empty groups**
 - **Broken linked groups**
@@ -42,7 +45,7 @@ Open **Settings** → **IPTVBoss Settings**, then expand **Layout Manager**. The
 
 Disabling a check only removes that condition from the health decision; it does not repair the layout or change the generated output. Keep checks enabled unless a condition is intentional for your workflow.
 
-![Layout Manager attention checks](../3.11.94_Screens/Layout_Manager_Settings.png)
+![Layout Manager attention checks](../3.11.95/Layout_Manager_Settings.png)
 
 ## Use the layout settings sections
 

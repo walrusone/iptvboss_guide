@@ -1,5 +1,14 @@
 # Changelog
 
+## 📢 IPTVBoss 3.11.95
+
+### 🧩 Layout Editor and layout health
+
+- **New:** Filter Layout Editor channel lists by **Missing EPG** and **Missing Logo**, including combined use with channel-name search.
+- **New:** Layout Manager channel metrics show missing-logo counts separately for **LIVE**, **VOD**, and **SERIES**, and open Layout Editor focused on the matching channels when selected.
+- **New:** Layout Manager attention checks can flag missing live, VOD, or TV logos independently.
+- **Fix:** Channel-list filtering and sorting now keep the displayed and editable channel collection in sync; reordering and drag-and-drop importing are locked while a filtered or health-focused list is active.
+
 ## 📢 IPTVBoss 3.11.88 → 3.11.94
 
 ### 🧭 Layout and source management
