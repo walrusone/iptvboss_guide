@@ -2,7 +2,7 @@
 
 **Sources Manager** is the main screen for reviewing, editing, and synchronizing playlist sources and EPG sources. Open it from **Sources** → **Sources Manager**.
 
-![The 3.11.94 IPTV Sources Manager](../3.11.94_Screens/Sources_Manager_IPTV.png)
+![The 3.11.106 IPTV Sources Manager](../3.11.106/Sources_Manager_IPTV_Sources.png)
 
 The Sources Manager now separates playlist and guide maintenance into two tabs: **IPTV Sources** and **EPG Sources**. Each tab uses a split view with the source list on the left and the selected source’s health, details, actions, and history on the right. The detail panels adapt to the available window size.
 
@@ -17,7 +17,7 @@ The selected source header and its list row can show:
 - **Sync failed** — the last sync did not complete successfully.
 - **Built-in** — the selected EPG is the built-in dummy source.
 
-The health badge summarizes the source state; it does not replace reviewing the last attempt, last successful sync, and last output in **Sync history**.
+The health badge summarizes the source state; it does not replace reviewing the last attempt, last successful sync, and last output in **Sync history**. A source that is still syncing can be marked as needing attention until the operation completes.
 
 ## Playlist sources
 
@@ -42,17 +42,19 @@ Use ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** on one selected sou
 
 The selected playlist source is organized into collapsible sections:
 
-- **Inventory** shows total, active, added, and removed channels, followed by LIVE, VOD, and SERIES category counts.
+- **Inventory** shows channel and category metrics in separate **TOTAL**, **LIVE**, **VOD**, and **SERIES** columns. Channel metrics include **Total**, **Active**, **Added By Provider**, and **Removed By Provider**. Category metrics include **Total**, **Active**, and **Stale**.
 - **Access & expiry** shows XC expiry, maximum connections, timezone, and the source-user summary when those values apply. User counts can be selected to open the relevant user-management view.
 - **Sync history** shows the last attempt, last successful sync, and last output.
 
-The **Inventory**, **Access & expiry**, and **Sync history** expansion choices are remembered. Fields that do not apply to an M3U or custom source are hidden rather than treated as zero.
+The **Added By Provider** and **Removed By Provider** values are interactive when they are non-zero. Select one to review the added or removed channels for that content type. The overall **TOTAL** values open the unfiltered change list.
+
+The **Inventory**, **Access & expiry**, and **Sync history** expansion choices are remembered. The inventory wraps into a narrower layout when the window is reduced. Fields that do not apply to an M3U or custom source are hidden rather than treated as zero.
 
 ## EPG sources
 
 The EPG section lists configured EPG feeds, including the built-in dummy source when present. The details panel shows the source name, channel count, synchronization/output times, preferred language, and whether the source is available for mapping or output.
 
-![The 3.11.94 EPG Sources Manager](../3.11.94_Screens/Sources_Manager_EPG.png)
+![The EPG Sources Manager](../3.11.94_Screens/Sources_Manager_EPG.png)
 
 ### EPG toolbar
 
@@ -76,7 +78,7 @@ The **Inventory**, **Output & matching**, and **Sync history** expansion choices
 1. Select the source to inspect.
 2. Review its last attempt and last successful synchronization time.
 3. Select ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** and wait for the progress operation to finish.
-4. For a playlist source, use ![](../assets/icons/ui/menu.svg){ .ui-icon } **More** to review added or removed channels when needed.
+4. For a playlist source, use ![](../assets/icons/ui/menu.svg){ .ui-icon } **More** to review added or removed channels when needed, or select a non-zero **Added By Provider**/**Removed By Provider** inventory value for a content-type-specific list.
 5. Check affected layouts before generating output.
 
 Synchronization can update source metadata and layout content. Avoid starting another source operation while the current progress dialog is running.

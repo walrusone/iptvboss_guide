@@ -1,5 +1,31 @@
 # Changelog
 
+## 📢 IPTVBoss 3.11.96 → 3.11.107
+
+### 🧭 Sources and layouts
+
+- **New:** Sources Manager inventory now separates channel and category totals for **TOTAL**, **LIVE**, **VOD**, and **SERIES**, with added/removed provider counts that open content-specific change lists.
+- **Improvement:** Sources Manager inventory, access/expiry, and sync-history sections use a responsive layout and remember their expansion state.
+- **New:** Layout Editor group options include **Ignore Empty Group Health Check** for groups that are intentionally empty.
+- **Improvement:** Layout Manager health recognizes XC output and uses relevant noGUI synchronization history when reporting output status.
+- **Improvement:** Adding a valid M3U or Xtream Codes source with no loaded categories opens category management before the source can be saved.
+
+### 🏟️ AED, EPG, and output
+
+- **Fix:** AED refreshes retry eligible no-match channels after source synchronization and later sports-data refreshes, while preserving valid fallback assignments.
+- **Fix:** AED assignments and fallback-chain changes are persisted more reliably, including bulk **Revert to Provider Name** operations.
+- **Fix:** AED/XMLTV generation handles no-event, after-event, overnight cutoff, and output-horizon cases more consistently.
+- **Fix:** Source synchronization and output preparation wait for committed sports data and database transitions before publishing AED-dependent results.
+
+### ☁️ XC Server and cloud synchronization
+
+- **Fix:** Shared cloud locks, XC Server shutdown, backups, reload coordination, and database transitions are handled more safely, including malformed or stale lock recovery paths.
+- **Improvement:** Request diagnostics are quieter, avoid printing raw response bodies, and redact full source URLs from logs.
+
+### 🌐 Networking
+
+- **Improvement:** Large HTTP downloads request gzip/deflate compression and transparently write the decoded response, reducing transfer size and provider throttling for supported endpoints.
+
 ## 📢 IPTVBoss 3.11.95
 
 ### 🧩 Layout Editor and layout health

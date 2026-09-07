@@ -1,10 +1,10 @@
 # Playlist Categories
 
-Playlist category settings control which Live, VOD, and Series categories IPTVBoss imports from an M3U or Xtream Codes source. A new source must load its categories before it can be saved.
+Playlist category settings control which Live, VOD, and Series categories IPTVBoss imports from an M3U or Xtream Codes source. A new source must load its categories before it can be saved. When the M3U or Xtream Codes source fields are valid but the category list is empty, selecting **Save** opens the category manager automatically.
 
 ## Load and select categories
 
-1. Select **Manage Categories** while adding or editing a playlist source.
+1. Select **Manage Categories** while adding or editing a playlist source, or select **Save** on a valid new source to open it automatically when no categories have been loaded.
 2. Select **Refresh Categories**.
 3. Wait for the provider's current categories to load.
 4. Select a category. Use Ctrl-click on Windows/Linux or Command-click on macOS to select multiple categories.

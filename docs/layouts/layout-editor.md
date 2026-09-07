@@ -60,6 +60,14 @@ Use the **Missing EPG** and **Missing Logo** checkboxes beside the **CHANNELS** 
 
 While a missing-content filter or a health-focused view is active, channel reordering and drag-and-drop importing are disabled. Clear the filters before changing channel order or importing onto the channel list.
 
+## Ignore an intentional empty-group warning
+
+Select a group and expand **Group Options**. Enable **Ignore Empty Group Health Check** when the group is intentionally empty and should not be counted by Layout Manager as an empty-group health issue.
+
+![Layout Editor group options](../3.11.106/Layout_Editor_Group_Options.png)
+
+This is a per-group health preference. It does not add channels, disable the group, or change source synchronization. It also does not stop **Remove Empty Layout Groups After Source Sync** from removing the group when that per-layout cleanup option is enabled. Save the group after changing the checkbox.
+
 ## Import channels with Channel Importer
 
 Select **Add Channels** in the Layout Editor to open **Channel Importer**. The importer has two modes:
@@ -181,7 +189,7 @@ Double-click a group name to edit it. Use the icon buttons above the lists for b
 
 ## Edit group options
 
-Select a group, then expand **Group Options** on the right. Edit **Group Name** or the available group settings, then select ![](../assets/icons/ui/save.svg){ .ui-icon } **Save Group(s)**.
+Select a group, then expand **Group Options** on the right. Edit **Group Name** or the available group settings, then select ![](../assets/icons/ui/save.svg){ .ui-icon } **Save Group(s)**. The group options header also contains **Ignore Empty Group Health Check** for suppressing the selected group’s empty-group health warning.
 
 The **Group Options** header can also contain:
 

@@ -14,11 +14,11 @@ Select a layout to populate the dashboard. The layout list and status header use
 - **Needs attention** — one or more enabled attention checks found a content, structure, or output condition to review.
 - **Output failed** — the last output attempt failed; the status reason contains the output error when available.
 - **Disabled** — the layout is disabled and will not be generated.
-- **No output configured** — neither M3U nor XMLTV output is enabled for the layout.
+- **No output configured** — none of M3U, XMLTV, or XC output is enabled for the layout.
 
 The **Groups** and **Channels** panels show totals and enabled counts for **LIVE**, **VOD**, and **SERIES**. Live channels also show the number that are not mapped to a usable EPG source. VOD and Series show **N/A** because those content types are not EPG-mappable. Each content type also shows its enabled channels that have no logo. Select a missing-logo value to open Layout Editor with the matching content focused. The lower cards show **Other Warnings**, **Output Types**, **Last Attempt**, **Last Success**, and assigned **Users**.
 
-The dashboard is interactive. Select a group or channel metric to open Layout Editor with the related content in focus. Select an empty-group count or the live **Unmapped** count to review the affected groups or channels. The warning and output cards open the selected layout in the editor so you can investigate the details.
+The dashboard is interactive. Select a group or channel metric to open Layout Editor with the related content in focus. Select an empty-group count or the live **Unmapped** count to review the affected groups or channels. The warning and output cards open the selected layout in the editor so you can investigate the details. A health-focused editor view is cleared when you change the layout, group, or channel selection.
 
 The values are a current inventory, not a replacement for checking the generated playlist or guide. After changing a source, group, mapping, or output setting, save the layout and review the dashboard again.
 
@@ -57,13 +57,19 @@ The selected layout’s settings are grouped so the status dashboard remains vis
 
 Expand only the section you need when working in a smaller window. IPTVBoss remembers the section state between uses.
 
+## Control empty-group health
+
+An empty group is normally reported as a layout-health issue. If an intentionally empty group should remain without affecting the layout status, open that group in Layout Editor and enable **Ignore Empty Group Health Check** in **Group Options**. This setting changes only the health calculation; it does not remove the group, disable it, or prevent future channels from being added.
+
+The setting is stored per group. Leave it disabled for groups that should contain channels and require review when they become empty.
+
 ## Remove empty groups after source sync
 
 Enable **Remove Empty Layout Groups After Source Sync** when a layout should automatically discard groups that no longer contain any layout channels after a successful source synchronization.
 
 ![Layout Manager: empty-group cleanup](../assets/images/layout-manager-cleanup-empty-groups.png)
 
-This is a per-layout setting. It runs only after the source sync completes successfully. Groups that still contain layout channels are kept, including groups whose sports channels do not currently have a matched event. A linked group is removed when its linked source group is missing or has no layout channels.
+This is a per-layout setting. It runs only after the source sync completes successfully. Groups that still contain layout channels are kept, including groups whose sports channels do not currently have a matched event. A linked group is removed when its linked source group is missing or has no layout channels. **Ignore Empty Group Health Check** affects the health dashboard only; it does not prevent this cleanup setting from removing an empty group.
 
 Because this changes the layout structure, export or back up the database before enabling it if empty groups may be intentional. Review the layout after the next source sync and disable the setting when groups should be retained for later imports.
 

@@ -14,7 +14,7 @@ Use the source type that matches the information supplied by the provider:
 | **M3U source** | You have a complete playlist URL or a local `.m3u` file. |
 | **Xtream Codes source** | You have a server address, username, and password, or a URL containing `get.php?username=...&password=...`. |
 
-Both workflows require you to refresh and select provider categories before saving. See [Playlist Categories](playlist-categories.md) for every category action.
+Both workflows require you to refresh and select provider categories before saving. If the source fields are valid but no categories have been loaded yet, IPTVBoss opens the category manager when you select **Save** so you can complete that step. See [Playlist Categories](playlist-categories.md) for every category action.
 
 ## Add an M3U source
 
@@ -23,7 +23,7 @@ Both workflows require you to refresh and select provider categories before savi
 3. Enter a descriptive value in **Name**.
 4. Enter the playlist address in **Source Link**, or select **Browse** to choose a local `.m3u` file.
 5. If the source requires authentication, enable the username/password option and enter the provider credentials.
-6. Select **Manage Categories** before saving the source.
+6. Select **Manage Categories** before saving the source. If you skip this step, selecting **Save** with valid source fields and no loaded categories opens the category manager automatically.
 7. In the category view, select **Refresh Categories** and wait for IPTVBoss to load the provider's current categories.
 8. Select the categories you want to import, then close the category view.
 9. Review the output and category options.
@@ -49,7 +49,7 @@ If a value contains URL-encoded characters such as `%2B` or `%40`, copy the valu
 2. Select **Add API Source**.
 3. Enter the provider server address.
 4. Enter the supplied username and password.
-5. Select **Manage Categories** before saving the source.
+5. Select **Manage Categories** before saving the source. If you skip this step, selecting **Save** with valid source fields and no loaded categories opens the category manager automatically.
 6. In the category view, select **Refresh Categories** and wait for the category list to load.
 7. Select the categories and content types to include.
 8. Review whether VOD or series content should be included in the M3U output.
@@ -68,7 +68,7 @@ If a value contains URL-encoded characters such as `%2B` or `%40`, copy the valu
 4. Wait for the synchronization to finish before editing channels or generating output.
 5. Review the imported categories and channel count.
 
-![The 3.11.94 IPTV Sources Manager](../3.11.94_Screens/Sources_Manager_IPTV.png)
+![The 3.11.106 IPTV Sources Manager](../3.11.106/Sources_Manager_IPTV_Sources.png)
 
 If synchronization fails, confirm that the URL is reachable, credentials are correct, and the provider is online. Then review [Common Problems](../troubleshooting/common-problems.md).
 
