@@ -65,13 +65,33 @@ The EPG section lists configured EPG feeds, including the built-in dummy source 
 ### Selected-EPG actions
 
 - ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** downloads and processes the selected EPG source now.
-- ![](../assets/icons/ui/settings.svg){ .ui-icon } **EPG Settings** edits the selected EPG source. The built-in dummy source opens its dummy-source editor instead.
+- ![](../assets/icons/ui/settings.svg){ .ui-icon } **EPG Settings** edits the selected EPG source. The built-in dummy source opens the [Dummy Guide inventory](#dummy-guide-inventory) instead.
 - ![](../assets/icons/ui/linked.png){ .ui-icon } **Map EPG to Source** opens the workflow that assigns the selected EPG to playlist sources.
 - ![](../assets/icons/ui/menu.svg){ .ui-icon } **More** opens **Output Logo Template** for the selected EPG source and **Output All Logo Templates** for all EPG sources.
 
 The EPG details are organized into **Inventory**, **Output & matching**, and **Sync history**. **Inventory** shows the total EPG channel count. **Output & matching** contains **Preferred Language**, **Included EPG in Search**, **Sort by Epg-ID (When unchecked, sort is by Display Name)**, mapping, and logo-template actions. **Preferred Language** controls the language selected from multilingual EPG data when the source provides that choice.
 
 The **Inventory**, **Output & matching**, and **Sync history** expansion choices are remembered. The built-in dummy source is shown as **Built-in** and cannot be synced manually. Custom EPG sources can also display a message when their sync window or daily sync limit prevents a manual sync.
+
+### Dummy Guide inventory
+
+Available in **3.11.108 and later**, the Dummy Guide inventory brings basic dummy channels and [Advanced EPG Dummies (AEDs)](../features/aed.md) together in one searchable table.
+
+Open **Sources** → **Dummy Guide Inventory**, or select the built-in dummy source in **EPG Sources** and open **EPG Settings**. The window is titled **Edit Dummy EPG Channels**.
+
+![Edit Dummy EPG Channels showing filters and AED usage across layouts](<../3.11.108/Edit Dummy EPG Channels.png>)
+
+Use **Type** to show all entries, basic dummies, AEDs, or sports AEDs. Use **Usage** to show all, used, or unused entries. Search by EPG ID, original ID, or name; search and dropdown filters work together. The count above the table shows how many entries match.
+
+The table shows each entry's type, EPG ID, name/title, usage count, and the layouts/groups where it is used. AED details also include sports/leagues, **Events Today**, **Fallback AED**, and **Last Updated**, where applicable. Double-click an entry to open its editor.
+
+- **Add Basic Dummy** creates a basic dummy channel; **Add AED** opens the AED creation workflow.
+- **Import AEDs** loads AED definitions from a file.
+- **Export Selected AEDs** exports selected AED definitions. Basic dummy rows are excluded from AED exports.
+- **Select All Visible** selects entries matching the current filters; **Clear Selection** clears the selection.
+- **Delete Selected** asks for confirmation and reports how many selected entries are currently used by layouts. Review **Used In** before deleting: deleting a used entry can remove its EPG assignment from future output.
+
+In Sources Manager, the built-in dummy source also shows totals for basic dummies, AEDs, assigned and unused AEDs, sports AEDs, today's events, and Custom Sports groups and channels. Select **Unused AEDs** to open the inventory filtered to unused AEDs.
 
 ## Synchronization workflow
 

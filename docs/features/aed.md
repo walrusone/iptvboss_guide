@@ -23,6 +23,12 @@ The related **AED Bulk Updater** can apply a change to multiple existing AEDs. I
 
 The AED editor's timing controls include **Signing Off Length (hrs)** and **Cutoff Hour**. The cutoff hour is a 24-hour value from `0` through `23` and controls the overnight boundary used when signing-off output is written.
 
+## Manage AEDs in the Dummy Guide inventory
+
+In **3.11.108 and later**, open **Sources** → **Dummy Guide Inventory** to find AEDs, check which layouts and groups use them, and review their sports/leagues, event counts, fallback AEDs, and last-updated information. Filter **Type** to **AED** or **Sports AED**, then use **Usage** or search to narrow the list. Double-click an AED to edit it, or select **Add AED** to create one.
+
+The inventory also supports importing, exporting selected AEDs, and deleting selected entries. See [Dummy Guide inventory](../setup/sources-manager.md#dummy-guide-inventory) for the screenshot, controls, and deletion guidance.
+
 ## League Based and Regex Based AEDs
 
 AEDs can be used in two main ways. Choose the approach that matches the data available from your EPG source.

@@ -31,6 +31,10 @@ An EPG (XMLTV) source supplies programme information that can be assigned to cha
 
 The built-in source is then available for synchronization and channel mapping like another EPG source. If the source is not listed or is locked, confirm the account status in [Free vs Pro](../getting-started/free-vs-pro.md) and [IPTVBoss Pro Settings](../settings/pro.md).
 
+## Manage the built-in Dummy Guide
+
+Use **Sources** → **Dummy Guide Inventory** to manage basic dummy channels and AEDs in **3.11.108 and later**. You can also select the built-in dummy source in Sources Manager and open **EPG Settings**. See [Dummy Guide inventory](sources-manager.md#dummy-guide-inventory) for filtering, usage details, editing, import/export, and deletion.
+
 ## Configure the EPG Layout
 
 The **EPG Layout** section controls how imported programme components are combined when IPTVBoss writes the output guide. It is available while adding or editing an EPG source.

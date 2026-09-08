@@ -1,5 +1,20 @@
 # Changelog
 
+## 📢 IPTVBoss 3.11.108
+
+### 🏟️ Dummy Guide inventory
+
+- **New:** Open **Dummy Guide Inventory** from the **Sources** menu to manage basic dummy channels and AEDs in one table, with usage counts, layout/group locations, sports and leagues, today's event counts, fallback AEDs, and last-updated information.
+- **New:** Filter entries by type and used/unused status, or search by EPG ID, original ID, or name. Double-click a row to edit it.
+- **Improvement:** Add basic dummies or AEDs, import AEDs, export selected AEDs, and delete selected entries from the inventory. Deletion warns when selected entries are used by layouts.
+- **New:** Sources Manager shows Dummy Guide totals for basic dummies, AEDs, assigned and unused AEDs, sports AEDs, today's events, and Custom Sports groups and channels. Select the unused-AED count to open the inventory filtered to unused AEDs.
+
+![Edit Dummy EPG Channels inventory with filters, usage locations, and AED details](<3.11.108/Edit Dummy EPG Channels.png>)
+
+### ☁️ XC Server
+
+- **Fix:** XC Server continues serving requests from the published data while a background noGUI sync runs. Requests are briefly paused only during the final data handoff or other database transitions.
+
 ## 📢 IPTVBoss 3.11.96 → 3.11.107
 
 ### 🧭 Sources and layouts
