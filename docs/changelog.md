@@ -1,6 +1,6 @@
 # Changelog
 
-## 📢 IPTVBoss 3.11.109
+## 📢 IPTVBoss 3.11.110
 
 ### 🏟️ Dummy Guide inventory
 
