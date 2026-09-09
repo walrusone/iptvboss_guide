@@ -1,5 +1,21 @@
 # Changelog
 
+## 📢 IPTVBoss 3.11.119
+
+### 🏟️ AED fallback chains and multi-event output
+
+- **Improvement:** AED fallback chains now evaluate hours-back, hours-ahead, today-only, and 24-hour tracking windows from one consistent output-time anchor, including fallback and linked-event resolution.
+- **Fix:** Custom sports channels can resolve and render multiple upcoming fixtures from configured TXT sources in guide output, previews, and GUI or noGUI refreshes.
+- **Fix:** Events outside the configured keep period, stale date-less matches, and fallback cycles are excluded more consistently from generated guide output.
+
+### 🧩 Dummy Guide inventory
+
+- **Fix:** Dummy Guide Inventory usage now follows multi-level AED fallback chains and original/output aliases with cycle protection. Assigned and unused AED totals now reflect the AEDs actually used by layouts.
+
+### ☁️ XC Server and database synchronization
+
+- **Fix:** Queued database reloads now use the coordinator's reserved restore path, report reload warnings, and safely handle unavailable server or logging state during cloud/local synchronization.
+
 ## 📢 IPTVBoss 3.11.111 → 3.11.118
 
 ### 🎬 XC Server player connections and runtime diagnostics
