@@ -1,5 +1,25 @@
 # Changelog
 
+## 📢 IPTVBoss 3.11.111 → 3.11.118
+
+### 🎬 XC Server player connections and runtime diagnostics
+
+- **Fix:** XC Server player API requests now use only the validated published response generation, so incomplete replacement generations are not served while reloads, restores, or background synchronization are in progress. Requests use a controlled direct fallback when a cached response is unavailable.
+- **Improvement:** XC runtime and database transitions coordinate connection pools, EPG preloading, and serving-runtime handoff more consistently, with clearer degraded-state handling when recovery cannot complete.
+- **New:** Add diagnostics for database pool usage, connection acquisition, and restore phase timing to help investigate XC Server connection and reload issues.
+
+### 🛡️ Database restore and XC Server safety
+
+- **Fix:** Local, linked, and cloud database restores now validate the replacement data before cutover, coordinate with active XC Server operations, and automatically roll back to the retained database when reload or post-restore validation fails.
+- **Fix:** Restore and reload operations keep the previously published XC responses serving until the replacement database reaches cutover, then invalidate stale responses and publish or rebuild data for the restored database. Conflicting mutations receive clear retry responses.
+- **Improvement:** Startup detects unfinished restore work and applies recovery handling before reopening the application. Database transitions also wait for active sports-data writes to finish instead of continuing after a quiescence timeout.
+- **Fix:** A failed cloud restore on a running XC Server keeps the existing serving runtime when no database replacement occurred. Queued XC restore and reload workflows retain their coordination reservation while cloud checks complete.
+
+### 🧩 AED matching and Layout Editor
+
+- **Fix:** AED sports matching respects the channel’s configured time regex, so an empty channel-level setting no longer unexpectedly inherits a default and changes the keep-period window behavior.
+- **Improvement:** Refreshing AEDs for multiple layout groups batches the EPG programme-card update, reducing repeated UI work and keeping the selected channel preview current after the refresh.
+
 ## 📢 IPTVBoss 3.11.110
 
 ### 🏟️ Dummy Guide inventory

@@ -47,7 +47,54 @@ ExecStart=/usr/bin/iptvboss -xcserver -xc-proxy -xc-bind-address loopback
 WantedBy=multi-user.target
 ```
 
-Change `User=ubuntu` to the normal Linux account that should run IPTVBoss. The account must be able to read and write the IPTVBoss data directory. No separate locked service account is required.
+Change `User=ubuntu` to the normal Linux account that should run IPTVBoss if your provider uses a different username. The account must be able to read and write the IPTVBoss data directory. This is the simplest setup for a beginner and keeps the default per-user data directory.
+
+### Optional: use a dedicated service account
+
+For stronger isolation, run IPTVBoss as a locked system account instead of your sudo-capable administrator account. Use this option for a new installation, or make a backup before migrating an existing data directory.
+
+Create the account and its data directory:
+
+```bash
+sudo useradd --system --user-group \
+    --home-dir /srv/iptvboss \
+    --create-home \
+    --shell /usr/sbin/nologin \
+    iptvboss
+sudo chown -R iptvboss:iptvboss /srv/iptvboss
+sudo chmod 0750 /srv/iptvboss
+```
+
+Then use this service definition instead of the one above:
+
+```ini
+[Unit]
+Description=IPTVBoss
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=10
+User=iptvboss
+ExecStart=/usr/bin/iptvboss -directory /srv/iptvboss -xcserver -xc-proxy -xc-bind-address loopback
+
+[Install]
+WantedBy=multi-user.target
+```
+
+The service account has no interactive shell and cannot use `sudo`. Keep `/srv/iptvboss` owned by `iptvboss:iptvboss` so the database, logs, configuration, and generated output remain writable by the service but are not stored in the administrator's home directory.
+
+For an existing normal-user installation, replace `YOUR_ADMIN_USER` below with the account currently running IPTVBoss. Stop the service, copy the existing data including hidden files, and restore ownership before starting it again:
+
+```bash
+sudo systemctl stop iptvboss.service
+sudo cp -a /home/YOUR_ADMIN_USER/IPTVBoss/. /srv/iptvboss/
+sudo chown -R iptvboss:iptvboss /srv/iptvboss
+```
+
+If your existing installation uses a different data directory, copy that directory instead. Keep a backup before migrating.
 
 Enable and start the service:
 
@@ -103,4 +150,4 @@ sudo systemctl stop iptvboss.service
 sudo systemctl start iptvboss.service
 ```
 
-Continue with [first-time setup](index.md#after-installation) after the local and public health checks succeed.
+Continue with [Server Console first-time setup](../console/login.md) after the local and public health checks succeed.
