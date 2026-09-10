@@ -15,6 +15,7 @@ The selected source header and its list row can show:
 - **Healthy** — the last sync completed successfully.
 - **Needs attention** — the source has not been synced, a sync was skipped or is running, a playlist category needs attention, or an XC account is expired or expiring within 30 days.
 - **Sync failed** — the last sync did not complete successfully.
+- **Sync cancelled** — the last sync was cancelled before it completed.
 - **Built-in** — the selected EPG is the built-in dummy source.
 
 The health badge summarizes the source state; it does not replace reviewing the last attempt, last successful sync, and last output in **Sync history**. A source that is still syncing can be marked as needing attention until the operation completes.
@@ -30,13 +31,23 @@ The playlist section shows the configured M3U, Xtream Codes, and custom sources.
 
 ### Selected-source actions
 
-- ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** downloads and processes the selected playlist source now. This can add new categories/channels, update existing data, and process deleted channels according to the source and category settings.
+- ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** downloads and processes the selected playlist source now. This can add new categories/channels, update existing data, and process deleted channels according to the source and category settings. The progress operation can be cancelled.
 - ![](../assets/icons/ui/settings.svg){ .ui-icon } **Source Settings** opens the editor for the selected source. Double-clicking the source does the same thing.
 - ![](../assets/icons/ui/menu.svg){ .ui-icon } **More** opens a menu containing **View Added**, **View Removed**, and **Add EPG**.
 
 Use **View Added** or **View Removed** to review recent provider changes. **Add EPG** creates an EPG source from information available in the selected playlist when that workflow is supported.
 
 Use ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** on one selected source when testing a change. Use the global **Sources** → **Sync All Sources** command when all configured playlist sources should be refreshed.
+
+## Sync on Start
+
+M3U and Xtream Codes source settings include **Automatically Sync Source on GUI Start**. Enable it when the source should be synchronized whenever the desktop application starts. A source that has never been synchronized is also eligible for its first sync; safe-mode sources are excluded.
+
+At GUI startup, IPTVBoss first loads the saved source and channel data. It then collects eligible sources into one sequential queue and starts that queue after the main startup and any required database, cloud, or sync-lock work is ready. The main window may therefore appear before the startup sync begins. The progress view is titled **Syncing Startup Sources** and identifies the current source and its position in the queue.
+
+If a database transition is active, restored sources are loaded without an automatic GUI source sync. Run **Sync** manually after the transition is complete.
+
+The same cancellable workflow is used for a selected-source sync, **Sync All Sources**, startup synchronization, and a sync started after saving a source. Select **Cancel** in the progress view to request cancellation. The current network or processing step may finish before the cancellation takes effect; remaining sources in a batch are skipped. The source is recorded as **Sync cancelled**, and you can run it again later.
 
 ### Playlist detail sections
 
@@ -97,11 +108,11 @@ In Sources Manager, the built-in dummy source also shows totals for basic dummie
 
 1. Select the source to inspect.
 2. Review its last attempt and last successful synchronization time.
-3. Select ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** and wait for the progress operation to finish.
+3. Select ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** and wait for the progress operation to finish. For a playlist source sync, select **Cancel** if the in-progress sync should stop; wait for the progress view to close before starting another operation.
 4. For a playlist source, use ![](../assets/icons/ui/menu.svg){ .ui-icon } **More** to review added or removed channels when needed, or select a non-zero **Added By Provider**/**Removed By Provider** inventory value for a content-type-specific list.
 5. Check affected layouts before generating output.
 
-Synchronization can update source metadata and layout content. Avoid starting another source operation while the current progress dialog is running.
+Synchronization can update source metadata and layout content. Avoid starting another source operation while the current progress dialog is running. A cancelled or failed playlist-source synchronization does not run the successful-sync cleanup; review the source status and run it again when ready.
 
 !!! note
     Sources Manager is for source maintenance. Use the [New Channel Manager](../layouts/new-channel-manager.md) and [New Category Manager](../layouts/new-category-manager.md) to control how future source changes are placed into layouts.

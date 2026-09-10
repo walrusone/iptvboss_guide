@@ -7,7 +7,7 @@ Update IPTVBoss while protecting the database, settings, layouts, and source con
 
 ## Before updating
 
-1. Finish or cancel any source synchronization and output operation.
+1. Finish any source synchronization and output operation, or select **Cancel** for an in-progress source sync and wait for its progress view to close.
 2. Confirm that no second IPTVBoss process is using the database.
 3. Create or confirm a recent database backup.
 4. Record the current IPTVBoss version and operating system.

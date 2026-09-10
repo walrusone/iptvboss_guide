@@ -13,7 +13,7 @@ Custom Sports groups use sports event data and AED results to organize channels 
 5. Add or move sports channels and team-based channels into the group.
 6. Confirm that the channels have the required [AED](aed.md) and sports event data.
 7. Select ![](../assets/icons/ui/settings.svg){ .ui-icon } **Edit Sports Settings** in the **Group Options** header to configure filtering and sorting.
-8. Select ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Refresh AEDs** when the group’s AED results need to be updated.
+8. Select ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Refresh AEDs** when the group’s AED results need to be updated. For an application-wide refresh, use **Sources** → **AED Refresh…** and choose **Refresh All** or **Refresh Pending**.
 9. Generate output and verify the event order in the resulting playlist.
 
 If the Custom Sports controls are unavailable, confirm that the group is configured for sports behavior and that the required Pro features are active.
@@ -100,7 +100,7 @@ Select **OK** to save the selection. Favorite event and team channels are then c
 ## Verify the result
 
 1. Confirm that the group contains the expected sports and team channels.
-2. Refresh the AED results or synchronize the relevant [EPG source](../setup/epg-sources.md).
+2. Refresh the AED results or synchronize the relevant [EPG source](../setup/epg-sources.md). If an AED refresh was paused or left queued, use **Sources** → **AED Refresh…** → **Refresh Pending** to continue it.
 3. Check that upcoming events are in time order when **Sort by Time** is enabled.
 4. Confirm that ended events move down when the ended-event option is enabled.
 5. Check **No Event** and **Non-AED** at the bottom for channels that did not match a sports event.

@@ -1,5 +1,20 @@
 # Changelog
 
+## 📢 IPTVBoss 3.11.122
+
+### 🏟️ Resumable AED refresh
+
+- **New:** **Sources** → **AED Refresh…** offers **Refresh All** for all configured AED channels and **Refresh Pending** for queued work left by an earlier paused or incomplete refresh.
+- **New:** AED refresh progress can be cancelled cooperatively, and the progress view identifies the current AED and visited-channel count.
+- **New:** The AED refresh completion dialog reports hits, misses, explicit no-event results, still-pending work, per-AED status, and expanded diagnostic counts for work that failed or was not processed.
+- **Improvement:** Manual AED refreshes use current sports data and more consistent event matching, including tester refreshes and forced result recalculation.
+
+### 🔄 GUI source synchronization
+
+- **Improvement:** GUI startup now loads saved sources first, then runs eligible **Sync on Start** sources through a deferred sequential queue after the main startup and database or cloud transition work is ready.
+- **New:** Selected-source syncs, **Sync All Sources**, startup syncs, and post-save syncs support cooperative cancellation. Cancelling records the active source as cancelled and skips the remaining sources in that batch.
+- **Improvement:** Editing an existing source saves settings before optionally prompting **Sync now?**; the prompt is shown only when the changes affect source synchronization.
+
 ## 📢 IPTVBoss 3.11.119
 
 ### 🏟️ AED fallback chains and multi-event output

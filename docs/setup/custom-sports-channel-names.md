@@ -95,7 +95,7 @@ After replacing the local file or updating the hosted file:
 
 1. Open **Sources**.
 2. Select **Reload TXT Channel Names**. This reloads the configured files for all sources.
-3. Refresh the assigned AED channels, or select **Refresh All AEDs** when several AEDs depend on the file.
+3. Refresh the assigned AED channels, or select **Sources** → **AED Refresh…** → **Refresh All** when several AEDs depend on the file.
 4. Generate or preview the affected layout output.
 
 The file is also loaded during normal source/AED processing. Use the explicit reload action when you need to test a changed file immediately without restarting IPTVBoss.

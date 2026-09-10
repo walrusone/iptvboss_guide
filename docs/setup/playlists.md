@@ -16,6 +16,8 @@ Use the source type that matches the information supplied by the provider:
 
 Both workflows require you to refresh and select provider categories before saving. If the source fields are valid but no categories have been loaded yet, IPTVBoss opens the category manager when you select **Save** so you can complete that step. See [Playlist Categories](playlist-categories.md) for every category action.
 
+When you add a new playlist source in the desktop GUI, IPTVBoss starts its first source synchronization after the source is saved. When you edit an existing source, IPTVBoss saves the settings first and asks **Sync now?** only when the changes affect source synchronization, such as the provider connection, included categories, or content-processing options. Select **No** to keep the saved settings without synchronizing yet. See [Sources Manager](sources-manager.md#sync-on-start) for startup synchronization and cancellation.
+
 ## Add an M3U source
 
 1. Open **Sources**.
@@ -27,7 +29,7 @@ Both workflows require you to refresh and select provider categories before savi
 7. In the category view, select **Refresh Categories** and wait for IPTVBoss to load the provider's current categories.
 8. Select the categories you want to import, then close the category view.
 9. Review the output and category options.
-10. Select **Save**.
+10. Select **Save**. The first source synchronization starts after the source is saved.
 
 ![The Add M3U Source dialog](../assets/images/sources/add-m3u-source.png)
 
@@ -53,7 +55,7 @@ If a value contains URL-encoded characters such as `%2B` or `%40`, copy the valu
 6. In the category view, select **Refresh Categories** and wait for the category list to load.
 7. Select the categories and content types to include.
 8. Review whether VOD or series content should be included in the M3U output.
-9. Select **Save**.
+9. Select **Save**. The first source synchronization starts after the source is saved.
 
 ![The Add API Source dialog](../assets/images/sources/add-api-source.png)
 
@@ -65,12 +67,14 @@ If a value contains URL-encoded characters such as `%2B` or `%40`, copy the valu
 1. Open **Sources** → **Sources Manager**, then open the **IPTV Sources** tab.
 2. Select the source you added.
 3. Select ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** in the source action bar.
-4. Wait for the synchronization to finish before editing channels or generating output.
+4. Wait for the synchronization to finish before editing channels or generating output. Select **Cancel** in the progress view to request cancellation; the current network or processing step may finish first.
 5. Review the imported categories and channel count.
 
 ![The 3.11.106 IPTV Sources Manager](../3.11.106/Sources_Manager_IPTV_Sources.png)
 
 If synchronization fails, confirm that the URL is reachable, credentials are correct, and the provider is online. Then review [Common Problems](../troubleshooting/common-problems.md).
+
+If you cancel a synchronization, the source is marked **Sync cancelled** in Sources Manager. Run **Sync** again after confirming the source settings.
 
 !!! note "Free and Pro"
     Source limits are listed only in the canonical [Free vs Pro comparison](../getting-started/free-vs-pro.md). If you reach the current limit, remove an unused source or review the available Pro plans.

@@ -197,9 +197,11 @@ The **Group Options** header can also contain:
 | --- | --- |
 | ![](../assets/icons/ui/settings.svg){ .ui-icon } **Edit Sports Settings** | Configures filtering and sorting for a Custom Sports group. |
 | ![](../assets/icons/ui/teams.svg){ .ui-icon } **Select Favorite Teams** | Chooses teams to prioritize in a Custom Sports group. |
-| ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Refresh AEDs** | Refreshes AED results for the group’s channels. |
+| ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Refresh AEDs** | Refreshes AED results for the group’s channels. The operation can be cancelled and reports its results when it finishes. |
 
 Sports controls appear only for a group configured as a **Custom Sports Group**.
+
+For an application-wide refresh, use **Sources** → **AED Refresh…**. **Refresh All** checks all configured AED channels; **Refresh Pending** continues queued work from an earlier paused or incomplete refresh. See [Test and refresh an AED](../features/aed.md#test-and-refresh-an-aed) for the progress view and completion metrics.
 
 ### Custom sports presentation
 

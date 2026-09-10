@@ -8,6 +8,8 @@ After installation, start IPTVBoss and confirm that the application can open its
 2. Wait for the startup process to finish.
 3. Confirm that the main window opens without a database or configuration error.
 
+If the database already contains sources, eligible sources may begin a deferred **Sync on Start** batch after the main window opens. Allow the batch to finish before generating output, or select **Cancel** in its progress view and run the source sync later from [Sources Manager](../setup/sources-manager.md).
+
 The first launch creates or opens the local IPTVBoss data used by the application. Keep the application’s data location backed up before making major changes.
 
 ![IPTVBoss application settings](../assets/images/getting-started/iptvboss-settings-1.png)
