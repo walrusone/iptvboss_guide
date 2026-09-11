@@ -1,5 +1,32 @@
 # Changelog
 
+## 📢 IPTVBoss 3.11.126
+
+### 🔐 Per-layout XC passwords
+
+- **Improvement:** Each user’s assigned XC-enabled layout now has its own password. Passwords are case-sensitive and unique across that user’s layouts; existing credentials are migrated without changing already-published links.
+- **New:** Desktop **Manage Users** can edit or generate the password for the layout selected in **Layout Preview**. The XC Server console provides the same **Edit Layout Password** workflow.
+- **New:** User API reads and mutations support layout-specific passwords, including targeted set and regenerate operations. The former bulk reset endpoint is retired.
+
+### 🏟️ AED and channel output fixes
+
+- **Fix:** Custom Sports TXT lookup names remain parsing inputs and no longer replace a channel’s universal output name when no channel-name rule is configured. Blank or invalid regex matches fall back to the channel name.
+- **Fix:** Removing AED EPG assignment clears the durable assignment, queued refresh request, and orphaned regex event state together.
+- **Improvement:** AED refresh ownership and cancellation remain consistent while an editor closes or the application shuts down. Pending work can be resumed without leaving the GUI blocked.
+
+## 📢 IPTVBoss 3.11.125
+
+### 🏟️ Sports data and AED selectors
+
+- **Fix:** Startup refreshes the sports dataset even when no deferred source-sync queue is needed, so AED selectors are ready after startup.
+- **Fix:** League selectors use the best available league label when a provider does not supply a preferred display name.
+
+## 📢 IPTVBoss 3.11.124
+
+### 🪟 Dialog presentation
+
+- **Improvement:** Dialogs and alerts open attached to the active application window and follow the selected light or dark theme, including dialogs opened from secondary windows.
+
 ## 📢 IPTVBoss 3.11.122
 
 ### 🏟️ Resumable AED refresh

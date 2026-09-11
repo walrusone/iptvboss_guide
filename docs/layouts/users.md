@@ -12,7 +12,11 @@ IPTVBoss uses layouts and user records to create separate output links for diffe
 6. Review the source credentials and enable the credentials the user should use.
 7. Save the user and verify the generated links.
 
-![Manage Users dialog](../assets/images/sources/manage-users.png)
+![Manage Users dialog with layout preview and XC password controls](../3.11.126/GUI_Manage_Users.png)
+
+Each assigned XC-enabled layout has its own XC login password for this user. Select the layout in **Layout Preview**, then choose **XC Password** to edit the saved password or generate a new one. Passwords are case-sensitive; manual values may contain 6–64 letters, digits, or `- . _ ~`, while **Generate** creates a new 12-character lowercase value. The action is available only for an XC-enabled layout.
+
+![Desktop XC password dialog](../3.11.126/GUI_Set_Layout_Password.png)
 
 When XC Server pairing is enabled, the selected user can show an **XC Activity** summary with the last successful synchronization, last playback, and stream. Select **Activity** to open the full activity table for all users.
 
@@ -39,7 +43,7 @@ Repeat the source setup only when adding another provider. Create separate sourc
 
 ## User output links
 
-Each enabled user receives their own M3U link. Standard EPG output can be shared between users when the guide data is the same. XC Server users receive unique XMLTV links.
+Each enabled user receives their own M3U link. Standard EPG output can be shared between users when the guide data is the same. XC Server users receive unique XMLTV links and a separate XC username/password pair for each assigned XC-enabled layout. Changing a layout password changes access to that layout; refresh or redistribute the affected link after saving.
 
 <span class="pro-badge">PRO</span> [Universal EPG](../setup/universal-epg.md) is often more efficient when every user uses the same EPG data. It allows IPTVBoss to publish one shared EPG file instead of generating multiple identical EPG files for separate users or layouts.
 

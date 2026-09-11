@@ -4,6 +4,8 @@
 
 **Custom Sports Channel Names** lets a source use a local or hosted TXT file of fixture names when an AED needs a more descriptive channel name to find the correct event. The TXT name is used as an AED lookup name; it does not rename the channel displayed in your layout.
 
+The lookup value remains parsing input even when it is saved in an AED assignment or an older refresh cache. If no **Channel Name Regex** is configured, the universal output name stays the channel's own name. A configured regex can intentionally render a different name; blank, invalid, or unresolved matches fall back to that channel name.
+
 This is useful when a provider supplies stable numbered sports channels such as `ESPN 1`, but the sports data or AED needs the current fixture name, such as `ESPN 1: Lakers vs Celtics`.
 
 !!! note

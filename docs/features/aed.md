@@ -160,6 +160,8 @@ Channel Name Regex controls which provider channels match the AED and can also c
 - For a team-based channel, `{title}` and `{shorttitle}` resolve to that channel’s team name in this field. They continue to behave normally in the other AED output fields.
 - Missing league, sport, or other optional values resolve to an empty string. Put surrounding punctuation in an `{if}` block when it should disappear with the missing value.
 
+Custom Sports TXT names are lookup inputs and do not replace the universal channel name by themselves. When a configured Channel Name Regex is blank, invalid, or renders no value, the channel's own name is retained.
+
 Examples:
 
 ```text
@@ -275,7 +277,7 @@ The **Refresh AEDs** button in the Layout Editor still refreshes the AED channel
 
 When the refresh finishes, the **AED Refresh** summary shows totals for AEDs and channels, plus **hits**, **misses**, **explicit no-event**, and **still pending** work. The table breaks those metrics down for each AED and includes the refresh **Status**. Expand **Details** for failed, discarded, superseded, and not-processed counts. A non-zero **still pending** value means that queued work remains and should be handled with **Refresh Pending** or another full refresh, as appropriate.
 
-![AED refresh completion summary with per-AED metrics](../3.11.121/AED_Refresh_Results.png)
+![AED refresh completion summary with per-AED metrics](../3.11.126/AED_Refresh_Results.png)
 
 ![AED tester for checking regex matches](../assets/images/sources/aed-editor-tester.png)
 

@@ -10,7 +10,7 @@ Use **User Management** to control users whose layouts, source credentials, and 
 2. Unlock editing with the required administrator access.
 3. Open **User Management**.
 
-![Server users](../../assets/images/server-console/server-users.png)
+![Server User Management with the Edit Layout Password action](../../3.11.126/Console_User_Management.png)
 
 The selected-user summary can include the user's last successful synchronization, last playback, and current stream. See [User Activity](activity.md) for the server-wide activity table.
 
@@ -26,14 +26,18 @@ The selected-user summary can include the user's last successful synchronization
 
 Both the user and the assigned source credentials must be enabled. The assigned layout must also be enabled before output is expected.
 
+Each assigned XC-enabled layout has its own XC login password. In **Edit User**, select **Edit Layout Password**, choose the layout, then either save a 6–64-character password (`A-Z`, `a-z`, `0-9`, `-`, `.`, `_`, or `~`) or select **Regenerate** for a new 12-character lowercase password. Passwords are unique across a user’s layouts and changing one affects only that layout’s XC access.
+
+![Server Console Edit layout password dialog](../../3.11.126/Console_Set_Layout_Password.png)
+
 ## Output and access actions
 
 - Use **Output M3Us** to generate or review user playlist output.
-- Use **Reset XC Password** only when the user needs a new XC password.
+- Use **Edit Layout Password** to change or regenerate the password for one assigned XC-enabled layout.
 - Use **Delete User** only after confirming that no player, layout, or customer still depends on the account.
 
 !!! warning
-    Password reset changes access. Deleting a user can remove access to assigned outputs. Confirm the intended user and preserve any required configuration before either action.
+    Changing a layout password changes access for that layout. Deleting a user can remove access to assigned outputs. Confirm the intended user and layout before either action.
 
 ## Verify a server user
 
