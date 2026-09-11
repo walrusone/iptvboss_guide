@@ -14,14 +14,10 @@
 - **Fix:** Removing AED EPG assignment clears the durable assignment, queued refresh request, and orphaned regex event state together.
 - **Improvement:** AED refresh ownership and cancellation remain consistent while an editor closes or the application shuts down. Pending work can be resumed without leaving the GUI blocked.
 
-## 📢 IPTVBoss 3.11.125
-
 ### 🏟️ Sports data and AED selectors
 
 - **Fix:** Startup refreshes the sports dataset even when no deferred source-sync queue is needed, so AED selectors are ready after startup.
 - **Fix:** League selectors use the best available league label when a provider does not supply a preferred display name.
-
-## 📢 IPTVBoss 3.11.124
 
 ### 🪟 Dialog presentation
 
