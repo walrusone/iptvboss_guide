@@ -1,5 +1,24 @@
 # Changelog
 
+## 📢 IPTVBoss 3.11.127
+
+### 🏟️ Teams, AED, and EPG output
+
+- **Fix:** Team-based AED exports now preserve eligible sequential fixtures and stay aligned with the Layout Editor preview, without appending an incorrect no-event fallback schedule.
+- **Fix:** AED refresh sessions always close and release active ownership when processing or sports-data barrier failures occur, while preserving the original failure details.
+- **Fix:** EPG parsing now reports failures safely when an exception has no message, and generated sequential output is validated before it replaces no-event handling.
+
+### 🖥️ NoGUI reliability and diagnostics
+
+- **Improvement:** Standalone NoGUI runs now record phase and periodic memory diagnostics, including heap, non-heap, buffer, thread, and garbage-collection details. Spawned NoGUI processes also report their PID and exit code.
+- **Fix:** NoGUI markers now use ownership-aware acquisition and verified stale-marker recovery, preventing concurrent runs from removing another process’s marker.
+- **Fix:** Fatal NoGUI failures perform best-effort cleanup, skip backup/publication, retain uncertain markers and cancellation requests, and return a nonzero exit status when appropriate.
+- **Fix:** EPG sync failures and logger failures are reported through an independent emergency path instead of causing recursive logging failures.
+
+### 🪟 Dialog presentation
+
+- **Fix:** Dialog ownership is applied only to active windows with an attached scene, avoiding owner initialization errors during window transitions.
+
 ## 📢 IPTVBoss 3.11.126
 
 ### 🔐 Per-layout XC passwords
