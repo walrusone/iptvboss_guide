@@ -73,7 +73,7 @@ The file location is configured in the playlist source dialog, not in the AED ed
 
 ### Xtream Codes source
 
-1. Open **Sources** → **Add API Source**, or edit an existing Xtream Codes source.
+1. Open **Sources** → **Add XC Source**, or edit an existing Xtream Codes source.
 2. Find **Custom Sports Channel Names**.
 3. Enter the local path or hosted TXT URL.
 4. Save the source and synchronize it if the source or its categories have changed.

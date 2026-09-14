@@ -12,7 +12,16 @@ https://server.example/swagger
 
 After signing in to the console, open the **Swagger** link or the server's `/swagger` path. The documentation session is separate from an external automation API key; use a valid key when testing an endpoint that requires one.
 
-The documented API includes user metadata, user listing and mutations, layout-specific password set/regenerate operations, and asynchronous operation status. The former bulk user-password reset endpoint is retained in the schema as retired and returns `410 Gone`. Treat the **Try it out** controls as live operations: use a test user and confirm the target server before sending a request.
+The raw OpenAPI JSON (`openapi.json`) specification is available at `/openapi`. External automation clients can fetch it with a valid `X-IPTVBoss-Api-Key` header, which is useful for code generation and client discovery:
+
+```bash
+curl -H 'X-IPTVBoss-Api-Key: YOUR_KEY' \
+  https://server.example/openapi
+```
+
+For documentation access, the API key grants access to the raw specification only; it does not grant access to the interactive `/swagger` page or its supporting web assets, which require an authenticated administrator console session.
+
+The documented API includes user metadata, user listing and mutations, layout-specific password set/regenerate operations, and asynchronous operation status. The former bulk user-password reset endpoint is retained in the schema as retired and returns `410 Gone`. Use a valid API key with the required scope when testing an endpoint, and treat the **Try it out** controls as live operations: use a test user and confirm the target server before sending a request.
 
 ## Layout password endpoints
 

@@ -48,7 +48,7 @@ Do not paste the entire `get.php` link into the connection dialog. Extract these
 If a value contains URL-encoded characters such as `%2B` or `%40`, copy the value exactly as provided rather than changing it. If the provider gives you a standard Xtream Codes link with a different filename or additional query parameters, the same rule applies: use the server portion as the address and copy the `username` and `password` parameter values.
 
 1. Open **Sources**.
-2. Select **Add API Source**.
+2. Select **Add XC Source**.
 3. Enter the provider server address.
 4. Enter the supplied username and password.
 5. Select **Manage Categories** before saving the source. If you skip this step, selecting **Save** with valid source fields and no loaded categories opens the category manager automatically.
@@ -57,10 +57,18 @@ If a value contains URL-encoded characters such as `%2B` or `%40`, copy the valu
 8. Review whether VOD or series content should be included in the M3U output.
 9. Select **Save**. The first source synchronization starts after the source is saved.
 
-![The Add API Source dialog](../assets/images/sources/add-api-source.png)
+![The Add XC Source dialog](../assets/images/sources/add-api-source.png)
 
 !!! note
-    Use **Add M3U Source** for a genuine M3U playlist URL or local `.m3u` file that is not a standard Xtream Codes login link. When the URL follows the `get.php?username=...&password=...` pattern, use **Add API Source** so IPTVBoss can retrieve the provider's Live, VOD, and Series categories through the Xtream Codes connection.
+    Use **Add M3U Source** for a genuine M3U playlist URL or local `.m3u` file that is not a standard Xtream Codes login link. When the URL follows the `get.php?username=...&password=...` pattern, use **Add XC Source** so IPTVBoss can retrieve the provider's Live, VOD, and Series categories through the Xtream Codes connection.
+
+## Disable automatic NoGUI user checks for a source
+
+Both M3U and Xtream Codes source editors include **Disable NoGUI user checks**. Enable it when NoGUI synchronization should skip automatic provider credential and expiry refreshes for that source. This is stored per source and does not disable playlist synchronization or manual credential refreshes.
+
+Automatic NoGUI checks apply to enabled, at-risk user credentials for Xtream Codes sources and password-backed M3U sources that have an XC URL. Each credential is checked at most once every 24 hours for the same connection details. See [External noGUI Scheduling](../settings/automation.md#automatic-nogui-user-checks) for the scheduling behavior and eligibility rules.
+
+Leave the option disabled when expiry and credential metadata should be refreshed automatically. A source-level opt-out is useful for providers that do not support these account-information requests or that impose strict request limits.
 
 ## Synchronize the source
 

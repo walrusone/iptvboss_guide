@@ -24,6 +24,8 @@ Changes to the included-category list are saved as the group is updated. To remo
 
 When the provider adds a channel, IPTVBoss checks its source and category against the rules in every layout. If the category is included in a layout group's rule, IPTVBoss adds the channel to that group automatically. The channel is marked as new and receives the group's position and other applicable layout behavior.
 
+Source synchronization now handles this automatic placement more efficiently when a large playlist adds many channels. The rule itself is unchanged: it applies only to newly discovered channels whose source and category match the selected group.
+
 The rule only applies to new channels. It does not move existing channels between groups, and it does not make a disabled provider category available. To change existing content, use the [Channel Importer](../layouts/layout-editor.md#import-channels-with-channel-importer) or organize the channels in the Layout Editor.
 
 ## Source Categories options

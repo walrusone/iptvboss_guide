@@ -16,7 +16,16 @@ Playlist category settings control which Live, VOD, and Series categories IPTVBo
 
 ## Understand the category lists
 
-The dialog contains separate lists for **Live Categories**, **VOD Categories**, and **Series Categories**. The count below each list reports how many categories are shown, how many exist in total, and how many are stale. Use the filter above a list to narrow the visible categories.
+The dialog contains separate lists for **Live Categories**, **VOD Categories**, and **Series Categories**. The count below each list reports how many categories are shown, how many exist in total, and how many are stale. Use the text filter above a list to narrow categories by name.
+
+Use the **Status** selector to filter all three lists by **All**, **Stale**, **Active**, or **Disabled**:
+
+- **All** shows every loaded category.
+- **Stale** shows categories that are no longer current in the provider data.
+- **Active** shows categories included by the source.
+- **Disabled** shows categories excluded by the source.
+
+Status and text filters work together. Staleness is independent of inclusion, so a stale category can also be active and match both the **Stale** and **Active** filters. The **Clear Stale** button removes stale categories currently visible in a content-type list; **Clear Selected Stale** performs the same cleanup for selected rows from the context menu.
 
 The right-click actions include:
 
@@ -35,5 +44,7 @@ Refresh the categories after the provider adds, removes, or renames content. Aft
 2. Review the imported channel totals in **Sources Manager**.
 3. Confirm that affected layouts still contain the intended groups and channels.
 4. Review [New Category Manager](../layouts/new-category-manager.md) when newly discovered provider categories should be added to a layout automatically.
+
+When you open Category Manager by clicking a category statistic in [Sources Manager](sources-manager.md), IPTVBoss opens the selected source directly and preselects the content type and status filter represented by that statistic. The **Total**, **Active**, and **Stale** values open the corresponding **All**, **Active**, and **Stale** views.
 
 Playlist category selection controls what the source downloads. **New Category Manager** is a separate layout-level rule and does not enable or disable source categories.

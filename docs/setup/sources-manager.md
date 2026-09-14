@@ -59,6 +59,8 @@ The selected playlist source is organized into collapsible sections:
 
 The **Added By Provider** and **Removed By Provider** values are interactive when they are non-zero. Select one to review the added or removed channels for that content type. The overall **TOTAL** values open the unfiltered change list.
 
+For M3U and Xtream Codes sources, category metrics are also interactive. Select **Total**, **Active**, or **Stale** in the category section to open Category Manager for the selected source. Selecting a content-type column opens that type; selecting the overall **TOTAL** column shows all content types. The category manager opens with the matching **All**, **Active**, or **Stale** status filter already selected. Use **Disabled** there to review categories excluded from the source.
+
 The **Inventory**, **Access & expiry**, and **Sync history** expansion choices are remembered. The inventory wraps into a narrower layout when the window is reduced. Fields that do not apply to an M3U or custom source are hidden rather than treated as zero.
 
 ## EPG sources

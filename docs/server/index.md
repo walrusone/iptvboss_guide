@@ -9,21 +9,17 @@ The IPTVBoss Server Console is the browser-based administration interface for an
 Use the address supplied for your server:
 
 ```text
-https://boss.somedomain.net/boss.php?apikey=apikey
+https://boss.somedomain.net/boss.php
 ```
 
-Replace `boss.somedomain.net` with the server hostname and the final `apikey` with the server API key. During first-time bootstrap, when no API key has been configured yet, use:
-
-```text
-https://boss.somedomain.net/boss.php?
-```
+Replace `boss.somedomain.net` with the server hostname. During first-time bootstrap, open the same address; the console will display the setup form when no administrator account exists.
 
 The browser should display the login or setup page. On the first visit, create the administrator account and a six-digit section PIN. On later visits, sign in with the administrator account; if two-factor authentication is enabled, enter the authenticator or a recovery code as the second step.
 
 ![Server Console overview](../assets/images/server-console/server-console.png)
 
 !!! warning
-    The API key grants access to the server. Do not publish a complete console URL in screenshots, logs, or support requests.
+    Sign in through the console and keep the administrator credentials private. For external API requests, send the API key in the `X-IPTVBoss-Api-Key` header; do not publish keys in URLs, screenshots, logs, or support requests.
 
 ## Console overview
 

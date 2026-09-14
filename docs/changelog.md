@@ -1,5 +1,30 @@
 # Changelog
 
+## 📢 IPTVBoss 3.11.135
+
+### 🧭 Sources and playlist synchronization
+
+- **New:** The source Category Manager now provides **All**, **Stale**, **Active**, and **Disabled** status filters. Status filtering combines with the per-content-type category search, and stale status is independent of whether a category is active.
+- **New:** M3U and Xtream Codes source settings include **Disable NoGUI user checks**, allowing automatic credential and expiry checks to be skipped for an individual source during NoGUI synchronization.
+- **Improvement:** At-risk NoGUI credential refreshes are limited to once every 24 hours per credential and paced per provider host, reducing repeated provider requests during scheduled runs.
+- **Fix:** Adding new channels during synchronization is faster for large playlists, including source and layout processing for newly discovered channels.
+- **Improvement:** Category statistics in Sources Manager are now clickable: total, active, and stale values open Category Manager for the selected source with the matching content type and filter.
+
+### 🧩 Linked layouts and playback
+
+- **Fix:** Series playback from linked layouts now finds the single enabled XC provider from linked series groups when no provider was previously remembered. Requests remain rejected when no provider or multiple providers can be identified.
+
+### 🏟️ AED and sports output
+
+- **Fix:** AED startup checks repair event-assignment foreign keys left pointing at an invalid table-copy target, clear invalid event references, and queue affected assignments for refresh instead of failing with an integrity-constraint violation.
+- **Fix:** `{league}` now uses the league’s **Display Name**, falling back to **Name** when Display Name is empty or null.
+
+### 🔐 XC Server API
+
+- **Improvement:** External API-key clients can now retrieve the raw `openapi.json` document from `/openapi`. The `/swagger` interactive UI and its web assets still require an authenticated administrator console session.
+- **Improvement:** The OpenAPI document reflects the current user automation routes, including layout-specific password set/regenerate operations and the retired bulk password-reset route, which returns `410 Gone`.
+- **Fix:** XC Server user-mutation responses no longer report a misleading M3U-output-unavailable warning solely because source data is not loaded in the server process.
+
 ## 📢 IPTVBoss 3.11.127
 
 ### 🏟️ Teams, AED, and EPG output

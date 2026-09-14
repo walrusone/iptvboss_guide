@@ -54,6 +54,10 @@ If no event is active, the channel can fall back to its provider name or to the 
 
 Before a startup source sync or output operation that depends on sports data, IPTVBoss waits for the sports dataset to be ready. If a database transition is still in progress, the source sync or XC response preparation is deferred until the active database and sports data agree. This prevents a temporary startup state from being saved as a default no-event result.
 
+## AED database integrity repair
+
+At startup, IPTVBoss verifies the event reference used by AED channel assignments. If an older database migration left that reference pointing to an invalid table-copy target, IPTVBoss repairs it, clears assignments whose events no longer exist, and queues those assignments for a later AED refresh. The repair is recorded in the log. If the repair cannot be completed, AED persistence is disabled until the database is reopened; keep the database backup and review the logged failure before retrying.
+
 ## Output timing and signing off
 
 Use **AED Defaults** to set reusable timing values for new or inherited AED configurations. The defaults include event duration, the window for including ended events, signing-off length, and **Signing Off Overnight Cutoff Hour (0-23)**.
@@ -77,7 +81,7 @@ Use these placeholders in AED output fields. A value may be empty when the sourc
 | `{team1nick}`, `{team2nick}` | Team nicknames or mascots |
 | `{team1loc}`, `{team2loc}` | Team city or location |
 | `{prefix}` | Custom Sports group presentation name and number, such as `ESPN+ 001` (Channel Name Regex only) |
-| `{league}` | Full league name |
+| `{league}` | League Display Name, falling back to Name when Display Name is empty or null |
 | `{leagueabbr}` | League abbreviation |
 | `{leagueshort}` | Short league name |
 | `{arena}`, `{city}`, `{state}` | Venue and location information |

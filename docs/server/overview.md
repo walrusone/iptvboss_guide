@@ -4,6 +4,8 @@
 
 IPTVBoss can run as an XC Server without opening the desktop application. In this mode it runs continuously, provides the browser-based [Server Console](index.md), and serves XC playlists, EPG data, and streams.
 
+For Series playback from a layout containing linked series groups, XC Server can resolve the upstream provider even when no provider was previously remembered. It follows the enabled linked groups and uses the provider when exactly one XC source is available. Playback is still rejected when no provider or multiple providers can be identified; confirm that the user has an enabled credential for the resolved source.
+
 XC Server mode is normally run behind an HTTPS reverse proxy. IPTVBoss listens on the local machine, while the reverse proxy handles the public hostname, TLS certificate, and Internet-facing connection.
 
 !!! warning "Protect remote connections"
