@@ -4,6 +4,8 @@
 
 Custom Sports groups use sports event data and AED results to organize channels around upcoming, live, favorite, and unmatched events. The group settings control filtering and the order in which those channels appear.
 
+If numbered channels need fixture text for matching, configure [TXT Fixture Names for AEDs](../setup/custom-sports-channel-names.md).
+
 ## Create a Custom Sports group
 
 1. Open [Layout Manager](../layouts/layout-manager.md) and select the layout that should contain the sports group.
@@ -38,44 +40,7 @@ Use **Exclusions** in **Sports Settings** when a provider supplies channels that
 4. Select a saved term and choose **Remove** when it is no longer needed.
 5. Select **OK** to save the sports settings.
 
-Matching is case-insensitive and uses the original channel name supplied by the provider. Terms are literal phrases, not regular expressions. A channel is excluded when its original name contains any saved term; a channel without an original provider name is not matched. Exclusions apply only to Custom Sports groups and are applied before AED lookup, sports classification, sorting, and custom presentation numbering, so an excluded channel is removed even when **Remove Channels without Events** is disabled and does not consume a presentation number. The underlying source channel remains available to other groups and layouts. A linked group uses the settings of its linked source group.
-
-## Customize the sports presentation
-
-A Custom Sports group can give its channels a consistent presentation name and numbered logo. This is useful for provider feeds that contain a large set of numbered sports channels, such as **ESPN+ 001**, **ESPN+ 002**, and so on.
-
-![Custom Sports presentation settings in the Layout Editor](../assets/images/layout/custom-sports-presentation.png)
-
-1. Select the Custom Sports group in the Layout Editor.
-2. Expand **Custom sports presentation** under **Group Options**.
-3. Enter a **Name** to use as the channel prefix, such as ESPN+.
-4. Choose the number of **Digits**. A value of 3 produces 001, 002, and 003; 0 leaves the number unpadded.
-5. Select a numbered **Logo set**, or enter a **Custom logo URL** containing {num}.
-6. Review the preview, then select **Save Group(s)**.
-
-The logo set and custom URL are alternatives. A custom URL takes precedence when both are present. The selected catalog set uses the digit width required by that set; the preview shows the resulting URL and width.
-
-Numbering follows the final channel order after the group’s exclusions, filters, and sports sort order are applied. A channel that moves because of favorites, event status, or time sorting receives the number for its new position. Excluded channels and channels with **Ignore Custom Presentation** enabled do not consume a number.
-
-### AED names and logos
-
-By default, a valid AED presentation can still provide the channel name or logo. Use **Override AED name** or **Override AED logo** when every channel in the group should use the group’s numbered presentation instead.
-
-The group presentation is also used by the Layout Editor’s channel list, programme preview, generated M3U output, and other layout views. An example with the programme preview open is shown below.
-
-![Custom Sports presentation with programme preview](../assets/images/layout/custom-sports-presentation-preview.png)
-
-Prebuilt logo sets are labeled by provider and variant. For example, alternate ESPN+, ESPNPlay, NCAAB, MLB, NBA, NFL, NHL, PPV, and regional sets have distinct names in the selector. Choose the variant whose numbered URL matches the assets you want to publish.
-
-### Skip the presentation for selected channels
-
-When a Custom Sports group has a name prefix or logo configured, eligible channels can enable **Ignore Custom Presentation** in **Channel Options**. The channel keeps its normal name and logo while remaining subject to the group’s sports filtering and sorting. This is useful when one channel in a numbered group should retain its provider or AED presentation.
-
-![Layout Editor Channel Options with Ignore Custom Presentation](<../3.11.138/Layout Editor Channel Options.png>)
-
-In **Custom sports presentation**, enable **Exclude linear channels from custom presentation** to keep linear channels in the group while preserving their original names and logos. Only channels assigned to the Dummy EPG source receive the group’s numbered presentation when this option is enabled.
-
-![Layout Editor Group Options with Custom Sports presentation](<../3.11.138/Layout Editor Group Options.png>)
+Matching is case-insensitive and uses the original channel name supplied by the provider. Terms are literal phrases, not regular expressions. A channel is excluded when its original name contains any saved term; a channel without an original provider name is not matched. Exclusions apply only to Custom Sports groups and are applied before AED lookup, sports classification, sorting, and custom presentation numbering, so an excluded channel is removed even when **Remove Channels without Events** is disabled and does not consume a presentation number. The underlying source channel remains available to other groups and layouts. A [linked group](../layouts/linked-groups.md) uses the settings of its linked source group.
 
 ## Filtering options
 
@@ -119,6 +84,43 @@ The selector includes these options:
 - **Only Move Favorite Events Happening within 24 Hours** limits the favorite-event behavior to events starting within the next 24 hours.
 
 Select **OK** to save the selection. Favorite event and team channels are then classified into the corresponding favorite buckets when the group is refreshed.
+
+## Customize the sports presentation
+
+A Custom Sports group can give its channels a consistent presentation name and numbered logo. This is useful for provider feeds that contain a large set of numbered sports channels, such as **ESPN+ 001**, **ESPN+ 002**, and so on.
+
+![Custom Sports presentation settings in the Layout Editor](../assets/images/layout/custom-sports-presentation.png)
+
+1. Select the Custom Sports group in the Layout Editor.
+2. Expand **Custom sports presentation** under **Group Options**.
+3. Enter a **Name** to use as the channel prefix, such as ESPN+.
+4. Choose the number of **Digits**. A value of 3 produces 001, 002, and 003; 0 leaves the number unpadded.
+5. Select a numbered **Logo set**, or enter a **Custom logo URL** containing {num}.
+6. Review the preview, then select **Save Group(s)**.
+
+The logo set and custom URL are alternatives. A custom URL takes precedence when both are present. The selected catalog set uses the digit width required by that set; the preview shows the resulting URL and width.
+
+Numbering follows the final channel order after the group’s exclusions, filters, and sports sort order are applied. A channel that moves because of favorites, event status, or time sorting receives the number for its new position. Excluded channels and channels with **Ignore Custom Presentation** enabled do not consume a number.
+
+### AED names and logos
+
+By default, a valid AED presentation can still provide the channel name or logo. Use **Override AED name** or **Override AED logo** when every channel in the group should use the group’s numbered presentation instead.
+
+The group presentation is also used by the Layout Editor’s channel list, programme preview, generated M3U output, and other layout views. An example with the programme preview open is shown below.
+
+![Custom Sports presentation with programme preview](../assets/images/layout/custom-sports-presentation-preview.png)
+
+Prebuilt logo sets are labeled by provider and variant. For example, alternate ESPN+, ESPNPlay, NCAAB, MLB, NBA, NFL, NHL, PPV, and regional sets have distinct names in the selector. Choose the variant whose numbered URL matches the assets you want to publish.
+
+### Skip the presentation for selected channels
+
+When a Custom Sports group has a name prefix or logo configured, eligible channels can enable **Ignore Custom Presentation** in **Channel Options**. The channel keeps its normal name and logo while remaining subject to the group’s sports filtering and sorting. This is useful when one channel in a numbered group should retain its provider or AED presentation.
+
+![Layout Editor Channel Options with Ignore Custom Presentation](<../3.11.138/Layout Editor Channel Options.png>)
+
+In **Custom sports presentation**, enable **Exclude linear channels from custom presentation** to keep linear channels in the group while preserving their original names and logos. Only channels assigned to the Dummy EPG source receive the group’s numbered presentation when this option is enabled.
+
+![Layout Editor Group Options with Custom Sports presentation](<../3.11.138/Layout Editor Group Options.png>)
 
 ## Verify the result
 

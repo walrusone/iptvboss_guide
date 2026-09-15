@@ -31,3 +31,5 @@ After a source sync or layout change, return to **Layout Manager** and review th
 
 !!! note "Free and Pro"
     Layout limits are listed only in the canonical [Free vs Pro comparison](../getting-started/free-vs-pro.md). If you reach the current limit, remove an unused layout or review the available Pro plans.
+
+To reuse content, choose [linked groups](linked-groups.md) for shared maintenance or [layout file import/export](layout-files.md) for transfer between installations.

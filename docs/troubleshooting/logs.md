@@ -44,3 +44,5 @@ Record:
 ## Change log detail
 
 If support asks for more detail, review the log-level and time-zone settings in **Settings**. Change diagnostic settings only as requested, and restore normal settings after collecting the evidence.
+
+See [application folder locations](application-files.md#application-folder-locations) for desktop defaults and [Server Console Logs](../server/console/logs.md) for browser-based server diagnostics. Choose a [support path](../support.md) when the diagnostics are ready.

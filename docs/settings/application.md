@@ -19,22 +19,9 @@ Use a timeout appropriate for the provider and network. A very short timeout can
 
 ## Backup and cloud settings
 
-<span class="pro-badge">PRO</span> Database cloud synchronization and backup controls are Pro features. [See Free vs Pro](../getting-started/free-vs-pro.md).
+Use [Database Sync and Backups](backups.md) to preserve application data, choose the authoritative database, and configure backup retention. Database cloud synchronization and backup controls require Pro.
 
-IPTVBoss can use cloud providers or an XC Server for database synchronization and backups. Available providers can include **Dropbox**, **Google Drive**, or **XC Server**, depending on account access and configuration.
-
-Before enabling synchronization:
-
-1. Confirm which database should be authoritative.
-2. Confirm that you can access the selected provider.
-3. Confirm the backup retention value.
-4. Save the settings.
-5. Verify the first backup before relying on it for recovery.
-
-!!! warning
-    Cloud synchronization is not a substitute for understanding which database is authoritative. Do not enable multiple competing sync workflows without a recovery plan.
-
-See [Cloud Provider Setup](cloud-providers.md) to create and authorize a Dropbox or Google Drive developer app, [Recovery and Application Files](../troubleshooting/recovery.md) before attempting a cloud restore, [Cloud Output Links](../setup/output-links.md) for generated links, and [Automatic Synchronization](automation.md) for a Windows noGUI schedule.
+For playlist and EPG publishing, follow [Cloud Provider Setup](cloud-providers.md) and [Cloud Output Links](../setup/output-links.md).
 
 ## Runtime and logging settings
 

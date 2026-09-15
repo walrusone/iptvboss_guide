@@ -59,6 +59,8 @@ Use the channel’s country, network, and service name to distinguish similarly 
 !!! warning
     An incorrect EPG match is worse than a missing match because it displays unrelated programme information.
 
+For manually configured guide entries, see [Dummy Guides and Inventory](dummy-guides.md). For programme title and description formatting, see [EPG Layout](epg-formatting.md#configure-the-epg-layout).
+
 ## Confirm the mapping
 
 The mapping is ready when the selected channel shows its EPG source and channel identifier and the layout can be saved without an error.

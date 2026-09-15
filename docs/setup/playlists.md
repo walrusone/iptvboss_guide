@@ -5,6 +5,8 @@ IPTVBoss can import a genuine M3U playlist from a URL or local file, or connect 
 !!! warning
     Use only playlist sources that you are authorized to access. Treat provider URLs, usernames, and passwords as private credentials.
 
+For individual stream addresses entered manually, use [Custom Sources](custom-sources.md).
+
 ## What are you adding?
 
 Use the source type that matches the information supplied by the provider:
@@ -61,6 +63,8 @@ If a value contains URL-encoded characters such as `%2B` or `%40`, copy the valu
 
 !!! note
     Use **Add M3U Source** for a genuine M3U playlist URL or local `.m3u` file that is not a standard Xtream Codes login link. When the URL follows the `get.php?username=...&password=...` pattern, use **Add XC Source** so IPTVBoss can retrieve the provider's Live, VOD, and Series categories through the Xtream Codes connection.
+
+For channel-name cleanup, see [Prefix Removal and Tags](source-tools.md). The **Custom Sports Channel Names** field uses [TXT Fixture Names for AEDs](custom-sports-channel-names.md).
 
 ## Disable automatic NoGUI user checks for a source
 

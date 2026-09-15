@@ -5,16 +5,6 @@
 !!! warning
     IPTVBoss must be closed before a noGUI run starts. Do not run the desktop application and noGUI synchronization against the same database at the same time.
 
-## Automatic NoGUI user checks
-
-During a NoGUI synchronization, IPTVBoss can refresh provider metadata for enabled user credentials that are at risk of being stale. This includes credentials with an unknown expiry or an expiry within the configured **Days Before Expiry** notice window. The check supports Xtream Codes sources and password-backed M3U sources with an XC URL.
-
-Each credential is checked at most once every 24 hours for the same connection details. Changing the source connection or the credential resets that connection-specific limit. Automatic checks are also paced per provider host, and a provider rate-limit response defers the remaining checks for that host until a later run.
-
-To opt out for one source, edit the M3U or Xtream Codes source and enable **Disable NoGUI user checks**. The option affects only automatic checks during NoGUI synchronization; it does not disable source synchronization or the manual **Refresh Credentials** action in Manage Users.
-
-The source option is useful when a provider does not support account-information requests, or when the provider has strict limits. Leave it disabled when IPTVBoss should maintain cached credentials and expiry values automatically.
-
 ## Windows Task Scheduler
 
 1. Close IPTVBoss.
@@ -41,7 +31,7 @@ The source option is useful when a provider does not support account-information
 12. Enable the option to force the task to close if it does not end when requested.
 13. Save the task.
 
-## Test the task
+### Test the task
 
 1. Make sure the normal IPTVBoss desktop application is closed.
 2. In Task Scheduler, select **Boss Sync**.
@@ -90,3 +80,15 @@ If the task cannot find IPTVBoss, use the full path to the installed executable 
 6. Test the command manually, then review the IPTVBoss logs after the first scheduled run.
 
 The native scheduler may manage these entries automatically when Pro access is enabled. Avoid manually adding a second cron entry for the same schedule.
+
+## Automatic NoGUI user checks
+
+During a NoGUI synchronization, IPTVBoss can refresh provider metadata for enabled user credentials that are at risk of being stale. This includes credentials with an unknown expiry or an expiry within the configured **Days Before Expiry** notice window. The check supports Xtream Codes sources and password-backed M3U sources with an XC URL.
+
+Each credential is checked at most once every 24 hours for the same connection details. Changing the source connection or the credential resets that connection-specific limit. Automatic checks are also paced per provider host, and a provider rate-limit response defers the remaining checks for that host until a later run.
+
+To opt out for one source, edit the M3U or Xtream Codes source and enable **Disable NoGUI user checks**. The option affects only automatic checks during NoGUI synchronization; it does not disable source synchronization or the manual **Refresh Credentials** action in Manage Users.
+
+The source option is useful when a provider does not support account-information requests, or when the provider has strict limits. Leave it disabled when IPTVBoss should maintain cached credentials and expiry values automatically.
+
+Use [Email Notifications](email.md) to configure credential-expiry notices.

@@ -21,11 +21,11 @@ This page is the guide's canonical entitlement table. Subscription tiers and fea
 | Layouts | Up to **2** layouts | Unlimited layouts |
 | Users | Up to **2** users | Tiered limits: **25, 75, 200, 500, 1,000, or unlimited** users, depending on the Pro tier |
 | Source and channel editing | Import sources, sync sources, edit groups and channels, reorder content, assign logos, and manually assign EPG data | Everything in Free, plus the Pro-only editor actions listed below |
-| EPG workflow | External/custom EPG sources, manual mapping, and standard EPG output | EPG Browser, automatic EPG tools in Layout Editor, EPG layout overrides, EPG logo templates, and Universal EPG |
-| Layout workflow | Create and edit layouts, import channels, organize groups, and generate output | Layout import/export, channel-list export, linked layout groups, and layout EPG override settings |
+| EPG workflow | External/custom EPG sources, manual mapping, and standard EPG output | EPG Browser, automatic EPG tools in Layout Editor, EPG layout overrides, EPG logo templates, and [Universal EPG](../setup/universal-epg.md) |
+| Layout workflow | Create and edit layouts, import channels, organize groups, and generate output | [Layout import/export](../layouts/layout-files.md), channel-list export, [linked layout groups](../layouts/linked-groups.md), and layout EPG override settings |
 | Output and hosting | Local M3U/EPG output and supported cloud playlist/EPG publishing | Everything in Free, plus cloud database synchronization and backups, XC Server, and the related server workflows |
 | Automation | Run supported noGUI commands through the operating-system scheduler | Native **Sync Schedule**, headless/cloud synchronization workflows, and email notifications |
-| Advanced tools | Core layout and source tools | Advanced EPG Dummies, AED bulk tools, AI Settings, Prefix Auto-Removal, custom tags, sports-data tools, and Custom Sports Groups |
+| Advanced tools | Core layout and source tools | [Advanced EPG Dummies](../features/aed.md), AED bulk tools, AI Settings, Prefix Auto-Removal, custom tags, sports-data tools, and [Custom Sports Groups](../features/custom-sports.md) |
 | Playback and diagnostics | Standard channel and EPG editing | VLCJ stream and EPG playback actions from the Layout Editor |
 | Appearance | Default application appearance | **Theme Settings** and its color controls |
 
@@ -46,8 +46,8 @@ Free accounts can use the core editor without activating a Pro token. When a sou
 
 Pro controls are marked with a lock in the application until a valid Pro subscription is active. The Pro-only application areas include:
 
-- **Sources** → EPG Browser, Universal EPG, Prefix Auto-Removal, Custom Tags, AED tools, and sports-data refresh tools.
-- **Layout Editor** → automatic EPG assignment, stream and programme playback, linked layout groups, and advanced EPG/group tools.
+- **Sources** → EPG Browser, [Universal EPG](../setup/universal-epg.md), Prefix Auto-Removal, Custom Tags, AED tools, and sports-data refresh tools.
+- **Layout Editor** → automatic EPG assignment, stream and programme playback, [linked layout groups](../layouts/linked-groups.md), and advanced EPG/group tools.
 - **Layout** → layout import/export, channel-list export, and EPG layout overrides.
 - **Settings** → AI Settings, Theme Settings, native Sync Schedule, Email Notifications, cloud database backup/synchronization, and XC Server.
 

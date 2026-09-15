@@ -55,28 +55,8 @@ For ESPN+ channels that were published before their event data was available, wa
 
 Confirm that the intended layout is selected, the layout is enabled, and the channels are assigned to the expected groups. If you used an all-layout output action, confirm that you are reviewing the correct output file.
 
-## Server did not reload after a client update
-
-<span class="pro-badge">PRO</span> This troubleshooting workflow applies to XC Server.
-
-The automatic reload request is sent when a paired IPTVBoss client closes after completing its database backup workflow. It is not sent after every edit.
-
-Check the following:
-
-1. Confirm the desktop installation still appears under the XC Server's [Paired Devices](../server/console/paired-devices.md).
-2. Confirm XC is enabled in the client's saved Server Settings and that the configured server address is reachable from that computer.
-3. If database cloud synchronization is enabled, confirm the shutdown cloud backup completed successfully. IPTVBoss intentionally skips the reload request after a failed or incomplete cloud backup.
-4. Check whether the server was already updating, processing an administration or restore operation, or blocked by a database synchronization lock.
-5. Review the client log for the reload notification and HTTP response, then review the [XC Server logs](../server/console/logs.md) for the queued or rejected request.
-6. If the client was revoked, generate a new one-time pairing code and pair it again. Do not reuse an expired pairing code or manually share a reload credential.
-
-See [Automatic server reloads from this client](../server/gui-settings.md#automatic-server-reloads-from-this-client) for the expected behavior.
-
-## XC output is rebuilding or serves an older response
-
-XC Server now prepares and publishes complete response variants, then keeps the previous valid generation available while a replacement is built. A request can temporarily use direct database generation when its cached variant is unavailable or when the database is changing.
-
-Do not delete XC cache files while the server is running. Check the client and [XC Server logs](../server/console/logs.md) for database-transition, cache-build, direct-fallback, or out-of-memory messages. If the problem continues, restart the XC Server after creating a database backup and include the sanitized logs with the application version when requesting support.
+- <span id="server-did-not-reload-after-a-client-update"></span>[Server did not reload after a client update](../server/troubleshooting.md#server-did-not-reload-after-a-client-update)
+- <span id="xc-output-is-rebuilding-or-serves-an-older-response"></span>[XC output is rebuilding or serves an older response](../server/troubleshooting.md#xc-output-is-rebuilding-or-serves-an-older-response)
 
 ## The application shows a locked feature
 

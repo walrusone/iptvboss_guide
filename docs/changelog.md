@@ -1,5 +1,7 @@
 # Changelog
 
+For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
+
 ## 📢 IPTVBoss 3.11.138
 
 ### 🏟️ Custom Sports and AED

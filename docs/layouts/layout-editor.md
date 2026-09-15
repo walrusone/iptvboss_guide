@@ -10,16 +10,6 @@ The right side has two main panels: **Channel Options** and **Group Options**. *
 
 ![Current Layout Editor Channel Options](<../3.11.138/Layout Editor Channel Options.png>)
 
-### Programme preview
-
-The editor can show programme information when preview data is available. The three programme cards show the previous, current, and next entries for the selected EPG mapping.
-
-When **Show Full Preview in-line in Channel Options** is enabled, select a programme card to display its artwork, title, time, and description below the cards. The selected card is highlighted, and the inline preview replaces the delayed hover overlay.
-
-![The Layout Editor with an inline programme preview](../assets/images/layout/layout-editor-inline-programme.png)
-
-When inline preview is disabled, **Enable Full Preview Overlays** can show the full preview as a delayed overlay when you hover over a programme card. The preview size is controlled from [Layout Editor settings](../settings/application.md#layout-editor-settings).
-
 ## Select a layout and group
 
 1. Open **Layout** → **Layout Editor**.
@@ -29,97 +19,14 @@ When inline preview is disabled, **Enable Full Preview Overlays** can show the f
 
 The **Type** selector filters the editor to Live, VOD, or Series content. Confirm the type before looking for a group or channel that appears to be missing.
 
-## Identify the group and channel controls
-
-The buttons above the **Groups** and **Channels** lists apply to the selected rows. Hover over an icon in IPTVBoss to display its name before using a bulk action.
-
-### Group controls
-
-| Control | What it does |
-| --- | --- |
-| ![](../assets/icons/ui/uppercase.svg){ .ui-icon } **Uppercase** | Changes selected group names to uppercase. |
-| ![](../assets/icons/ui/sentence_case.svg){ .ui-icon } **Sentence Case** | Changes selected group names to sentence case. |
-| ![](../assets/icons/ui/sort_az.svg){ .ui-icon } **Sort A to Z** | Sorts the groups alphabetically. |
-| ![](../assets/icons/ui/find_replace.svg){ .ui-icon } **Find and Replace** | Finds or replaces text in selected group names. |
-| ![](../assets/icons/ui/merge.svg){ .ui-icon } **Merge Groups** | Combines the selected groups. |
-| ![](../assets/icons/ui/add.svg){ .ui-icon } **Add Group** | Creates a group in the current layout. |
-| ![](../assets/icons/ui/remove.svg){ .ui-icon } **Remove Group** | Removes the selected groups. |
-
-### Channel controls
-
-| Control | What it does |
-| --- | --- |
-| ![](../assets/icons/ui/uppercase.svg){ .ui-icon } **Uppercase** | Changes selected channel names to uppercase. |
-| ![](../assets/icons/ui/sentence_case.svg){ .ui-icon } **Sentence Case** | Changes selected channel names to sentence case. |
-| ![](../assets/icons/ui/sort_az.svg){ .ui-icon } **Sort A to Z** | Sorts channels alphabetically. |
-| ![](../assets/icons/ui/find_replace.svg){ .ui-icon } **Find and Replace** | Finds or replaces text in selected channel names. |
-| ![](../assets/icons/ui/prefix.png){ .ui-icon } **Add Prefix/Suffix** | Adds text before or after selected channel names. |
-| ![](../assets/icons/ui/remove.svg){ .ui-icon } **Remove Channel** | Removes selected channels from the layout. |
-
-### Filter channels by missing EPG or logo
-
-Use the **Missing EPG** and **Missing Logo** checkboxes beside the **CHANNELS** heading to narrow the channel list. **Missing EPG** shows live channels without a usable EPG mapping. **Missing Logo** shows channels whose source channel has no logo. If both are selected, a channel is shown when it matches either condition. These filters can be combined with the channel search field.
-
-While a missing-content filter or a health-focused view is active, channel reordering and drag-and-drop importing are disabled. Clear the filters before changing channel order or importing onto the channel list.
-
-## Ignore an intentional empty-group warning
-
-Select a group and expand **Group Options**. Enable **Ignore Empty Group Health Check** when the group is intentionally empty and should not be counted by Layout Manager as an empty-group health issue.
-
-![Layout Editor group options](../3.11.106/Layout_Editor_Group_Options.png)
-
-This is a per-group health preference. It does not add channels, disable the group, or change source synchronization. It also does not stop **Remove Empty Layout Groups After Source Sync** from removing the group when that per-layout cleanup option is enabled. Save the group after changing the checkbox.
-
 ## Import channels with Channel Importer
 
-Select **Add Channels** in the Layout Editor to open **Channel Importer**. The importer has two modes:
+Select **Add Channels** in Layout Editor. Follow [Importing Channels](importing-channels.md) for the complete workflow.
 
-- **Source Import** adds groups and channels from an imported M3U or Xtream Codes source.
-- **Layout Import** adds groups and channels that already exist in another layout.
-
-Use **Switch to Layout Import** or **Switch to Source Import** at the bottom of the dialog to change modes. The selected mode determines whether the left-hand list is labeled **Source** or **Layout**.
-
-### Import from a source
-
-![Channel Importer: source import](../assets/images/layout/layout-editor-import-from-source.png)
-
-In Source Import mode:
-
-1. Select a source in the left panel.
-2. Select a group in the middle panel to display its channels in the right panel. Use the **GROUPS** and **CHANNELS** checkboxes when you want to select items in bulk.
-3. Select one or more groups or channels to import. Use the search field under a panel to find a matching item.
-4. Choose **Import Source(s)**, **Import Group(s)**, or **Import Channel(s)**, depending on what is selected.
-
-The **LIVE** dropdown filters the source content by the available content type. **Sort A to Z** controls the order shown in the group and channel lists. Sorting changes the display order in the dialog; it does not by itself reorder the destination layout.
-
-The source importer also provides these options:
-
-- **Keep Dialog Open after Import** leaves the importer open so you can repeat imports from the same source.
-- **Add to Layout Group included Categories** adds imported source categories to the destination layout group when that grouping option is available. Use it when the source categories should become part of the selected layout group; leave it off when the imported categories should remain separate.
-- **Don't Import Duplicate Channels** skips channels that are already present instead of adding another copy. Enable it for incremental imports and review the destination before disabling it.
-
-### Import from another layout
-
-![Channel Importer: layout import](../assets/images/layout/layout-editor-import-from-layout.png)
-
-In Layout Import mode:
-
-1. Select the source layout in the left panel.
-2. Select a group in the middle panel to display its channels in the right panel.
-3. Select the groups or channels to bring into the current layout.
-4. Choose **Import Layout(s)**, **Import Group(s)**, or **Import Channel(s)**.
-
-The layout importer is useful when a second layout needs some of the same channel organization as an existing layout. It copies selected content into the layout currently open in the editor; confirm the destination layout before importing.
-
-### Linked Layout Groups
-
-Enable **Import as Linked Layout Group** when the imported group should remain linked to its originating layout group rather than becoming an independent copy. This is useful when several layouts should reuse the same group structure and follow its source layout over time.
-
-Leave the option disabled when the destination needs to be edited independently. A linked group should be treated as shared configuration: review the originating layout before making changes, and verify the resulting channels in every layout that uses the link.
-
-### Avoid accidental imports
-
-Before selecting an import button, confirm the current mode, the source or layout in the left panel, the selected groups and channels, and the destination layout. If the result is not expected, undo or remove the imported items before generating output.
+- <span id="import-from-a-source"></span>[Import from a source](importing-channels.md#import-from-a-source)
+- <span id="import-from-another-layout"></span>[Import from another layout](importing-channels.md#import-from-another-layout)
+- <span id="linked-layout-groups"></span>[Linked Layout Groups](importing-channels.md#linked-layout-groups)
+- <span id="avoid-accidental-imports"></span>[Avoid accidental imports](importing-channels.md#avoid-accidental-imports)
 
 ## Edit a channel
 
@@ -164,17 +71,9 @@ The name actions above the channel list apply only to channels whose names can b
 
 For a universal-name channel, enable **Ignore Name Changes** when AED or source synchronization must not replace the current universal name. The control is available for the applicable selected channels and can show a mixed state when selected channels have different values.
 
-Inside **EPG Mapping**, the header buttons are:
-
-| Control | What it does |
-| --- | --- |
-| ![](../assets/icons/ui/auto_epg_search.svg){ .ui-icon } **Auto** | Attempts to assign an EPG match automatically using the sensitivity setting. |
-| ![](../assets/icons/ui/manual_epg_search.svg){ .ui-icon } **Manual** | Displays likely EPG matches so you can choose one. |
-| ![](../assets/icons/ui/settings.svg){ .ui-icon } **EPG Search Options** | Chooses which existing EPG sources Auto and Manual search. The button tooltip is **Search Options**. |
-
-From left to right, the buttons beside **EPG-ID** are ![](../assets/icons/ui/add.svg){ .ui-icon } **Add Dummy EPG**, ![](../assets/icons/ui/add.svg){ .ui-icon } **Add Advanced Dummy EPG**, ![](../assets/icons/ui/edit.svg){ .ui-icon } **Edit Dummy EPG**, and ![](../assets/icons/ui/offset.png){ .ui-icon } **EPG Offset**. The two Add buttons use the same plus icon, so use their position or hover tooltip to distinguish them. Some controls are available only when the selected channel or account supports them.
-
 To edit the channel name directly, select a channel that uses **USE UNIVERSAL NAME** or **USE LAYOUT NAME**, then double-click the channel row or edit the **Channel Name** field. Press **Enter** to commit the edit or **Esc** to cancel it. Right-click a channel row for actions such as enabling or disabling channels, removing channels, moving selected channels to the top or bottom, and cutting, copying, or pasting channels.
+
+For source-wide cleanup, see [Prefix Removal and Tags](../setup/source-tools.md). For display and sorting options, see [Preferences and Theme](../settings/preferences.md).
 
 Keep channel names consistent with the service you are editing. If you change a name only to improve matching, record the original name somewhere before saving.
 
@@ -218,6 +117,71 @@ Enable **Exclude linear channels from custom presentation** to leave linear chan
 See [Custom Sports Groups](../features/custom-sports.md#customize-the-sports-presentation) for the complete setup and numbering behavior.
 
 Review the selected layout after each bulk change. A change made in one layout does not automatically change another layout.
+
+## EPG mapping controls
+
+Follow [Mapping Channels](../setup/channel-mapping.md) to choose and save an EPG assignment.
+
+Inside **EPG Mapping**, the header buttons are:
+
+| Control | What it does |
+| --- | --- |
+| ![](../assets/icons/ui/auto_epg_search.svg){ .ui-icon } **Auto** | Attempts to assign an EPG match automatically using the sensitivity setting. |
+| ![](../assets/icons/ui/manual_epg_search.svg){ .ui-icon } **Manual** | Displays likely EPG matches so you can choose one. |
+| ![](../assets/icons/ui/settings.svg){ .ui-icon } **EPG Search Options** | Chooses which existing EPG sources Auto and Manual search. The button tooltip is **Search Options**. |
+
+From left to right, the buttons beside **EPG-ID** are ![](../assets/icons/ui/add.svg){ .ui-icon } **Add Dummy EPG**, ![](../assets/icons/ui/add.svg){ .ui-icon } **Add Advanced Dummy EPG**, ![](../assets/icons/ui/edit.svg){ .ui-icon } **Edit Dummy EPG**, and ![](../assets/icons/ui/offset.png){ .ui-icon } **EPG Offset**. The two Add buttons use the same plus icon, so use their position or hover tooltip to distinguish them. Some controls are available only when the selected channel or account supports them.
+
+## Programme preview
+
+The editor can show programme information when preview data is available. The three programme cards show the previous, current, and next entries for the selected EPG mapping.
+
+When **Show Full Preview in-line in Channel Options** is enabled, select a programme card to display its artwork, title, time, and description below the cards. The selected card is highlighted, and the inline preview replaces the delayed hover overlay.
+
+![The Layout Editor with an inline programme preview](../assets/images/layout/layout-editor-inline-programme.png)
+
+When inline preview is disabled, **Enable Full Preview Overlays** can show the full preview as a delayed overlay when you hover over a programme card. The preview size is controlled from [Layout Editor settings](../settings/application.md#layout-editor-settings).
+
+## Identify the group and channel controls
+
+The buttons above the **Groups** and **Channels** lists apply to the selected rows. Hover over an icon in IPTVBoss to display its name before using a bulk action.
+
+### Group controls
+
+| Control | What it does |
+| --- | --- |
+| ![](../assets/icons/ui/uppercase.svg){ .ui-icon } **Uppercase** | Changes selected group names to uppercase. |
+| ![](../assets/icons/ui/sentence_case.svg){ .ui-icon } **Sentence Case** | Changes selected group names to sentence case. |
+| ![](../assets/icons/ui/sort_az.svg){ .ui-icon } **Sort A to Z** | Sorts the groups alphabetically. |
+| ![](../assets/icons/ui/find_replace.svg){ .ui-icon } **Find and Replace** | Finds or replaces text in selected group names. |
+| ![](../assets/icons/ui/merge.svg){ .ui-icon } **Merge Groups** | Combines the selected groups. |
+| ![](../assets/icons/ui/add.svg){ .ui-icon } **Add Group** | Creates a group in the current layout. |
+| ![](../assets/icons/ui/remove.svg){ .ui-icon } **Remove Group** | Removes the selected groups. |
+
+### Channel controls
+
+| Control | What it does |
+| --- | --- |
+| ![](../assets/icons/ui/uppercase.svg){ .ui-icon } **Uppercase** | Changes selected channel names to uppercase. |
+| ![](../assets/icons/ui/sentence_case.svg){ .ui-icon } **Sentence Case** | Changes selected channel names to sentence case. |
+| ![](../assets/icons/ui/sort_az.svg){ .ui-icon } **Sort A to Z** | Sorts channels alphabetically. |
+| ![](../assets/icons/ui/find_replace.svg){ .ui-icon } **Find and Replace** | Finds or replaces text in selected channel names. |
+| ![](../assets/icons/ui/prefix.png){ .ui-icon } **Add Prefix/Suffix** | Adds text before or after selected channel names. |
+| ![](../assets/icons/ui/remove.svg){ .ui-icon } **Remove Channel** | Removes selected channels from the layout. |
+
+### Filter channels by missing EPG or logo
+
+Use the **Missing EPG** and **Missing Logo** checkboxes beside the **CHANNELS** heading to narrow the channel list. **Missing EPG** shows live channels without a usable EPG mapping. **Missing Logo** shows channels whose source channel has no logo. If both are selected, a channel is shown when it matches either condition. These filters can be combined with the channel search field.
+
+While a missing-content filter or a health-focused view is active, channel reordering and drag-and-drop importing are disabled. Clear the filters before changing channel order or importing onto the channel list.
+
+## Ignore an intentional empty-group warning
+
+Select a group and expand **Group Options**. Enable **Ignore Empty Group Health Check** when the group is intentionally empty and should not be counted by Layout Manager as an empty-group health issue.
+
+![Current Layout Editor Group Options](<../3.11.138/Layout Editor Group Options.png>)
+
+This is a per-group health preference. It does not add channels, disable the group, or change source synchronization. It also does not stop **Remove Empty Layout Groups After Source Sync** from removing the group when that per-layout cleanup option is enabled. Save the group after changing the checkbox.
 
 ## Check the result
 

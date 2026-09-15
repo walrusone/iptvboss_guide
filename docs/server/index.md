@@ -27,7 +27,7 @@ The available console sections are listed in the navigation. Use the pages in th
 
 - [Logs](console/logs.md) — review server activity and failures.
 - [Login and Setup](console/login.md) — create the first administrator and sign in.
-- [Boss Metadata](console/metadata.md) — review server metadata and administrative information.
+- [Boss Metadata](#boss-metadata) — review server metadata and administrative information.
 - [Server Settings](console/settings.md) — configure server connection and schedule settings.
 - [XC Server Users](console/users.md) — manage server users.
 - [User Activity](console/activity.md) — review successful synchronization and playback activity.
@@ -36,7 +36,7 @@ The available console sections are listed in the navigation. Use the pages in th
 - [API Keys](console/api.md) — rotate the XC Reload key and manage external automation keys.
 - [Swagger API Documentation](console/swagger.md) — inspect the documented external API.
 - [Console Security](console/security.md) — configure two-factor authentication and section PIN protection.
-- [Administrator Account](console/administrator.md) — change the console username or password.
+- [Administrator Account](console/security.md#administrator-account) — change the console username or password.
 
 Some sections require a section-PIN unlock before they can be opened. Editing also requires ownership of the console editor lease when another desktop or console is using the database. Server operations can change the authoritative database and output for every paired device, so create a backup and confirm the intended server before editing.
 
@@ -71,3 +71,11 @@ When the server has no usable database, it enters bootstrap mode. Open the web f
 
 !!! note
     Server sections and labels may change between releases.
+
+## Boss Metadata
+
+Use **Boss Metadata** to review server metadata and administrative information.
+
+![Boss metadata](../assets/images/server-console/server-metadata.png)
+
+Treat displayed identifiers and connection information as private server details.

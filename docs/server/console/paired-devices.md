@@ -13,4 +13,6 @@ Use **Paired Devices** to generate a single-use pairing code, review connected c
 
 The code expires and should be shared only with the intended device owner. The reload credential is limited to requesting a server reload; it does not grant general Server Console access. Revoking a device also revokes its reload credential and releases its editor lease when applicable. A revoked client can no longer trigger automatic reloads unless it is paired again.
 
+For desktop setup, see [Connect the Desktop](../gui-settings.md). For a lost pairing, see [paired-code recovery](../recovery.md#restore-an-xc-server-paired-code).
+
 Treat pairing and recovery codes as temporary credentials; do not publish them. For the complete client-triggered workflow, see [Automatic server reloads from this client](../gui-settings.md#automatic-server-reloads-from-this-client).

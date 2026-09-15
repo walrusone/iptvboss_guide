@@ -2,6 +2,8 @@
 
 This page explains how to install the current IPTVBoss release on Windows, macOS, or Linux.
 
+For an always-on XC Server, start with [Choose an Installation](../server/setup/index.md).
+
 ## Before you begin
 
 - Use a computer or server that you control.

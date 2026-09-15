@@ -15,17 +15,7 @@ If the database is damaged or the configuration is wrong, first identify a known
 
 ## Restore a known-good backup
 
-1. Close operations that write to the database.
-2. Confirm that the backup belongs to the intended database.
-3. Open the database restore action.
-4. Choose the appropriate restore source.
-5. Read the confirmation message carefully.
-6. Continue only when you understand which current data will be replaced.
-7. Allow IPTVBoss to finish the restore and reload process.
-8. Confirm that sources, layouts, and settings are present.
-
-!!! warning
-    A restore can replace current data. Preserve a copy of the current database before proceeding if it can still be accessed.
+Follow [Restore a Database Backup](restore.md) to select a local, cloud, link, or XC backup and verify the recovered configuration. Preserve the current data before replacing it.
 
 ## Reset only after review
 

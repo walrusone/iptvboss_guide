@@ -14,16 +14,6 @@ IPTVBoss uses layouts and user records to create separate output links for diffe
 
 ![Manage Users dialog with layout preview and XC password controls](../3.11.126/GUI_Manage_Users.png)
 
-Each assigned XC-enabled layout has its own XC login password for this user. Select the layout in **Layout Preview**, then choose **XC Password** to edit the saved password or generate a new one. Passwords are case-sensitive; manual values may contain 6–64 letters, digits, or `- . _ ~`, while **Generate** creates a new 12-character lowercase value. The action is available only for an XC-enabled layout.
-
-![Desktop XC password dialog](../3.11.126/GUI_Set_Layout_Password.png)
-
-When XC Server pairing is enabled, the selected user can show an **XC Activity** summary with the last successful synchronization, last playback, and stream. Select **Activity** to open the full activity table for all users.
-
-![Desktop XC user activity](../assets/images/sources/user-activity.png)
-
-The activity view reports successful XC playlist, guide, catalog, and playback activity. **Last Sync** and **Last Played** use relative and exact timestamps; **Stream** identifies the most recently played live, VOD, or series item when that information is available. Activity is read from the paired XC Server, so it is unavailable until the desktop installation is paired and the server can be reached.
-
 !!! important "Use one source per provider"
     Add each provider once, regardless of how many users have accounts with that provider. Store each user's provider credentials in that user's record instead of creating a duplicate source for every account.
 
@@ -41,6 +31,18 @@ For example, when several users have accounts with Provider A:
 
 Repeat the source setup only when adding another provider. Create separate source entries for the same provider only when there is a specific reason to manage them independently.
 
+## XC passwords and activity
+
+Each assigned XC-enabled layout has its own XC login password for this user. Select the layout in **Layout Preview**, then choose **XC Password** to edit the saved password or generate a new one. Passwords are case-sensitive; manual values may contain 6–64 letters, digits, or `- . _ ~`, while **Generate** creates a new 12-character lowercase value. The action is available only for an XC-enabled layout.
+
+![Desktop XC password dialog](../3.11.126/GUI_Set_Layout_Password.png)
+
+When XC Server pairing is enabled, the selected user can show an **XC Activity** summary with the last successful synchronization, last playback, and stream. Select **Activity** to open the full activity table for all users.
+
+![Desktop XC user activity](../assets/images/sources/user-activity.png)
+
+The activity view reports successful XC playlist, guide, catalog, and playback activity. **Last Sync** and **Last Played** use relative and exact timestamps; **Stream** identifies the most recently played live, VOD, or series item when that information is available. Activity is read from the paired XC Server, so it is unavailable until the desktop installation is paired and the server can be reached.
+
 ## User output links
 
 Each enabled user receives their own M3U link. Standard EPG output can be shared between users when the guide data is the same. XC Server users receive unique XMLTV links and a separate XC username/password pair for each assigned XC-enabled layout. Changing a layout password changes access to that layout; refresh or redistribute the affected link after saving.
@@ -54,3 +56,5 @@ Each enabled user receives their own M3U link. Standard EPG output can be shared
 
 !!! note
     If desktop user management is locked or unavailable, check the account plan and whether another IPTVBoss process is currently modifying users.
+
+Continue with [Connect a Player](../setup/connect-player.md). For credential maintenance, see [automatic NoGUI user checks](../settings/automation.md#automatic-nogui-user-checks) and [Email Notifications](../settings/email.md).

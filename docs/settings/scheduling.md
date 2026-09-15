@@ -44,4 +44,4 @@ When a run fails:
 !!! warning
     Do not create overlapping schedules that write to the same database at the same time. Choose one authoritative scheduler for a given installation.
 
-For a Windows installation that cannot use the native scheduler, see [External noGUI Scheduling](automation.md).
+For operating-system tasks, see [External noGUI Scheduling](automation.md). For an always-on XC Server, use [Server Console schedules](../server/console/settings.md#current-schedules). Compare the methods in [Choose a Scheduling Method](sync-overview.md).

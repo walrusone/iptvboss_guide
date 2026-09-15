@@ -17,7 +17,7 @@ Follow [Build Your First Working Setup](getting-started/first-working-setup.md) 
 3. [Add and synchronize a playlist](setup/playlists.md).
 4. [Add and synchronize an EPG source](setup/epg-sources.md).
 5. [Create and enable a layout](layouts/layout-manager.md#create-a-layout).
-6. [Import playlist channels into the layout](layouts/layout-editor.md#import-channels-with-channel-importer).
+6. [Import playlist channels into the layout](layouts/importing-channels.md).
 7. [Map the channels to EPG data](setup/channel-mapping.md).
 8. [Configure the layout output](layouts/output-settings.md).
 9. [Generate and test the M3U and EPG output](setup/output.md).
@@ -26,7 +26,20 @@ Sources provide content, layouts select and organize that content, and output pu
 
 ## Existing users
 
-Use the navigation or search at the top of the page to find instructions for a specific feature or problem.
+Choose the task you want to complete:
+
+| Task | Guide |
+| --- | --- |
+| Update an existing installation | [Updating IPTVBoss](getting-started/updating.md) |
+| Organize or maintain channels | [Layouts](layouts/index.md) |
+| Add or correct programme information | [EPG & Mapping](setup/epg-overview.md) |
+| Publish a playlist and guide | [Creating Output](setup/output.md) and [Connect a Player](setup/connect-player.md) |
+| Configure sports channels | [Sports & AEDs](features/index.md) |
+| Run updates automatically | [Choose a Scheduling Method](settings/sync-overview.md) |
+| Set up an XC Server | [First XC Server Connection](server/first-connection.md) |
+| Protect or recover a database | [Backups](settings/backups.md) and [Restore](troubleshooting/restore.md) |
+
+Use [Release Highlights](release-highlights.md) or the [build changelog](changelog.md) for recent changes or search for a specific setting.
 
 ## Getting support
 
@@ -34,9 +47,9 @@ Before asking for help in the [IPTVBoss Discord](https://discord.gg/s3kpjP8EgR) 
 
 1. Search this guide for the error or feature.
 2. Review [common problems](troubleshooting/common-problems.md).
-3. Collect the relevant IPTVBoss logs.
+3. Collect [Logs and Diagnostics](troubleshooting/logs.md).
 4. Include your IPTVBoss version and operating system.
-5. Use Discord for general help, the ticket system for account-specific or private issues, or [report a guide error on GitHub](https://github.com/walrusone/iptvboss_guide/issues/new?template=documentation.yml).
+5. Choose the appropriate [support path](support.md) for general help, private issues, or guide corrections.
 
 !!! note
     Menu names and screenshots are based on the current desktop workflow. They may change as IPTVBoss is updated.

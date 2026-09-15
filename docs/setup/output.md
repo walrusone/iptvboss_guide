@@ -33,6 +33,8 @@ Use the all-layout options when you intentionally want to process every enabled 
 
 Do not use an all-layout action when you are testing a single layout change.
 
+After generation, follow [Connect a Player](connect-player.md) for local files, cloud links, or XC login. For separate viewer accounts, see [Desktop Output Users](../layouts/users.md).
+
 ## Review output
 
 1. Open the configured output folder or cloud-provider destination.

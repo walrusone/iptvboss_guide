@@ -23,3 +23,5 @@ The section PIN is separate from the administrator password. It protects sensiti
 4. If the authenticator is unavailable, choose **Use a recovery code** and enter one unused recovery code.
 
 Use **Log out** when finished on a shared computer. Never share the console URL, password, authenticator secret, or recovery codes.
+
+Manage [account and security settings](security.md) after signing in. For lost administrator access, see [XC Server Recovery](../recovery.md#reset-the-xc-administrator).

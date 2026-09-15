@@ -197,7 +197,7 @@ Task Scheduler's **End** command is not guaranteed to give the JVM enough time t
 Before an upgrade:
 
 1. Wait until all Server Console synchronization and backup activity has finished.
-2. Open [**Database Backup History**](../dashboard.md) in the Server Console and download a current backup.
+2. Open [**Database Backup History**](../dashboard.md) in the paired desktop application’s **GUI Server Dashboard** and download a current backup.
 3. End the scheduled task only after the downloadable backup is complete.
 4. Confirm in Task Manager that `iptvboss-c.exe` has exited.
 5. Copy the entire `IPTVBoss-XC` data directory to another computer or storage device.

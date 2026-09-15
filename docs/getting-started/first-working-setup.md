@@ -2,7 +2,10 @@
 
 This tutorial takes a new desktop installation from an empty database to cloud-hosted M3U playlist and EPG (XMLTV) links that you can use in a player. It uses the core Free workflow; cloud playlist/EPG publishing does not require Pro. Cloud database backup, automation, advanced tools, and XC Server are optional next steps.
 
-Before you begin, have these items ready:
+!!! tip "Prefer local output?"
+    Cloud hosting is optional. For local files, skip step 4, select a **Custom Output Folder** in step 5 instead of a cloud-provider folder, then generate files in step 8 and follow [Connect a Player](../setup/connect-player.md#m3u-and-xmltv). See [Layout Output Settings](../layouts/output-settings.md).
+
+For the cloud workflow below, have these items ready:
 
 - an authorized M3U playlist or Xtream Codes provider connection;
 - an external EPG URL that contains guide data for at least some of your channels;
@@ -74,7 +77,7 @@ The layout is the publishable channel list. Adding sources alone does not place 
 6. Select the matching import action.
 7. Close the importer and confirm that the channels appear in the destination layout.
 
-See [Editing a Layout](../layouts/layout-editor.md#import-channels-with-channel-importer) for selection, duplicate, and grouping options.
+See [Editing a Layout](../layouts/importing-channels.md) for selection, duplicate, and grouping options.
 
 ## 7. Map EPG data
 
@@ -116,4 +119,6 @@ After the cloud links work, you can:
 - [organize and rename layout content](../layouts/layout-editor.md);
 - [configure additional output settings](../layouts/output-settings.md);
 - [create desktop output users](../layouts/users.md);
-- [automate synchronization](../settings/automation.md).
+- [choose a scheduling method](../settings/sync-overview.md);
+- [set up XC Server delivery](../server/first-connection.md);
+- [protect your database](../settings/backups.md).

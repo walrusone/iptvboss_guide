@@ -5,7 +5,7 @@
 !!! danger "Validate before production"
     The macOS launchd and Windows Task Scheduler instructions still require hands-on platform testing. The Windows scheduler also has weaker shutdown guarantees than a true service. The Linux service procedure is the tested native installation path.
 
-The XC Server runs IPTVBoss continuously without the desktop interface and exposes the browser-based [Server Console](../index.md). Start with the [XC Server Overview](../overview.md) for the runtime model, available XC flags, defaults, and security modes, then choose the installation path for your host:
+The XC Server runs IPTVBoss continuously without the desktop interface and exposes the browser-based [Server Console](../index.md). Start with the [XC Server Overview](../overview.md) for the runtime model, and [Runtime Configuration](../runtime.md) for XC flags, defaults, and security modes, then choose the installation path for your host:
 
 | Path | Best suited for | Persistent data | Process manager |
 | --- | --- | --- | --- |
@@ -24,6 +24,8 @@ For installations that cannot use a reverse proxy, see [Direct HTTPS](direct-htt
     The 3.12 Beta documentation currently uses the public Alpha container distribution channel. Pre-release builds can change without notice.
 
 The Docker template keeps the image repository and version tag in `.env`, so a future distribution-channel change will not require editing `compose.yaml`. For a long-running installation, pin an exact tested version instead of automatically following a moving channel tag.
+
+For a new Ubuntu VPS using the native Linux service, complete [Prepare an Ubuntu VPS](prepare-vps.md) first.
 
 ## Shared requirements
 
@@ -56,3 +58,5 @@ Caddy's [reverse-proxy defaults](https://caddyserver.com/docs/caddyfile/directiv
 5. Review [Console Security](../console/security.md), then back up the working server data.
 
 The native Windows path is not fully tested. Use [Docker](docker.md) when its stronger container lifecycle and backup workflow are preferable.
+
+Continue with [First XC Server Connection](../first-connection.md) to configure users, test a player, and set up routine scheduling and backups.

@@ -36,6 +36,15 @@ The right-click actions include:
 
 For a first setup, enable a small set of Live categories. Add VOD or Series only when you intend to include that content and understand the related output settings.
 
+## Choose the right category tool
+
+| Task | Tool |
+| --- | --- |
+| Choose which provider categories the source imports | **Manage Categories**, described above |
+| Add existing channels to a layout | [Channel Importer](../layouts/importing-channels.md) |
+| Place newly discovered channels into an existing group | [New Channel Manager](../layouts/new-channel-manager.md) |
+| Add newly discovered categories as layout groups | [New Category Manager](../layouts/new-category-manager.md) |
+
 ## Maintain an existing source
 
 Refresh the categories after the provider adds, removes, or renames content. After changing the enabled categories:

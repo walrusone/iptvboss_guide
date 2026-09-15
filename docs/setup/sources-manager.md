@@ -26,7 +26,7 @@ The playlist section shows the configured M3U, Xtream Codes, and custom sources.
 
 ### Playlist toolbar
 
-- ![](../assets/icons/ui/add.svg){ .ui-icon } **Add Source** opens a menu. Choose **Add M3U Source**, **Add XC Source**, or **Add Custom Source** from that menu.
+- ![](../assets/icons/ui/add.svg){ .ui-icon } **Add Source** opens a menu. Choose **Add M3U Source**, **Add XC Source**, or **Add Custom Source** from that menu. See [Adding Playlists](playlists.md) for M3U and XC connections, or [Custom Sources](custom-sources.md) for manually entered channels.
 - ![](../assets/icons/ui/remove.svg){ .ui-icon } **Remove Source(s)** deletes the selected sources after confirmation. Review dependent layouts and output before removing them.
 
 ### Selected-source actions
@@ -38,16 +38,6 @@ The playlist section shows the configured M3U, Xtream Codes, and custom sources.
 Use **View Added** or **View Removed** to review recent provider changes. **Add EPG** creates an EPG source from information available in the selected playlist when that workflow is supported.
 
 Use ![](../assets/icons/ui/refresh.svg){ .ui-icon } **Sync** on one selected source when testing a change. Use the global **Sources** → **Sync All Sources** command when all configured playlist sources should be refreshed.
-
-## Sync on Start
-
-M3U and Xtream Codes source settings include **Automatically Sync Source on GUI Start**. Enable it when the source should be synchronized whenever the desktop application starts. A source that has never been synchronized is also eligible for its first sync; safe-mode sources are excluded.
-
-At GUI startup, IPTVBoss first loads the saved source and channel data. It then collects eligible sources into one sequential queue and starts that queue after the main startup and any required database, cloud, or sync-lock work is ready. The main window may therefore appear before the startup sync begins. The progress view is titled **Syncing Startup Sources** and identifies the current source and its position in the queue.
-
-If a database transition is active, restored sources are loaded without an automatic GUI source sync. Run **Sync** manually after the transition is complete.
-
-The same cancellable workflow is used for a selected-source sync, **Sync All Sources**, startup synchronization, and a sync started after saving a source. Select **Cancel** in the progress view to request cancellation. The current network or processing step may finish before the cancellation takes effect; remaining sources in a batch are skipped. The source is recorded as **Sync cancelled**, and you can run it again later.
 
 ### Playlist detail sections
 
@@ -63,6 +53,16 @@ For M3U and Xtream Codes sources, category metrics are also interactive. Select 
 
 The **Inventory**, **Access & expiry**, and **Sync history** expansion choices are remembered. The inventory wraps into a narrower layout when the window is reduced. Fields that do not apply to an M3U or custom source are hidden rather than treated as zero.
 
+## Sync on Start
+
+M3U and Xtream Codes source settings include **Automatically Sync Source on GUI Start**. Enable it when the source should be synchronized whenever the desktop application starts. A source that has never been synchronized is also eligible for its first sync; safe-mode sources are excluded.
+
+At GUI startup, IPTVBoss first loads the saved source and channel data. It then collects eligible sources into one sequential queue and starts that queue after the main startup and any required database, cloud, or sync-lock work is ready. The main window may therefore appear before the startup sync begins. The progress view is titled **Syncing Startup Sources** and identifies the current source and its position in the queue.
+
+If a database transition is active, restored sources are loaded without an automatic GUI source sync. Run **Sync** manually after the transition is complete.
+
+The same cancellable workflow is used for a selected-source sync, **Sync All Sources**, startup synchronization, and a sync started after saving a source. Select **Cancel** in the progress view to request cancellation. The current network or processing step may finish before the cancellation takes effect; remaining sources in a batch are skipped. The source is recorded as **Sync cancelled**, and you can run it again later.
+
 ## EPG sources
 
 The EPG section lists configured EPG feeds, including the built-in dummy source when present. The details panel shows the source name, channel count, synchronization/output times, preferred language, and whether the source is available for mapping or output.
@@ -71,7 +71,7 @@ The EPG section lists configured EPG feeds, including the built-in dummy source 
 
 ### EPG toolbar
 
-- ![](../assets/icons/ui/add.svg){ .ui-icon } **Add EPG** creates a new XMLTV or other supported EPG source.
+- ![](../assets/icons/ui/add.svg){ .ui-icon } **Add EPG** creates a new XMLTV or other supported EPG source. Follow [Adding an EPG Source](epg-sources.md).
 - ![](../assets/icons/ui/remove.svg){ .ui-icon } **Remove EPG(s)** removes selected EPG sources after confirmation. Check current channel mappings first.
 - ![](../assets/icons/ui/sort_az.svg){ .ui-icon } **Sort A to Z** sorts the EPG source list alphabetically and saves the new order. When multiple sources are selected, the selected range is sorted.
 
@@ -88,23 +88,7 @@ The **Inventory**, **Output & matching**, and **Sync history** expansion choices
 
 ### Dummy Guide inventory
 
-Available in **3.11.108 and later**, the Dummy Guide inventory brings basic dummy channels and [Advanced EPG Dummies (AEDs)](../features/aed.md) together in one searchable table.
-
-Open **Sources** → **Dummy Guide Inventory**, or select the built-in dummy source in **EPG Sources** and open **EPG Settings**. The window is titled **Edit Dummy EPG Channels**.
-
-![Edit Dummy EPG Channels showing filters and AED usage across layouts](<../3.11.108/Edit Dummy EPG Channels.png>)
-
-Use **Type** to show all entries, basic dummies, AEDs, or sports AEDs. Use **Usage** to show all, used, or unused entries. Search by EPG ID, original ID, or name; search and dropdown filters work together. The count above the table shows how many entries match.
-
-The table shows each entry's type, EPG ID, name/title, usage count, and the layouts/groups where it is used. AED details also include sports/leagues, **Events Today**, **Fallback AED**, and **Last Updated**, where applicable. Double-click an entry to open its editor.
-
-- **Add Basic Dummy** creates a basic dummy channel; **Add AED** opens the AED creation workflow.
-- **Import AEDs** loads AED definitions from a file.
-- **Export Selected AEDs** exports selected AED definitions. Basic dummy rows are excluded from AED exports.
-- **Select All Visible** selects entries matching the current filters; **Clear Selection** clears the selection.
-- **Delete Selected** asks for confirmation and reports how many selected entries are currently used by layouts. Review **Used In** before deleting: deleting a used entry can remove its EPG assignment from future output.
-
-In Sources Manager, the built-in dummy source also shows totals for basic dummies, AEDs, assigned and unused AEDs, sports AEDs, today's events, and Custom Sports groups and channels. Select **Unused AEDs** to open the inventory filtered to unused AEDs.
+Open **Sources** → **Dummy Guide Inventory** to create, find, edit, or remove basic dummy guides and AEDs. See [Dummy Guides and Inventory](dummy-guides.md) for filters, usage counts, import/export, and deletion guidance.
 
 ## Synchronization workflow
 

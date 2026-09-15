@@ -28,21 +28,4 @@ The **Automation Operations** area shows pending or failed journaled mutations. 
 
 ## Access the OpenAPI specification
 
-External API keys can retrieve the raw OpenAPI JSON (`openapi.json`) document from:
-
-```text
-https://server.example/openapi
-```
-
-Send the key in the `X-IPTVBoss-Api-Key` header:
-
-```bash
-curl -H 'X-IPTVBoss-Api-Key: YOUR_KEY' \
-  https://server.example/openapi
-```
-
-The specification endpoint accepts a valid, non-revoked external automation key and does not require a user scope. API-key rate limits and access auditing still apply. An authenticated administrator console session can also access the specification.
-
-The interactive `/swagger` UI and its web assets remain administrator-session-only; an API key by itself does not sign in to the console or open Swagger UI.
-
-The current specification documents user metadata, user listing and detail, create/patch/delete, asynchronous operation status, and layout-specific password set/regenerate operations. The former `POST /api/v1/users/{id}/reset-password` route remains documented as retired and returns `410 Gone`; use the layout-specific routes instead.
+Use [Using the API and Swagger](swagger.md) for the raw specification, authentication requirements, and endpoint examples. Manage key creation, permissions, expiry, and revocation on this page.

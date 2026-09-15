@@ -31,29 +31,6 @@ An EPG (XMLTV) source supplies programme information that can be assigned to cha
 
 The built-in source is then available for synchronization and channel mapping like another EPG source. If the source is not listed or is locked, confirm the account status in [Free vs Pro](../getting-started/free-vs-pro.md) and [IPTVBoss Pro Settings](../settings/pro.md).
 
-## Manage the built-in Dummy Guide
-
-Use **Sources** → **Dummy Guide Inventory** to manage basic dummy channels and AEDs in **3.11.108 and later**. You can also select the built-in dummy source in Sources Manager and open **EPG Settings**. See [Dummy Guide inventory](sources-manager.md#dummy-guide-inventory) for filtering, usage details, editing, import/export, and deletion.
-
-## Configure the EPG Layout
-
-The **EPG Layout** section controls how imported programme components are combined when IPTVBoss writes the output guide. It is available while adding or editing an EPG source.
-
-The editor contains three list views:
-
-- **Title** — components used to create the programme title.
-- **Description** — components included in the programme description.
-- **Remove Components** — original components removed from the output XML after the title and description are created.
-
-The available components are displayed above the lists. Drag a component into the required list and drop it in the order you want it to appear. For example, place **Title**, **Subtitle**, and **Movie Year** in the Title list, and place **Description** and **Category** in the Description list. Use **Next Line** or punctuation components when the output needs separators or line breaks.
-
-To remove a component from one of the three lists, select it and right-click it. The component is removed from that list; it is not deleted from the source data. Components placed in **Remove Components** are omitted from the generated XML output, which can reduce duplicate or unwanted metadata.
-
-!!! note
-    Selecting a source from the **Copy Layout** dropdown loads that source's existing Title, Description, and Remove Components arrangement as a starting point. Review the copied layout before saving.
-
-Save the EPG source after reviewing the three lists, then synchronize the source and inspect the generated guide output.
-
 ## Synchronize the EPG source
 
 1. Open [Sources Manager](sources-manager.md).
@@ -72,3 +49,8 @@ After synchronizing an external or built-in source, use [Channel Mapping](channe
 ## Verify the source
 
 The source is ready for mapping when synchronization completes and the expected channel names are available in the layout editor’s EPG controls.
+## Manage the built-in Dummy Guide
+
+Use **Sources** → **Dummy Guide Inventory** to manage basic dummy channels and AEDs in **3.11.108 and later**. You can also select the built-in dummy source in Sources Manager and open **EPG Settings**. See [Dummy Guides and Inventory](dummy-guides.md) for filtering, usage details, editing, import/export, and deletion.
+
+- <span id="configure-the-epg-layout"></span>[Configure the EPG Layout](epg-formatting.md#configure-the-epg-layout)

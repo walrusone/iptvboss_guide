@@ -1,4 +1,4 @@
-# Server Console: Swagger API Documentation
+# Using the API and Swagger {#server-console-swagger-api-documentation}
 
 --8<-- "includes/xc-server-preview.md"
 
@@ -12,12 +12,16 @@ https://server.example/swagger
 
 After signing in to the console, open the **Swagger** link or the server's `/swagger` path. The documentation session is separate from an external automation API key; use a valid key when testing an endpoint that requires one.
 
+Create a key in [API Keys](api.md#external-automation-keys) before making external requests.
+
 The raw OpenAPI JSON (`openapi.json`) specification is available at `/openapi`. External automation clients can fetch it with a valid `X-IPTVBoss-Api-Key` header, which is useful for code generation and client discovery:
 
 ```bash
 curl -H 'X-IPTVBoss-Api-Key: YOUR_KEY' \
   https://server.example/openapi
 ```
+
+The raw specification accepts a valid, non-revoked external automation key without a user scope; key rate limits and access auditing still apply. An authenticated administrator console session can also access the specification.
 
 For documentation access, the API key grants access to the raw specification only; it does not grant access to the interactive `/swagger` page or its supporting web assets, which require an authenticated administrator console session.
 

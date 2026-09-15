@@ -56,79 +56,104 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Changelog: changelog.md
   - Start Here:
       - First Working Setup: getting-started/first-working-setup.md
-      - Free vs Pro: getting-started/free-vs-pro.md
       - Installation: getting-started/installation.md
       - First Run: getting-started/first-run.md
+      - Free vs Pro: getting-started/free-vs-pro.md
       - Updating IPTVBoss: getting-started/updating.md
   - Sources:
-      - Sources Manager: setup/sources-manager.md
       - Adding Playlists: setup/playlists.md
+      - Custom Sources: setup/custom-sources.md
       - Playlist Categories: setup/playlist-categories.md
-      - Adding EPG Sources: setup/epg-sources.md
+      - Sources Manager: setup/sources-manager.md
+      - Prefix Removal and Tags · PRO: setup/source-tools.md
   - Build a Layout:
       - Layout Overview: layouts/index.md
       - Layout Manager: layouts/layout-manager.md
+      - Importing Channels: layouts/importing-channels.md
+      - Linked Layout Groups · PRO: layouts/linked-groups.md
+      - Layout File Import and Export · PRO: layouts/layout-files.md
       - Layout Editor: layouts/layout-editor.md
-      - Channel Mapping: setup/channel-mapping.md
-      - Layout Tools:
+      - Keep Layouts Updated:
           - New Channel Manager: layouts/new-channel-manager.md
           - New Category Manager: layouts/new-category-manager.md
+  - EPG & Mapping:
+      - EPG Overview: setup/epg-overview.md
+      - Adding EPG Sources: setup/epg-sources.md
+      - Channel Mapping: setup/channel-mapping.md
+      - EPG Browser · PRO: setup/epg-browser.md
+      - Dummy Guides and Inventory: setup/dummy-guides.md
+      - EPG Formatting and Overrides · PRO: setup/epg-formatting.md
+      - Universal EPG · PRO: setup/universal-epg.md
   - Output & Users:
       - Layout Output Settings: layouts/output-settings.md
-      - Creating Output: setup/output.md
-      - Desktop Output Users: layouts/users.md
-  - Automation & Cloud:
       - Cloud Provider Setup: settings/cloud-providers.md
+      - Creating Output: setup/output.md
       - Cloud Output Links: setup/output-links.md
-      - External noGUI Scheduling: settings/automation.md
+      - Desktop Output Users: layouts/users.md
+      - Connect a Player: setup/connect-player.md
+  - Sports & AEDs · PRO:
+      - Sports Overview: features/index.md
+      - Advanced EPG Dummies: features/aed.md
+      - AED Templates and Regex: features/aed-reference.md
+      - Manage and Refresh AEDs: features/aed-maintenance.md
+      - Custom Sports Groups: features/custom-sports.md
+      - TXT Fixture Names for AEDs: setup/custom-sports-channel-names.md
+  - Automation & Sync:
+      - Choose a Scheduling Method: settings/sync-overview.md
       - Sync Schedule · PRO: settings/scheduling.md
+      - External noGUI Scheduling: settings/automation.md
       - Email Notifications · PRO: settings/email.md
-  - Advanced / Pro Features:
-      - Advanced Source Tools · PRO: setup/source-tools.md
-      - Universal EPG · PRO: setup/universal-epg.md
-      - EPG Browser · PRO: setup/epg-browser.md
-      - Advanced EPG Dummies · PRO: features/aed.md
-      - Custom Sports Channel Names · PRO: setup/custom-sports-channel-names.md
-      - Custom Sports Groups · PRO: features/custom-sports.md
-      - AI Settings · PRO: settings/ai.md
+      - Database Sync and Backups: settings/backups.md
   - XC Server · PRO · 3.12 BETA:
       - XC Server Overview: server/overview.md
-      - Setup:
-          - Setup Overview: server/setup/index.md
+      - First Connection: server/first-connection.md
+      - Install:
+          - Choose an Installation: server/setup/index.md
+          - Prepare an Ubuntu VPS: server/setup/prepare-vps.md
           - Docker Installation: server/setup/docker.md
-          - "Advanced Docker": server/setup/docker-advanced.md
-          - "Linux Service": server/setup/linux-service.md
-          - "macOS Service": server/setup/macos-service.md
-          - "Direct HTTPS": server/setup/direct-https.md
-          - "Windows Startup Task": server/setup/windows.md
-      - Desktop Integration:
-          - GUI Server Dashboard: server/dashboard.md
-          - Desktop GUI Settings: server/gui-settings.md
-      - Server Console: server/index.md
-      - Server Console Sections:
-          - Login and Setup: server/console/login.md
-          - Logs: server/console/logs.md
-          - Boss Metadata: server/console/metadata.md
-          - Server Settings: server/console/settings.md
+          - Advanced Docker: server/setup/docker-advanced.md
+          - Linux Service: server/setup/linux-service.md
+          - macOS Service: server/setup/macos-service.md
+          - Windows Startup Task: server/setup/windows.md
+          - Direct HTTPS: server/setup/direct-https.md
+      - Connect & Pair:
+          - Connect the Desktop: server/gui-settings.md
+          - Paired Devices: server/console/paired-devices.md
+      - Users & Activity:
           - XC Server Users: server/console/users.md
           - User Activity: server/console/activity.md
-          - Paired Devices: server/console/paired-devices.md
-          - Link Restore: server/console/link-restore.md
-          - API Keys: server/console/api.md
-          - Swagger API Documentation: server/console/swagger.md
+      - Console & Operations:
+          - Server Console: server/index.md
+          - Login and Setup: server/console/login.md
+          - Desktop Server Dashboard: server/dashboard.md
+          - Server Settings and Schedules: server/console/settings.md
+          - Logs: server/console/logs.md
+      - Security & Recovery:
           - Console Security: server/console/security.md
-          - Administrator Account: server/console/administrator.md
+          - XC Server Recovery: server/recovery.md
+          - XC Server Troubleshooting: server/troubleshooting.md
+          - Link Restore: server/console/link-restore.md
+      - Runtime Configuration: server/runtime.md
+      - API & Integrations:
+          - API Keys: server/console/api.md
+          - Using the API and Swagger: server/console/swagger.md
   - Settings:
       - Application Settings: settings/application.md
       - Preferences and Theme: settings/preferences.md
+      - AI Settings · PRO: settings/ai.md
       - IPTVBoss Pro Settings: settings/pro.md
-  - Troubleshooting:
+  - Troubleshooting & Recovery:
       - Common Problems: troubleshooting/common-problems.md
+      - AED Troubleshooting: troubleshooting/aed.md
       - Logs and Diagnostics: troubleshooting/logs.md
+      - Restore a Database Backup: troubleshooting/restore.md
+      - Application Files: troubleshooting/application-files.md
+      - Additional Recovery Procedures: troubleshooting/recovery.md
       - Resetting IPTVBoss: troubleshooting/reset.md
-      - Recovery and Application Files: troubleshooting/recovery.md
   - Frequently Asked Questions: faq.md
   - Support: support.md
+  - Release Notes:
+      - Release Highlights: release-highlights.md
+      - Build Changelog: changelog.md

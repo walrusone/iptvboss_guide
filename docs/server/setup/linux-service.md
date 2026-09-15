@@ -7,6 +7,8 @@ The Linux service runs IPTVBoss continuously without the desktop interface and e
 !!! note
     The service binds IPTVBoss to loopback. Put a reverse proxy such as [Caddy](https://caddyserver.com/) in front of it when the server must be reachable from other machines.
 
+For a new public Ubuntu host, first follow [Prepare an Ubuntu VPS](prepare-vps.md).
+
 ## Install IPTVBoss
 
 Install IPTVBoss normally using the [Linux installation instructions](../../getting-started/installation.md#linux). The package installs the `iptvboss` command at `/usr/bin/iptvboss`.
@@ -96,7 +98,9 @@ sudo chown -R iptvboss:iptvboss /srv/iptvboss
 
 If your existing installation uses a different data directory, copy that directory instead. Keep a backup before migrating.
 
-Enable and start the service:
+## Enable and start the service
+
+For either service-account choice, enable and start the service:
 
 ```bash
 sudo systemctl daemon-reload

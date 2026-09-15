@@ -5,11 +5,13 @@ Update IPTVBoss while protecting the database, settings, layouts, and source con
 !!! note "Automatic updates"
     Windows and macOS installations should normally update automatically when a new release is available. Use this page when an automatic update does not complete, when you need to verify the installed version, or when updating a Linux package manually.
 
+For a server, use the [platform-specific backup and update procedures](../settings/backups.md#back-up-or-update-an-xc-server).
+
 ## Before updating
 
 1. Finish any source synchronization and output operation, or select **Cancel** for an in-progress source sync and wait for its progress view to close.
 2. Confirm that no second IPTVBoss process is using the database.
-3. Create or confirm a recent database backup.
+3. [Create or confirm a recent backup](../settings/backups.md).
 4. Record the current IPTVBoss version and operating system.
 5. Download the new installer only from the [official IPTVBoss download page](https://walrusone.github.io/iptvboss-release/download.html). Use the [GitHub Releases page](https://github.com/walrusone/iptvboss-release/releases/latest) when you need direct assets or release notes.
 

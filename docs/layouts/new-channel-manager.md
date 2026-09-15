@@ -26,7 +26,7 @@ When the provider adds a channel, IPTVBoss checks its source and category agains
 
 Source synchronization now handles this automatic placement more efficiently when a large playlist adds many channels. The rule itself is unchanged: it applies only to newly discovered channels whose source and category match the selected group.
 
-The rule only applies to new channels. It does not move existing channels between groups, and it does not make a disabled provider category available. To change existing content, use the [Channel Importer](../layouts/layout-editor.md#import-channels-with-channel-importer) or organize the channels in the Layout Editor.
+The rule only applies to new channels. It does not move existing channels between groups, and it does not make a disabled provider category available. To change existing content, use the [Channel Importer](../layouts/importing-channels.md) or organize the channels in the Layout Editor.
 
 ## Source Categories options
 
@@ -45,3 +45,5 @@ When enabled, IPTVBoss keeps the channel name currently stored in IPTVBoss when 
 Choose an EPG source to use for new or refreshed **Live** channels in the selected category. During source processing, IPTVBoss first tries to match the channel's existing TVG ID in that EPG source; if there is no direct match, it can run the source's automatic EPG search. Choose **NO EPG** when the category should not receive a default EPG source.
 
 The Default EPG Source control is disabled when multiple categories are selected. Select one category to edit its default EPG source. The setting applies to the source category, not to every channel already in the layout.
+
+See [Choose the right category tool](../setup/playlist-categories.md#choose-the-right-category-tool) for the difference between source inclusion, manual import, and automatic layout rules.

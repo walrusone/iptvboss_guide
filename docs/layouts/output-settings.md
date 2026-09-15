@@ -6,7 +6,7 @@ Layout output settings determine which files or links are generated and where th
 
 1. Open [Layout Manager](layout-manager.md).
 2. Select a layout.
-3. Select **Edit Layout**.
+3. Expand **Output & Sync** and **Advanced / Custom** in the selected layout’s settings.
 4. Review the output settings before enabling the layout.
 5. Save the layout.
 
@@ -37,6 +37,8 @@ Common settings include:
 
 Do not enable multiple destinations until you understand which output is authoritative.
 
+Authorize a destination with [Cloud Provider Setup](../settings/cloud-providers.md), or follow [XC Server setup](../server/first-connection.md). For a shared guide, see [Universal EPG](../setup/universal-epg.md).
+
 ## Verify a layout
 
 1. Confirm the layout is enabled.
@@ -45,3 +47,5 @@ Do not enable multiple destinations until you understand which output is authori
 4. Confirm the filenames and destination.
 5. Test the resulting playlist and guide.
 6. Use [Cloud Output Links](../setup/output-links.md) when the layout publishes cloud links.
+
+For programme title and description rules, see [EPG Formatting and Overrides](../setup/epg-formatting.md).

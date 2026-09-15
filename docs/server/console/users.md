@@ -49,3 +49,5 @@ Each assigned XC-enabled layout has its own XC login password. In **Edit User**,
 6. Review server logs after saving changes.
 
 Server changes affect the shared authoritative database. Do not edit the same users from another IPTVBoss or XC Server process at the same time.
+
+See [provider credentials](../../layouts/users.md#understand-provider-credentials) for the shared source/user model, then [Connect a Player](../../setup/connect-player.md) to test delivery.

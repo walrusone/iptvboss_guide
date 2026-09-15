@@ -29,3 +29,5 @@ It does not:
 - change category rules configured in New Channel Manager.
 
 After a new category is added, review the layout groups and use [New Channel Manager](new-channel-manager.md) if channels from that category should automatically enter a particular group in future updates.
+
+See [Choose the right category tool](../setup/playlist-categories.md#choose-the-right-category-tool) for the difference between source inclusion, manual import, and automatic layout rules.

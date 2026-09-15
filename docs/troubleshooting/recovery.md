@@ -1,52 +1,11 @@
 # Recovery and Application Files
 
-This page covers common application locations and a Dropbox-based recovery workflow. Recovery can replace current data, so preserve the current database before changing or deleting anything.
+Start with [Restore a Database Backup](restore.md) to choose local, cloud, link, or XC Server recovery. This page links to application files and XC pairing recovery, and covers Dropbox-specific recovery steps. Recovery can replace current data, so preserve the current database before changing or deleting anything.
 
-## Application folder locations
+- <span id="application-folder-locations"></span>[Application folder locations](application-files.md#application-folder-locations)
 
-| Operating system | Default location |
-| --- | --- |
-| Windows | `C:\Users\{user}\IPTVBoss` |
-| Linux | `/home/{user}/IPTVBoss` |
-| macOS | `~/Library/Application Support/IPTVBoss/` |
-
-When Windows and headless Linux use the same synchronized installation data, the Windows drive path may appear under the Linux application folder, for example:
-
-```text
-/home/{user}/IPTVBoss/C:
-```
-
-If the Windows installation uses another drive or custom path, use the corresponding folder name instead of `C:`.
-
-The `db` and `backup` directories are especially important. Do not delete them until you have copied them somewhere safe and confirmed that the copy can be read.
-
-## Restore an XC Server paired code
-
-<span class="pro-badge">PRO</span> This recovery workflow applies to XC Server.
-
-When an installation is reinstalled, moved to another computer, or loses its local XC Server pairing, use **XC Server Paired Code Restore** when the server provides a paired recovery code. This restores the installation’s connection to the existing XC Server without creating a new server or replacing the server database.
-
-Before starting, confirm that you are using the intended XC Server and that the current server database is backed up. A paired code grants access to that server and should be handled like a temporary credential.
-
-1. Open the [Server Console](../server/index.md) in a browser, then open [Paired Devices](../server/console/paired-devices.md).
-2. Generate or copy the paired recovery code for the installation.
-3. On the installation being recovered, open **Settings** → **Server Settings**.
-4. Open **XC Server Paired Code Restore**.
-5. Enter the server address when requested, then paste the paired code.
-6. Apply the restore and wait for the installation to report that it is paired.
-7. Confirm the installation in the server’s **Paired Devices** list.
-8. Review **XC Cloud Database** settings and confirm that synchronization is enabled only when the server database should be authoritative.
-
-!!! warning
-    Do not use paired code restore to initialize an unrelated server or to replace a database. If the server is already paired to other installations, confirm the server URL and database owner before applying the code.
-
-If the pairing code is expired or rejected, generate a new code and repeat the restore. For the normal first-time pairing flow, see [Bootstrap an empty XC Server with GUI pairing](../server/gui-settings.md#bootstrap-an-empty-xc-server-with-gui-pairing).
-
-## Unpair when the XC Server is unavailable
-
-Open **Settings** → **Server Settings** and select **Unlink This Installation**. IPTVBoss stops the local XC heartbeat, attempts to revoke the server-side client, and removes the local pairing even if the server is unreachable. The status message identifies when the old server-side pairing may remain until the server can be contacted.
-
-If the server is still in bootstrap mode, use [Repair a server left in bootstrap mode](../server/gui-settings.md#repair-a-server-left-in-bootstrap-mode). Choose a local unpair/re-pair action when the server database and identity must remain intact. Use the full reset only when all XC pairing and backup history should be erased.
+- <span id="restore-an-xc-server-paired-code"></span>[Restore an XC Server paired code](../server/recovery.md#restore-an-xc-server-paired-code)
+- <span id="unpair-when-the-xc-server-is-unavailable"></span>[Unpair when the XC Server is unavailable](../server/recovery.md#unpair-when-the-xc-server-is-unavailable)
 
 ## Restore a deleted Dropbox backup
 
@@ -89,7 +48,7 @@ Repeat with another dated backup if the first one does not resolve the problem.
 
 ## Full reinstall and restore
 
-Use a full reinstall only when IPTVBoss cannot open or a normal database restore does not solve the problem.
+Use a full reinstall only when IPTVBoss cannot open or a normal database restore does not solve the problem. Before manually deleting application data, obtain the version-specific instructions described in [Reset only after review](reset.md#reset-only-after-review).
 
 1. Close IPTVBoss and stop any noGUI or server process.
 2. Move the contents of the application `db` and `backup` directories to a safe location.

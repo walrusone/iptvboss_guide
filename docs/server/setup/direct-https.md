@@ -91,6 +91,8 @@ openssl pkcs12 -info -noout -in keystore.p12
 
 Both commands prompt for the password. IPTVBoss refuses to start if the file is missing, cannot be opened with the configured password, or does not contain a private key and certificate chain.
 
+The native examples below cover Linux systemd and macOS launchd. They do not provide a complete Windows startup-task certificate configuration.
+
 ## Configure a native installation
 
 Stop XC Server before replacing its certificate. Copy the store into the same data directory used by IPTVBoss and restrict it to the service account. This example uses `/srv/iptvboss` and the account `ubuntu`:

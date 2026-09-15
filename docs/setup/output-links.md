@@ -2,6 +2,8 @@
 
 When cloud output is configured, IPTVBoss can display the generated M3U and EPG links for use in a player or downstream service.
 
+First complete [Cloud Provider Setup](../settings/cloud-providers.md) and [Layout Output Settings](../layouts/output-settings.md).
+
 ## Generate cloud output
 
 1. Confirm that the intended [layout](../layouts/layout-manager.md) is enabled.

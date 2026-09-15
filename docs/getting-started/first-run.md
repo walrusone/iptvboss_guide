@@ -10,7 +10,7 @@ After installation, start IPTVBoss and confirm that the application can open its
 
 If the database already contains sources, eligible sources may begin a deferred **Sync on Start** batch after the main window opens. Allow the batch to finish before generating output, or select **Cancel** in its progress view and run the source sync later from [Sources Manager](../setup/sources-manager.md).
 
-The first launch creates or opens the local IPTVBoss data used by the application. Keep the application’s data location backed up before making major changes.
+The first launch creates or opens the local IPTVBoss data used by the application. [Preserve the application data](../settings/backups.md#preserve-the-current-desktop-installation) before making major changes.
 
 ![IPTVBoss application settings](../assets/images/getting-started/iptvboss-settings-1.png)
 
@@ -34,7 +34,7 @@ If you have an IPTVBoss Pro subscription, open [IPTVBoss Pro Settings](../settin
 
 ## Existing databases
 
-If you are updating or moving IPTVBoss, do not create a new empty database until you have confirmed that your existing database is backed up. Follow [Updating IPTVBoss](updating.md) and the recovery guidance before restoring data.
+If you are updating or moving IPTVBoss, do not create a new empty database until you have confirmed that your existing database is backed up. Follow [Updating IPTVBoss](updating.md) and [Restore a Database Backup](../troubleshooting/restore.md) before restoring data.
 
 ## Confirm that setup is complete
 
