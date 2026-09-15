@@ -1,6 +1,21 @@
 # Changelog
 
-## 📢 IPTVBoss 3.11.135
+## 📢 IPTVBoss 3.11.138
+
+### 🏟️ Custom Sports and AED
+
+- **New:** Custom Sports groups can enable an exclusions list in **Sports Settings**. Exclusions are case-insensitive literal keywords or phrases matched against the original provider channel name.
+- **New:** Excluded channels are removed before AED lookup, sports classification, sorting, and custom presentation numbering. This is independent of **Remove Channels without Events**, and the source channels remain available to other groups and layouts.
+- **New:** Custom Sports presentation settings can preserve linear channels with their original names and logos, and eligible individual channels can use **Ignore Custom Presentation**. Excluded or ignored channels do not consume a presentation number.
+- **Fix:** Custom Sports previews and generated output now use the same final filtered order for presentation names and logos.
+- **Fix:** AED event keep-window checks honor the configured event duration for same-day events, including zero-hour configurations.
+- **Fix:** Sports team matching handles Manchester United and Manchester City derby names without incorrectly rejecting either team.
+
+### 💾 Backups, synchronization, and dialogs
+
+- **Improvement:** User backup and cloud publication workflows now use verified snapshots, mutation journaling, ownership handoff, and deferred retry handling so active edits are not overwritten or published from a stale database.
+- **Fix:** Console and cloud user mutations coordinate their publication handoff and report unresolved publication blockers instead of silently losing changes.
+- **Improvement:** Large scrollable dialogs now choose a more useful initial viewport and window bounds during startup.
 
 ### 🧭 Sources and playlist synchronization
 

@@ -8,6 +8,8 @@ The editor is divided into three working areas: groups on the left, channels in 
 
 The right side has two main panels: **Channel Options** and **Group Options**. **Basic Info** and **EPG Mapping** are sections inside **Channel Options**. Select a section header to expand or collapse it. IPTVBoss remembers these choices between uses.
 
+![Current Layout Editor Channel Options](<../3.11.138/Layout Editor Channel Options.png>)
+
 ### Programme preview
 
 The editor can show programme information when preview data is available. The three programme cards show the previous, current, and next entries for the selected EPG mapping.
@@ -138,6 +140,8 @@ The **Channel Options** header also provides these actions:
 
 In **Basic Info**, select ![](../assets/icons/ui/revert.svg){ .ui-icon } **Revert to Provider Name** beside **Channel Name** to restore the name supplied by the playlist source. Beside **Channel Logo**, ![](../assets/icons/ui/find_replace.svg){ .ui-icon } **Find and Replace** updates logo text or links for selected channels; **EPG Logo** and **M3U Logo** copy the logo from the corresponding source when one is available.
 
+For a channel in a Custom Sports group with a configured presentation, **Ignore Custom Presentation** keeps that channel’s normal name and logo. The channel still participates in the group’s exclusions, AED processing, sports classification, and sorting. Select the checkbox and save the channel change; it can be applied to multiple eligible channels.
+
 ### Choose the channel name source
 
 Each layout channel has a name mode beside **Channel Name**. The mode controls the name used by that layout’s playlist, guide, and player output:
@@ -191,6 +195,8 @@ Double-click a group name to edit it. Use the icon buttons above the lists for b
 
 Select a group, then expand **Group Options** on the right. Edit **Group Name** or the available group settings, then select ![](../assets/icons/ui/save.svg){ .ui-icon } **Save Group(s)**. The group options header also contains **Ignore Empty Group Health Check** for suppressing the selected group’s empty-group health warning.
 
+![Current Layout Editor Group Options](<../3.11.138/Layout Editor Group Options.png>)
+
 The **Group Options** header can also contain:
 
 | Control | What it does |
@@ -206,6 +212,8 @@ For an application-wide refresh, use **Sources** → **AED Refresh…**. **Refre
 ### Custom sports presentation
 
 When **Custom Sports Group** is enabled, expand **Custom sports presentation** in **Group Options** to configure a numbered channel presentation. Set the name prefix and number padding, choose a prebuilt logo set or enter a custom {num} logo URL, and decide whether the presentation should override AED names or logos. The section includes a live preview of the generated name and logo URL.
+
+Enable **Exclude linear channels from custom presentation** to leave linear channels in the group with their original names and logos. Only Dummy EPG channels receive the numbered custom presentation with this option enabled. Select **Edit Sports Settings** to manage keyword or phrase exclusions; those exclusions remove matching channels before sports processing.
 
 See [Custom Sports Groups](../features/custom-sports.md#customize-the-sports-presentation) for the complete setup and numbering behavior.
 

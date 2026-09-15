@@ -26,7 +26,19 @@ If the Custom Sports controls are unavailable, confirm that the group is configu
 4. Change the filters or bucket order.
 5. Select **OK**, then refresh or regenerate output to review the result.
 
-![Sports Settings dialog for a Custom Sports group](../assets/images/layout/custom-sports-settings.png)
+![Sports Settings dialog for a Custom Sports group](<../3.11.138/Custom Sports Group Settings.png>)
+
+## Exclude channels by keyword or phrase
+
+Use **Exclusions** in **Sports Settings** when a provider supplies channels that should never enter the Custom Sports group, such as Spanish-language alternates or duplicate feeds.
+
+1. Open **Edit Sports Settings** for the Custom Sports group.
+2. Select **Enable exclusions**.
+3. Select **Add** and enter one keyword or phrase, then repeat for each term.
+4. Select a saved term and choose **Remove** when it is no longer needed.
+5. Select **OK** to save the sports settings.
+
+Matching is case-insensitive and uses the original channel name supplied by the provider. Terms are literal phrases, not regular expressions. A channel is excluded when its original name contains any saved term; a channel without an original provider name is not matched. Exclusions apply only to Custom Sports groups and are applied before AED lookup, sports classification, sorting, and custom presentation numbering, so an excluded channel is removed even when **Remove Channels without Events** is disabled and does not consume a presentation number. The underlying source channel remains available to other groups and layouts. A linked group uses the settings of its linked source group.
 
 ## Customize the sports presentation
 
@@ -43,7 +55,7 @@ A Custom Sports group can give its channels a consistent presentation name and n
 
 The logo set and custom URL are alternatives. A custom URL takes precedence when both are present. The selected catalog set uses the digit width required by that set; the preview shows the resulting URL and width.
 
-Numbering follows the final channel order after the group’s filters and sports sort order are applied. A channel that moves because of favorites, event status, or time sorting receives the number for its new position.
+Numbering follows the final channel order after the group’s exclusions, filters, and sports sort order are applied. A channel that moves because of favorites, event status, or time sorting receives the number for its new position. Excluded channels and channels with **Ignore Custom Presentation** enabled do not consume a number.
 
 ### AED names and logos
 
@@ -55,6 +67,16 @@ The group presentation is also used by the Layout Editor’s channel list, progr
 
 Prebuilt logo sets are labeled by provider and variant. For example, alternate ESPN+, ESPNPlay, NCAAB, MLB, NBA, NFL, NHL, PPV, and regional sets have distinct names in the selector. Choose the variant whose numbered URL matches the assets you want to publish.
 
+### Skip the presentation for selected channels
+
+When a Custom Sports group has a name prefix or logo configured, eligible channels can enable **Ignore Custom Presentation** in **Channel Options**. The channel keeps its normal name and logo while remaining subject to the group’s sports filtering and sorting. This is useful when one channel in a numbered group should retain its provider or AED presentation.
+
+![Layout Editor Channel Options with Ignore Custom Presentation](<../3.11.138/Layout Editor Channel Options.png>)
+
+In **Custom sports presentation**, enable **Exclude linear channels from custom presentation** to keep linear channels in the group while preserving their original names and logos. Only channels assigned to the Dummy EPG source receive the group’s numbered presentation when this option is enabled.
+
+![Layout Editor Group Options with Custom Sports presentation](<../3.11.138/Layout Editor Group Options.png>)
+
 ## Filtering options
 
 | Setting | Behavior |
@@ -64,6 +86,7 @@ Prebuilt logo sets are labeled by provider and variant. For example, alternate E
 | **When sorting by time, move ended events to the bottom** | Keeps ended events in their normal bucket but places them below active and upcoming events. This applies only when **Sort by Time** is enabled. |
 | **Only Daily Events** | Limits the group to events happening today. |
 | **Treat Team-Based Channels as Event Channels** | Makes team-based channels follow event-style grouping and allows options such as **Only Daily Events** to apply to them. |
+| **Enable exclusions** | Removes channels whose original provider name contains one of the saved exclusion terms before sports processing. |
 
 Start with **Remove Channels without Events** and **Only Daily Events** when you want a compact daily sports group. Add **Sort by Time** when the viewing order should follow the schedule.
 
