@@ -1,6 +1,6 @@
 # XC Server Users
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 Use **User Management** to control users whose layouts, source credentials, and output links are managed through the XC Server. Changes require console editing access and may be unavailable while another editor or synchronization process owns the database.
 

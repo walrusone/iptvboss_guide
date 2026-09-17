@@ -62,6 +62,7 @@ nav:
       - First Run: getting-started/first-run.md
       - Free vs Pro: getting-started/free-vs-pro.md
       - Updating IPTVBoss: getting-started/updating.md
+      - Update from 3.11.16: getting-started/update-from-3.11.16.md
   - Sources:
       - Adding Playlists: setup/playlists.md
       - Custom Sources: setup/custom-sources.md
@@ -106,7 +107,7 @@ nav:
       - External noGUI Scheduling: settings/automation.md
       - Email Notifications · PRO: settings/email.md
       - Database Sync and Backups: settings/backups.md
-  - XC Server · PRO · 3.12 BETA:
+  - XC Server · PRO:
       - XC Server Overview: server/overview.md
       - First Connection: server/first-connection.md
       - Install:

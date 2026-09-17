@@ -1,6 +1,6 @@
 # Desktop GUI Settings
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 Open **Settings** → **Server Settings** in the desktop IPTVBoss application. These settings connect the desktop installation to the XC Server and control its server, network, output, security, and synchronization behavior.
 
@@ -46,7 +46,7 @@ The client must be paired, XC must be enabled in its saved configuration, and th
 
 ## Server and Network
 
-Use **Enable XC Server** when this installation should provide the XC Server service. Use **Block direct connections (bind to 127.0.0.1)** only when the server must be local-only; it prevents remote paired devices from reaching it.
+Use **Enable XC Server** when this installation should provide the XC Server service. Use **Block direct connections (bind to 127.0.0.1)** when a native server should accept connections only from the same host, such as through a reverse proxy running on that host. Remote devices can still connect through that proxy. Clear it for direct LAN connections. Command-line and environment bind-address overrides take precedence; see [Update from 3.11.16](../getting-started/update-from-3.11.16.md#choose-the-correct-server-mode).
 
 Enabling the XC Server does not require any layout to be enabled for XC output. The server can be used solely to deliver M3U playlists. Enable **XC Enabled** on a layout only when that particular layout should participate in XC Server output.
 

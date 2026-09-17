@@ -1,6 +1,6 @@
 # Advanced Docker Configuration
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 Start with the [beginner Docker installation](docker.md). This page explains variations that are useful after the basic Compose setup is understood.
 
@@ -21,8 +21,8 @@ The exact Docker volume names include the Compose project name, which normally c
 The image repository and tag are separate settings:
 
 ```env
-IPTVBOSS_IMAGE=ghcr.io/walrusone/iptvboss-alpha
-IPTVBOSS_TAG=alpha
+IPTVBOSS_IMAGE=ghcr.io/walrusone/iptvboss-release
+IPTVBOSS_TAG=latest
 ```
 
 This makes a future channel change an `.env` edit instead of a Compose-file edit. A moving channel tag receives new releases during `docker compose pull`. For a controlled production upgrade, set `IPTVBOSS_TAG` to an exact published version, create a backup, and then pull and recreate the service.

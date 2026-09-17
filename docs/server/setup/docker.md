@@ -1,6 +1,6 @@
 # Install the XC Server with Docker
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 This guide runs IPTVBoss as a standalone Docker container and stores its data in a Docker volume. It is written for a beginner using Ubuntu or Debian.
 

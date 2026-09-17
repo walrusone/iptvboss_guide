@@ -72,7 +72,7 @@ Each enabled user receives their own M3U link. Standard EPG output can be shared
 
 <span class="pro-badge">PRO</span> [Universal EPG](../setup/universal-epg.md) is often more efficient when every user uses the same EPG data. It allows IPTVBoss to publish one shared EPG file instead of generating multiple identical EPG files for separate users or layouts.
 
-<span class="pro-badge">PRO</span> For browser-based administration in the 3.12 Beta workflow, use [XC Server Users](../server/console/users.md). Server-side changes can trigger backups or cloud synchronization, so wait for the operation to finish before making another database change.
+<span class="pro-badge">PRO</span> For browser-based administration in the XC Server console, use [XC Server Users](../server/console/users.md). Server-side changes can trigger backups or cloud synchronization, so wait for the operation to finish before making another database change.
 
 !!! warning
     Do not include provider usernames, passwords, M3U links, EPG links, or access tokens in screenshots or support requests.

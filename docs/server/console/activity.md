@@ -1,6 +1,6 @@
 # XC Server User Activity
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 Use **User Activity** to review the latest successful activity recorded by the XC Server for each user. The section is read-only and does not require console editing access.
 

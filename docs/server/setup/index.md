@@ -1,6 +1,6 @@
 # XC Server Setup
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 !!! danger "Validate before production"
     The macOS launchd and Windows Task Scheduler instructions still require hands-on platform testing. The Windows scheduler also has weaker shutdown guarantees than a true service. The Linux service procedure is the tested native installation path.
@@ -20,8 +20,7 @@ For installations that cannot use a reverse proxy, see [Direct HTTPS](direct-htt
 
 ## Release channel
 
-!!! warning "Pre-release software"
-    The 3.12 Beta documentation currently uses the public Alpha container distribution channel. Pre-release builds can change without notice.
+Use the stable [iptvboss-release repository](https://github.com/walrusone/iptvboss-release/releases/latest) for application downloads. The Docker templates use `ghcr.io/walrusone/iptvboss-release:latest`.
 
 The Docker template keeps the image repository and version tag in `.env`, so a future distribution-channel change will not require editing `compose.yaml`. For a long-running installation, pin an exact tested version instead of automatically following a moving channel tag.
 

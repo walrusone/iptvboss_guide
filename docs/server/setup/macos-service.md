@@ -1,6 +1,6 @@
 # Install the XC Server as a macOS Service
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 !!! warning "Needs macOS testing"
     This procedure and its launchd template still need hands-on testing on both Apple Silicon and Intel macOS. Treat it as untested guidance until those checks are complete.

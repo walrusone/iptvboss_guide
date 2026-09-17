@@ -30,6 +30,7 @@ Choose the task you want to complete:
 
 | Task | Guide |
 | --- | --- |
+| Upgrade from 3.11.16 | [Update from 3.11.16](getting-started/update-from-3.11.16.md) |
 | Update an existing installation | [Updating IPTVBoss](getting-started/updating.md) |
 | Organize or maintain channels | [Layouts](layouts/index.md) |
 | Add or correct programme information | [EPG & Mapping](setup/epg-overview.md) |

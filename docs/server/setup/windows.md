@@ -1,6 +1,6 @@
 # Install the XC Server on Windows
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 !!! danger "Still requires Windows testing"
     This Task Scheduler procedure is not a fully tested Windows service installation. Task Scheduler can start IPTVBoss automatically, but it does not provide the same graceful shutdown guarantees as a true service wrapper. Reboot, shutdown, upgrade, and database-recovery testing is still required.

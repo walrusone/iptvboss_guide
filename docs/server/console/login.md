@@ -1,8 +1,12 @@
 # Server Console: Login and Setup
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 ![Server Console login](../../assets/images/server-console/server-login.png)
+
+## Updating an existing server
+
+When upgrading from 3.11.16 with an existing administrator password, sign in with username **`admin`** and **your existing password**. These are the console administrator credentials, separate from player credentials. See [Update from 3.11.16](../../getting-started/update-from-3.11.16.md) for connection-mode settings and migration checks.
 
 ## First-time setup
 

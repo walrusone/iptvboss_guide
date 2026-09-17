@@ -1,6 +1,6 @@
 # XC Server Recovery
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 Choose the procedure that matches the problem. Administrator recovery, desktop pairing, and database replacement affect different parts of the installation.
 

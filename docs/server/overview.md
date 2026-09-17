@@ -1,6 +1,6 @@
 # XC Server Overview
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 IPTVBoss can run as an XC Server without opening the desktop application. In this mode it runs continuously, provides the browser-based [Server Console](index.md), and serves XC playlists, EPG data, and streams.
 

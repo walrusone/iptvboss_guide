@@ -1,8 +1,8 @@
 # Server Console
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
-The IPTVBoss Server Console is the browser-based administration interface for an XC Server. The workflows below describe the planned 3.12 Beta interface. Open it from the server address in a browser; it is not a screen inside the desktop IPTVBoss application.
+The IPTVBoss Server Console is the browser-based administration interface for an XC Server. Open it from the server address in a browser; it is not a screen inside the desktop IPTVBoss application.
 
 ## Open the Server Console
 

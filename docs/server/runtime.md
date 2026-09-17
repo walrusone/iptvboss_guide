@@ -1,6 +1,6 @@
 # XC Server Runtime Configuration
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 Use this reference after choosing an [installation method](setup/index.md). For the first database and player connection, follow [First XC Server Connection](first-connection.md).
 

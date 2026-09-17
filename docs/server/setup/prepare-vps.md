@@ -1,6 +1,6 @@
 # Prepare an Ubuntu VPS
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 Use this page before [Linux Service](linux-service.md) when IPTVBoss will run on a public VPS. It prepares a new **Ubuntu Server 24.04 LTS** host with a normal administrator account, SSH key access, a firewall, basic SSH protection, automatic security updates, and DNS for Caddy.
 

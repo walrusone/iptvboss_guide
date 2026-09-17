@@ -1,6 +1,6 @@
 # Server Console: API Keys
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 ![Server Console API keys](../../assets/images/server-console/server-api.png)
 

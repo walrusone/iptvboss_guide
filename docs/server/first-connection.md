@@ -1,6 +1,6 @@
 # First XC Server Connection
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 Use this checklist to take an installed XC Server through database setup and a first player test.
 

@@ -1,6 +1,6 @@
 # Using the API and Swagger {#server-console-swagger-api-documentation}
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 ![Swagger API documentation](../../assets/images/server-console/server-swagger.png)
 

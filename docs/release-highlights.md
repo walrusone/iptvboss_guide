@@ -1,6 +1,6 @@
 # Release Highlights
 
-This summary groups the recent changes documented in the [build-by-build changelog](changelog.md). The upcoming stable release's version and distribution details have not yet been added here. XC Server remains documented as a preview; follow the preview notices and distribution-channel instructions on its pages.
+This summary groups the recent changes documented in the [build-by-build changelog](changelog.md). For an existing installation, start with [Update from 3.11.16](getting-started/update-from-3.11.16.md). Stable downloads are available from [iptvboss-release](https://github.com/walrusone/iptvboss-release/releases/latest).
 
 ## Sources and layouts
 
@@ -23,7 +23,7 @@ This summary groups the recent changes documented in the [build-by-build changel
 - Understand [NoGUI cancellation status and interrupted-run recovery](settings/automation.md#nogui-status-and-cancellation).
 - Review [NoGUI credential checks](settings/automation.md#automatic-nogui-user-checks) and the per-source opt-out.
 - Choose between [desktop, external, and server scheduling](settings/sync-overview.md).
-- Follow [First XC Server Connection](server/first-connection.md) for the documented preview workflow, including pairing, users, and player verification.
+- Follow [First XC Server Connection](server/first-connection.md) for the server workflow, including pairing, users, and player verification.
 - Manage layout-specific XC passwords in [Desktop Output Users](layouts/users.md#xc-passwords-and-activity) or [XC Server Users](server/console/users.md).
 - Use [API Keys](server/console/api.md) and [API documentation](server/console/swagger.md) for external automation.
 

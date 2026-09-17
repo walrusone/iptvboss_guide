@@ -1,6 +1,6 @@
 # Server Console: Security
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 ![Console security](../../assets/images/server-console/server-security-section-pin.png)
 

@@ -7,6 +7,10 @@ Update IPTVBoss while protecting the database, settings, layouts, and source con
 
 For a server, use the [platform-specific backup and update procedures](../settings/backups.md#back-up-or-update-an-xc-server).
 
+## Update from 3.11.16
+
+Read [Update from 3.11.16](update-from-3.11.16.md) before upgrading an existing installation. It covers the new XC Server administrator username (`admin` with your existing password) and the settings for reverse proxy, direct LAN HTTP, and direct HTTPS connections.
+
 ## Before updating
 
 1. Finish any source synchronization and output operation, or select **Cancel** for an in-progress source sync and wait for its progress view to close.

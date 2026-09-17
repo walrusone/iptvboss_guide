@@ -1,6 +1,6 @@
 # Server Console: Paired Devices
 
---8<-- "includes/xc-server-preview.md"
+--8<-- "includes/xc-server-pro.md"
 
 Use **Paired Devices** to generate a single-use pairing code, review connected clients, and revoke access for a device that should no longer reach the server. Pairing also provisions the client-specific credential that allows an IPTVBoss desktop installation to request an automatic server reload after its shutdown backup finishes.
 
