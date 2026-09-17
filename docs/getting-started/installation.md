@@ -52,18 +52,16 @@ On the first launch, macOS may ask you to confirm that you want to open an appli
 
 ## Linux
 
-1. Download the package matching your Linux architecture.
-2. Install the package using your distribution’s package manager.
-3. Start **IPTVBoss** from the applications menu or its installed command.
+For Ubuntu and other Debian-based distributions:
 
-For Debian-based Linux, the release package uses the version and system architecture in its filename. Download the current `.deb` from the official release page, then install that exact downloaded filename. For example, replace the placeholder below with the real filename:
+1. Open the [official download page](https://walrusone.github.io/iptvboss-release/download.html) and select **Linux**.
+2. Copy the command block under **Or install it from the command line**.
+3. Paste it into a terminal on the computer where you want to install IPTVBoss and run it. Enter your account password and approve installation if prompted.
+4. Start **IPTVBoss** from the applications menu.
 
-```bash
-cd ~/Downloads
-sudo apt install ./iptvboss_VERSION_ARCH.deb
-```
+The command detects your CPU architecture, downloads the matching `.deb`, and installs it with `apt`. Always copy the command from the download page so it uses the current release filename. If `wget` is missing, install it with `sudo apt install wget`, then run the download command again.
 
-The package format and installation command may vary by release. Follow the instructions attached to the selected release rather than copying a command from an older version.
+For a headless server, follow [Linux XC Server Installation](../server/setup/linux-service.md) instead of opening the desktop application. For other Linux distributions, use the package and instructions provided for your platform on the download page.
 
 ## Confirm the installation
 
