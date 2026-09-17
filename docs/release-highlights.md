@@ -19,6 +19,8 @@ This summary groups the recent changes documented in the [build-by-build changel
 
 ## Automation and server workflows
 
+- Refresh provider expiry from [Desktop Output Users](layouts/users.md#refresh-provider-expiry) or [XC Server Users](server/console/users.md#refresh-provider-expiry), and review how [XC account expiry](layouts/users.md#xc-account-expiry) follows each layout.
+- Understand [NoGUI cancellation status and interrupted-run recovery](settings/automation.md#nogui-status-and-cancellation).
 - Review [NoGUI credential checks](settings/automation.md#automatic-nogui-user-checks) and the per-source opt-out.
 - Choose between [desktop, external, and server scheduling](settings/sync-overview.md).
 - Follow [First XC Server Connection](server/first-connection.md) for the documented preview workflow, including pairing, users, and player verification.

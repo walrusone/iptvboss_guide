@@ -31,6 +31,29 @@ For example, when several users have accounts with Provider A:
 
 Repeat the source setup only when adding another provider. Create separate source entries for the same provider only when there is a specific reason to manage them independently.
 
+## Refresh provider expiry
+
+Select a user in **Manage Users**, then choose **Refresh Credentials**. IPTVBoss checks the user's enabled Xtream Codes credentials and password-backed M3U credentials whose source has an XC URL. It uses the credential's alternate provider URL when one is configured.
+
+The button shows **Refreshing…** while requests run in the background. The Manage Users dialog is temporarily disabled and cannot be closed until the refresh finishes. Review **Provider refresh results** for the result from each supported source.
+
+| Result | Effect on saved values |
+| --- | --- |
+| Expiry refreshed or unchanged | The provider confirmed the expiry; any supplied connection limit is updated. |
+| Provider omitted expiry | The previous expiry is kept and the supplied connection limit is updated. |
+| Login rejected | Expiry and connection limit become unknown. Check the provider credentials. |
+| Rate limit, failed request, or invalid data | Previous values are kept. For a rate limit, try later; for a failed request, review the IPTVBoss log. |
+
+**Disable NoGUI user checks** does not block manual refresh. For scheduled checks and their request limits, see [Automatic NoGUI user checks](../settings/automation.md#automatic-nogui-user-checks).
+
+## XC account expiry
+
+The expiry shown in desktop XC login details and returned to XC players is calculated for the selected layout. IPTVBoss considers enabled credentials used by enabled channels the user can access in that layout's enabled live, VOD, and series groups, including linked groups. Credentials for unrelated sources are excluded.
+
+When every relevant credential has a known expiry date, the account expiry is the **latest** of those dates. For example, if two providers in the layout expire on September 20 and October 10, the XC account reports October 10. Each provider still has its own expiry; this does not extend access to the earlier-expiring provider.
+
+If any relevant credential has an unknown or unlimited expiry, or no credentials qualify, desktop login details show **No account expiry** and the XC API returns a null expiry. This describes the account metadata; it does not guarantee that an individual provider login is valid.
+
 ## XC passwords and activity
 
 Each assigned XC-enabled layout has its own XC login password for this user. Select the layout in **Layout Preview**, then choose **XC Password** to edit the saved password or generate a new one. Passwords are case-sensitive; manual values may contain 6–64 letters, digits, or `- . _ ~`, while **Generate** creates a new 12-character lowercase value. The action is available only for an XC-enabled layout.

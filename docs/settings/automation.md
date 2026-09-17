@@ -91,4 +91,20 @@ To opt out for one source, edit the M3U or Xtream Codes source and enable **Disa
 
 The source option is useful when a provider does not support account-information requests, or when the provider has strict limits. Leave it disabled when IPTVBoss should maintain cached credentials and expiry values automatically.
 
+Checks use the user's alternate provider URL when configured. An unchanged expiry counts as a confirmed result. Failed, rate-limited, or invalid responses retain saved values; missing expiry retains the previous expiry while updating the supplied connection limit. A rejected login marks expiry and connection limit as unknown. To check a renewal immediately, use [Refresh Credentials](../layouts/users.md#refresh-provider-expiry) on desktop or [Refresh expiry](../server/console/users.md#refresh-provider-expiry) in the console.
+
 Use [Email Notifications](email.md) to configure credential-expiry notices.
+
+## NoGUI status and cancellation
+
+The desktop NoGUI menu distinguishes **NoGUI active**, **NoGUI cancellation requested**, and states needing attention. Open the menu to read the status detail or choose **Cancel NoGUI**. The server console also reports cancellation progress and reasons needing attention.
+
+Cancellation is a request to stop safely. Wait for the stopped state before starting another operation. If stopping cannot be confirmed within 25 seconds, the marker and cancellation request remain in place. The desktop displays a warning and restores **Cancel NoGUI**; the console reports that cancellation needs attention. Review the status detail and logs to identify the process still running.
+
+### Interrupted runs and stale markers
+
+On a later launch, IPTVBoss can recover a stale marker for either standalone NoGUI or an internal XC Server sync when it can verify that the local owner has exited or its process ID has been reused. The log identifies the interrupted run and recovery reason. Recovery permits another run; it does not resume the interrupted work or report it as successful.
+
+**NoGUI status needs attention** means the marker's owner could not be verified. Read the accompanying reason and check whether the previous process is still running. Legacy, malformed, unsupported, or foreign-host markers require manual investigation. Replacing a container with one that has a different hostname can cause this condition; a local process check cannot prove the previous container stopped.
+
+Do not remove a marker while its owner may still be running. The `db/nogui-marker.guard` file coordinates marker access; its presence does not mean a sync is active, and deleting it does not safely unlock NoGUI.

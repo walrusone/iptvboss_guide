@@ -2,6 +2,22 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.11.140 — September 16, 2026
+
+### 🔐 Provider credentials and XC account expiry
+
+- **New:** XC Server **User Management** offers **Refresh expiry** for each supported enabled source credential, with feedback from the provider request.
+- **Improvement:** Desktop **Refresh Credentials** runs provider requests in the background and reports a result for each supported enabled credential.
+- **Fix:** Credential refresh uses the user's alternate provider URL when configured and correctly handles special characters in usernames and passwords.
+- **Fix:** Failed, rate-limited, or invalid refresh responses preserve saved values. A response that omits expiry keeps the previous expiry while updating the supplied connection limit; a rejected login marks expiry and connection limit as unknown.
+- **Fix:** XC player and panel account information and desktop XC login details use the latest expiry among enabled credentials used by the selected layout, including linked groups. Unrelated providers are excluded. Unknown or unlimited expiry, or no matching credentials, produces no account expiry instead of an invented date.
+
+### 🖥️ NoGUI recovery and cancellation
+
+- **Fix:** Interrupted internal XC Server syncs now support the same verified stale-owner recovery as standalone NoGUI runs. Recovery logs the interrupted run and reason; it does not resume the run or mark it successful.
+- **Improvement:** Desktop and console status distinguish active NoGUI work, cancellation requests, and conditions needing attention, including markers whose owner cannot be verified.
+- **Fix:** Cancellation timeouts and failures retain the marker and cancellation request. The desktop restores **Cancel NoGUI** and displays a warning; the console reports that cancellation needs attention.
+
 ## 📢 IPTVBoss 3.11.138
 
 ### 🏟️ Custom Sports and AED

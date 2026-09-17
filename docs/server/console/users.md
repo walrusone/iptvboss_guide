@@ -30,6 +30,19 @@ Each assigned XC-enabled layout has its own XC login password. In **Edit User**,
 
 ![Server Console Edit layout password dialog](../../3.11.126/Console_Set_Layout_Password.png)
 
+## Refresh provider expiry
+
+1. Select the user in **User Management**.
+2. Find the source credential in the selected-user summary.
+3. Select **Refresh expiry** beside its expiry and connection limit.
+4. Wait for the result and the user details to refresh.
+
+The action appears for supported enabled credentials: Xtream Codes sources and password-backed M3U sources with an XC URL. It uses the user's alternate provider URL when configured and requires console editing access with permission to manage users. A database operation or another editor may temporarily block it.
+
+An unchanged expiry is a successful confirmation. Failed, rate-limited, or invalid responses keep the saved values. If the provider omits expiry but supplies a connection limit, the previous expiry is kept and the limit is updated. A rejected login makes both values unknown. Returned metadata is saved and a user backup is scheduled.
+
+These source expiry values are separate from the [XC account expiry calculated for each layout](../../layouts/users.md#xc-account-expiry). Manual refresh remains available when **Disable NoGUI user checks** is enabled for the source.
+
 ## Output and access actions
 
 - Use **Output M3Us** to generate or review user playlist output.

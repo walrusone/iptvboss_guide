@@ -1,5 +1,7 @@
 # XC Server Troubleshooting
 
+For interrupted background syncs, cancellation timeouts, or a NoGUI status that needs attention, see [NoGUI status and cancellation](../settings/automation.md#nogui-status-and-cancellation).
+
 --8<-- "includes/xc-server-preview.md"
 
 ## Series playback from linked groups
