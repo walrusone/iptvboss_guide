@@ -2,6 +2,31 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.12.4 — September 18, 2026
+
+### 🔐 XC Server login performance
+
+- **Fix:** XC player logins no longer load every channel in large layouts to calculate account expiry. Source membership is now retrieved with lightweight database queries and cached, while preserving layout-specific expiry and linked-group support.
+- **Improvement:** Concurrent logins share the source lookup, reducing pressure on the serving database pool. Layout changes and database reloads invalidate the cache, while credential changes take effect immediately.
+
+### 🏟️ AED assignments and channel IDs
+
+- **Fix:** Corrected duplicate or missing AED channel IDs across sources, keeping IDs consistent across playlists, EPG output, XC playback, and restarts.
+- **Fix:** Conflicting AED IDs are now detected to prevent channels from being silently omitted from EPG output.
+- **Fix:** Corrected AED assignments and reassignments in the Layout Editor, including bulk edits and Undo/Redo.
+- **Fix:** Failed channel saves no longer incorrectly clear unsaved changes or alter Undo/Redo history.
+- **Fix:** Saved AED assignments are preserved when a refresh fails, allowing refresh retries without losing the edit.
+- **Improvement:** Reduced repeated database work during AED ID allocation and bulk assignment.
+
+### 🎨 Themes and editor controls
+
+- **Fix:** Corrected menu styling when switching themes and Undo/Redo icon visibility.
+
+### 💾 Shutdown and NoGUI reliability
+
+- **Fix:** Shutdown during suspended cloud editing creates a local safety backup without overwriting the server's newer database.
+- **Fix:** A process timestamp mismatch no longer causes NoGUI process detection to delete an active updater's marker or cancellation request.
+
 ## 📢 IPTVBoss 3.11.140 — September 16, 2026
 
 ### 🔐 Provider credentials and XC account expiry

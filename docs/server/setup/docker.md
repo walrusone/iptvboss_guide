@@ -56,9 +56,11 @@ Open `.env` in a text editor:
 nano .env
 ```
 
-The downloaded environment file defaults to:
+The downloaded environment file uses the beta image and defaults to:
 
 ```env
+IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta
+IPTVBOSS_TAG=beta
 IPTVBOSS_HOST_IP=0.0.0.0
 IPTVBOSS_HOST_PORT=8001
 IPTVBOSS_XC_PORT=8001
@@ -259,9 +261,19 @@ Copy the resulting backup to another computer or storage device. A backup kept o
 
 ## Update IPTVBoss
 
-Create a backup first, then run:
+Create a backup first. If the installation still uses the previous image repository, update these settings in `.env`:
+
+```env
+IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta
+IPTVBOSS_TAG=beta
+```
+
+If `compose.yaml` hardcodes the image instead of reading `IPTVBOSS_IMAGE` and `IPTVBOSS_TAG`, change its `image` value to `git.iptvboss.pro/walrusone/iptvboss-beta:beta`. Keep the existing data volume and other settings.
+
+Then validate the configuration, pull the image, and recreate the service:
 
 ```bash
+sudo docker compose config
 sudo docker compose pull
 sudo docker compose up --detach
 sudo docker compose ps

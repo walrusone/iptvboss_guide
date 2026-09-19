@@ -197,8 +197,8 @@ Expand **only the path that matches your setup**. Each section contains its conf
     For Caddy running on the Docker host or bundled in the same Compose stack, change the existing entries to:
 
     ```env
-    IPTVBOSS_IMAGE=ghcr.io/walrusone/iptvboss-release
-    IPTVBOSS_TAG=latest
+    IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta
+    IPTVBOSS_TAG=beta
     IPTVBOSS_XC_BEHIND_HTTPS_PROXY=true
     IPTVBOSS_HTTPS_ONLY=false
     IPTVBOSS_XC_BIND_ADDRESS=all
@@ -268,8 +268,8 @@ Expand **only the path that matches your setup**. Each section contains its conf
     Change the existing entries to:
 
     ```env
-    IPTVBOSS_IMAGE=ghcr.io/walrusone/iptvboss-release
-    IPTVBOSS_TAG=latest
+    IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta
+    IPTVBOSS_TAG=beta
     IPTVBOSS_XC_BEHIND_HTTPS_PROXY=false
     IPTVBOSS_HTTPS_ONLY=false
     IPTVBOSS_XC_BIND_ADDRESS=all
@@ -347,7 +347,7 @@ Expand the restart instructions for your installation. For macOS or Windows serv
     sudo docker compose config
     ```
 
-    Inspect the output before continuing: it should show the intended mode, port, and existing data volume. The stable image is `ghcr.io/walrusone/iptvboss-release:latest`; if `compose.yaml` hardcodes the old image, edit it there. An exact published version tag can be used instead of `latest`. Keep any existing `-f` override-file options or project-name options in all your Compose commands.
+    Inspect the output before continuing: it should show the intended mode, port, and existing data volume. The beta image is `git.iptvboss.pro/walrusone/iptvboss-beta:beta`; if `compose.yaml` hardcodes the old image, edit it there. An exact published version tag can be used instead of `beta`. Keep any existing `-f` override-file options or project-name options in all your Compose commands.
 
     When the configuration is correct, apply it:
 

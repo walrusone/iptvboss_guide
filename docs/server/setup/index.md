@@ -20,7 +20,7 @@ For installations that cannot use a reverse proxy, see [Direct HTTPS](direct-htt
 
 ## Release channel
 
-Use the stable [iptvboss-release repository](https://github.com/walrusone/iptvboss-release/releases/latest) for application downloads. The Docker templates use `ghcr.io/walrusone/iptvboss-release:latest`.
+Use the stable [iptvboss-release repository](https://github.com/walrusone/iptvboss-release/releases/latest) for application downloads. The Docker templates use the beta image `git.iptvboss.pro/walrusone/iptvboss-beta:beta`.
 
 The Docker template keeps the image repository and version tag in `.env`, so a future distribution-channel change will not require editing `compose.yaml`. For a long-running installation, pin an exact tested version instead of automatically following a moving channel tag.
 

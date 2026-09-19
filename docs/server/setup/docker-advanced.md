@@ -18,11 +18,11 @@ The exact Docker volume names include the Compose project name, which normally c
 
 ## Image channel and version pinning
 
-The image repository and tag are separate settings:
+The templates use the beta image from `git.iptvboss.pro`. The image repository and tag are separate settings:
 
 ```env
-IPTVBOSS_IMAGE=ghcr.io/walrusone/iptvboss-release
-IPTVBOSS_TAG=latest
+IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta
+IPTVBOSS_TAG=beta
 ```
 
 This makes a future channel change an `.env` edit instead of a Compose-file edit. A moving channel tag receives new releases during `docker compose pull`. For a controlled production upgrade, set `IPTVBOSS_TAG` to an exact published version, create a backup, and then pull and recreate the service.

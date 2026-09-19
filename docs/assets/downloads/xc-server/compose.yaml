@@ -1,6 +1,6 @@
 services:
   iptvboss:
-    image: "${IPTVBOSS_IMAGE:-ghcr.io/walrusone/iptvboss-release}:${IPTVBOSS_TAG:-latest}"
+    image: "${IPTVBOSS_IMAGE:-git.iptvboss.pro/walrusone/iptvboss-beta}:${IPTVBOSS_TAG:-beta}"
     pull_policy: always
     restart: unless-stopped
     stop_grace_period: 60s
