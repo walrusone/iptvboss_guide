@@ -197,8 +197,8 @@ Expand **only the path that matches your setup**. Each section contains its conf
     For Caddy running on the Docker host or bundled in the same Compose stack, change the existing entries to:
 
     ```env
-    IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta
-    IPTVBOSS_TAG=beta
+    IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-release
+    IPTVBOSS_TAG=release
     IPTVBOSS_XC_BEHIND_HTTPS_PROXY=true
     IPTVBOSS_HTTPS_ONLY=false
     IPTVBOSS_XC_BIND_ADDRESS=all
@@ -268,8 +268,8 @@ Expand **only the path that matches your setup**. Each section contains its conf
     Change the existing entries to:
 
     ```env
-    IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta
-    IPTVBOSS_TAG=beta
+    IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-release
+    IPTVBOSS_TAG=release
     IPTVBOSS_XC_BEHIND_HTTPS_PROXY=false
     IPTVBOSS_HTTPS_ONLY=false
     IPTVBOSS_XC_BIND_ADDRESS=all
@@ -347,7 +347,7 @@ Expand the restart instructions for your installation. For macOS or Windows serv
     sudo docker compose config
     ```
 
-    Inspect the output before continuing: it should show the intended mode, port, and existing data volume. The beta image is `git.iptvboss.pro/walrusone/iptvboss-beta:beta`; if `compose.yaml` hardcodes the old image, edit it there. An exact published version tag can be used instead of `beta`. Keep any existing `-f` override-file options or project-name options in all your Compose commands.
+    Inspect the output before continuing: it should show the intended mode, port, and existing data volume. The examples use `git.iptvboss.pro/walrusone/iptvboss-release:release`, which pulls the latest stable release. For the latest beta, set `IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta` and `IPTVBOSS_TAG=beta` instead. Change both values when switching channels. If `compose.yaml` hardcodes the old image, replace it with the full path for the chosen channel. An exact version published in that repository can be used instead of its moving `release` or `beta` tag. Keep any existing `-f` override-file options or project-name options in all your Compose commands.
 
     When the configuration is correct, apply it:
 

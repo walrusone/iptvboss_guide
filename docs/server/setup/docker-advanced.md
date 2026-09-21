@@ -18,14 +18,25 @@ The exact Docker volume names include the Compose project name, which normally c
 
 ## Image channel and version pinning
 
-The templates use the beta image from `git.iptvboss.pro`. The image repository and tag are separate settings:
+The templates default to the latest stable image from `git.iptvboss.pro`. The image repository and tag are separate settings:
+
+```env
+IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-release
+IPTVBOSS_TAG=release
+```
+
+For the latest beta, use:
 
 ```env
 IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta
 IPTVBOSS_TAG=beta
 ```
 
-This makes a future channel change an `.env` edit instead of a Compose-file edit. A moving channel tag receives new releases during `docker compose pull`. For a controlled production upgrade, set `IPTVBOSS_TAG` to an exact published version, create a backup, and then pull and recreate the service.
+`git.iptvboss.pro/walrusone/iptvboss-release:release` always pulls the latest stable release; `git.iptvboss.pro/walrusone/iptvboss-beta:beta` always pulls the latest beta. Change both `.env` values when switching channels. If the Compose file hardcodes `image`, replace it with the full path for the chosen channel.
+
+These moving tags receive new images during `docker compose pull`; run `docker compose up --detach` afterward to recreate the service with the pulled image. Restarting alone does not pull an update. Follow the [backup and update procedure](docker.md#update-iptvboss).
+
+For a controlled upgrade, keep `IPTVBOSS_IMAGE` set to the chosen channel repository and set `IPTVBOSS_TAG` to an exact version published in that repository. Create a backup, then pull and recreate the service.
 
 ## Reverse proxies in another container or host
 

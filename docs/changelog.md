@@ -2,6 +2,13 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.12.5 — September 21, 2026
+
+### 🖥️ NoGUI lock recovery
+
+- **Fix:** Eligible legacy or malformed NoGUI status markers now clear automatically after two hours, preventing stale locks from indefinitely blocking desktop and unattended syncs. Markers tied to live local processes, other hosts, or unsupported formats are not aged out.
+- **Improvement:** Added **Force Clear NoGUI Status…** to the desktop NoGUI menu and startup recovery dialog for uncertain saved status. Confirm only after verifying the previous sync has stopped; clearing status does not stop a process, and confirmed live owners or active internal syncs cannot be cleared.
+
 ## 📢 IPTVBoss 3.12.4 — September 18, 2026
 
 ### 🔐 XC Server login performance

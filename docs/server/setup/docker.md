@@ -56,17 +56,33 @@ Open `.env` in a text editor:
 nano .env
 ```
 
-The downloaded environment file uses the beta image and defaults to:
+The downloaded environment file uses the latest stable release from `git.iptvboss.pro` and defaults to:
 
 ```env
-IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta
-IPTVBOSS_TAG=beta
+IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-release
+IPTVBOSS_TAG=release
 IPTVBOSS_HOST_IP=0.0.0.0
 IPTVBOSS_HOST_PORT=8001
 IPTVBOSS_XC_PORT=8001
 IPTVBOSS_XC_BEHIND_HTTPS_PROXY=false
 IPTVBOSS_HTTPS_ONLY=false
 ```
+
+Choose the channel by setting **both** the image repository and its matching tag:
+
+| Channel | Full image path | What a pull retrieves |
+| --- | --- | --- |
+| Stable | `git.iptvboss.pro/walrusone/iptvboss-release:release` | Latest stable release |
+| Beta | `git.iptvboss.pro/walrusone/iptvboss-beta:beta` | Latest beta |
+
+To use beta, replace the first two entries in `.env` with:
+
+```env
+IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta
+IPTVBOSS_TAG=beta
+```
+
+The `release` and `beta` tags move to the newest image in their respective channels. An existing container updates when you pull and recreate it using the [update steps](#update-iptvboss).
 
 `0.0.0.0` publishes port `8001` on every host network interface. Keep this only when the host firewall and router restrict access to a trusted network. To allow access through one host address instead, replace it with that private address.
 
@@ -261,14 +277,16 @@ Copy the resulting backup to another computer or storage device. A backup kept o
 
 ## Update IPTVBoss
 
-Create a backup first. If the installation still uses the previous image repository, update these settings in `.env`:
+Create a backup first. To use the latest stable release, set these values in your existing `.env` (including when migrating from the previous image host):
 
 ```env
-IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta
-IPTVBOSS_TAG=beta
+IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-release
+IPTVBOSS_TAG=release
 ```
 
-If `compose.yaml` hardcodes the image instead of reading `IPTVBOSS_IMAGE` and `IPTVBOSS_TAG`, change its `image` value to `git.iptvboss.pro/walrusone/iptvboss-beta:beta`. Keep the existing data volume and other settings.
+For the latest beta, use `IPTVBOSS_IMAGE=git.iptvboss.pro/walrusone/iptvboss-beta` and `IPTVBOSS_TAG=beta` instead. When switching channels, change both values.
+
+If `compose.yaml` hardcodes the image instead of reading `IPTVBOSS_IMAGE` and `IPTVBOSS_TAG`, change its `image` value to `git.iptvboss.pro/walrusone/iptvboss-release:release` for stable or `git.iptvboss.pro/walrusone/iptvboss-beta:beta` for beta. Keep the existing data volume and other settings.
 
 Then validate the configuration, pull the image, and recreate the service:
 
