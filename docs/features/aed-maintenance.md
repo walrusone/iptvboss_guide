@@ -15,6 +15,12 @@ Use [Dummy Guide Inventory](../setup/dummy-guides.md) to find definitions and ch
 
 After a successful playlist source sync, eligible sports channels that previously had no match are retried automatically. If a channel still has no event, confirm that the sports data is available, the AED is assigned, and the provider name or custom lookup name matches the AED rules before using **Refresh AEDs** manually.
 
+### Understand matches outside the output window
+
+The tester can show a matching event even when it is outside the AED's configured output inclusion window. **Matched — outside output inclusion window.** means the lookup matched, but that event does not currently qualify for output. The tester uses current form values, including unsaved matching edits; a successful tester match alone does not mean the event will be exported.
+
+Review the event time and the AED's keep-period settings, then refresh and inspect the generated guide. Do not widen the output window solely to remove the notice unless those additional events should actually appear.
+
 ### Refresh AED results
 
 Use **Sources** → **AED Refresh…** when you need to refresh AED results beyond the currently selected group. Choose one of the following actions:

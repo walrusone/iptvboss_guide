@@ -2,6 +2,14 @@
 
 This summary groups the recent changes documented in the [build-by-build changelog](changelog.md). For an existing installation, start with [Update from 3.11.16](getting-started/update-from-3.11.16.md). Stable downloads are available from [iptvboss-release](https://github.com/walrusone/iptvboss-release/releases/latest).
 
+## New in 3.12.6
+
+- Set up [XC Player Pairing (Beta)](server/console/player-pairings.md) to hand a compatible player its assigned XC layouts using a single-use code.
+- Publish a per-user M3U configuration URL through [Boss Player Output (Beta)](setup/boss-player-output.md). Both player features require Pro and a compatible beta player.
+- Exclude intentional missing mappings, missing logos, or empty groups through [group health check options](layouts/layout-editor.md#group-health-check-options).
+- Choose when to [load external EPG programmes for preview](setup/epg-sources.md#control-external-programme-preview-loading), and resolve [missing-cache output warnings](setup/output.md#epg-sources-that-require-synchronization).
+- Understand [AED tester matches outside the output window](features/aed-maintenance.md#understand-matches-outside-the-output-window). See the [3.12.6 changelog](changelog.md) for AED, dummy-guide, editor, and runtime fixes.
+
 ## Sources and layouts
 
 - Review source inventory and synchronization history in [Sources Manager](setup/sources-manager.md).

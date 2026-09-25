@@ -10,7 +10,16 @@ Generate output for the intended layout before configuring the player. If output
 | Cloud links | M3U URL and EPG/XMLTV URL | **Output** → **View Cloud Links** after [cloud output generation](output-links.md) |
 | XC Server login · PRO | Public server address and the XC username/password for the assigned layout | The user's assigned XC-enabled layout in [user management](../layouts/users.md#user-output-links) |
 
-Keep output links and login details private. An XC player's credentials are the user's layout credentials; the administrator login and desktop pairing code are for managing the server.
+Both player features below are **beta** in 3.12.6 and require a compatible beta player:
+
+| Connection | Values needed | Where to get them |
+| --- | --- | --- |
+| [XC Player Pairing · Beta · PRO](../server/console/player-pairings.md) | Single-use player code, plus server URL when discovery is unavailable or unsupported | XC Server **User Management → Player Pairing** |
+| [Boss Player Output · Beta · PRO](boss-player-output.md) | One per-user Boss configuration URL for M3U layouts and guides | Desktop **Manage Users → BOSS Player** or **View Cloud Links**, after cloud publication |
+
+XC Player Pairing retrieves XC layout credentials from your server. Boss Player Output publishes a configuration through Dropbox or Google Drive without an XC Server.
+
+Keep output links and login details private. An XC player's credentials are the user's layout credentials; the administrator login and desktop pairing code are for managing the server. A **player** pairing code is generated separately for the intended user.
 
 ## M3U and XMLTV
 

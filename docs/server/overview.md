@@ -13,6 +13,8 @@ XC Server mode is normally run behind an HTTPS reverse proxy. IPTVBoss listens o
 
 Start with [First XC Server Connection](first-connection.md) for installation, database initialization, desktop pairing, and a player test. Use [Runtime Configuration](runtime.md) for command-line flags, ports, environment variables, and HTTPS modes.
 
+Compatible beta players can use [XC Player Pairing (Beta)](console/player-pairings.md) to retrieve assigned XC layouts with a player code. For M3U delivery through Dropbox or Google Drive, see [Boss Player Output (Beta)](../setup/boss-player-output.md).
+
 ## Configuration reference
 
 - <span id="recommended-command"></span>[Recommended command](runtime.md#recommended-command)

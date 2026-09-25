@@ -24,6 +24,7 @@ This page is the guide's canonical entitlement table. Subscription tiers and fea
 | EPG workflow | External/custom EPG sources, manual mapping, and standard EPG output | EPG Browser, automatic EPG tools in Layout Editor, EPG layout overrides, EPG logo templates, and [Universal EPG](../setup/universal-epg.md) |
 | Layout workflow | Create and edit layouts, import channels, organize groups, and generate output | [Layout import/export](../layouts/layout-files.md), channel-list export, [linked layout groups](../layouts/linked-groups.md), and layout EPG override settings |
 | Output and hosting | Local M3U/EPG output and supported cloud playlist/EPG publishing | Everything in Free, plus cloud database synchronization and backups, XC Server, and the related server workflows |
+| Beta player configuration | Standard M3U/XMLTV connections remain available | [XC Player Pairing (Beta)](../server/console/player-pairings.md) and [Boss Player Output (Beta)](../setup/boss-player-output.md), for compatible beta players |
 | Automation | Run supported noGUI commands through the operating-system scheduler | Native **Sync Schedule**, headless/cloud synchronization workflows, and email notifications |
 | Advanced tools | Core layout and source tools | [Advanced EPG Dummies](../features/aed.md), AED bulk tools, AI Settings, Prefix Auto-Removal, custom tags, sports-data tools, and [Custom Sports Groups](../features/custom-sports.md) |
 | Playback and diagnostics | Standard channel and EPG editing | VLCJ stream and EPG playback actions from the Layout Editor |

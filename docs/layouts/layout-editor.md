@@ -49,6 +49,10 @@ In **Basic Info**, select ![](../assets/icons/ui/revert.svg){ .ui-icon } **Rever
 
 For a channel in a Custom Sports group with a configured presentation, **Ignore Custom Presentation** keeps that channel’s normal name and logo. The channel still participates in the group’s exclusions, AED processing, sports classification, and sorting. Select the checkbox and save the channel change; it can be applied to multiple eligible channels.
 
+### Load external EPG previews
+
+For external EPG sources, programme previews follow the source’s **Automatically load programs** preference. Use **Load Programs** when automatic loading is disabled or a load needs retrying. See [external programme preview loading](../setup/epg-sources.md#control-external-programme-preview-loading).
+
 ### Choose the channel name source
 
 Each layout channel has a name mode beside **Channel Name**. The mode controls the name used by that layout’s playlist, guide, and player output:
@@ -92,9 +96,9 @@ Double-click a group name to edit it. Use the icon buttons above the lists for b
 
 ## Edit group options
 
-Select a group, then expand **Group Options** on the right. Edit **Group Name** or the available group settings, then select ![](../assets/icons/ui/save.svg){ .ui-icon } **Save Group(s)**. The group options header also contains **Ignore Empty Group Health Check** for suppressing the selected group’s empty-group health warning.
+Select a group, then expand **Group Options** on the right. Edit **Group Name** or the available group settings, then select ![](../assets/icons/ui/save.svg){ .ui-icon } **Save Group(s)**. Use **Health Check Options** beside **Group Name** to choose which health issues to ignore for this group.
 
-![Current Layout Editor Group Options](<../3.11.138/Layout Editor Group Options.png>)
+![Group Options and the Health Check Options dialog](../assets/images/layout-group-health-options.png)
 
 The **Group Options** header can also contain:
 
@@ -175,13 +179,23 @@ Use the **Missing EPG** and **Missing Logo** checkboxes beside the **CHANNELS** 
 
 While a missing-content filter or a health-focused view is active, channel reordering and drag-and-drop importing are disabled. Clear the filters before changing channel order or importing onto the channel list.
 
-## Ignore an intentional empty-group warning
+## Group health check options
 
-Select a group and expand **Group Options**. Enable **Ignore Empty Group Health Check** when the group is intentionally empty and should not be counted by Layout Manager as an empty-group health issue.
+1. Select a group and expand **Group Options**.
+2. Select **Health Check Options** beside **Group Name**.
+3. Check the conditions to exclude and select **Save**, then save the group changes.
 
-![Current Layout Editor Group Options](<../3.11.138/Layout Editor Group Options.png>)
+| Option | Effect |
+| --- | --- |
+| **Ignore Empty Group Health Check** | Excludes this group from empty-group health checks. |
+| **Ignore Missing EPG Mapping Health Check** | Excludes this group's missing EPG mappings; available for Live groups only. |
+| **Ignore Missing Logos Health Check** | Excludes this group's missing-logo issues. |
 
-This is a per-group health preference. It does not add channels, disable the group, or change source synchronization. It also does not stop **Remove Empty Layout Groups After Source Sync** from removing the group when that per-layout cleanup option is enabled. Save the group after changing the checkbox.
+Checked options exclude the group's corresponding issues from health counts, warnings, and health filters. Global [Layout Manager attention checks](../settings/application.md#layout-manager-attention-checks) still apply. These preferences do not repair mappings, add logos, remove channels, or change generated output.
+
+### Ignore an intentional empty-group warning
+
+Enable **Ignore Empty Group Health Check** through the dialog above when a group is intentionally empty. This does not stop **Remove Empty Layout Groups After Source Sync** from removing the group when that per-layout cleanup option is enabled.
 
 ## Check the result
 

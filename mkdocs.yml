@@ -94,6 +94,7 @@ nav:
       - Cloud Output Links: setup/output-links.md
       - Desktop Output Users: layouts/users.md
       - Connect a Player: setup/connect-player.md
+      - Boss Player Output · BETA · PRO: setup/boss-player-output.md
   - Sports & AEDs · PRO:
       - Sports Overview: features/index.md
       - Advanced EPG Dummies: features/aed.md
@@ -122,6 +123,7 @@ nav:
       - Connect & Pair:
           - Connect the Desktop: server/gui-settings.md
           - Paired Devices: server/console/paired-devices.md
+          - XC Player Pairing · BETA: server/console/player-pairings.md
       - Users & Activity:
           - XC Server Users: server/console/users.md
           - User Activity: server/console/activity.md

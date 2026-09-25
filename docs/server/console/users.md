@@ -43,6 +43,10 @@ An unchanged expiry is a successful confirmation. Failed, rate-limited, or inval
 
 These source expiry values are separate from the [XC account expiry calculated for each layout](../../layouts/users.md#xc-account-expiry). Manual refresh remains available when **Disable NoGUI user checks** is enabled for the source.
 
+## Player pairing (Beta)
+
+For a compatible beta player, select the enabled user and use **Player Pairing → Generate Player Code**. Choose a code expiry and share the displayed code and server URL as instructed by the result. Use **View Player Pairings** to review devices. Follow [XC Player Pairing](player-pairings.md) for discovery, revocation, and export/import details. These codes are separate from desktop pairing codes.
+
 ## Output and access actions
 
 - Use **Output M3Us** to generate or review user playlist output.

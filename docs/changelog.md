@@ -2,6 +2,35 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.12.7 — September 25, 2026
+
+### 📺 Player configuration — Beta
+
+- **Beta:** [XC Player Pairing](server/console/player-pairings.md) lets a compatible beta player retrieve a user's assigned XC layouts and guide links using a single-use code. User Management offers configurable code expiry, with code-only discovery for supported players and a server-URL-plus-code fallback.
+- **Beta:** The **Player Pairings** console provides user filtering, configuration-contact status, revocation, clearing revoked records, and export/import. Revoking a pairing stops configuration retrieval; previously supplied playback credentials remain usable.
+- **New · Beta:** [Boss Player Output](setup/boss-player-output.md) publishes one per-user configuration URL through Dropbox or Google Drive for assigned M3U layouts and available guide links. Enable it globally in **Output & Links**, then select **Include in Boss Player Output** on each intended layout. Both player features require Pro and a compatible beta player.
+- **Improvement:** Boss publication runs after GUI or NoGUI output batches, supports partial runs using existing published links, and reports missing or failed outputs for affected users. Direct and optional TinyURL links are available in user management and cloud links.
+
+### 🧩 Layout health and EPG previews
+
+- **New:** Layout Editor **Health Check Options** groups the existing empty-group exclusion with new per-group missing-EPG and missing-logo exclusions. Checked options exclude matching issues from health counts, warnings, and health filters; missing-EPG exclusion applies to Live groups.
+- **New:** External EPG sources offer **Automatically load programs** for previews. Layout Editor and EPG Browser provide background **Load Programs** and retry controls. Already-loaded programmes remain visible when automatic loading is disabled; synchronization and output are unaffected.
+- **Fix:** Reading external EPG caches no longer creates an empty cache when programme data is unavailable. Output identifies sources requiring synchronization when their cached guide data is omitted.
+
+### 🏟️ AEDs and dummy guides
+
+- **Fix:** Team-based AED logos are preserved when a matching event is missing or outside the output inclusion window.
+- **Improvement:** The AED tester uses current matching settings and can show matches outside the output window, with **Matched — outside output inclusion window.** explaining why a match may not be exported.
+- **Fix:** Upcoming-event information remains visible before midnight for events on the following day, with consistent AED preview and guide output.
+- **Fix:** Basic dummy-guide loading and repair restore missing dummy programmes in generated output. Failed guide generation preserves the previous output file.
+
+### 💾 Editor, recovery, and runtime
+
+- **Fix:** Layout and group navigation handle unsaved-change dialogs and delayed refreshes more safely, preventing stale selections and re-entrant navigation errors.
+- **Improvement:** Backup restoration validates the expected database content and coordinates staging and recovery more safely.
+- **Fix:** Progress completion and shutdown coordinate background work more reliably, addressing premature completion and closed-resource errors.
+- **Improvement:** Initial Server Console setup gives clearer validation feedback when a section PIN does not contain exactly six digits.
+
 ## 📢 IPTVBoss 3.12.5 — September 21, 2026
 
 ### 🖥️ NoGUI lock recovery

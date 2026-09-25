@@ -39,6 +39,14 @@ The built-in source is then available for synchronization and channel mapping li
 4. Wait for the import to finish.
 5. Confirm that the source contains channels before attempting channel mapping.
 
+## Control external programme preview loading
+
+For an external **Custom** EPG source, **Automatically load programs** controls whether viewing a channel loads that source's programme data for preview. It is enabled by default. Edit the EPG source, change the checkbox, and save.
+
+When it is disabled and the programmes are not already loaded, Layout Editor and EPG Browser offer **Load Programs**. The initial prompt also offers **Not Now**; you can use **Load Programs** later. Loading runs in the background. If it reports **Unable to load programs. Try again.**, use **Load Programs** to retry after checking the source.
+
+Already-loaded programmes remain visible when you disable automatic loading. This is a preview preference: it does not disable source synchronization or EPG output. If data is unavailable, [synchronize the source](#synchronize-the-epg-source) before trying again.
+
 ## Use EPG data for mapping
 
 After synchronizing an external or built-in source, use [Channel Mapping](channel-mapping.md) to assign its channels to playlist channels. <span class="pro-badge">PRO</span> Use [EPG Browser](epg-browser.md) to inspect the programme data returned for a mapped channel.

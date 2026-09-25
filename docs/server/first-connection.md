@@ -23,14 +23,14 @@ Confirm that the selected database is the copy you want the server to use. Wait 
 
 For additional installations, generate a code under [Paired Devices](console/paired-devices.md) and enter it in the desktop's **Server Settings**. Review [XC Cloud Database](gui-settings.md#xc-cloud-database) and the [Desktop Server Dashboard](dashboard.md) to confirm pairing and synchronization status.
 
-Pairing connects an IPTVBoss installation for administration and database synchronization. IPTV players use the output links or XC user credentials configured in the next step.
+Pairing connects an IPTVBoss installation for administration and database synchronization. IPTV players use the output links, XC user credentials, or separate beta player-pairing workflow configured in the next step.
 
 ## 4. Configure delivery and test a player
 
 1. Confirm the database has the intended sources, channel mappings, and enabled layout.
 2. Review [Layout Output Settings](../layouts/output-settings.md). Enable **XC Enabled** for a layout that will provide XC login access.
 3. Configure [users and provider credentials](console/users.md), using the console's [Begin Editing / End Editing workflow](index.md#apply-changes-safely).
-4. Complete [Connect a Player](../setup/connect-player.md) for M3U/XMLTV or XC login.
+4. Complete [Connect a Player](../setup/connect-player.md) for M3U/XMLTV or XC login, or use [XC Player Pairing (Beta)](console/player-pairings.md) with a compatible beta player.
 5. Review [User Activity](console/activity.md) and [Logs](console/logs.md) after the test.
 
 ## 5. Schedule and back up

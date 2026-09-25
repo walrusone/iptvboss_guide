@@ -4,6 +4,8 @@
 
 Use **Paired Devices** to generate a single-use pairing code, review connected clients, and revoke access for a device that should no longer reach the server. Pairing also provisions the client-specific credential that allows an IPTVBoss desktop installation to request an automatic server reload after its shutdown backup finishes.
 
+For playback devices, use [XC Player Pairing (Beta)](player-pairings.md), which generates codes from **User Management**. The codes on this page pair IPTVBoss desktop installations.
+
 ![Paired devices](../../assets/images/server-console/paired-devices.png)
 
 1. Select **Generate Pairing Code**.

@@ -71,9 +71,13 @@ For broken links, follow [Linked Layout Groups](linked-groups.md#investigate-a-b
 
 Open **Settings** → **IPTVBoss Settings** → **Layout Manager**. See [Layout Manager attention checks](../settings/application.md#layout-manager-attention-checks) for the available controls. Disabling a check removes that condition from the health decision; it does not repair the layout or change output.
 
+### Exclude intentional group issues
+
+Use [Group health check options](layout-editor.md#group-health-check-options) to exclude a group's empty-group, missing-EPG, or missing-logo issues from health counts, warnings, and health filters. Missing-EPG exclusion applies to Live groups. These per-group exclusions work alongside the global attention checks; they do not repair content or change output.
+
 ## Control empty-group health
 
-An empty group is normally reported as a layout-health issue. If an intentionally empty group should remain without affecting the layout status, open that group in Layout Editor and enable **Ignore Empty Group Health Check** in **Group Options**. This setting changes only the health calculation; it does not remove the group, disable it, or prevent future channels from being added.
+An empty group is normally reported as a layout-health issue. If an intentionally empty group should remain without affecting the layout status, open that group in Layout Editor and select **Group Options → Health Check Options → Ignore Empty Group Health Check**, then save the change. This setting changes only the health calculation; it does not remove the group, disable it, or prevent future channels from being added.
 
 The setting is stored per group. Leave it disabled for groups that should contain channels and require review when they become empty.
 

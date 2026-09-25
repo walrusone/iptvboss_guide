@@ -20,6 +20,8 @@ Double-click a channel in the EPG Browser to return to **Layout Editor** with th
 
 The redesigned EPG Browser uses three resizable panes for layouts and channels, programmes, and channel details. Resize the window or pane boundaries to give more space to the list or the programme information; this screen uses adjustable panes rather than collapsible sections.
 
+If an external source has automatic programme loading disabled, use **Load Programs** to view its guide data. You can decline the initial prompt with **Not Now** and load later. See [external programme preview loading](epg-sources.md#control-external-programme-preview-loading) for the setting and retry behavior.
+
 ## Search guide data
 
 Use [Channel Mapping](channel-mapping.md) to assign an EPG source and channel identifier first. The EPG Browser then searches the channels and mappings available in the selected layout:

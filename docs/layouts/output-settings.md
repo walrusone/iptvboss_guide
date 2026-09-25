@@ -29,6 +29,10 @@ Common settings include:
 !!! note
     Exact labels can vary by release. Use the field shown in the current Layout Manager when a label differs.
 
+## Boss Player Output (Beta) <span class="pro-badge">PRO</span>
+
+**Include in Boss Player Output** adds this layout to the configuration published for its explicitly assigned users. Enable **Enable Boss Player Output for M3U** in **IPTVBoss Settings → Output & Links** first. The layout control requires Pro and a supported cloud output provider; active Boss output keeps M3U output and cloud sync enabled. Follow [Boss Player Output](../setup/boss-player-output.md) for setup, publication, and copying the user's URL.
+
 ## Choose local or cloud output
 
 - Use **Custom Output Folder** for local files consumed by a player or another service on the same system.

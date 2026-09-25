@@ -35,6 +35,14 @@ Do not use an all-layout action when you are testing a single layout change.
 
 After generation, follow [Connect a Player](connect-player.md) for local files, cloud links, or XC login. For separate viewer accounts, see [Desktop Output Users](../layouts/users.md).
 
+## EPG sources that require synchronization
+
+If output reports **EPG sources require sync**, the named sources had unavailable cached guide data and were omitted from that output. Synchronize those sources in [Sources Manager](sources-manager.md), regenerate the affected guide output, and refresh it in the player. Changing **Automatically load programs** does not disable output and is not a substitute for synchronizing missing source data.
+
+## Boss Player Output (Beta) <span class="pro-badge">PRO</span>
+
+When enabled, [Boss Player Output](boss-player-output.md) publishes each eligible user's configuration after the output batch completes. For initial setup, generate **All Layouts M3Us & EPGs** so the required cloud links exist. Review publication errors before distributing the user's configuration URL.
+
 ## Review output
 
 1. Open the configured output folder or cloud-provider destination.

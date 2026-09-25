@@ -66,6 +66,10 @@ When XC Server pairing is enabled, the selected user can show an **XC Activity**
 
 The activity view reports successful XC playlist, guide, catalog, and playback activity. **Last Sync** and **Last Played** use relative and exact timestamps; **Stream** identifies the most recently played live, VOD, or series item when that information is available. Activity is read from the paired XC Server, so it is unavailable until the desktop installation is paired and the server can be reached.
 
+## Boss Player Output (Beta) <span class="pro-badge">PRO</span>
+
+Explicitly assign each enabled user the enabled layouts they should receive, and include those layouts in [Boss Player Output](../setup/boss-player-output.md). After successful cloud publication, select the user and copy their configuration URL from **BOSS Player** in the preview area. The section appears when a published link is available. Regenerate output after assignment changes, then refresh the configuration in the compatible beta player.
+
 ## User output links
 
 Each enabled user receives their own M3U link. Standard EPG output can be shared between users when the guide data is the same. XC Server users receive unique XMLTV links and a separate XC username/password pair for each assigned XC-enabled layout. Changing a layout password changes access to that layout; refresh or redistribute the affected link after saving.

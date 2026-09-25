@@ -17,6 +17,10 @@ First complete [Cloud Provider Setup](../settings/cloud-providers.md) and [Layou
 !!! warning
     Cloud links can provide access to provider content. Treat them as credentials and never share them publicly.
 
+## Boss configuration links (Beta) <span class="pro-badge">PRO</span>
+
+After [Boss Player Output](boss-player-output.md) publishes successfully, **View Cloud Links** also provides the user's Boss configuration link. The same link is available in **Manage Users → BOSS Player**. It imports the user's included M3U layouts and guide links together in a compatible beta player. Use the TinyURL when available or the direct URL; keep both private.
+
 ## Verify a link
 
 1. Confirm that the link belongs to the intended layout or user.
