@@ -2,7 +2,7 @@
 
 <span class="pro-badge">PRO</span> [See Free vs Pro](../getting-started/free-vs-pro.md).
 
-!!! warning "Beta feature — IPTVBoss 3.12.6"
+!!! warning "Beta feature — IPTVBoss 3.12.8"
     Boss Player Output is in beta and requires a compatible beta player that can import a Boss configuration URL. For ordinary M3U players, use the separate [playlist and XMLTV links](connect-player.md#m3u-and-xmltv).
 
 Boss Player Output publishes one configuration URL per user. It collects that user's assigned Boss-enabled M3U layouts and available guide links so a compatible player can import and refresh them together. It uses Dropbox or Google Drive and does not require an XC Server or a player pairing code.

@@ -2,7 +2,7 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
-## 📢 IPTVBoss 3.12.7 — September 25, 2026
+## 📢 IPTVBoss 3.12.8 — September 25, 2026
 
 ### 📺 Player configuration — Beta
 
@@ -11,6 +11,12 @@ For a task-oriented overview of recent changes, see [Release Highlights](release
 - **New · Beta:** [Boss Player Output](setup/boss-player-output.md) publishes one per-user configuration URL through Dropbox or Google Drive for assigned M3U layouts and available guide links. Enable it globally in **Output & Links**, then select **Include in Boss Player Output** on each intended layout. Both player features require Pro and a compatible beta player.
 - **Improvement:** Boss publication runs after GUI or NoGUI output batches, supports partial runs using existing published links, and reports missing or failed outputs for affected users. Direct and optional TinyURL links are available in user management and cloud links.
 
+### 🧭 Source synchronization and cleanup
+
+- **New:** M3U and Xtream Codes source settings offer **Automatically remove stale source groups after** with a separate retention period. It defaults off for new and existing sources, with **30 days** prefilled. When enabled, groups absent from the provider are removed after the configured time since last seen; **0 days** removes absent groups on the next successful sync.
+- **Improvement:** Stale source-group cleanup is independent of removed-channel cleanup. With automatic group cleanup disabled, absent categories and their category links are retained; empty XC categories still listed by the provider are kept. Per-layout empty-group cleanup remains separate.
+- **Fix:** A failed XC series-category request now causes source synchronization to fail instead of continuing as a successful sync.
+
 ### 🧩 Layout health and EPG previews
 
 - **New:** Layout Editor **Health Check Options** groups the existing empty-group exclusion with new per-group missing-EPG and missing-logo exclusions. Checked options exclude matching issues from health counts, warnings, and health filters; missing-EPG exclusion applies to Live groups.
@@ -18,6 +24,8 @@ For a task-oriented overview of recent changes, see [Release Highlights](release
 - **Fix:** Reading external EPG caches no longer creates an empty cache when programme data is unavailable. Output identifies sources requiring synchronization when their cached guide data is omitted.
 
 ### 🏟️ AEDs and dummy guides
+
+- **Fix:** The AED tester resolves current Custom Sports TXT lookup names and retains the appropriate lookup name when no event matches, without replacing the source channel's active lookup state.
 
 - **Fix:** Team-based AED logos are preserved when a matching event is missing or outside the output inclusion window.
 - **Improvement:** The AED tester uses current matching settings and can show matches outside the output window, with **Matched — outside output inclusion window.** explaining why a match may not be exported.

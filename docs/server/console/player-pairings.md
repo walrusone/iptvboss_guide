@@ -2,7 +2,7 @@
 
 --8<-- "includes/xc-server-pro.md"
 
-!!! warning "Beta feature — IPTVBoss 3.12.6"
+!!! warning "Beta feature — IPTVBoss 3.12.8"
     XC Player Pairing is in beta and requires a compatible beta player. Ordinary Xtream Codes players can continue using [XC login details](../../setup/connect-player.md#xc-server-login).
 
 Player pairing gives a compatible player the user's assigned XC layouts, layout credentials, and guide links through a single-use code. The player can retrieve the current configuration again after pairing.

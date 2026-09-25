@@ -36,6 +36,12 @@ The right-click actions include:
 
 For a first setup, enable a small set of Live categories. Add VOD or Series only when you intend to include that content and understand the related output settings.
 
+## Automatic stale-category cleanup
+
+M3U and XC source settings provide [Automatically remove stale source groups after](playlists.md#automatically-remove-stale-source-groups). The option defaults off, with a 30-day retention value ready to use when enabled. Cleanup uses the time since a category was last seen and runs after a successful source sync; a value of zero removes absent categories on the next successful sync. Empty XC categories still returned by the provider are retained.
+
+Leaving this option off retains absent categories and their category links until you remove them manually. Removed-channel cleanup and per-layout empty-group cleanup are separate settings.
+
 ## Choose the right category tool
 
 | Task | Tool |

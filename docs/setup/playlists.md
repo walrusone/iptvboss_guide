@@ -33,7 +33,7 @@ When you add a new playlist source in the desktop GUI, IPTVBoss starts its first
 9. Review the output and category options.
 10. Select **Save**. The first source synchronization starts after the source is saved.
 
-![The Add M3U Source dialog](../assets/images/sources/add-m3u-source.png)
+![The 3.12.8 M3U source dialog with independent channel and stale-group cleanup controls](../3.12.8/Edit_M3U_Source.png)
 
 ## Add an Xtream Codes source
 
@@ -59,12 +59,23 @@ If a value contains URL-encoded characters such as `%2B` or `%40`, copy the valu
 8. Review whether VOD or series content should be included in the M3U output.
 9. Select **Save**. The first source synchronization starts after the source is saved.
 
-![The Add XC Source dialog](../assets/images/sources/add-api-source.png)
+![The 3.12.8 XC source editor with independent channel and stale-group cleanup controls](../3.12.8/Edit_XC_API_Source.png)
 
 !!! note
     Use **Add M3U Source** for a genuine M3U playlist URL or local `.m3u` file that is not a standard Xtream Codes login link. When the URL follows the `get.php?username=...&password=...` pattern, use **Add XC Source** so IPTVBoss can retrieve the provider's Live, VOD, and Series categories through the Xtream Codes connection.
 
 For channel-name cleanup, see [Prefix Removal and Tags](source-tools.md). The **Custom Sports Channel Names** field uses [TXT Fixture Names for AEDs](custom-sports-channel-names.md).
+
+## Automatically remove stale source groups
+
+Both M3U and Xtream Codes source editors include **Automatically remove stale source groups after**. Enable it and enter the number of days to retain categories that are no longer listed by the provider, then save the source.
+
+- The option defaults **off** for new and existing sources. The retention field starts at **30 days**.
+- When enabled, cleanup runs after successful source synchronization and uses the time since each category was last seen. **0 days** removes absent categories on the next successful sync.
+- When disabled, automatic cleanup retains absent categories and their category links indefinitely. You can still remove stale categories manually in [Playlist Categories](playlist-categories.md).
+- Empty XC categories still listed by the provider are kept.
+
+This setting is independent of **Automatically Clear Channels Removed by Provider After**, which controls removed channels. It is also separate from [Remove Empty Layout Groups After Source Sync](../layouts/layout-manager.md#remove-empty-groups-after-source-sync), which can still remove empty layout groups even when stale source-group cleanup is disabled.
 
 ## Disable automatic NoGUI user checks for a source
 

@@ -10,7 +10,7 @@ Generate output for the intended layout before configuring the player. If output
 | Cloud links | M3U URL and EPG/XMLTV URL | **Output** → **View Cloud Links** after [cloud output generation](output-links.md) |
 | XC Server login · PRO | Public server address and the XC username/password for the assigned layout | The user's assigned XC-enabled layout in [user management](../layouts/users.md#user-output-links) |
 
-Both player features below are **beta** in 3.12.6 and require a compatible beta player:
+Both player features below are **beta** in 3.12.8 and require a compatible beta player:
 
 | Connection | Values needed | Where to get them |
 | --- | --- | --- |
