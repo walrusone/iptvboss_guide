@@ -2,6 +2,34 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.12.9 — September 29, 2026
+
+### 🖥️ NoGUI reliability
+
+- **Fix:** Active NoGUI runs are protected by an operating-system ownership lock, preventing incorrect stale-status recovery or clearing when process detection cannot identify the running worker. The lock also prevents overlapping runs and is released when the owning process exits.
+- **Improvement:** NoGUI shutdown diagnostics distinguish an explicit cancellation request from a removed ownership marker, making interrupted runs easier to investigate.
+
+### 🏟️ AED matching and guide output
+
+- **Fix:** Team-based AEDs find fixtures across the selected competitions, including events outside the team's identity league. Custom Sports group visibility, upcoming-event text, matchup logos, previews, and exported guides use the selected leagues and event windows consistently.
+- **Fix:** Refreshed regex-based AED events respect the output inclusion window and **Only Today's Events** setting in the output time zone, preventing out-of-window events from appearing in previews or exported guides.
+- **Fix:** Viewing an AED programme preview no longer clears the channel's pending AED refresh or changes its saved last-output time, keeping repeated previews and subsequent output consistent.
+
+### 🏷️ Sports event and team identifiers
+
+- **New:** Sports AEDs automatically include the selected event identifier and available home/away team identifiers in XC live-stream and panel responses, M3U playlists, and XMLTV event programmes for players that support this metadata.
+- **Improvement:** ESPN+ listings use the linked sports event identity when valid linking metadata is available, with a listing-specific identity otherwise. Unavailable or invalid identifiers are omitted; XMLTV countdown, next-event, after-event, and no-event filler entries remain untagged.
+- **Improvement:** Identifiers appear when normal output or XC cache refresh replaces existing files or responses. Event identifiers follow the selected event and are not permanent channel identifiers.
+
+### 🎨 Layout Editor and playback
+
+- **Fix:** Channel rows display their assigned EPG-source colors correctly. Changing the missing-EPG or missing-logo highlighting options refreshes channel colors immediately.
+- **Fix:** XC playback URL generation handles surrounding whitespace and missing or extra trailing slashes in provider and alternate URLs, including linked-layout playback redirects.
+
+### 🪟 Windows scheduling
+
+- **Fix:** The Windows scheduler helper starts without the elevation-required launch error. Schedule queries and version checks run without an administrator prompt; task changes request elevation when needed.
+
 ## 📢 IPTVBoss 3.12.8 — September 25, 2026
 
 ### 📺 Player configuration — Beta
