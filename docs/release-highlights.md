@@ -2,6 +2,11 @@
 
 This summary groups the recent changes documented in the [build-by-build changelog](changelog.md). For an existing installation, start with [Update from 3.11.16](getting-started/update-from-3.11.16.md). Stable downloads are available from [iptvboss-release](https://github.com/walrusone/iptvboss-release/releases/latest).
 
+## New in 3.12.10
+
+- Understand [default-user recovery and protection](layouts/users.md#default-user-recovery-and-protection): missing user ID 1 is rebuilt from configured sources, and desktop, console, and API actions prevent its deletion. Review recovered login details before reconnecting players.
+- See the [build changelog](changelog.md) for the latest user-recovery and credential-assignment fixes.
+
 ## New in 3.12.8
 
 - Choose a separate retention period for [automatic stale source-group cleanup](setup/playlists.md#automatically-remove-stale-source-groups) in M3U and XC sources; the option defaults off.

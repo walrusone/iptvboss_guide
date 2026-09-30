@@ -17,6 +17,14 @@ IPTVBoss uses layouts and user records to create separate output links for diffe
 !!! important "Use one source per provider"
     Add each provider once, regardless of how many users have accounts with that provider. Store each user's provider credentials in that user's record instead of creating a duplicate source for every account.
 
+## Default user recovery and protection
+
+The default account is **user ID 1**, normally named **USER1**. It cannot be deleted from desktop User Management, the XC Server console, or the external API. Renaming it does not change this protection.
+
+If user 1 is missing, IPTVBoss recreates it when configured sources load normally or a source operation requires the default user. Recovery creates an enabled account using the configured sources' credentials and assigns it to all existing layouts. Other users and their layout assignments are preserved. An existing user 1 is not replaced, and another subscriber is not adopted as the default account.
+
+The recovered account is named **USER1**, or **USER1_1**, **USER1_2**, and so on if that name is already taken. Its account password and XC layout passwords are newly generated. Review its enabled state, source credentials, and layout access in **Manage Users**, then copy the current XC login details to any affected players. Old passwords for the missing account are not restored.
+
 ## Understand provider credentials
 
 For example, when several users have accounts with Provider A:

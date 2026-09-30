@@ -27,6 +27,10 @@ For documentation access, the API key grants access to the raw specification onl
 
 The documented API includes user metadata, user listing and mutations, layout-specific password set/regenerate operations, and asynchronous operation status. The former bulk user-password reset endpoint is retained in the schema as retired and returns `410 Gone`. Use a valid API key with the required scope when testing an endpoint, and treat the **Try it out** controls as live operations: use a test user and confirm the target server before sending a request.
 
+## Default user deletion protection
+
+Deleting the default account (user ID 1) through the external users API returns **409 Conflict** with problem code `default_user_protected`. Protection follows the numeric user ID even if the account is renamed. Treat this as a rejected deletion, not a temporary conflict to retry. See [default-user recovery and protection](../../layouts/users.md#default-user-recovery-and-protection).
+
 ## Layout password endpoints
 
 Use an API key with the user-write scope and an `Idempotency-Key` for each mutation:

@@ -51,10 +51,16 @@ For a compatible beta player, select the enabled user and use **Player Pairing â
 
 - Use **Output M3Us** to generate or review user playlist output.
 - Use **Edit Layout Password** to change or regenerate the password for one assigned XC-enabled layout.
-- Use **Delete User** only after confirming that no player, layout, or customer still depends on the account.
+- Use **Delete User** only after confirming that no player, layout, or customer still depends on the account. The default user (ID 1) cannot be deleted, even if renamed.
 
 !!! warning
     Changing a layout password changes access for that layout. Deleting a user can remove access to assigned outputs. Confirm the intended user and layout before either action.
+
+## Default user recovery
+
+If default user ID 1 is missing, IPTVBoss automatically recreates it when configured sources load normally or a source operation requires it. The recovered account is enabled, receives credentials from configured sources, and is assigned to existing layouts. Existing users and their assignments are preserved; an existing user 1 is not replaced.
+
+Recovery generates fresh account and XC layout passwords. Review the recovered user's source credentials, layout access, and current player login details before reconnecting affected players. See [default-user recovery and protection](../../layouts/users.md#default-user-recovery-and-protection) for naming and recovery details.
 
 ## Verify a server user
 

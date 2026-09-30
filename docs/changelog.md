@@ -2,6 +2,15 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.12.10 — September 30, 2026
+
+### 👤 Default user recovery and protection
+
+- **Fix:** A missing default user (ID 1) is recovered automatically when configured sources load normally or source operations require it. Recovery rebuilds its source credentials and assigns it to existing layouts while preserving other users and their assignments. An existing default user is preserved.
+- **Fix:** The default user cannot be deleted through desktop User Management, the XC Server console, or the external API. Protection follows user ID 1 even when the account is renamed.
+- **Fix:** Adding missing source credentials to users identifies the default account by ID 1, preventing another subscriber from receiving the source's default credentials when user 1 is missing.
+- **Note:** A recovered default user receives fresh account and XC layout passwords. Review its credentials and player login details in [Desktop Output Users](layouts/users.md#default-user-recovery-and-protection) or [XC Server Users](server/console/users.md).
+
 ## 📢 IPTVBoss 3.12.9 — September 29, 2026
 
 ### 🖥️ NoGUI reliability
@@ -17,9 +26,9 @@ For a task-oriented overview of recent changes, see [Release Highlights](release
 
 ### 🏷️ Sports event and team identifiers
 
-- **New:** Sports AEDs automatically include the selected event identifier and available home/away team identifiers in XC live-stream and panel responses, M3U playlists, and XMLTV event programmes for players that support this metadata.
+- **New:** Sports AEDs automatically include the selected event identifier and available home/away team identifiers in XMLTV event programmes for players that support this metadata.
 - **Improvement:** ESPN+ listings use the linked sports event identity when valid linking metadata is available, with a listing-specific identity otherwise. Unavailable or invalid identifiers are omitted; XMLTV countdown, next-event, after-event, and no-event filler entries remain untagged.
-- **Improvement:** Identifiers appear when normal output or XC cache refresh replaces existing files or responses. Event identifiers follow the selected event and are not permanent channel identifiers.
+- **Improvement:** Identifiers appear when XMLTV output is regenerated. Event identifiers follow the selected event and are not permanent channel identifiers.
 
 ### 🎨 Layout Editor and playback
 
