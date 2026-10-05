@@ -2,14 +2,32 @@
 
 Update IPTVBoss while protecting the database, settings, layouts, and source configuration already on the computer.
 
-!!! note "Automatic updates"
-    Windows and macOS installations should normally update automatically when a new release is available. Use this page when an automatic update does not complete, when you need to verify the installed version, or when updating a Linux package manually.
+!!! note "Startup update check"
+    Packaged desktop installations check for a newer release before loading application data. The prompt shows the installed and available versions. A failed or timed-out update check allows normal startup to continue.
 
 For a server, use the [platform-specific backup and update procedures](../settings/backups.md#back-up-or-update-an-xc-server).
 
 ## Update from 3.11.16
 
 Read [Update from 3.11.16](update-from-3.11.16.md) before upgrading an existing installation. It covers the new XC Server administrator username (`admin` with your existing password) and the settings for reverse proxy, direct LAN HTTP, and direct HTTPS connections.
+
+## Use the startup update prompt
+
+When an update is available:
+
+- Choose **Update now** when offered to hand installation to the native updater and restart before loading your data.
+- Choose **Later** to continue using the installed version.
+- If **Open download page** appears instead, download and install the update manually, then relaunch with your usual shortcut or command. This applies when the native updater is unavailable, including launches with command-line arguments or software rendering.
+
+On Linux, update a Debian/Ubuntu package through your package manager. For a tarball installation, stop IPTVBoss and replace the installation using the download for the matching architecture and Ubuntu variant. Preserve the application data directory.
+
+If local XC Server or sync work is active, or its status cannot be verified, the prompt reports **Update available — installation deferred**. Choose **Continue to Boss** or **Exit**, stop the local work safely, and reopen the desktop to update. IPTVBoss does not stop that work for you.
+
+### Recover an incomplete update
+
+While an update is pending, new background launches are deferred. If startup reports **Previous update has not completed**, let any running installer finish. If the installer has failed and closed, choose **The updater has closed — recover startup**. Background jobs remain paused until the update succeeds or startup is recovered.
+
+If the native updater cannot start, use the offered download page to install manually. See [If the update fails](#if-the-update-fails) if the installation itself fails.
 
 ## Before updating
 

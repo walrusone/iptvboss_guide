@@ -93,6 +93,8 @@ The source option is useful when a provider does not support account-information
 
 Checks use the user's alternate provider URL when configured. An unchanged expiry counts as a confirmed result. Failed, rate-limited, or invalid responses retain saved values; missing expiry retains the previous expiry while updating the supplied connection limit. A rejected login marks expiry and connection limit as unknown. To check a renewal immediately, use [Refresh Credentials](../layouts/users.md#refresh-provider-expiry) on desktop or [Refresh expiry](../server/console/users.md#refresh-provider-expiry) in the console.
 
+For Pro installations, both standalone NoGUI runs and internal XC Server syncs check credential-expiry notifications using the configured email settings. Notices can use saved expiry information when a provider refresh is not due. Failed email sends are reported and remain eligible for a later retry.
+
 Use [Email Notifications](email.md) to configure credential-expiry notices.
 
 ## NoGUI status and cancellation

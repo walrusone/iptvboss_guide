@@ -25,4 +25,8 @@ Email Notification Settings can send operational notifications such as provider-
 3. Review the IPTVBoss logs if the test fails.
 4. Confirm that the relevant provider user has an expiry date that can be monitored.
 
-The exact notification events and timing may vary by release. The current documented purpose is credential-expiry notification; do not assume that every synchronization or output failure sends email.
+Credential-expiry checks run during standalone NoGUI synchronization and internal XC Server syncs. They can use saved expiry information even when a provider metadata refresh is not due. User notices and the manager summary follow their configured notification settings and existing notice intervals.
+
+Email delivery failures appear in the logs and error reporting. A failed send is not recorded as a successfully sent notice, so it can be retried on a later check. If notices are missing, verify SMTP connectivity and authentication as well as the saved credential expiry and notification settings.
+
+Credential-expiry notification does not mean that every synchronization or output failure sends email.

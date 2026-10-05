@@ -33,6 +33,14 @@ A data-directory copy preserves the installation files; it is not the same as th
 
 Keep a dated backup from before a major change. Synchronizing the latest database does not by itself preserve an older working configuration.
 
+## Closing a desktop synchronized with XC Server
+
+With XC Server database synchronization and backups enabled, allow shutdown to finish creating the backup, uploading it, and waiting for the server. The desktop restores the server database on its next startup before editing resumes.
+
+If **Shutdown needs attention** appears, use **Retry** or, when available, **Exit with Local Backup**. Record the displayed backup path. Exiting with a local backup preserves a recovery copy but does not confirm successful server publication. Pending publication or restore work is checked on the next startup, and editing remains paused until reconciliation succeeds or you explicitly unlink the server.
+
+Follow [XC shutdown or startup needs attention](../server/troubleshooting.md#xc-shutdown-or-startup-needs-attention) for recovery options.
+
 ## Back up or update an XC Server
 
 Use the instructions for the process that owns the server database:

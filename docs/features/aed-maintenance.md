@@ -13,7 +13,11 @@ Use [Dummy Guide Inventory](../setup/dummy-guides.md) to find definitions and ch
 5. Save the AED only after the results are correct.
 6. Refresh the assigned AED channels and inspect the result in the Layout Editor.
 
-After a successful playlist source sync, eligible sports channels that previously had no match are retried automatically. If a channel still has no event, confirm that the sports data is available, the AED is assigned, and the provider name or custom lookup name matches the AED rules before using **Refresh AEDs** manually.
+After a successful playlist source sync, eligible sports channels that previously had no match are retried automatically. Retries search the full configured window using the available sports data, even when the provider name and dataset have not changed. An event already in the dataset can therefore match when it enters the output window. A miss remains eligible for a later refresh; explicit no-event markers are still respected.
+
+Eligible channels using a fallback AED are also checked for a match in earlier sports definitions in their fallback chain. This can replace the fallback with a matching earlier definition without requiring new sports data. If no earlier definition matches, the existing fallback is preserved. A match to an intermediate definition can still be promoted to the primary definition on a later refresh.
+
+Saving an AED can retry eligible unmatched channels or check eligible fallback assignments even when matching settings are unchanged. If a channel still has no event, confirm that the sports data is available, the AED is assigned, and the provider name or custom lookup name matches the AED rules before using **Refresh AEDs** manually.
 
 ### Understand matches outside the output window
 

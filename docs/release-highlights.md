@@ -2,6 +2,14 @@
 
 This summary groups the recent changes documented in the [build-by-build changelog](changelog.md). For an existing installation, start with [Update from 3.11.16](getting-started/update-from-3.11.16.md). Stable downloads are available from [iptvboss-release](https://github.com/walrusone/iptvboss-release/releases/latest).
 
+## New in 3.12.17
+
+- Follow the [startup update prompt](getting-started/updating.md#use-the-startup-update-prompt) to install or defer an update, use the manual download route, or recover an incomplete update.
+- Understand [AED retries and fallback matching](features/aed-maintenance.md#test-and-refresh-an-aed) across the full configured window, including when the sports dataset has not changed.
+- Review [XC shutdown publication and next startup](server/gui-settings.md#shutdown-publication-and-next-startup), including local-backup exit and reconciliation recovery.
+- Configure [automatic server backup checks](server/gui-settings.md#output-links-security-and-operations); `0` disables them.
+- Review [expiry email notifications](settings/email.md#verify-notifications) during standalone NoGUI and internal XC Server syncs. See the [3.12.17 changelog](changelog.md) for notification and database reliability fixes.
+
 ## New in 3.12.10
 
 - Understand [default-user recovery and protection](layouts/users.md#default-user-recovery-and-protection): missing user ID 1 is rebuilt from configured sources, and desktop, console, and API actions prevent its deletion. Review recovered login details before reconnecting players.

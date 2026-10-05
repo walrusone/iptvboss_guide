@@ -32,14 +32,25 @@ HTTP and HTTPS server URLs are accepted. IPTVBoss displays a warning when the co
 
 After pairing, actions such as **Refresh Cloud Status**, **Disable Sync**, **Retry Current Database**, and **Unlink This Installation** apply immediately. **Unlink This Installation** removes the local pairing even when the server cannot be reached; if revocation cannot be sent, the old server-side pairing may remain until the server is reachable again.
 
+### Shutdown publication and next startup
+
+When XC Server is the database synchronization provider and synchronization and database backups are enabled, closing the desktop creates and publishes a backup. Progress shows **Creating backup**, **Uploading backup**, **Waiting for XC Server**, and **Closing application** as the work proceeds. The closing desktop does not restore the published database; the next startup restores the server database before editing resumes.
+
+If shutdown cannot finish, **Shutdown needs attention** shows the failure and the local backup path when available. Choose **Retry**, or **Exit with Local Backup** to close while retaining a verified local backup. The latter is available only when that backup exists and does not confirm that the server received the changes.
+
+If the previous publication or restore still needs to be resolved at startup, **XC database reconciliation required** pauses editing and automatic source synchronization. Choose **Retry Connection** to resolve the publication and restore the server database, **Exit** to leave, or **Unlink Server** to continue with the local copy. Unlinking first saves a safety backup and disables database synchronization. The local copy may lack server-side changes; unlinking abandons automatic reconciliation and does not restore or modify the server database.
+
+See [XC shutdown or startup needs attention](troubleshooting.md#xc-shutdown-or-startup-needs-attention) for recovery steps.
+
 ## Automatic server reloads from this client
 
 Pairing does more than connect the desktop installation to the XC Server database. The server also provisions a client-specific, reload-only credential. IPTVBoss stores and uses this credential automatically; it does not grant general Server Console or administration access.
 
-When the desktop client closes after producing a database backup, it asks the paired XC Server to reload after a short delay:
+When the desktop client closes after producing a database backup, the database provider determines how the paired XC Server receives the update:
 
 - If database cloud synchronization is disabled, the server reloads its local database.
-- If database cloud synchronization is enabled and the cloud backup succeeds, the server reloads from the synchronized cloud database.
+- If Dropbox or Google Drive database synchronization is enabled and the cloud backup succeeds, the client asks the server to reload from the synchronized cloud database after a short delay.
+- If XC Server is the database synchronization provider, the server applies the uploaded backup through its publication workflow; the client does not send a separate reload request.
 - If an enabled cloud backup fails or is incomplete, the client does not request a reload. This prevents the server from loading an incomplete update.
 
 The client must be paired, XC must be enabled in its saved configuration, and the server address must be reachable. This is not a live reload after every edit; it occurs as part of the client's shutdown and backup workflow. If the server is offline, busy, or blocked by another database operation, review the client and server logs before trying again. See [Paired Devices](console/paired-devices.md) for access management and [Server did not reload after a client update](troubleshooting.md#server-did-not-reload-after-a-client-update) for troubleshooting.
@@ -54,7 +65,7 @@ Enabling the XC Server does not require any layout to be enabled for XC output. 
 
 - **Output and Links** controls M3U downloads, cloud-provider links, and TinyURL links. Enable only the link types required by the deployment.
 - **Security** controls the administrator password and which console areas require administrator protection.
-- **Operations and Sync Runs** contains the update interval, testing-server controls, and **Manage Sync Runs**. Use these only when you understand their effect on the shared server.
+- **Operations and Sync Runs** contains the update interval, testing-server controls, and **Manage Sync Runs**. The update interval is measured in minutes and controls automatic backup checks, not software update checks or source sync schedules. Set it to `0` to disable automatic backup checks. Negative saved values reset to 30 minutes.
 
 !!! warning
     Never publish an administrator password, API key, pairing code, or private server address.

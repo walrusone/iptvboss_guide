@@ -14,7 +14,7 @@ See [Linked Layout Groups](../layouts/linked-groups.md) to check the originating
 
 <span class="pro-badge">PRO</span> This troubleshooting workflow applies to XC Server.
 
-The automatic reload request is sent when a paired IPTVBoss client closes after completing its database backup workflow. It is not sent after every edit.
+For local databases or Dropbox/Google Drive database synchronization, the automatic reload request is sent when a paired IPTVBoss client closes after completing its database backup workflow. It is not sent after every edit. When XC Server is the database synchronization provider, the server applies the uploaded backup directly; no separate reload request is expected. For that workflow, see [XC shutdown or startup needs attention](#xc-shutdown-or-startup-needs-attention).
 
 Check the following:
 
@@ -26,6 +26,22 @@ Check the following:
 6. If the client was revoked, generate a new one-time pairing code and pair it again. Do not reuse an expired pairing code or manually share a reload credential.
 
 See [Automatic server reloads from this client](gui-settings.md#automatic-server-reloads-from-this-client) for the expected behavior.
+
+## XC shutdown or startup needs attention
+
+**Shutdown needs attention** means the desktop could not finish its shutdown work. Read the failure detail and record the displayed local backup path, then:
+
+1. Check the server connection and review the desktop and XC Server logs. Backup phase timings can help distinguish backup creation, upload, server processing, and cleanup delays.
+2. Choose **Retry**. If the server already accepted an upload, IPTVBoss checks that operation rather than uploading again. If the upload outcome is uncertain, it checks server revision history and keeps the operation unresolved when success cannot be confirmed.
+3. If you need to close, choose **Exit with Local Backup** when enabled. This requires a verified local backup and does not mean that publication succeeded.
+
+At the next startup, pending publication and restore work must be resolved before normal editing and automatic source sync resume. If **XC database reconciliation required** appears:
+
+- **Retry Connection** attempts to resolve the pending work and restore the server database. Use it after restoring connectivity or resolving the reported server issue.
+- **Exit** leaves the recovery unresolved for a later launch; follow any shutdown prompt that appears.
+- **Unlink Server** saves a local safety backup, disables synchronization, and allows editing the local copy. Confirm this only when you intend to abandon automatic reconciliation: the local copy may lack server-side changes. The server database is not modified. Unlinking cannot proceed if the safety backup fails.
+
+See [Shutdown publication and next startup](gui-settings.md#shutdown-publication-and-next-startup) for the normal workflow.
 
 ## XC output is rebuilding or serves an older response
 

@@ -2,6 +2,42 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.12.17 — October 5, 2026
+
+### 🖥️ Startup updates
+
+- **New:** Packaged desktop installations check for updates before loading application data and offer **Update now** or **Later**. When the native updater is unavailable, **Open download page** provides the manual installation route.
+- **Improvement:** Installation is deferred while local XC Server or synchronization work is active or its status is uncertain. Pending updates pause new background launches until the update completes or startup is recovered.
+- **Improvement:** The startup update window shows the installed and available versions and provides recovery guidance after an incomplete update. Failed update checks allow normal startup to continue.
+
+### 🏟️ AED refresh and fallback matching
+
+- **Fix:** Eligible sports AED channels with no match retry across the full configured window, even when the provider name and sports dataset have not changed. Previously seen events can match when they enter the output window, and unresolved matches remain eligible on later refreshes.
+- **Fix:** Eligible fallback assignments are checked against earlier sports definitions in the fallback chain using the full configured window. An unsuccessful promotion preserves the existing fallback; successful intermediate matches remain eligible for a later primary match.
+- **Fix:** Saving an AED can retry eligible unmatched or fallback channels even with unchanged matching settings. Explicit no-event markers remain respected.
+
+### ☁️ XC cloud database and shutdown recovery
+
+- **Improvement:** Desktop shutdown publishes the database backup to XC Server without restoring it into the closing desktop. The next startup restores the server database before editing resumes.
+- **New:** **Shutdown needs attention** offers **Retry** or **Exit with Local Backup** when a verified local backup is available. Accepted uploads are monitored on retry; uncertain upload outcomes are checked without blindly sending a duplicate.
+- **New:** Pending database reconciliation pauses editing and automatic source sync, with **Retry Connection**, **Unlink Server**, and **Exit** actions. Unlinking saves a local safety backup and allows local editing without changing the server database.
+- **Improvement:** Shutdown progress distinguishes backup creation, upload, server processing, and application cleanup. Backup and publication logs include phase timings for troubleshooting.
+
+### 🔧 Server reliability and notifications
+
+- **Fix:** A server update interval of `0` disables automatic backup checks; negative values reset to 30 minutes instead of causing scheduler startup failures.
+- **Fix:** Reduced database connection contention during sports-data access and playback activity reporting, and increased serving connection capacity to prevent pool exhaustion under concurrent work.
+- **Fix:** Internal XC Server synchronization now checks credential-expiry notifications as standalone NoGUI runs do. Email delivery failures are reported and leave notices eligible for a later retry instead of recording them as sent.
+
+## 📢 IPTVBoss 3.12.11 — September 30, 2026
+
+### 🏟️ AED refresh and team matching
+
+- **Fix:** AED channels previously marked as having no event retry matching when a nonblank Custom Sports TXT lookup is available, even when the lookup name has not changed.
+- **Fix:** Sports-based TXT recovery waits for sports data before matching; regex-based recovery can proceed without it.
+- **Fix:** Recognized short team names, including Fulham, Leeds, Wolves, Spurs, and Hull, are no longer rejected solely for their length. Matching ignores capitalization and surrounding whitespace; explicit no-event markers remain respected.
+- **Improvement:** NoGUI AED logs distinguish queued requests, skipped channels, and collection failures. AED processing summaries report matching outcomes and deferred work.
+
 ## 📢 IPTVBoss 3.12.10 — September 30, 2026
 
 ### 👤 Default user recovery and protection
