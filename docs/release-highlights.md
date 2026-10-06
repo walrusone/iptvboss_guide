@@ -2,6 +2,11 @@
 
 This summary groups the recent changes documented in the [build-by-build changelog](changelog.md). For an existing installation, start with [Update from 3.11.16](getting-started/update-from-3.11.16.md). Stable downloads are available from [iptvboss-release](https://github.com/walrusone/iptvboss-release/releases/latest).
 
+## New in 3.12.18
+
+- Configure [Stream Priority](layouts/stream-priority.md) at layout, group, or channel level so compatible players can rank preferred live streams in search and event channel lists. Use `0`–`9`, **Inherit**, and the **Effective** indicator, with bulk editing for channels.
+- Control both priority editing controls and M3U/XC metadata through **Enable Stream Priority** in [Output & Links](settings/application.md#stream-priority). It defaults to enabled and preserves saved values when turned off.
+
 ## New in 3.12.17
 
 - Follow the [startup update prompt](getting-started/updating.md#use-the-startup-update-prompt) to install or defer an update, use the manual download route, or recover an incomplete update.

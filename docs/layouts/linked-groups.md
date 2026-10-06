@@ -22,6 +22,10 @@ For a linked Custom Sports group, the originating group's sports settings contro
 
 To create an independently editable group, repeat the layout import with **Import as Linked Layout Group** disabled. Verify the copy before removing an obsolete link.
 
+## Stream priority in linked groups
+
+[Stream Priority](stream-priority.md#linked-groups) uses an explicit originating channel override first, then the destination linked group's override, then the destination layout's default. Editing an explicit channel override affects other links to that channel; use the destination group override for a default local to that layout.
+
 ## Investigate a broken or empty link
 
 1. Open [Layout Manager](layout-manager.md#read-layout-health) and inspect the affected layout's warning.

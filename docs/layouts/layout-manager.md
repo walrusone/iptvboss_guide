@@ -2,7 +2,7 @@
 
 Use **Layout Manager** to create, select, duplicate, remove, import, and export layouts.
 
-![The 3.11.95 Layout Manager](../3.11.95/Layout_Manager.png)
+![The 3.12.18 Layout Manager](../3.12.18/Layout_Manager.png)
 
 The Layout Manager uses a split view: layouts are listed on the left and the selected layout’s status, inventory, actions, and settings appear on the right. The dashboard adapts to the available width. Its three settings sections—**General**, **Output & Sync**, and **Advanced / Custom**—can each be expanded or collapsed from the section header.
 
@@ -43,11 +43,15 @@ Follow [Import and Export Layout Files](layout-files.md) to transfer selected la
 
 The selected layout’s settings are grouped so the status dashboard remains visible while you work:
 
-- **General** contains the layout name and enabled state.
+- **General** contains the layout name, enabled state, and **Stream Priority** when enabled in application settings.
 - **Output & Sync** contains cloud sync, EPG upload, empty-group cleanup, XC output, M3U output, XMLTV output, channel numbering, and output filenames.
 - **Advanced / Custom** contains the custom output folder and cloud-provider folder.
 
 Expand only the section you need when working in a smaller window. IPTVBoss remembers the section state between uses.
+
+## Set the default stream priority
+
+In **General**, choose **Stream Priority** beside **Name**, then select **Save Layout**. The default is `0` (lowest); `9` is highest. Live channels inherit this value unless a group or channel has an override. Follow [Stream Priority](stream-priority.md) for inheritance, player support, and output refresh steps.
 
 ## Read layout health
 

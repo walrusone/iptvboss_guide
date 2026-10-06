@@ -8,7 +8,7 @@ The editor is divided into three working areas: groups on the left, channels in 
 
 The right side has two main panels: **Channel Options** and **Group Options**. **Basic Info** and **EPG Mapping** are sections inside **Channel Options**. Select a section header to expand or collapse it. IPTVBoss remembers these choices between uses.
 
-![Current Layout Editor Channel Options](<../3.11.138/Layout Editor Channel Options.png>)
+![The 3.12.18 Layout Editor Channel Options](../3.12.18/Layout_Editor_Channel_Options.png)
 
 ## Select a layout and group
 
@@ -48,6 +48,10 @@ The **Channel Options** header also provides these actions:
 In **Basic Info**, select ![](../assets/icons/ui/revert.svg){ .ui-icon } **Revert to Provider Name** beside **Channel Name** to restore the name supplied by the playlist source. Beside **Channel Logo**, ![](../assets/icons/ui/find_replace.svg){ .ui-icon } **Find and Replace** updates logo text or links for selected channels; **EPG Logo** and **M3U Logo** copy the logo from the corresponding source when one is available.
 
 For a channel in a Custom Sports group with a configured presentation, **Ignore Custom Presentation** keeps that channel’s normal name and logo. The channel still participates in the group’s exclusions, AED processing, sports classification, and sorting. Select the checkbox and save the channel change; it can be applied to multiple eligible channels.
+
+### Set channel stream priority
+
+For live channels, **Stream Priority** appears after **Mark Stale** in **Basic Info** when enabled in application settings. Choose `0`–`9` or **Inherit**, then select **Save Channel(s)**. This also supports bulk editing. **Effective** shows the resolved value and its source for an individual channel. See [Stream Priority](stream-priority.md#set-a-channel-override) for the complete workflow.
 
 ### Load external EPG previews
 
@@ -111,6 +115,10 @@ The **Group Options** header can also contain:
 Sports controls appear only for a group configured as a **Custom Sports Group**.
 
 For an application-wide refresh, use **Sources** → **AED Refresh…**. **Refresh All** checks all configured AED channels; **Refresh Pending** continues queued work from an earlier paused or incomplete refresh. See [Test and refresh an AED](../features/aed.md#test-and-refresh-an-aed) for the progress view and completion metrics.
+
+### Set group stream priority
+
+For a live group, **Stream Priority** sets the default for channels without an explicit override. Choose `0`–`9` or **Inherit** to use the layout default, then select **Save Group(s)**. The value, dropdown, and **Effective** indicator appear together below the group name. See [Stream Priority](stream-priority.md#set-a-group-override), including the rules for linked groups.
 
 ### Custom sports presentation
 

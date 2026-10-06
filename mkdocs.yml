@@ -76,6 +76,7 @@ nav:
       - Linked Layout Groups · PRO: layouts/linked-groups.md
       - Layout File Import and Export · PRO: layouts/layout-files.md
       - Layout Editor: layouts/layout-editor.md
+      - Stream Priority: layouts/stream-priority.md
       - Keep Layouts Updated:
           - New Channel Manager: layouts/new-channel-manager.md
           - New Category Manager: layouts/new-category-manager.md

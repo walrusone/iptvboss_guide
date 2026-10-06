@@ -31,6 +31,10 @@ The settings dialog includes log level and log time-zone controls. Leave the log
 
 Advanced settings may include global M3U output tags and output-link behavior. Change these only when you understand how the receiving player uses the generated attributes.
 
+### Stream Priority
+
+**Enable Stream Priority** in **Output & Links** defaults to enabled. It shows or hides priority controls in Layout Manager and Layout Editor and includes or omits priority metadata in generated M3U and XC output. Turning it off preserves saved priorities. This checkbox is independent of **Enable Boss Player Output for M3U**. Follow [Stream Priority](../layouts/stream-priority.md#enable-or-disable-stream-priority) for the screenshot and setup steps.
+
 ### Boss Player Output (Beta) <span class="pro-badge">PRO</span>
 
 In **Output & Links**, **Enable Boss Player Output for M3U** enables per-user configuration publication for a compatible beta player. It defaults off and requires Pro. Configure Dropbox or Google Drive for output, then select the layouts to include. Follow [Boss Player Output](../setup/boss-player-output.md) for the complete workflow.

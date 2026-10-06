@@ -2,6 +2,14 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.12.18
+
+### Stream Priority
+
+- **New:** [Stream Priority](layouts/stream-priority.md) assigns live channels a priority from `0` (lowest) to `9` (highest), with layout defaults, group overrides, and individual or bulk channel overrides. **Inherit** clears an override; **Effective** shows the resolved value and its source.
+- **New:** M3U and XC live-channel output include the resolved priority for compatible players to rank search and event channel lists. Priority does not change IPTVBoss channel order or numbering.
+- **New:** **Enable Stream Priority** in [Output & Links](settings/application.md#stream-priority) defaults to enabled and controls both GUI visibility and exported metadata. Disabling it preserves saved priorities and is independent of Boss Player Output for M3U.
+
 ## 📢 IPTVBoss 3.12.17 — October 5, 2026
 
 ### 🖥️ Startup updates

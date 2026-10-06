@@ -29,6 +29,10 @@ Common settings include:
 !!! note
     Exact labels can vary by release. Use the field shown in the current Layout Manager when a label differs.
 
+## Stream Priority
+
+[Stream Priority](stream-priority.md) adds a resolved `0`–`9` priority to live-channel M3U and XC output for compatible players. Enable or disable it globally in **IPTVBoss Settings → Output & Links**. Set the layout default under **General**, with group and channel overrides in Layout Editor. Save changes, regenerate output or reload/publish XC data, and refresh the player. Channel order and numbering in IPTVBoss stay unchanged.
+
 ## Boss Player Output (Beta) <span class="pro-badge">PRO</span>
 
 **Include in Boss Player Output** adds this layout to the configuration published for its explicitly assigned users. Enable **Enable Boss Player Output for M3U** in **IPTVBoss Settings → Output & Links** first. The layout control requires Pro and a supported cloud output provider; active Boss output keeps M3U output and cloud sync enabled. Follow [Boss Player Output](../setup/boss-player-output.md) for setup, publication, and copying the user's URL.
