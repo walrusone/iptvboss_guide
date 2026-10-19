@@ -2,6 +2,20 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.12.21 — October 19, 2026
+
+### 🐳 Docker startup
+
+- **Fix:** Containers running with a custom numeric UID/GID use `/data` for the home directory and update state, preventing startup failures with `AccessDeniedException: /.iptvboss-updates` when the user has no account entry in the container. The data volume must remain writable by the configured user.
+- **Note:** This fix requires an image built with the updated release package and Docker configuration. If overriding `CONVEYOR_JVM_OPTIONS`, retain `-Duser.home=/data`.
+
+### ☁️ XC cloud editing and recovery
+
+- **Fix:** Temporary connection failures, server errors, and rate limits retry editing-ownership renewal while the confirmed lease remains valid. If ownership expires or is lost, editing becomes read-only even when a renewal request is still waiting for a response.
+- **Fix:** Publishing a database pauses desktop editing while the server processes it and the merged database reloads. Editing resumes only after ownership is confirmed; delayed renewal responses from an earlier session no longer disrupt the current session.
+- **Fix:** Uncertain publication outcomes keep editing suspended until recovery, preventing further publication from an unreconciled local database. Publication, recovery, and local safety backups are coordinated to prevent overlapping database operations.
+- **Improvement:** Recovery messages distinguish expired ownership, ownership transferred to another editor, authorization loss, and publication recovery. Local work is backed up, and **Reload Latest and Resume Editing** becomes available only after a successful server status check confirms availability. Devices that lose authorization receive guidance to pair again.
+
 ## 📢 IPTVBoss 3.12.18
 
 ### Stream Priority
