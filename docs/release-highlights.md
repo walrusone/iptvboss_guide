@@ -2,10 +2,11 @@
 
 This summary groups the recent changes documented in the [build-by-build changelog](changelog.md). For an existing installation, start with [Update from 3.11.16](getting-started/update-from-3.11.16.md). Stable downloads are available from [iptvboss-release](https://github.com/walrusone/iptvboss-release/releases/latest).
 
-## New in 3.12.22
+## New in 3.12.23
 
 - Follow the [3.12.22 upgrade guidance](getting-started/updating.md#upgrading-to-31222-or-later) for persistent XC stream IDs: update both desktop and server before database sync, and refresh playlists in players affected by oversized IDs.
 - Review [switching from XC Server to Dropbox or Google Drive](settings/backups.md#switch-from-xc-server-to-dropbox-or-google-drive), including editing ownership and failed handoffs.
+- XC unlinking preserves a verified local backup and clears stale editing restrictions. Switching cloud providers after unlinking and exiting with a local backup no longer depend on the former server. See the [3.12.23 changelog](changelog.md) for recovery fixes.
 - Numbered short team names such as `Wigan (1)` remain eligible for [AED matching](features/aed-maintenance.md#test-and-refresh-an-aed).
 - Full-layout [M3U output](setup/output.md#user-output-order) generates the default user's playlist first, even if that user has been renamed.
 
