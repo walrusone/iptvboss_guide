@@ -7,6 +7,16 @@ Update IPTVBoss while protecting the database, settings, layouts, and source con
 
 For a server, use the [platform-specific backup and update procedures](../settings/backups.md#back-up-or-update-an-xc-server).
 
+## Upgrading to 3.12.22 or later
+
+When upgrading from an earlier release, update **both the desktop and XC Server** before resuming XC database synchronization. Version 3.12.22 introduces persistent XC stream IDs and cloud-sync protocol 2.0; incompatible peers are rejected with an instruction to update both installations.
+
+Startup creates and retains a verified local backup before the first stream-ID migration. Allow the migration to finish. Existing positive XC IDs up to `2,147,483,647` are preserved; oversized IDs are replaced with IDs within that range. If a player could not load the oversized IDs, refresh its playlist once after updating.
+
+Old oversized IDs remain playback and metadata aliases while the original layout channel exists and the user has access. Removed IDs are reserved rather than assigned to replacement content. Playlist positions, EPG IDs, and provider episode IDs are unchanged. Cached XC responses from the old ID format are rebuilt automatically.
+
+The ID registry travels with database backups and XC synchronization. Restoring a historical backup restores that snapshot's identities; independently edited databases are not merged.
+
 ## Update from 3.11.16
 
 Read [Update from 3.11.16](update-from-3.11.16.md) before upgrading an existing installation. It covers the new XC Server administrator username (`admin` with your existing password) and the settings for reverse proxy, direct LAN HTTP, and direct HTTPS connections.

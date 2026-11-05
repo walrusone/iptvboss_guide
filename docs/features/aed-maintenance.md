@@ -13,6 +13,8 @@ Use [Dummy Guide Inventory](../setup/dummy-guides.md) to find definitions and ch
 5. Save the AED only after the results are correct.
 6. Refresh the assigned AED channels and inspect the result in the Layout Editor.
 
+Recognized short team names with numeric stream suffixes, such as `Wigan (1)`, `Wigan (2)`, and `Hull (1)`, are eligible for matching even if their display names have been changed. Capitalization and surrounding whitespace are ignored for this check. Explicit no-event markers still take precedence; a numbered stream name does not guarantee an event match.
+
 After a successful playlist source sync, eligible sports channels that previously had no match are retried automatically. Retries search the full configured window using the available sports data, even when the provider name and dataset have not changed. An event already in the dataset can therefore match when it enters the output window. A miss remains eligible for a later refresh; explicit no-event markers are still respected.
 
 Eligible channels using a fallback AED are also checked for a match in earlier sports definitions in their fallback chain. This can replace the fallback with a matching earlier definition without requiring new sports data. If no earlier definition matches, the existing fallback is preserved. A match to an intermediate definition can still be promoted to the primary definition on a later refresh.

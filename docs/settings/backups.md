@@ -33,6 +33,16 @@ A data-directory copy preserves the installation files; it is not the same as th
 
 Keep a dated backup from before a major change. Synchronizing the latest database does not by itself preserve an older working configuration.
 
+## Switch from XC Server to Dropbox or Google Drive
+
+Before switching, configure and authorize the chosen [cloud provider](cloud-providers.md) on the installations that will use it. In the desktop's **Cloud & Backups** settings, leave **Cloud Sync Enabled** selected, choose **Dropbox** or **Google Drive**, and select **Save Settings**.
+
+IPTVBoss first asks the paired XC Server to transfer database synchronization to that provider and release the desktop's editing lease. The settings dialog shows **Saving Cloud Settings** while this completes. Another editor's active lease or an ongoing database operation blocks the handoff. If **Database Sync Provider Was Not Changed** appears, resolve the reported condition and retry; the desktop's provider setting has not been changed.
+
+After a successful handoff, cloud sync state is refreshed with progress shown. Check the selected provider and backup status on both installations. Pausing XC synchronization alone does not transfer database synchronization to Dropbox or Google Drive.
+
+When leaving Dropbox or Google Drive, IPTVBoss releases any cloud lock owned by this installation before applying the new settings. Disabling XC database synchronization releases the desktop's editing lease.
+
 ## Closing a desktop synchronized with XC Server
 
 With XC Server database synchronization and backups enabled, allow shutdown to finish creating the backup, uploading it, and waiting for the server. The desktop restores the server database on its next startup before editing resumes.

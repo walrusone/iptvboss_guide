@@ -23,6 +23,8 @@ The pairing code expires and can be used only once. Confirm that the intended da
 
 ## XC Cloud Database
 
+When upgrading from before 3.12.22, [update both desktop and server](../getting-started/updating.md#upgrading-to-31222-or-later) before resuming database sync. To move database synchronization to Dropbox or Google Drive, follow [the provider-switch procedure](../settings/backups.md#switch-from-xc-server-to-dropbox-or-google-drive).
+
 1. Enter the **Server URL** and **Server Port**.
 2. Enable **Include Port in URL** when required by the public address.
 3. Review the displayed connection address.
