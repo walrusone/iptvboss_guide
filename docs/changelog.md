@@ -2,6 +2,24 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.12.22 — November 4, 2026
+
+### 📺 XC stream IDs and upgrade compatibility
+
+- **Fix:** IPTVBoss-generated live, VOD, and series-list IDs stay within the positive 32-bit range, fixing player failures with oversized IDs. Existing IDs within that range are preserved; replaced IDs remain valid for playback and metadata while the original layout channel exists and the user has access.
+- **Improvement:** Stream IDs persist in the database and its backups. Removed IDs are reserved so old URLs cannot play replacement content when internal channel or layout numbers are reused. Startup retains a verified local backup before the first migration, and old XC response caches are rebuilt.
+- **Upgrade:** Update **both desktop and XC Server to 3.12.22 or later** before resuming database sync; older cloud-sync peers are rejected. Refresh the playlist once in players affected by oversized IDs. See [Updating IPTVBoss](getting-started/updating.md#upgrading-to-31222-or-later).
+
+### ☁️ Cloud provider changes
+
+- **Fix:** Switching from XC Server to Dropbox or Google Drive transfers the server's database sync provider and releases editing ownership before saving the desktop settings. If another editor owns the database or a database operation is active, the change is rejected and the desktop provider stays unchanged.
+- **Improvement:** Cloud settings show progress while network work completes. Provider changes and disabling synchronization release the previous editing lease or owned cloud lock before applying local settings. Pausing XC sync alone does not transfer the server to another provider.
+
+### 🏟️ AED matching and playlist output
+
+- **Fix:** Recognized short team names with a numeric stream suffix, such as `Wigan (1)`, `Wigan (2)`, and `Hull (1)`, remain eligible for AED matching, including after display-name changes. Explicit no-event markers remain respected.
+- **Improvement:** Full-layout M3U generation writes the enabled, assigned default user (user ID 1) first, even if renamed. Other users retain their saved assignment order; output for a selected list of users retains the requested order.
+
 ## 📢 IPTVBoss 3.12.21 — October 19, 2026
 
 ### 🐳 Docker startup

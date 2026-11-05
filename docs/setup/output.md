@@ -35,6 +35,12 @@ Do not use an all-layout action when you are testing a single layout change.
 
 After generation, follow [Connect a Player](connect-player.md) for local files, cloud links, or XC login. For separate viewer accounts, see [Desktop Output Users](../layouts/users.md).
 
+## User output order
+
+Full-layout M3U generation writes the default user's playlist first when user ID 1 is enabled and assigned to the layout. This applies even if the user has been renamed. Other users keep their saved assignment order. A disabled or unassigned default user is not added to the output batch.
+
+Output for a selected list of users keeps the requested order. This controls the order in which user files are generated, not the channel order inside a playlist.
+
 ## EPG sources that require synchronization
 
 If output reports **EPG sources require sync**, the named sources had unavailable cached guide data and were omitted from that output. Synchronize those sources in [Sources Manager](sources-manager.md), regenerate the affected guide output, and refresh it in the player. Changing **Automatically load programs** does not disable output and is not a substitute for synchronizing missing source data.
