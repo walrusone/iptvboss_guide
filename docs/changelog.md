@@ -2,7 +2,7 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
-## 📢 IPTVBoss 3.12.22 — November 4, 2026
+## 📢 IPTVBoss 3.12.23 — November 5, 2026
 
 ### 📺 XC stream IDs and upgrade compatibility
 
@@ -14,6 +14,12 @@ For a task-oriented overview of recent changes, see [Release Highlights](release
 
 - **Fix:** Switching from XC Server to Dropbox or Google Drive transfers the server's database sync provider and releases editing ownership before saving the desktop settings. If another editor owns the database or a database operation is active, the change is rejected and the desktop provider stays unchanged.
 - **Improvement:** Cloud settings show progress while network work completes. Provider changes and disabling synchronization release the previous editing lease or owned cloud lock before applying local settings. Pausing XC sync alone does not transfer the server to another provider.
+
+### 🔄 XC unlinking and local recovery
+
+- **Fix:** Unpairing or resetting XC Server trust creates a verified local backup before removing pairing data, disables local XC synchronization, and clears stale read-only and recovery overlays while preserving pending local changes for backup.
+- **Fix:** After unlinking, selecting Dropbox or Google Drive for database synchronization creates a local safety backup and checks the selected provider without contacting the former XC Server. If the initial sync check fails, database synchronization remains disabled.
+- **Fix:** **Exit with Local Backup** can create and verify a recovery backup when none is available yet. Local-only shutdown and shutdown backup after unlinking do not publish to or notify the former XC Server.
 
 ### 🏟️ AED matching and playlist output
 
