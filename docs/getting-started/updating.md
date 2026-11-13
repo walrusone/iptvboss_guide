@@ -33,6 +33,14 @@ On Linux, update a Debian/Ubuntu package through your package manager. For a tar
 
 If local XC Server or sync work is active, or its status cannot be verified, the prompt reports **Update available — installation deferred**. Choose **Continue to Boss** or **Exit**, stop the local work safely, and reopen the desktop to update. IPTVBoss does not stop that work for you.
 
+### Update a community Docker GUI container
+
+In **3.12.24 and later**, a GUI container configured with `IPTVBOSS_COMMUNITY_DOCKER=true` offers **Open Docker instructions** and **Later** when a newer release is available. **Open Docker instructions** opens the community maintainer's update instructions; **Later** continues startup. If the browser cannot open, the prompt displays the address to open manually.
+
+Update the Docker image and recreate the container using the maintainer's instructions, preserving the configured data volumes. Do not install a Debian package or replace application files inside the container. A newer IPTVBoss release may be available before the community image has been updated.
+
+This prompt applies to community GUI containers that set the environment flag. For XC Server containers, follow the [server backup and update procedures](../settings/backups.md#back-up-or-update-an-xc-server).
+
 ### Recover an incomplete update
 
 While an update is pending, new background launches are deferred. If startup reports **Previous update has not completed**, let any running installer finish. If the installer has failed and closed, choose **The updater has closed — recover startup**. Background jobs remain paused until the update succeeds or startup is recovered.

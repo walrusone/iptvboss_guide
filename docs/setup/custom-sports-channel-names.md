@@ -91,6 +91,14 @@ The field stores either a local path or a URL. IPTVBoss downloads a hosted file 
 
 The TXT file does not assign an AED by itself. It only supplies an alternate lookup name for channels that already use an AED. The AED still needs the correct matching configuration and assignment.
 
+## Regex fallback output names
+
+In **3.12.25 and later**, when a sports AED uses a regex fallback, output uses that fallback's Channel Name Regex with its saved matched lookup text and captured titles. The generated name therefore remains available after temporary TXT lookup data is cleared, including when the channel is loaded again from its saved assignment.
+
+For example, a fallback template `{title} | {title2}` can continue to display the competition and matchup captured from the TXT fixture instead of reverting to the provider's numbered channel name. A plain regex can also extract a name from saved lookup text; captured titles alone cannot reconstruct that original text.
+
+The TXT file still does not change the universal channel name. If Channel Name Regex is blank, invalid, or produces no value, the channel's own name is retained. Saved matching data does not extend an event's output window. After editing the TXT file, reload it and refresh the AED to use the new fixture.
+
 ## Refresh after changing the file
 
 After replacing the local file or updating the hosted file:

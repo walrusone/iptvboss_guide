@@ -81,6 +81,10 @@ If the task cannot find IPTVBoss, use the full path to the installed executable 
 
 The native scheduler may manage these entries automatically when Pro access is enabled. Avoid manually adding a second cron entry for the same schedule.
 
+## Source cleanup during NoGUI sync
+
+Successful M3U and XC NoGUI syncs apply the source's [removed-channel retention settings](../setup/playlists.md#automatically-clear-removed-channels) and [stale source-group cleanup](../setup/playlists.md#automatically-remove-stale-source-groups). Version **3.12.25** fixes removed-channel classification and cleanup during headless runs, with removals preserved after database reload. Failed or cancelled syncs do not run this cleanup stage.
+
 ## Automatic NoGUI user checks
 
 During a NoGUI synchronization, IPTVBoss can refresh provider metadata for enabled user credentials that are at risk of being stale. This includes credentials with an unknown expiry or an expiry within the configured **Days Before Expiry** notice window. The check supports Xtream Codes sources and password-backed M3U sources with an XC URL.

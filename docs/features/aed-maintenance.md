@@ -21,6 +21,16 @@ Eligible channels using a fallback AED are also checked for a match in earlier s
 
 Saving an AED can retry eligible unmatched channels or check eligible fallback assignments even when matching settings are unchanged. If a channel still has no event, confirm that the sports data is available, the AED is assigned, and the provider name or custom lookup name matches the AED rules before using **Refresh AEDs** manually.
 
+### Test Other Sports matching
+
+For [Other Sports AEDs](aed.md#other-sports-aeds), test both a full event name and a participant-only channel name. A participant-only name must identify the player or driver unambiguously in the relevant listings. Include a deliberately incorrect name to check that it does not match.
+
+For tennis names such as `Guo H` or `H. Guo`, enable abbreviation matching. Name/display-name matching and fuzzy matching alone do not enable these abbreviations. Doubles matching supports either name order and listings without athlete IDs or short names, but both partnerships must agree: incorrect initials or mixed-up partners should produce no match. A surname shared by multiple participants is not sufficient to select one of them.
+
+For fight and racing channels, compare a broad card or event name with a specific bout, segment, session, or driver-camera name. Check that the result has the intended scope and that sequential programmes fit the AED's output window. Team-location matching does not apply to these listings.
+
+After saving, refresh assigned channels and inspect both their output names and programme preview. Matching in the tester and inclusion in output remain separate checks.
+
 ### Understand matches outside the output window
 
 The tester can show a matching event even when it is outside the AED's configured output inclusion window. **Matched — outside output inclusion window.** means the lookup matched, but that event does not currently qualify for output. The tester uses current form values, including unsaved matching edits; a successful tester match alone does not mean the event will be exported.

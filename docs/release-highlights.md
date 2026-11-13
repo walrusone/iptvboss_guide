@@ -2,6 +2,14 @@
 
 This summary groups the recent changes documented in the [build-by-build changelog](changelog.md). For an existing installation, start with [Update from 3.11.16](getting-started/update-from-3.11.16.md). Stable downloads are available from [iptvboss-release](https://github.com/walrusone/iptvboss-release/releases/latest).
 
+## New in 3.12.25
+
+- Configure [Other Sports AEDs](features/aed.md#other-sports-aeds) for tennis, fight cards and bouts, racing sessions, and driver cameras. Review [participant and doubles matching](features/aed-maintenance.md#test-other-sports-matching), including abbreviation settings.
+- Add [team ranks](features/aed-reference.md#team-ranks) and [Other Sports details](features/aed-reference.md#other-sports-output) to AED output using optional placeholders.
+- Review [TXT regex fallback output names](setup/custom-sports-channel-names.md#regex-fallback-output-names), which now survive cleared temporary lookup data.
+- Review [removed-channel cleanup](setup/playlists.md#automatically-clear-removed-channels) for M3U/XC sources, including successful NoGUI syncs and persistent removals.
+- For community GUI containers, follow the [Docker update prompt introduced in 3.12.24](getting-started/updating.md#update-a-community-docker-gui-container).
+
 ## New in 3.12.23
 
 - Follow the [3.12.22 upgrade guidance](getting-started/updating.md#upgrading-to-31222-or-later) for persistent XC stream IDs: update both desktop and server before database sync, and refresh playlists in players affected by oversized IDs.

@@ -2,6 +2,28 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.12.25
+
+### 🏟️ Other Sports AEDs
+
+- **New:** Sports AEDs match tennis singles and doubles, fight cards, bouts and segments, race sessions, and driver cameras when supplied by the sports dataset. Unambiguous participant channels can follow player or driver schedules. See [Other Sports AEDs](features/aed.md#other-sports-aeds).
+- **Improvement:** Tennis doubles matching supports both initial-first and surname-first abbreviations, including listings without athlete IDs or short names. Enable abbreviation matching for names such as `Guo H` or `H. Guo`; incorrect initials, wrong partners, and ambiguous surnames are rejected.
+- **New:** [Output placeholders](features/aed-reference.md#other-sports-output) expose tournament, court, fight segment, race session, driver, car number, and other supplied listing details. Programme output uses supplied end times and artwork when available.
+- **New:** `{team1rank}` and `{team2rank}` render supplied team ranks from 1 to 25. Missing or out-of-range ranks render empty and can be hidden with conditional formatting.
+
+### 🏷️ TXT lookup and regex fallback names
+
+- **Fix:** Regex fallback AED output retains its matched TXT lookup and captured titles after temporary lookup data is cleared, keeping generated channel names consistent with the tester. Blank, invalid, or empty Channel Name Regex results still retain the channel's own name. See [TXT fallback output names](setup/custom-sports-channel-names.md#regex-fallback-output-names).
+
+### 🔄 Source cleanup and synchronization
+
+- **Fix:** Successful M3U and XC synchronization refreshes removed-channel classifications before cleanup, including during NoGUI runs. Eligible removals persist after database reload and no longer appear in playlist output. Failed or cancelled syncs do not run this cleanup.
+- **Improvement:** Added-channel logs describe additions in the current sync, while GUI new-channel indicators retain their existing history. See [removed-channel cleanup](setup/playlists.md#automatically-clear-removed-channels).
+
+### 🐳 Community Docker GUI updates
+
+- **Improvement:** GUI containers configured with `IPTVBOSS_COMMUNITY_DOCKER=true` offer **Open Docker instructions** or **Later** when a newer release is available. Update the Docker image and recreate the container using its maintainer's instructions; a newer application release can precede the updated community image. See [community Docker updates](getting-started/updating.md#update-a-community-docker-gui-container).
+
 ## 📢 IPTVBoss 3.12.23 — November 5, 2026
 
 ### 📺 XC stream IDs and upgrade compatibility

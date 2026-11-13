@@ -46,6 +46,23 @@ League Based AEDs can also use regex. **Title Regex** can provide additional `{t
 
 Regex Based AEDs do not need a league match to create an output channel name. They rely on the provider naming pattern, so similar channel names and representative test samples are especially important.
 
+## Other Sports AEDs
+
+In **3.12.25 and later**, League Based AEDs can use Other Sports listings from the sports dataset as well as team fixtures:
+
+| Listing | Matching input examples |
+| --- | --- |
+| Tennis singles and doubles | Player names or both doubles partnerships |
+| Fight cards, bouts, and segments | Card name, fighters, or a segment such as Prelims |
+| Race weekends and sessions | Event name or a session such as Qualifying |
+| Driver cameras | Driver name or car number with session context |
+
+Select the relevant sports and leagues, configure the name-matching options, and test representative provider names or [TXT fixture names](../setup/custom-sports-channel-names.md). Available coverage depends on the current sports dataset; selecting a sport cannot create missing listings.
+
+The delimiter field is labelled **Team / Participant Delimiter (Optional)**. Other Sports matching uses players, fighters, drivers, and session names; team-location matching does not apply. Unambiguous player or driver channels can follow their matching schedules within the configured output window, rather than showing only one fixture. Stale or withdrawn listings are excluded from matching.
+
+For doubles abbreviations and ambiguous names, see [Test Other Sports matching](aed-maintenance.md#test-other-sports-matching). Use [Other Sports output placeholders](aed-reference.md#other-sports-output) to display listing details without relying on team-only fields.
+
 ## How an AED is evaluated
 
 The exact steps depend on the AED approach, but an AED normally combines three jobs:

@@ -66,6 +66,16 @@ If a value contains URL-encoded characters such as `%2B` or `%40`, copy the valu
 
 For channel-name cleanup, see [Prefix Removal and Tags](source-tools.md). The **Custom Sports Channel Names** field uses [TXT Fixture Names for AEDs](custom-sports-channel-names.md).
 
+## Automatically clear removed channels
+
+In the M3U or Xtream Codes source editor, enable **Automatically Clear Channels Removed by Provider After** and set the retention period in days. Following a successful source sync, channels absent from the provider are eligible for removal once the time since they were last seen exceeds that period. Setting **0 days** permits cleanup on the next successful sync once that elapsed time is positive. Disabling the option retains absent channels during normal automatic cleanup; explicit removal actions remain available. When cleanup is enabled, a category configured to clear removed channels can bypass the source retention period.
+
+In **3.12.25 and later**, this cleanup also runs correctly during NoGUI synchronization, including channels first found missing during that run. Removed channels stay removed after the database is reloaded and are excluded from subsequent playlist output. Channels that return in the current sync are retained. Failed or cancelled syncs do not run the removed-channel or stale-category cleanup stage.
+
+The sync log's **Added Channels** entries report additions in that run. GUI new-channel indicators can continue to show channels added since the previous GUI session, so the two counts need not agree.
+
+Channel removal is separate from the stale source-group setting below and from [empty layout-group cleanup](../layouts/layout-manager.md#remove-empty-groups-after-source-sync).
+
 ## Automatically remove stale source groups
 
 Both M3U and Xtream Codes source editors include **Automatically remove stale source groups after**. Enable it and enter the number of days to retain categories that are no longer listed by the provider, then save the source.

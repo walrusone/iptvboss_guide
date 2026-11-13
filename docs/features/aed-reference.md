@@ -12,10 +12,11 @@ Use these placeholders in AED output fields. A value may be empty when the sourc
 | --- | --- |
 | `{title}` | Full event title and the first title-regex capture group |
 | `{title2}`–`{title10}` | Additional title-regex capture groups |
-| `{team1}`, `{team2}` | Home and away team names |
+| `{team1}`, `{team2}` | Home and away team names, or participant sides for Other Sports matches |
 | `{team1short}`, `{team2short}` | Short home and away team names |
 | `{team1abbr}`, `{team2abbr}` | Team abbreviations |
 | `{team1record}`, `{team2record}` | Team records, such as `12-3` |
+| `{team1rank}`, `{team2rank}` | Supplied team ranks from 1 to 25; empty when unavailable or outside that range |
 | `{team1nick}`, `{team2nick}` | Team nicknames or mascots |
 | `{team1loc}`, `{team2loc}` | Team city or location |
 | `{prefix}` | Custom Sports group presentation name and number, such as `ESPN+ 001` (Channel Name Regex only) |
@@ -28,11 +29,52 @@ Use these placeholders in AED output fields. A value may be empty when the sourc
 | `{Countdown}` | Sentence-case countdown |
 | `{livetag}` | Live-event indicator tag |
 | `{newline}` | A line break in output text |
-| `{summary}` | AI-generated event preview, when available |
+| `{summary}` | AI-generated event preview, or supplied Other Sports summary with title fallback |
 | `{predictor}` | Matchup prediction, when available |
 | `{oddsml}` | Moneyline odds, when available |
 
 `{title1}` is an alias for `{title}`. In Sports AEDs and Title Regex, `{title}` is the event title, so additional regex groups begin at `{title2}`. In a Simple Regex Dummy, capture group 1 maps to `{title}` and group 2 maps to `{title2}`.
+
+### Team ranks
+
+In **3.12.25 and later**, use conditional formatting to include a rank and its punctuation only when supplied:
+
+```text
+{if#{team1rank} endif}{team1} vs. {if#{team2rank} endif}{team2}
+```
+
+This can produce `#4 Alabama vs. #18 Tennessee`, or `Alabama vs. Tennessee` when neither rank is available. Ranks outside `1`–`25` also render empty. These are team ranks, not tennis seeds or participant rankings.
+
+### Other Sports output
+
+In **3.12.25 and later**, Other Sports listings provide the following text placeholders when the corresponding data is available:
+
+| Placeholder | Meaning |
+| --- | --- |
+| `{event}` | Event or parent fight-card name |
+| `{sport}` | Sport name |
+| `{tournament}` | Tennis tournament name |
+| `{round}`, `{court}` | Supplied round and tennis court |
+| `{session}` | Racing session name |
+| `{segment}` | Fight segment, such as Prelims |
+| `{driver}`, `{carnumber}`, `{team}` | Driver name, car number, and racing team |
+| `{broadcast}` | Supplied broadcast information |
+| `{warnings}` | Supplied data-quality warnings |
+| `{availability}`, `{participation}` | Supplied camera availability and entry participation values |
+
+These are text values in output templates. In the **Logo** field, identically named placeholders such as `{event}`, `{sport}`, and `{team}` remain [graphic selectors](#sports-logos).
+
+For tennis matches and fight bouts, `{team1}` and `{team2}` represent the two participant sides; doubles partners on each side are joined with ` / `. Their short-name placeholders use those same side names. Team abbreviations, locations, nicknames, records, and ranks are empty for these listings. Cards, segments, sessions, and cameras have no participant sides, so prefer `{title}` and the listing-specific fields.
+
+For example, a racing output template can use:
+
+```text
+{event}{if - {session}endif}{if - {driver}endif}{if (#{carnumber})endif}
+```
+
+Missing optional values render empty. `{title}` uses the listing's event title, and `{summary}` uses its supplied summary or falls back to that title. For listings without participant sides, the default next-event statistics description falls back to the title.
+
+Programme output follows the matched schedule. A supplied end time later than the start replaces the configured duration; the next event can still shorten the programme to avoid overlap. Without a usable supplied end time, the configured duration applies. Programme artwork uses the supplied portrait icon when portrait output is enabled and available, otherwise the supplied programme icon or event logo.
 
 ## Conditional output
 
@@ -103,6 +145,8 @@ Channel Name Regex controls which provider channels match the AED and can also c
 - Missing league, sport, or other optional values resolve to an empty string. Put surrounding punctuation in an `{if}` block when it should disappear with the missing value.
 
 Custom Sports TXT names are lookup inputs and do not replace the universal channel name by themselves. When a configured Channel Name Regex is blank, invalid, or renders no value, the channel's own name is retained.
+
+For regex fallback AEDs, saved matching inputs and captured titles keep the configured output name available after temporary TXT lookup data is cleared. This does not extend the event's output window or make the TXT name a universal channel rename. See [TXT fallback output names](../setup/custom-sports-channel-names.md#regex-fallback-output-names).
 
 Examples:
 
