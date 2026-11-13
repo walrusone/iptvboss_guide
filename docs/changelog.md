@@ -2,7 +2,7 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
-## 📢 IPTVBoss 3.12.25
+## 📢 IPTVBoss 3.12.26
 
 ### 🏟️ Other Sports AEDs
 
