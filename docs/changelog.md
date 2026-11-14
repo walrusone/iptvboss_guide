@@ -2,6 +2,15 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.12.27
+
+### 🏟️ Other Sports AEDs
+
+- **New:** Tennis AEDs can match tournament sessions without player names, including round and singles/doubles filters. `ATP 250 Tennis: Stockholm Semifinals` selects eligible semifinals; `WTA Finals: Singles & Doubles Semifinals` selects both draws. Matches follow the configured AED windows and retain their individual programme details. See [tennis session matching](features/aed-maintenance.md#match-tennis-tournament-sessions).
+- **New:** `{draw}` displays a readable tennis draw such as `Mens Singles` or `Womens Doubles`; missing values render empty.
+- **Improvement:** `{segment}` uses readable fight-segment names such as `Main Card` and `Early Prelims`, using the parent card's supplied segment name when available. Use `{event}` with `{segment}` to avoid repeating the segment already included in a segment listing's `{title}`.
+- **Fix:** Other Sports output preserves numbered title-regex captures, including `{title2}` and capitalized forms such as `{Title2}`, while `{title}` and `{Title}` retain the listing title. Missing captures render empty. See [Other Sports output](features/aed-reference.md#other-sports-output).
+
 ## 📢 IPTVBoss 3.12.26
 
 ### 🏟️ Other Sports AEDs

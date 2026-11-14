@@ -2,6 +2,11 @@
 
 This summary groups the recent changes documented in the [build-by-build changelog](changelog.md). For an existing installation, start with [Update from 3.11.16](getting-started/update-from-3.11.16.md). Stable downloads are available from [iptvboss-release](https://github.com/walrusone/iptvboss-release/releases/latest).
 
+## New in 3.12.27
+
+- Match [tennis tournament sessions](features/aed-maintenance.md#match-tennis-tournament-sessions) by tournament, round, and draw without player names, within the configured AED windows.
+- Use the new `{draw}` placeholder, readable fight-segment names, and restored numbered title captures in [Other Sports output](features/aed-reference.md#other-sports-output).
+
 ## New in 3.12.25
 
 - Configure [Other Sports AEDs](features/aed.md#other-sports-aeds) for tennis, fight cards and bouts, racing sessions, and driver cameras. Review [participant and doubles matching](features/aed-maintenance.md#test-other-sports-matching), including abbreviation settings.

@@ -33,7 +33,7 @@ Use these placeholders in AED output fields. A value may be empty when the sourc
 | `{predictor}` | Matchup prediction, when available |
 | `{oddsml}` | Moneyline odds, when available |
 
-`{title1}` is an alias for `{title}`. In Sports AEDs and Title Regex, `{title}` is the event title, so additional regex groups begin at `{title2}`. In a Simple Regex Dummy, capture group 1 maps to `{title}` and group 2 maps to `{title2}`.
+`{title1}` normally aliases `{title}`; Other Sports listings use the capture behavior described [below](#other-sports-output). In Sports AEDs and Title Regex, `{title}` is the event title, so additional regex groups begin at `{title2}`. In a Simple Regex Dummy, capture group 1 maps to `{title}` and group 2 maps to `{title2}`.
 
 ### Team ranks
 
@@ -54,9 +54,10 @@ In **3.12.25 and later**, Other Sports listings provide the following text place
 | `{event}` | Event or parent fight-card name |
 | `{sport}` | Sport name |
 | `{tournament}` | Tennis tournament name |
+| `{draw}` | Readable tennis draw, such as `Mens Singles`, `Womens Doubles`, or `Mixed Doubles` (3.12.27+) |
 | `{round}`, `{court}` | Supplied round and tennis court |
 | `{session}` | Racing session name |
-| `{segment}` | Fight segment, such as Prelims |
+| `{segment}` | Fight segment; readable names such as `Main Card`, `Prelims`, or `Early Prelims` in 3.12.27+ |
 | `{driver}`, `{carnumber}`, `{team}` | Driver name, car number, and racing team |
 | `{broadcast}` | Supplied broadcast information |
 | `{warnings}` | Supplied data-quality warnings |
@@ -73,6 +74,16 @@ For example, a racing output template can use:
 ```
 
 Missing optional values render empty. `{title}` uses the listing's event title, and `{summary}` uses its supplied summary or falls back to that title. For listings without participant sides, the default next-event statistics description falls back to the title.
+
+In **3.12.27 and later**, `{title1}` through `{title10}` preserve title-regex captures for Other Sports output, while `{title}` remains the listing title. `{Title1}` through `{Title10}` capitalize the captures, and `{Title}` capitalizes the listing title. Missing captures render empty and can be hidden with conditionals. For example, `{title}{if - {title2}endif}` appends a second capture such as an audio language only when present.
+
+Fight bouts use the parent card's supplied segment name when available, otherwise a readable form of the segment code. For a segment listing, `{title}` already includes the segment, while `{event}` is the card name alone. To avoid repeating it, use:
+
+```text
+NEXT EVENT: {sport} - {event}{if ({segment})endif}
+```
+
+For example, this can produce `NEXT EVENT: MMA - UFC 334: Gane vs. Hokit (Prelims)`. The `{draw}` placeholder is empty when no draw is supplied or the listing is not tennis.
 
 Programme output follows the matched schedule. A supplied end time later than the start replaces the configured duration; the next event can still shorten the programme to avoid overlap. Without a usable supplied end time, the configured duration applies. Programme artwork uses the supplied portrait icon when portrait output is enabled and available, otherwise the supplied programme icon or event logo.
 

@@ -52,7 +52,7 @@ In **3.12.25 and later**, League Based AEDs can use Other Sports listings from t
 
 | Listing | Matching input examples |
 | --- | --- |
-| Tennis singles and doubles | Player names or both doubles partnerships |
+| Tennis singles and doubles | Player names, both doubles partnerships, or tournament sessions (3.12.27+) |
 | Fight cards, bouts, and segments | Card name, fighters, or a segment such as Prelims |
 | Race weekends and sessions | Event name or a session such as Qualifying |
 | Driver cameras | Driver name or car number with session context |
@@ -60,6 +60,8 @@ In **3.12.25 and later**, League Based AEDs can use Other Sports listings from t
 Select the relevant sports and leagues, configure the name-matching options, and test representative provider names or [TXT fixture names](../setup/custom-sports-channel-names.md). Available coverage depends on the current sports dataset; selecting a sport cannot create missing listings.
 
 The delimiter field is labelled **Team / Participant Delimiter (Optional)**. Other Sports matching uses players, fighters, drivers, and session names; team-location matching does not apply. Unambiguous player or driver channels can follow their matching schedules within the configured output window, rather than showing only one fixture. Stale or withdrawn listings are excluded from matching.
+
+In **3.12.27 and later**, tennis channels can also match a tournament session without naming players. Use tournament, round, and singles/doubles hints, then check the configured match and output windows. See [Match tennis tournament sessions](aed-maintenance.md#match-tennis-tournament-sessions) for examples and limits.
 
 For doubles abbreviations and ambiguous names, see [Test Other Sports matching](aed-maintenance.md#test-other-sports-matching). Use [Other Sports output placeholders](aed-reference.md#other-sports-output) to display listing details without relying on team-only fields.
 

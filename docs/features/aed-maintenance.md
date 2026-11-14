@@ -31,6 +31,26 @@ For fight and racing channels, compare a broad card or event name with a specifi
 
 After saving, refresh assigned channels and inspect both their output names and programme preview. Matching in the tester and inclusion in output remain separate checks.
 
+### Match tennis tournament sessions
+
+In **3.12.27 and later**, a tennis AED can match eligible individual matches from a tournament session without player names. Select the relevant sports and leagues, then test provider names or [TXT fixture names](../setup/custom-sports-channel-names.md) such as:
+
+| Lookup name | Intended selection |
+| --- | --- |
+| `ATP 250 Tennis: Stockholm Semifinals` | Stockholm men's semifinals |
+| `WTA Finals: Singles & Doubles Semifinals` | Women's singles and doubles semifinals at the WTA Finals |
+| `ATP Finals Doubles Round Robin` | Men's doubles round-robin matches at the ATP Finals |
+
+`ATP Finals` and `WTA Finals` identify tournaments; the word `Finals` inside those names does not restrict matches to the final round. Add a separate round hint when needed. Supported round hints include semifinals (`SF`), quarterfinals (`QF`), finals, and round robin (`RR`).
+
+Configure **Date Regex**, **Time Regex**, their formats, and **Source Timezone** when the lookup includes a timestamp. A `Day #N` label requires both a parsed date and time: IPTVBoss does not convert tournament day numbers into calendar dates. For example, `ATP Finals Doubles Round Robin Day #2 (2026-11-16 05:30:00)` needs regex settings that extract that date and time.
+
+Matches are ordered by start time within the existing **Event Match Window** and output limits. If the broadcast covers a longer session, adjust the configured window to include the intended matches. Each match keeps its own title, summary, artwork, and event identity. Existing overlap handling still applies; a tournament session match does not identify which court the provider is showing.
+
+Ambiguous tournament names, conflicting tour or round hints, and unsupported session wording produce no match. For example, correct the lookup name for `Indian Wells: Day 6 WTA Finals` before retrying. Explicit player matchups continue to use participant matching; a failed matchup does not become a generic tournament schedule. Provider EPG descriptions are not searched, and unavailable, withdrawn, or incomplete matches are excluded.
+
+After saving, refresh the assigned channels and check both the programme preview and generated guide against the broadcast you expect.
+
 ### Understand matches outside the output window
 
 The tester can show a matching event even when it is outside the AED's configured output inclusion window. **Matched — outside output inclusion window.** means the lookup matched, but that event does not currently qualify for output. The tester uses current form values, including unsaved matching edits; a successful tester match alone does not mean the event will be exported.
