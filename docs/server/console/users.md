@@ -39,9 +39,26 @@ Each assigned XC-enabled layout has its own XC login password. In **Edit User**,
 
 The action appears for supported enabled credentials: Xtream Codes sources and password-backed M3U sources with an XC URL. It uses the user's alternate provider URL when configured and requires console editing access with permission to manage users. A database operation or another editor may temporarily block it.
 
-An unchanged expiry is a successful confirmation. Failed, rate-limited, or invalid responses keep the saved values. If the provider omits expiry but supplies a connection limit, the previous expiry is kept and the limit is updated. A rejected login makes both values unknown. Returned metadata is saved and a user backup is scheduled.
+An unchanged expiry is a successful confirmation. Failed, rate-limited, or invalid responses keep the saved values. If the provider omits expiry but supplies a connection limit, the previous expiry is kept and the limit is updated. A rejected login makes both values unknown. Changed metadata is saved and a user backup is scheduled; an unchanged result does not trigger a backup. In **3.12.30 and later**, changes from console and automatic refreshes are recorded for replay during database reconciliation without making another provider request.
 
 These source expiry values are separate from the [XC account expiry calculated for each layout](../../layouts/users.md#xc-account-expiry). Manual refresh remains available when **Disable NoGUI user checks** is enabled for the source.
+
+## Automatic provider credential checks
+
+In **3.12.30 and later**, XC Server checks supported enabled credentials for enabled users independently of source synchronization:
+
+| Saved account expiry | Check interval |
+| --- | --- |
+| Unknown, expired, or expiring within seven days | Every 24 hours |
+| More than seven days away, or unlimited | Every seven days |
+
+Weekly checks also discover connection-limit changes. Failed checks and still-expired accounts remain eligible for later checks, allowing renewals to be discovered automatically. These are eligibility intervals: provider pacing and server activity can delay a check.
+
+Automatic requests are spaced at least 30 seconds apart per provider hostname, with up to four hosts in flight. An HTTP 429 rate-limit response pauses automatic checks for that host for 24 hours; excess work carries forward. The server stores scheduling history in `xc-credential-refresh.json` in its data directory, preserving pacing across restarts and database restores.
+
+To opt out for a source, enable **Disable NoGUI user checks** in its M3U or XC source settings. This also disables the server's automatic checks for that source, while manual **Refresh expiry** remains available. Checks use the user's alternate provider URL when configured.
+
+Automatic checks wait while another desktop owns editing access or the server is busy with database operations. They pause for server-local NoGUI runs and resume afterward. See [server synchronization prerequisites](settings.md#before-a-server-sync-starts) if a run is deferred.
 
 ## Player pairing (Beta)
 

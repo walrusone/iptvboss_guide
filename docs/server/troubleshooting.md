@@ -43,6 +43,20 @@ At the next startup, pending publication and restore work must be resolved befor
 
 See [Shutdown publication and next startup](gui-settings.md#shutdown-publication-and-next-startup) for the normal workflow.
 
+## Server database is preserved at startup
+
+In **3.12.30 and later**, when the existing server database selects **XC Server** as its database synchronization provider, startup opens that database without replacing it with the desktop database. First startup and legacy synchronization modes retain the desktop-copy workflow.
+
+If startup reports that it cannot read the server database's synchronization ownership, it stops without copying the desktop database or attempting startup backup restoration. Review the [server logs](console/logs.md) for database access or corruption errors, preserve the existing database and backups, and resolve the reported problem before restarting. Use [XC Server Recovery](recovery.md) when a deliberate restore is needed.
+
+## A server sync was skipped or deferred
+
+In **3.12.30 and later**, logs identify rejected manual and scheduled launches with `NoGUI launch rejected` and a `blocker` value. Scheduled runs also record the reason in their history.
+
+If the message says **Sync deferred until user changes are published**, check the configured backup destination and the accompanying publication error. The server must confirm publication of pending user changes before starting its internal NoGUI run. Resolve the error and retry; starting another run does not bypass publication.
+
+Other blockers include active editing ownership, a database restore, queued administration work, or another background sync. Let that operation finish or resolve its reported recovery state before retrying. See [Before a server sync starts](console/settings.md#before-a-server-sync-starts) for the normal sequence.
+
 ## XC output is rebuilding or serves an older response
 
 XC Server now prepares and publishes complete response variants, then keeps the previous valid generation available while a replacement is built. A request can temporarily use direct database generation when its cached variant is unavailable or when the database is changing.

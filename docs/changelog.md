@@ -2,6 +2,32 @@
 
 For a task-oriented overview of recent changes, see [Release Highlights](release-highlights.md).
 
+## 📢 IPTVBoss 3.12.30
+
+### 🏟️ AED matching and editing
+
+- **Fix:** Name priority determines lookup order. If the preferred edited or provider name is unusable or unmatched, matching can try the other name. Explicit provider **NO EVENT** markers still block normal matching, with existing custom sports TXT overrides preserved.
+- **Fix:** Short names, numbered slots, blank names, and placeholder endings only produce a hard no-event result when neither name is usable. Usable names with no match retain normal fallback and retry behavior.
+- **Fix:** Normal refresh re-evaluates stored hard no-event results, allowing incorrect earlier rejections to resume full-window matching without a database restore or name/settings changes. See [Name priority and no-event results](features/aed-maintenance.md#name-priority-and-no-event-results).
+- **Fix:** Selecting **OK** after saving an unchanged AED closes the editor without another save or duplicate refresh.
+
+### 📺 M3U catch-up output
+
+- **Fix:** Eligible live channels imported from XC sources export `catchup="xc"` and `catchup-days` when provider catch-up availability and positive retention are present. Existing explicit catch-up, timeshift, and recording metadata retains precedence. See [Catch-up from XC sources](setup/output.md#catch-up-from-xc-sources).
+
+### 🔄 Provider credential refresh
+
+- **New:** XC Server checks enabled provider credentials independently of source syncs: daily for expired, unknown, or within-seven-days expiry; weekly for other accounts, including unlimited expiry. Checks respect the source's **Disable NoGUI user checks** option.
+- **Improvement:** Automatic checks are paced per provider hostname, HTTP 429 defers that host for 24 hours, and scheduling history survives restarts and database restores. Failed or still-expired credentials remain eligible for later checks.
+- **Fix:** Changed metadata from automatic checks and console **Refresh expiry** survives database reconciliation without another provider request. Unchanged metadata does not trigger a backup. See [Automatic provider credential checks](server/console/users.md#automatic-provider-credential-checks).
+- **Fix:** Standalone NoGUI no longer permanently suppresses checks for failed or still-expired credentials. Internal server NoGUI uses the independent server worker instead of repeating provider checks. See [Automatic NoGUI user checks](settings/automation.md#automatic-nogui-user-checks).
+
+### ☁️ XC Server synchronization and startup
+
+- **Improvement:** Before scheduled or manual server-local NoGUI starts, credential refresh pauses and pending user changes are published to the configured backup destination. Failed or unconfirmed publication defers the run; refresh resumes after the run. See [Before a server sync starts](server/console/settings.md#before-a-server-sync-starts).
+- **Improvement:** Rejected launches log their blocker and run context; scheduled skips also record the reason in history. See [Skipped or deferred server syncs](server/troubleshooting.md#a-server-sync-was-skipped-or-deferred).
+- **Fix:** Startup preserves an existing server database configured for XC Server synchronization instead of copying the desktop database over it. If synchronization ownership cannot be read, startup stops without a desktop copy or startup backup restoration. First-start and legacy synchronization paths retain their copy behavior. See [Server database preservation](server/troubleshooting.md#server-database-is-preserved-at-startup).
+
 ## 📢 IPTVBoss 3.12.27
 
 ### 🏟️ Other Sports AEDs

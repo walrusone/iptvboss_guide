@@ -21,6 +21,16 @@ Eligible channels using a fallback AED are also checked for a match in earlier s
 
 Saving an AED can retry eligible unmatched channels or check eligible fallback assignments even when matching settings are unchanged. If a channel still has no event, confirm that the sports data is available, the AED is assigned, and the provider name or custom lookup name matches the AED rules before using **Refresh AEDs** manually.
 
+### Name priority and no-event results
+
+In **3.12.30 and later**, AED name priority controls which name is tried first. An unusable or unmatched edited name still allows the original provider name to be tried, and vice versa. Prefer the provider name when edited names are cosmetic labels without event details.
+
+An explicit provider **NO EVENT** marker blocks normal matching regardless of name priority; existing [custom sports TXT lookup overrides](../setup/custom-sports-channel-names.md) remain supported. Short names, numbered slots, blank names, and placeholder endings produce a hard **No Event** result only when neither name is usable. When usable names find no match, the configured fallback AED and normal retry behavior still apply.
+
+Normal refresh also re-evaluates stored hard **No Event** results. Incorrect rejections from earlier versions can resume full-window matching without a database restore or changes to names or settings. Legitimate provider no-event markers remain respected.
+
+After saving an AED, selecting **OK** with no further form changes closes the editor without saving or queuing the same refresh again.
+
 ### Test Other Sports matching
 
 For [Other Sports AEDs](aed.md#other-sports-aeds), test both a full event name and a participant-only channel name. A participant-only name must identify the player or driver unambiguously in the relevant listings. Include a deliberately incorrect name to check that it does not match.
