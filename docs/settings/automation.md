@@ -87,15 +87,17 @@ Successful M3U and XC NoGUI syncs apply the source's [removed-channel retention 
 
 ## Automatic NoGUI user checks
 
-During a NoGUI synchronization, IPTVBoss can refresh provider metadata for enabled user credentials that are at risk of being stale. This includes credentials with an unknown expiry or an expiry within the configured **Days Before Expiry** notice window. The check supports Xtream Codes sources and password-backed M3U sources with an XC URL.
+During a standalone NoGUI synchronization, IPTVBoss can refresh provider metadata for enabled user credentials that are at risk of being stale. This includes credentials with an unknown expiry or an expiry within the configured **Days Before Expiry** notice window. The check supports Xtream Codes sources and password-backed M3U sources with an XC URL.
 
 Each credential is checked at most once every 24 hours for the same connection details. Changing the source connection or the credential resets that connection-specific limit. Automatic checks are also paced per provider host, and a provider rate-limit response defers the remaining checks for that host until a later run.
 
-To opt out for one source, edit the M3U or Xtream Codes source and enable **Disable NoGUI user checks**. The option affects only automatic checks during NoGUI synchronization; it does not disable source synchronization or the manual **Refresh Credentials** action in Manage Users.
+To opt out for one source, edit the M3U or Xtream Codes source and enable **Disable NoGUI user checks**. In **3.12.30 and later**, the option affects both standalone NoGUI checks and the XC Server automatic credential worker. It does not disable source synchronization or manual credential refresh.
 
 The source option is useful when a provider does not support account-information requests, or when the provider has strict limits. Leave it disabled when IPTVBoss should maintain cached credentials and expiry values automatically.
 
 Checks use the user's alternate provider URL when configured. An unchanged expiry counts as a confirmed result. Failed, rate-limited, or invalid responses retain saved values; missing expiry retains the previous expiry while updating the supplied connection limit. A rejected login marks expiry and connection limit as unknown. To check a renewal immediately, use [Refresh Credentials](../layouts/users.md#refresh-provider-expiry) on desktop or [Refresh expiry](../server/console/users.md#refresh-provider-expiry) in the console.
+
+In **3.12.30 and later**, XC Server uses its own [automatic provider credential checks](../server/console/users.md#automatic-provider-credential-checks), independent of source synchronization. Internal server NoGUI runs do not repeat those provider checks. The server uses a fixed seven-day near-expiry window; standalone NoGUI checks retain the configured **Days Before Expiry** window. Failed or still-expired credentials are no longer permanently excluded from later checks.
 
 For Pro installations, both standalone NoGUI runs and internal XC Server syncs check credential-expiry notifications using the configured email settings. Notices can use saved expiry information when a provider refresh is not due. Failed email sends are reported and remain eligible for a later retry.
 

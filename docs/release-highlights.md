@@ -2,6 +2,13 @@
 
 This summary groups the recent changes documented in the [build-by-build changelog](changelog.md). For an existing installation, start with [Update from 3.11.16](getting-started/update-from-3.11.16.md). Stable downloads are available from [iptvboss-release](https://github.com/walrusone/iptvboss-release/releases/latest).
 
+## New in 3.12.30
+
+- Review [AED name priority and no-event recovery](features/aed-maintenance.md#name-priority-and-no-event-results): unmatched preferred names allow the alternate name to be tried, and incorrect stored no-event results are re-evaluated. Closing an unchanged, saved AED no longer queues a duplicate refresh.
+- Generate [XC catch-up metadata in M3U output](setup/output.md#catch-up-from-xc-sources) for eligible provider live channels.
+- Understand [automatic XC Server credential checks](server/console/users.md#automatic-provider-credential-checks), including daily or weekly checks, provider pacing, and the source opt-out.
+- Review [publication before server sync](server/console/settings.md#before-a-server-sync-starts) and [server database preservation at startup](server/troubleshooting.md#server-database-is-preserved-at-startup). Logs now identify why a server sync launch was rejected.
+
 ## New in 3.12.27
 
 - Match [tennis tournament sessions](features/aed-maintenance.md#match-tennis-tournament-sessions) by tournament, round, and draw without player names, within the configured AED windows.

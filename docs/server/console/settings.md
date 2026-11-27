@@ -23,3 +23,9 @@ Use an address reachable by paired desktop installations. Do not use `localhost`
 5. Confirm the schedule’s next run and status.
 
 Use **Edit Selected**, **Delete Selected**, and **Refresh** only after confirming the intended schedule. Review the next run, status, last started time, last success, and run history after saving.
+
+## Before a server sync starts
+
+In **3.12.30 and later**, a scheduled or manual server-local NoGUI run pauses credential refresh and publishes pending user changes to the configured backup destination before it starts. Credential refresh resumes after the run finishes.
+
+If publication fails or cannot be confirmed, the run is deferred. Review the schedule history and [server logs](logs.md), resolve the reported blocker, then retry. This protection applies to NoGUI runs inside XC Server; separate installations continue to use their existing cloud coordination and reconciliation workflow. See [A server sync was skipped or deferred](../troubleshooting.md#a-server-sync-was-skipped-or-deferred).

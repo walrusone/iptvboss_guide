@@ -41,6 +41,12 @@ Full-layout M3U generation writes the default user's playlist first when user ID
 
 Output for a selected list of users keeps the requested order. This controls the order in which user files are generated, not the channel order inside a playlist.
 
+## Catch-up from XC sources
+
+In **3.12.30 and later**, M3U output includes `catchup="xc"` and `catchup-days` for live channels imported from Xtream Codes sources when the provider reports catch-up enabled with a positive retention period. This fills in missing M3U catch-up metadata; existing explicit catch-up, timeshift, or recording metadata retains precedence.
+
+Regenerate the M3U and refresh it in your player after updating. Catch-up still requires provider archive availability and a player that supports XC catch-up in M3U playlists. The metadata does not add archives to channels without provider catch-up, or to VOD and series entries.
+
 ## EPG sources that require synchronization
 
 If output reports **EPG sources require sync**, the named sources had unavailable cached guide data and were omitted from that output. Synchronize those sources in [Sources Manager](sources-manager.md), regenerate the affected guide output, and refresh it in the player. Changing **Automatically load programs** does not disable output and is not a substitute for synchronizing missing source data.
